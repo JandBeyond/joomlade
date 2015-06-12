@@ -1,1 +1,3 @@
 <?php
+
+exit("deploy test");
