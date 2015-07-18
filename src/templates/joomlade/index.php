@@ -78,7 +78,7 @@ $doc->addScript($tpath.'/js/joomlade.js');
         <img id="logo" src="<?php echo $tpath; ?>/images/logo.svg" alt="Logo des Joomla Projekts" />
 
         <button id="navtoggler" class="visible-xs-block">
-          <span class="fa fa-bars"><span class="sr-only">Zeige/Verstecke Navigation</span></span>
+          <span class="fa fa-bars"><span class="sr-only"><?php echo JText::_('TPL_JOOMLADE_SHOWHIDENAV'); ?></span></span>
         </button>
 
         <nav id="mainnav">
@@ -123,6 +123,13 @@ $doc->addScript($tpath.'/js/joomlade.js');
         </section>
       <?php endif; ?>
     </div>
+
+    <?php if($this->countModules('events')):  ?>
+      <div id="bottom-a" class="row">
+        <h3 class="moduleheading"><?php echo JText::_('TPL_JOOMLADE_HEADING_EVENTS'); ?></h3>
+        <jdoc:include type="modules" name="events" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('events')); ?>"  />
+      </div>
+    <?php endif; ?>
 
     <?php if($this->countModules('bottom-a')):  ?>
       <div id="bottom-a" class="row">

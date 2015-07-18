@@ -34,49 +34,50 @@
 		<filename>templateDetails.xml</filename>
 	</files>
 
-    <positions>
-    	<position>aside</position>
-    	<position>footer</position>
-    	<position>header</position>
-    	<position>nav</position>
-    	<position>top-a</position>
-    	<position>top-b</position>
-    	<position>top-c</position>
-    	<position>bottom-a</position>
-    	<position>bottom-b</position>
-    	<position>bottom-c</position>
-    	<position>top-stack</position>
-    	<position>bottom-stack</position>
-    </positions>
+	<positions>
+		<position>aside</position>
+		<position>footer</position>
+		<position>header</position>
+		<position>nav</position>
+		<position>events</position>
+		<position>top-a</position>
+		<position>top-b</position>
+		<position>top-c</position>
+		<position>bottom-a</position>
+		<position>bottom-b</position>
+		<position>bottom-c</position>
+		<position>top-stack</position>
+		<position>bottom-stack</position>
+	</positions>
 
 	<config><!-- no need to change -->
 		<fields name="params" addfieldpath="templates/joomlade/nnframework/joomla/config/elements">
 
 			<fieldset name="advanced">
-                
-                <!-- SHOWSYSTEMOUTPUT -->
-                <field  name="showsystemoutput"
-                        type="radio"
-                        class="btn-group"
-                        default="0"
-                        label="TPL_JOOMLADE_PARAMETER_SHOWSYSTEMOUTPUT_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_SHOWSYSTEMOUTPUT_DESC"
-                        >
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
+
+				<!-- SHOWSYSTEMOUTPUT -->
+				<field  name="showsystemoutput"
+						type="radio"
+						class="btn-group"
+						default="0"
+						label="TPL_JOOMLADE_PARAMETER_SHOWSYSTEMOUTPUT_LABEL"
+						description="TPL_JOOMLADE_PARAMETER_SHOWSYSTEMOUTPUT_DESC"
+						>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
 			</fieldset>
 
-            <fieldset name="webfonts">
-                <!-- GOOGLE FONT-->
-                <field  name="googlefont"
-                        class=""
-                        type="text"
-                        default=""
-                        label="TPL_JOOMLADE_PARAMETER_GOOGLEFONT_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_GOOGLEFONT_DESC"
-                        />
-            </fieldset>
+			<fieldset name="webfonts">
+				<!-- GOOGLE FONT-->
+				<field  name="googlefont"
+						class=""
+						type="text"
+						default=""
+						label="TPL_JOOMLADE_PARAMETER_GOOGLEFONT_LABEL"
+						description="TPL_JOOMLADE_PARAMETER_GOOGLEFONT_DESC"
+						/>
+			</fieldset>
 		</fields>
 	</config>
 </extension>
