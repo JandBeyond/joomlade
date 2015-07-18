@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="system" method="upgrade">
+    <name>plg_system_kickcck</name>
+    <author>Niels Nübel</author>
+    <creationDate>18 Juni 2015</creationDate>
+    <copyright>Copyright (c) 2009 - 2015 Niels Nübel</copyright>
+    <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authorEmail>info@niels-nuebel.de</authorEmail>
+    <authorUrl>www.niels-nuebel.de</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_SYSTEM_KICKCCK_XML_DESCRIPTION</description>
+
+	<files>
+		<folder>language</folder>
+		<folder>mixins</folder>
+		<folder>sql</folder>
+        <file>abstract.php</file>
+        <file plugin="kickcck">kickcck.php</file>
+    </files>
+
+	<media folder="media" destination="plg_system_kickcck">
+		<folder>config</folder>
+		<folder>css</folder>
+		<folder>fields</folder>
+		<folder>forms</folder>
+		<folder>language</folder>
+		<folder>layouts</folder>
+		<folder>js</folder>
+	</media>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+	            <field  name="cckconfigfile"
+	                    type="filelist"
+	                    default=""
+	                    filter="\.json$"
+	                    stripext="false"
+	                    hide_none="true"
+	                    hide_default="true"
+	                    directory="media/plg_system_kickcck/config"
+	                    description="PLG_SYSTEM_KICKCCK_FIELD_CCKCONFIGFILE_DESC"
+	                    label="PLG_SYSTEM_KICKCCK_FIELD_CCKCONFIGFILE_LABEL"
+			            />
+	            <field
+			            name="upload_maxsize"
+			            type="text"
+			            size="50"
+			            default="10"
+			            label="PLG_SYSTEM_KICKCCK_CONFIG_MAXIMUM_SIZE_LABEL"
+			            description="PLG_SYSTEM_KICKCCK_CONFIG_MAXIMUM_SIZE_DESC" />
+	            <field
+			            name="source_formats" type="text"
+			            label="PLG_SYSTEM_KICKCCK_CONFIG_SOURCE_LABEL"
+			            description="PLG_SYSTEM_KICKCCK_CONFIG_SOURCE_DESC"
+			            default="gif,ico,jpg,jpeg,png,BMP,GIF,ICO,JPG,JPEG,PNG"
+			            />
+	            <field
+			            name="memory_limit" type="text"
+			            label="PLG_SYSTEM_KICKCCK_CONFIG_MEMORY_LIMIT_LABEL"
+			            description="PLG_SYSTEM_KICKCCK_CONFIG_MEMORY_LIMIT_LABEL"
+			            default="128"
+			            />
+	            <field  name="override_image"
+	                    type="radio"
+	                    class="btn-group"
+	                    default="0"
+	                    label="PLG_SYSTEM_KICKCCK_CONFIG_OVERRIDEIMAGE_LABEL"
+	                    description="PLG_SYSTEM_KICKCCK_CONFIG_OVERRIDEIMAGE_DESC"
+			            >
+		            <option value="1">JYES</option>
+		            <option value="0">JNO</option>
+	            </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
