@@ -8927,13 +8927,13 @@ body.shownav #mainnav ul.menu ul.nav-child li a {
   #mainnav > ul > li {
     display: inline-block;
   }
-  #mainnav > ul > li:before {
+  #mainnav > ul > li:after {
     content: "|";
     display: inline-block;
     margin: 0 2px;
     color: white;
   }
-  #mainnav > ul > li:first-child:before {
+  #mainnav > ul > li:nth-child(1):after {
     content: "";
     display: none;
   }

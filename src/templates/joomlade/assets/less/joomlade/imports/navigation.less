@@ -150,14 +150,14 @@ body.shownav #mainnav {
       > li {
         display: inline-block;
 
-        &:before {
+        &:after {
           content: "|";
           display: inline-block;
           margin: 0 2px;
           color: white;
         }
 
-        &:first-child:before {
+        &:nth-child(1):after {
           content: "";
           display: none;
         }
