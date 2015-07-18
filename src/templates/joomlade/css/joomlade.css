@@ -8582,6 +8582,25 @@ body {
   margin: 0;
   padding: 0;
 }
+#outerwrapper {
+  max-width: 1170px;
+}
+.fullwidth {
+  margin-left: calc(-30px / 2);
+  width: calc(100% +  30px);
+}
+.fullwidth img.img-responsive {
+  max-width: none;
+  width: 100%;
+}
+#header {
+  background: #196dab;
+  min-height: 200px;
+}
+#footer {
+  background: #919191;
+  min-height: 50px;
+}
 body.area-joomla h1,
 body.area-joomla h2,
 body.area-joomla h3 {
@@ -8693,4 +8712,14 @@ a.skiplink:focus {
 /* Small devices Tablets  */
 /* Medium desktop */
 /* Large desktop  */
+@media (min-width: 1200px) {
+  .fullwidth {
+    width: 100vw;
+    margin-left: calc((100vw -  1170px + 30px ) / 2 * -1);
+  }
+  .lt-ie10 .fullwidth {
+    width: 100%;
+    margin-left: 0;
+  }
+}
 /*# sourceMappingURL=joomlade.css.map */

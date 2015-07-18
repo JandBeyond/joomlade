@@ -1,3 +1,27 @@
 body {
   margin: 0; padding:0;
 }
+
+#outerwrapper {
+  max-width: @container-large-desktop;
+}
+
+.fullwidth {
+  margin-left: calc(-@grid-gutter-width / 2);
+  width: calc( ~"100% + " @grid-gutter-width );
+
+  img.img-responsive {
+    max-width: none;
+    width: 100%
+  }
+}
+
+#header {
+  background: @color-darkblue;
+  min-height: 200px;
+}
+
+#footer {
+  background: @color-grey;
+  min-height: 50px;
+}
