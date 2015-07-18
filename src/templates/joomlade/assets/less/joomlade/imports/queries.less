@@ -28,13 +28,22 @@
 
  /* Large desktop  */
 @media (min-width: @screen-lg-min) {
-  .fullwidth {
-   width: 100vw;
-   margin-left: calc(~"(100vw - " @container-lg + @grid-gutter-width ~") / 2 * -1");
+ .fullwidth {
+  width: 100vw;
+  margin-left: calc(~"(100vw - "@container-lg + @grid-gutter-width~") / 2 * -1");
 
-   .lt-ie10 & {
-    width: 100%;
-    margin-left: 0;
-   }
+  .lt-ie10 & {
+   width: 100%;
+   margin-left: 0;
+  }
+ }
+
+ #logo {
+  left: 50%;
+  margin-left: ((@container-lg - @grid-gutter-width) / 2 * -1);
+ }
+
+ #mainnav {
+  right: calc(~"(100vw - "(@container-lg - @grid-gutter-width)~") / 2") !important;
  }
 }
