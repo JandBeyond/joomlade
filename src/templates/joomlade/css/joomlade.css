@@ -8781,6 +8781,7 @@ body.shownav #navtoggler {
     top: 30px;
     overflow: visible;
     z-index: 10;
+    clip: auto;
     /** mainlevel **/
     /*** submenu level 1 ***/
     /*** all other levels ***/
