@@ -1,0 +1,55 @@
+@green-color   : #014d1e;
+@pink-color    :#e95a72;
+@blue-color    :#765e9d;
+@red-color     :#D21D14;
+@orange-color  :#F27A24;
+@light-green-color  :#17c7be;
+@footer-color: #333333;
+
+@secondary-color: #ffd200;
+@black-color    :#000;
+@white-color    :#fff;
+
+@text-color: #5a5959;
+@headings-text-color: #333333;
+@body-text-color: #666;
+
+@body-font-family: 'Asap', sans-serif;
+@baseLineHeight: 20px;
+@baseBorderRadius: 4px;
+
+@gray-light: #bdc3c7;
+@component-font-size-base: 15px;
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);

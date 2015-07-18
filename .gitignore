@@ -1,0 +1,5 @@
+/.idea
+/demotemplate
+*.diff
+*.patch
+.DS_Store

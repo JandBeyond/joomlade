@@ -1,0 +1,776 @@
+/* Theme Name:The Project - Responsive Website Template
+Author:HtmlCoder
+Author URI:http://www.htmlcoder.me
+Author e-mail:htmlcoder.me@gmail.com
+Version:1.0.0
+Created:May 2015
+License URI:http://support.wrapbootstrap.com/
+File Description:Gray Skin
+*/
+@import "../mixins.less";
+
+//== Colors
+//
+//## Gray and brand colors for use across The Project Template.
+@gray-dark:             #333333;
+@gray:                  #777777;
+@gray-light:            #999999;
+@gray-lighter:          #cdcdcd;
+@white:                 #ffffff;
+@black:                 #000000;
+
+//** Base Colors of Gray Skin.
+@base-color:            #809398;
+@base-color-opacity-60: rgba(128, 147, 152, 0.6);
+@base-color-opacity-70: rgba(128, 147, 152, 0.7);
+@base-color-opacity-80: rgba(128, 147, 152, 0.8);
+@base-color-hover:      #6e7e82;
+//** Dark Header Top and Header
+@dark-header:                   #363d3f;
+@dark-header-opacity-95:        rgba(54, 61, 63, 0.95);
+@dark-header-opacity-90:        rgba(54, 61, 63, 0.9);
+@dark-header-opacity-80:        rgba(54, 61, 63, 0.8);
+@dark-header-opacity-60:        rgba(54, 61, 63, 0.6);
+@dark-header-top:               #2a3031;
+@dark-header-top-opacity-60:    rgba(30, 34, 35, 0.5);
+@dark-header-top-border:        #1e2223;
+@dark-navigation-item-border:   rgba(54, 61, 63, 0.8);
+
+/* 1- Typography
+-------------------------------------------------
+-------------------------------------------------*/
+a {
+	color: @base-color;
+}
+p a:not(.btn) { text-decoration: underline; }
+a:hover {
+	color: @base-color-hover;
+}
+a:focus,
+a:active {
+	color: @base-color-hover;
+}
+mark,
+.mark {
+	background-color: @base-color;
+	color: #ffffff;
+}
+.text-default {
+	color: @base-color;
+}
+/* Tables
+---------------------------------- */
+.table.table-colored {
+	border-bottom-color: @base-color;
+}
+.table-colored > thead > tr > th {
+	border-color: @base-color;
+	background-color: @base-color;
+	color: #fff;
+}
+/* 2- Layout
+-------------------------------------------------
+-------------------------------------------------*/
+.header-top.dark {
+	background-color: @dark-header-top;
+	border-bottom: 1px solid @dark-header-top-border;
+}
+.header.dark {
+	background-color: @dark-header;
+	border-top-color: @dark-header;
+}
+.header-top.colored {
+	background-color: @base-color;
+	border-bottom: 1px solid @base-color;
+}
+.default-bg {
+	background-color:@base-color;
+	color: #ffffff;
+}
+/*Transparent Header*/
+.transparent-header  header.header.dark.transparent-header-on {
+	background-color: @dark-header-opacity-80;
+	border-top-color: @dark-header-top-opacity-60;
+}
+/*Fixed Navigation*/
+.fixed-header-on .dark.header.fixed {
+	background-color: @dark-header-opacity-95;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width:768px) {
+	.fixed-header-on .dark.header .dropdown-menu {
+		border: 1px solid @dark-header-top;
+	}
+}
+/*Translucent Backgrounds*/
+.default-translucent-bg:after {
+	background-color: @base-color-opacity-70;
+}
+.default-translucent-bg.hovered:hover:after {
+	background-color: @base-color-opacity-80;
+}
+.default-hovered:hover:after,
+.default-hovered:hover {
+	background-color: @base-color;
+}
+/* 4 Pages
+-------------------------------------------------
+-------------------------------------------------*/
+/* Blog Timeline layout
+---------------------------------- */
+.timeline-date-label:after {
+	background-color: @base-color;
+}
+/* 5 Components
+-------------------------------------------------
+-------------------------------------------------*/
+/* Buttons
+---------------------------------- */
+/*Default Button*/
+.btn-default {
+	color: @white;
+	background-color: @base-color;
+	border-color: @base-color-hover;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+	color: @white;
+	background-color: @base-color-hover;
+	border-color: @base-color-hover;
+}
+.btn-default.disabled, 
+.btn-default[disabled], 
+fieldset[disabled] .btn-default {
+	background-color: @base-color;
+	border-color: @base-color-hover;
+}
+.btn-default-transparent {
+	color: @gray;
+	background-color: transparent;
+	border-color: @base-color;
+
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > .dropdown-toggle& {
+		color: #ffffff;
+		background-color: @base-color-hover;
+		border-color: darken(@base-color, 12%);
+	}
+}
+.default-bg,
+.default-translucent-bg {
+	.btn-default,
+	.btn-default-transparent {
+		color: @base-color;
+		background-color: @white;
+		border-color: @white;
+	}
+	.btn-default:hover,
+	.btn-default:focus,
+	.btn-default.focus,
+	.btn-default:active,
+	.btn-default.active,
+	.open > .dropdown-toggle.btn-default,
+	.btn-default-transparent:hover,
+	.btn-default-transparent:focus,
+	.btn-default-transparent.focus,
+	.btn-default-transparent:active,
+	.btn-default-transparent.active,
+	.open > .dropdown-toggle.btn-default-transparent {
+		color: @white;
+		background-color: transparent;
+		border-color: @white;
+	}
+}
+/*White Button*/
+.btn-white {
+	color: @gray;
+	background-color: @white;
+	border-color: @white;
+}
+.btn-white:hover,
+.btn-white:focus,
+.btn-white.focus,
+.btn-white:active,
+.btn-white.active,
+.open > .dropdown-toggle.btn-white {
+	color: @base-color-hover;
+	background-color: @white;
+	border-color: @white;
+}
+/*Background Transition*/
+.hvr-sweep-to-right:hover,
+.hvr-sweep-to-left:hover,
+.hvr-sweep-to-bottom:hover,
+.hvr-sweep-to-top:hover,
+.hvr-bounce-to-right:hover,
+.hvr-bounce-to-left:hover,
+.hvr-bounce-to-bottom:hover,
+.hvr-bounce-to-top:hover,
+.hvr-radial-out:hover,
+.hvr-rectangle-out:hover,
+.hvr-shutter-out-horizontal:hover,
+.hvr-shutter-out-vertical:hover {
+	background: transparent;
+}
+.hvr-radial-in,
+.hvr-rectangle-in,
+.hvr-shutter-in-horizontal,
+.hvr-shutter-in-vertical {
+	background: @base-color-hover;
+}
+.hvr-radial-in:hover,
+.hvr-rectangle-in:hover,
+.hvr-shutter-in-horizontal:hover,
+.hvr-shutter-in-vertical:hover, {
+	background: @base-color-hover;
+}
+.hvr-radial-in:before,
+.hvr-rectangle-in:before,
+.hvr-shutter-in-horizontal:before,
+.hvr-shutter-in-vertical:before { 
+	background: @white;
+}
+.hvr-sweep-to-right:before,
+.hvr-sweep-to-left:before,
+.hvr-sweep-to-bottom:before,
+.hvr-sweep-to-top:before,
+.hvr-bounce-to-right:before,
+.hvr-bounce-to-left:before,
+.hvr-bounce-to-bottom:before,
+.hvr-bounce-to-top:before,
+.hvr-radial-out:before,
+.hvr-rectangle-out:before,
+.hvr-shutter-out-horizontal:before,
+.hvr-shutter-out-vertical:before { 
+	background: @base-color-hover;
+}
+/*ie9*/
+.no-csstransitions .hvr-radial-in,
+.no-csstransitions .hvr-rectangle-in,
+.no-csstransitions .hvr-shutter-in-horizontal,
+.no-csstransitions .hvr-shutter-in-vertical {
+	background: transparent;
+}
+.no-csstransitions .hvr-sweep-to-right:hover,
+.no-csstransitions .hvr-sweep-to-left:hover,
+.no-csstransitions .hvr-sweep-to-bottom:hover,
+.no-csstransitions .hvr-sweep-to-top:hover,
+.no-csstransitions .hvr-bounce-to-right:hover,
+.no-csstransitions .hvr-bounce-to-left:hover,
+.no-csstransitions .hvr-bounce-to-bottom:hover,
+.no-csstransitions .hvr-bounce-to-top:hover,
+.no-csstransitions .hvr-radial-out:hover,
+.no-csstransitions .hvr-rectangle-out:hover,
+.no-csstransitions .hvr-shutter-out-horizontal:hover,
+.no-csstransitions .hvr-shutter-out-vertical:hover,
+.no-csstransitions .hvr-radial-in:hover,
+.no-csstransitions .hvr-rectangle-in:hover,
+.no-csstransitions .hvr-shutter-in-horizontal:hover,
+.no-csstransitions .hvr-shutter-in-vertical:hover {
+	background: @base-color-hover;
+}
+/* Image overlay
+---------------------------------- */
+.overlay-top a, 
+.overlay-bottom a, 
+.overlay-to-top a {
+	color: #ffffff;
+}
+/* Pager
+---------------------------------- */
+ul.pagination li > a:hover,
+ul.pagination li > a:focus {
+	background-color: transparent;
+	color: #ffffff;
+	background-color: @base-color-hover;
+	border-color: @base-color-hover;
+}
+ul.pagination li.active a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus {
+	color: #ffffff;
+	background-color: @base-color;
+	border-color: @base-color;
+}
+/* Breadcrumb
+---------------------------------- */
+.banner .breadcrumb > li a:hover {
+	color: @base-color-hover;
+}
+/* Nav pills
+---------------------------------- */
+.nav-pills.style-2 > li.active > a,
+.nav-pills.style-2 > li.active > a:hover,
+.nav-pills.style-2 > li.active > a:focus,
+.nav-pills.style-2 > li > a:hover,
+.nav-pills.style-2 > li > a:focus {
+	color: @base-color;
+	background-color: #fafafa;
+	border: 1px solid #eaeaea;
+}
+.nav-pills.nav-stacked > li.active > a,
+.nav-pills.nav-stacked > li.active > a:hover,
+.nav-pills.nav-stacked > li.active > a:focus,
+.nav-pills.nav-stacked > li > a:hover,
+.nav-pills.nav-stacked > li > a:focus {
+	color: @base-color;
+	background-color: transparent;
+	border-color: transparent;
+}
+.nav-pills > li.active > a:after {
+	color: @base-color;
+}
+.nav-pills.nav-stacked:not(.list-style-icons) > li.active > a:hover:after,
+.nav-pills.nav-stacked:not(.list-style-icons) > li.active > a:focus:after,
+.nav-pills.nav-stacked:not(.list-style-icons) > li > a:hover:after,
+.nav-pills.nav-stacked:not(.list-style-icons) > li > a:focus:after {
+	color: @base-color-hover;
+}
+.nav-pills.nav-stacked.list-style-icons > li > a > i {
+	color: @gray-lighter;
+}
+.nav-pills.nav-stacked.list-style-icons > li.active > a > i,
+.nav-pills.nav-stacked.list-style-icons > li > a:hover > i,
+.nav-pills.nav-stacked.list-style-icons > li > a:focus > i {
+	color: @base-color-hover;
+}
+/*footer*/
+.dark .footer-content .nav-pills > li > a,
+.dark .footer-content .nav-pills > li.active > a,
+.dark .footer-content .nav-pills > li.active > a:focus,
+.dark .footer-content .nav-pills > li > a:focus {
+	color: @gray-light;
+}
+.dark .footer-content .nav-pills > li.active > a:hover,
+.dark .footer-content .nav-pills > li > a:hover {
+	color: @base-color-hover;
+}
+/* Collapse
+---------------------------------- */
+/*Style 2*/
+.collapse-style-2 .panel-heading a {
+	color: @white;
+	background-color: @base-color;
+}
+.panel-heading a {
+	color: inherit;
+}
+/* Progress bars
+---------------------------------- */
+.progress-bar-default {
+	background-color: @base-color;
+}
+/* Forms
+---------------------------------- */
+.default-bg {
+	.form-control {
+		background-color: rgba(0, 0, 0, 0.2);
+		border-color: @base-color-hover;
+		.box-shadow(inset 0 2px 3px rgba(0, 0, 0, .35));
+		color: @white;
+	}
+	.has-success .form-control:focus,
+	.has-warning .form-control:focus,
+	.has-error .form-control:focus {
+		.box-shadow(inset 0 2px 3px rgba(0, 0, 0, .35));
+	}
+	.input-group-addon {
+		background-color: rgba(0, 0, 0, 0.20);
+		border-color: @base-color-hover;
+	}
+	.form-control:focus {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+	.form-control-feedback {
+		color: @white;
+	}
+}
+.dark.header,
+.dark.header-top {
+	.form-control { 
+		border-color: @dark-header-top;
+	}
+}
+/*Icons
+---------------------------------- */
+.icon.default-bg {
+	background-color: @base-color;
+	color: #ffffff;
+}
+.icon.light-bg {
+	background-color: #fff;
+	color: @base-color;
+}
+/*Listing Items
+---------------------------------- */
+.listing-item {
+	.overlay-container .badge {
+		border: 1px solid @base-color;
+		background-color: rgba(255, 255, 255, 0.95);
+		color: @base-color;
+	}
+}
+/*Modals
+---------------------------------- */
+.modal-content {
+	.modal-header {
+		background-color: @base-color;
+	}
+	.modal-title {
+		color: #ffffff;
+	}
+}
+/*Breadcrumb
+---------------------------------- */
+.banner .dark.breadcrumb-container {
+	background-color: @dark-header-opacity-60;
+}
+/* 6 Navigations
+-------------------------------------------------
+-------------------------------------------------*/
+/* 6.1 Light Version
+---------------------------------- */
+/* first level menu item on hover/focus */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	background-color: transparent;
+	color: @base-color;
+}
+.transparent-header .header:not(.dark) .navbar-nav > li.open > a,
+.transparent-header .header:not(.dark) .navbar-nav > li > a:hover,
+.transparent-header .header:not(.dark) .navbar-nav > li > a:focus {
+	color: @base-color;
+}
+/* first level menu item when opened */
+.main-navigation .navbar-nav > .open > a,
+.main-navigation .navbar-nav > .open > a:hover,
+.main-navigation .navbar-nav > .open > a:focus,
+.main-navigation .navbar-nav > .dropdown > a:focus {
+	background-color: #ffffff;
+	color: @base-color;
+	border-bottom-color: #ffffff;
+	border-right: 1px solid #f5f5f5;
+	border-left: 1px solid #f5f5f5;
+}
+/* second level menu item on focus/hover and when opened */
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu .menu > .active > a,
+.dropdown-menu .menu > .active > a:hover,
+.dropdown-menu .menu > .active > a:focus {
+	background-color: #fcfcfc;
+	color: @base-color-hover;
+	border-color: #f7f7f7;
+}
+/* Mega Menu 
+------------------------------ */
+header:not(.dark) .mega-menu .menu > li > a:hover i,
+header:not(.dark) .dropdown-menu > li > a:hover i,
+header:not(.dark) .mega-menu .menu > li.active > a i,
+header:not(.dark) .dropdown-menu > li.active > a i {
+	color: @base-color;
+}
+/* mega menu menu item on focus/hover*/
+.mega-menu .menu > li > a:hover,
+.mega-menu .menu > li > a:focus {
+	background-color: #fcfcfc;
+	color: @base-color-hover;
+	border-color: #f7f7f7;
+	text-decoration: none;
+}
+/* Arrow for parent menu item 
+------------------------------ */
+.header:not(.dark) .active.dropdown>a:before,
+.header:not(.dark).centered .active.dropdown>a:before {
+	color: @base-color;
+}
+.transparent-header .header:not(.dark) .dropdown:not(.open):not(.active)>a:before {
+	color: @gray;
+}
+.transparent-header .header:not(.dark) .navbar-default .navbar-nav > .dropdown.open > a:before {
+	color: @base-color;
+}
+.dropdown .dropdown.open>a:before,
+.header.centered:not(.dark) .dropdown .dropdown.open>a:before {
+	color: @base-color;
+}
+/* Mobile Menu
+------------------------------ */
+/* mobile menu toggle button on hover/focus */
+.navbar-default {
+	.navbar-toggle {
+		border-color: #ccc;
+		&:hover,
+		&:focus {
+			background-color: #fafafa;
+			border-color: @base-color-hover;
+		}
+		.icon-bar {
+			background-color: #ccc;
+		}
+		&:hover .icon-bar,
+		&:focus .icon-bar {
+			background-color: @base-color-hover;
+		}
+	}
+}
+/* Small devices (tablets, phones less than 767px) */
+@media (max-width:767px) { 
+	/* Mobile menu
+	------------------------------ */
+	/* active item */
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+		color: @base-color-hover;
+		background-color: transparent;
+	}
+	/* first level item hover and focus states */
+	.navbar-default .navbar-nav > li > a:hover,
+	.navbar-default .navbar-nav > li > a:focus,
+	.navbar-default .navbar-nav > .active > a,
+	.navbar-default .navbar-nav > .active > a:hover,
+	.navbar-default .navbar-nav > .active > a:focus {
+		color: @base-color-hover;
+		background-color: #fff;
+		border-bottom-color: transparent;
+	}
+	/* second level item on hover/focus */
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: @base-color-hover;
+	}
+	/* Arrow for parent menu item */
+	.navbar-default .navbar-nav > .dropdown.open > a:before {
+		color: @base-color;
+	}
+}
+/* 6.2 Dark Version
+------------------------------ */
+/* first level active menu item when opened */
+.dark.header {
+	.main-navigation .navbar-nav > .open > a,
+	.main-navigation .navbar-nav > .open > a:hover,
+	.main-navigation .navbar-nav > .open > a:focus,
+	.main-navigation .navbar-nav > .dropdown > a:focus {
+		border-bottom-color: @dark-header-top;
+	}
+}
+/* second level menu item */
+.dark.header {
+	.dropdown-menu {
+		background-color: @dark-header-top;
+		border: 1px solid @dark-navigation-item-border;
+	}
+	.dropdown-menu .divider {
+		background-color: @dark-header;
+	}	
+	.dropdown-menu > li > a,
+	.mega-menu .menu > li > a {
+		border-bottom: 1px solid @dark-navigation-item-border;
+	}
+	.mega-menu .menu > li > a:hover, 
+	.mega-menu .menu > li > a:focus	{
+		border-color: @dark-navigation-item-border;
+	}
+	.dropdown-menu > li > a:hover, 
+	.dropdown-menu > li > a:focus, .nav .open > a, 
+	.nav .open > a:hover, 
+	.nav .open > a:focus, 
+	.dropdown-menu > .active > a, 
+	.dropdown-menu > .active > a:hover, 
+	.dropdown-menu > .active > a:focus, 
+	.dropdown-menu .menu > .active > a, 
+	.dropdown-menu .menu > .active > a:hover, 
+	.dropdown-menu .menu > .active > a:focus {
+		border-color: @dark-navigation-item-border;
+	}
+}
+/* Small devices (tablets, phones less than 767px) */
+@media (max-width:767px) { 
+	.transparent-header .dark .main-navigation .navbar.navbar-default {
+		background-color: @dark-header-opacity-90;
+		border-color: @dark-header-top-opacity-60;
+	}	
+}
+/* 6.3 Subfooter navigation
+------------------------------ */
+.subfooter .navbar-default .nav > li > a:hover,
+.subfooter .navbar-default .nav > .active > a:hover,
+.subfooter .navbar-default .nav > .active > a:focus {
+	background-color: transparent;
+	text-decoration: underline;
+	color: @base-color-hover;
+}
+/* 6.3 Offcanvas navigation
+------------------------------ */
+#offcanvas .nav .open > a,
+#offcanvas .nav .open > a:hover,
+#offcanvas .nav .open > a:focus,
+#offcanvas .nav > li > a:hover, 
+#offcanvas .nav > li > a:focus,
+#offcanvas .navbar-nav > li.active > a {
+	color: @base-color-hover;
+	background-color: #ffffff;
+}
+/*Nav arrows*/
+#offcanvas .dropdown>a:before {
+	color: @gray;
+}
+#offcanvas .dropdown.open > a:before {
+	color: @base-color;
+}
+/* 7 Blocks/Widgets
+-------------------------------------------------
+-------------------------------------------------*/
+/* Social icons block
+------------------------------ */
+.social-links {
+	li {
+		a {
+			border: 1px solid #e7e7e7;
+			color: @gray-lighter;
+			&:hover {
+				background-color: transparent;
+				border-color: @base-color-hover;
+				color: @base-color-hover;
+			}
+		}
+	}
+}
+.dark.social-links li a {
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	color: #ffffff;
+}
+.social-links.animated-effect-1 li {
+	a:hover {
+		color: #ffffff!important;
+	}	
+	a:after {
+		background-color: @base-color;
+	}
+}
+.default.social-links li {
+	a {
+		background-color: @base-color;
+		border: 1px solid @base-color-hover;
+		color: #ffffff;
+	}
+	a:hover {
+		background-color: @white;
+		color: @gray;
+	}	
+}
+/*Header Top Dropdowns*/
+.header-top:not(.dark) .social-links .dropdown.open>button>i:before {
+	color: @base-color;
+}
+.header-top.colored .social-links .dropdown>button>i:before,
+.header-top.colored .social-links .dropdown.open>button>i:before {
+	color: @white;
+}
+.dark.header-top {
+	.dropdown-menu {
+		border: 1px solid @dark-header-top-border;
+		border-top: none;
+		background: @dark-header-top;
+	}
+}
+.header-dropdown-buttons .btn-group .dropdown-menu { border: none; }
+/* Full Width Content
+---------------------------------- */
+/* Medium devices (tablets, phones) */
+@media (max-width: 1199px) { 
+	.full-width-section:not(.no-image) .full-text-container.default-bg {
+		background-color: @base-color-opacity-60;
+	}
+}
+/*Header Dropdowns (search, cart etc)
+---------------------------------- */
+.header-dropdown-buttons { 
+	.btn-group {
+		> .btn {
+			background-color: #f2f2f2;
+			border: 1px solid #e9e9e9;
+			&:hover {
+				background-color: @base-color;
+				color: #fff;
+				border-color: @base-color-hover;
+			}
+		}
+	}
+	.btn-group.open { 
+		> .btn { 
+			background-color: @base-color;
+			color: #fff;
+			border-color: @base-color-hover;
+		}
+	}
+}
+.colored.header-top {
+	.dropdown-menu {
+		border: 1px solid @base-color;
+		background: @base-color;
+	}
+}
+/* Media 
+---------------------------------- */
+.media:hover .icon {
+	background-color: transparent;
+	color: @base-color;
+	border: 1px solid @base-color;
+}
+/* Pricing tables
+---------------------------------- */
+.popover-title {
+	background-color: @base-color;
+	color: #ffffff;
+}
+/* Tags cloud block
+---------------------------------- */
+.tag a {
+	color: #ffffff;
+	background-color: @base-color;
+	border: 1px solid @base-color-hover;
+}
+.tag a:hover {
+	color: @base-color;
+	background-color: @white;
+	border-color: @base-color-hover;
+	text-decoration: none;
+}
+/* 8 Main Slideshow
+-------------------------------------------------
+-------------------------------------------------*/
+.tp-bannertimer {
+	background-color: @base-color-opacity-80;
+}
+/* 9 Owl Carousel
+-------------------------------------------------
+-------------------------------------------------*/
+.content-slider-with-large-controls .owl-buttons .owl-prev:after,
+.content-slider-with-large-controls-autoplay .owl-buttons .owl-prev:after { 
+	color: @base-color;
+}
+.content-slider-with-large-controls .owl-buttons .owl-next:after,
+.content-slider-with-large-controls-autoplay .owl-buttons .owl-next:after { 
+	color: @base-color;
+}
