@@ -4,6 +4,22 @@
   .sr-only-focusable();
 }
 
+#navtoggler {
+  width:calc(@grid-gutter-width * 1.25);
+  height:calc(@grid-gutter-width * 1.25);
+  color:#fff;
+  background:transparent;
+  border:none;
+
+  span {
+    font-size:@font-size-h2;
+  }
+}
+
+#navtoggler:focus {
+  border:none;
+}
+
 /** main nav layout on enabled navigation **/
 body.shownav {
   overflow-x: hidden;
@@ -21,6 +37,7 @@ body.shownav {
     width: @width-offcanvas;
     height: 100%;
     clip: auto;
+    background:darken(@color-grey,45%);
   }
 
   #navtoggler {
@@ -28,9 +45,77 @@ body.shownav {
   }
 }
 
+
+
 /*** main nav mobile styles ***/
 body.shownav #mainnav {
+  ul.menu {
+    list-style-type: none;
+    margin:calc(@grid-gutter-width/2) 0 0 0;
+    padding:0;
 
+    li {
+      line-height:calc(@line-height-base * 2.25);
+      font-size:@font-size-large;
+    }
+
+    a {
+      text-transform:uppercase;
+      text-decoration:none;
+      color:#fff;
+      padding:0 @grid-gutter-width;
+    }
+
+    ul.nav-child {
+      list-style-type:none;
+      padding:0;
+      background:darken(@color-grey,45%);
+
+      li:focus, li:hover {
+        background:none;
+      }
+
+      li a {
+        padding:0 calc(@grid-gutter-width*2);
+      }
+    }
+
+
+    li.joomla:focus, li.joomla:hover {
+      background:@color-blue;
+    }
+
+    li.community:focus, li.community:hover {
+      background:@color-yellow;
+    }
+
+    li.events:focus, li.events:hover {
+      background:@color-green;
+    }
+
+    li.forum:focus, li.forum:hover {
+      background:@color-red;
+    }
+
+    li.joomla.parent li a:hover,  li.joomla.parent li a:focus {
+      background: none!important;
+      color:@color-blue;
+    }
+
+    li.community.parent li a:hover, li.community.parent li a:focus   {
+      background: none!important;
+      color:@color-yellow;
+    }
+
+    li.events.parent li a:hover, li.events.parent li a:focus  {
+      background: none!important;
+      color:@color-green;
+    }
+
+    li.forum.parent li a:hover, li.forum.parent li a:focus  {
+      background: none!important;
+      color:@color-red;
+    }
 }
 
 /*** main nav desktop styles ***/

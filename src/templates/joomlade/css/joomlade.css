@@ -8797,6 +8797,19 @@ body {
   overflow: visible;
   clip: auto;
 }
+#navtoggler {
+  width: calc(30px * 1.25);
+  height: calc(30px * 1.25);
+  color: #fff;
+  background: transparent;
+  border: none;
+}
+#navtoggler span {
+  font-size: 30px;
+}
+#navtoggler:focus {
+  border: none;
+}
 /** main nav layout on enabled navigation **/
 body.shownav {
   overflow-x: hidden;
@@ -8813,6 +8826,70 @@ body.shownav #mainnav {
   width: 250px;
   height: 100%;
   clip: auto;
+  background: #1e1e1e;
+}
+body.shownav #mainnav ul.menu {
+  list-style-type: none;
+  margin: calc(30px/2) 0 0 0;
+  padding: 0;
+}
+body.shownav #mainnav ul.menu li {
+  line-height: calc(1.375 * 2.25);
+  font-size: 20px;
+}
+body.shownav #mainnav ul.menu li.joomla:focus,
+body.shownav #mainnav ul.menu li.joomla:hover {
+  background: #679ed4;
+}
+body.shownav #mainnav ul.menu li.community:focus,
+body.shownav #mainnav ul.menu li.community:hover {
+  background: #f9b431;
+}
+body.shownav #mainnav ul.menu li.events:focus,
+body.shownav #mainnav ul.menu li.events:hover {
+  background: #85c03c;
+}
+body.shownav #mainnav ul.menu li.forum:focus,
+body.shownav #mainnav ul.menu li.forum:hover {
+  background: #e84032;
+}
+body.shownav #mainnav ul.menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  padding: 0 30px;
+}
+body.shownav #mainnav ul.menu li.joomla.parent li a:hover,
+body.shownav #mainnav ul.menu li.joomla.parent li a:focus {
+  background: none!important;
+  color: #679ed4;
+}
+body.shownav #mainnav ul.menu li.community.parent li a:hover,
+body.shownav #mainnav ul.menu li.community.parent li a:focus {
+  background: none!important;
+  color: #f9b431;
+}
+body.shownav #mainnav ul.menu li.events.parent li a:hover,
+body.shownav #mainnav ul.menu li.events.parent li a:focus {
+  background: none!important;
+  color: #85c03c;
+}
+body.shownav #mainnav ul.menu li.forum.parent li a:hover,
+body.shownav #mainnav ul.menu li.forum.parent li a:focus {
+  background: none!important;
+  color: #e84032;
+}
+body.shownav #mainnav ul.menu ul.nav-child {
+  list-style-type: none;
+  padding: 0;
+  background: #1e1e1e;
+}
+body.shownav #mainnav ul.menu ul.nav-child li:focus,
+body.shownav #mainnav ul.menu ul.nav-child li:hover {
+  background: none;
+}
+body.shownav #mainnav ul.menu ul.nav-child li a {
+  padding: 0 calc(30px*2);
 }
 body.shownav #navtoggler {
   right: calc(250px + 30px);

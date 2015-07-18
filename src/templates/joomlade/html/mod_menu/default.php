@@ -24,7 +24,7 @@ defined('_JEXEC') or die;
 <?php
 foreach ($list as $i => &$item)
 {
-	$class = 'item-' . $item->id;
+	$class = 'item-' . $item->id . " " . $item->anchor_css;
 
 	if (($item->id == $active_id) OR ($item->type == 'alias' AND $item->params->get('aliasoptions') == $active_id))
 	{
