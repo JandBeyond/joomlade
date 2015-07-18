@@ -8603,8 +8603,17 @@ body {
   min-height: 200px;
 }
 #footer {
-  background: #919191;
+  background: #196dab;
   min-height: 50px;
+  padding: 15px 0;
+  margin-top: 1.5em;
+  color: white;
+  font-size: 0.85em;
+  text-align: center;
+}
+#footer > * {
+  max-width: 1170px;
+  margin: 0 auto;
 }
 #logo {
   width: 60%;
@@ -8866,6 +8875,29 @@ body.shownav #navtoggler {
   #mainnav > ul ul {
     display: none;
   }
+}
+/*** footer nav ***/
+#footer nav > ul {
+  padding: 0;
+  margin-top: 2em;
+}
+#footer nav > ul li {
+  display: inline;
+}
+#footer nav > ul li:after {
+  content: " | ";
+}
+#footer nav > ul li:last-child:after {
+  content: "";
+}
+#footer nav > ul a {
+  color: white;
+  text-decoration: none;
+}
+#footer nav > ul a:hover,
+#footer nav > ul a:focus,
+#footer nav > ul li.active a {
+  text-decoration: underline;
 }
 ul.tags.inline {
   list-style-type: none;

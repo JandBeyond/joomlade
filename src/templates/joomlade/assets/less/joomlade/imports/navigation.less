@@ -125,3 +125,30 @@ body.shownav #mainnav {
     }
   }
 }
+
+/*** footer nav ***/
+#footer nav > ul {
+  padding: 0;
+  margin-top: 2em;
+
+  li {
+    display: inline;
+
+    &:after {
+      content: " | ";
+    }
+
+    &:last-child:after {
+      content: "";
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover, a:focus, li.active a {
+    text-decoration: underline;
+  }
+}
