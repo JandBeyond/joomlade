@@ -9,22 +9,24 @@
 
 defined('_JEXEC') or die;
 ?>
-<div class="wrapper wrapper-slideshow">
-    <div class="col-sm-12">
-        <div class="newsflash<?php echo $moduleclass_sfx; ?>">
-            <?php foreach ($list as $item) : ?>
-                <?php require JModuleHelper::getLayoutPath('mod_articles_news', '_item'); ?>
-            <?php endforeach; ?>
-        </div>
-        
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+    
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
   </ol>
-
+    
+    
+    <?php 
+    foreach ($list as $item){
+        echo '<pre>';
+        print_r ($item);
+        echo '</pre>';
+    }
+    ?>
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
@@ -51,6 +53,4 @@ defined('_JEXEC') or die;
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
-    </div>
 </div>
