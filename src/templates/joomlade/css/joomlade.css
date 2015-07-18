@@ -8601,88 +8601,88 @@ body {
   background: #919191;
   min-height: 50px;
 }
-body.area-joomla h1,
-body.area-joomla h2,
-body.area-joomla h3 {
+.area-joomla h1,
+.area-joomla h2,
+.area-joomla h3 {
   background-color: #679ed4;
 }
-body.area-joomla a {
+.area-joomla a {
   color: #679ed4;
 }
-body.area-joomla a:hover,
-body.area-joomla a:focus {
+.area-joomla a:hover,
+.area-joomla a:focus {
   color: #2f6ba6;
 }
-body.area-joomla i:before {
+.area-joomla i:before {
   color: #679ed4;
 }
-body.area-joomla .btn {
+.area-joomla .btn {
   background: #679ed4;
 }
-body.area-joomla .bg {
+.area-joomla .bg {
   background: rgba(103, 158, 212, 0.8) !important;
 }
-body.area-forum h1,
-body.area-forum h2,
-body.area-forum h3 {
+.area-forum h1,
+.area-forum h2,
+.area-forum h3 {
   background-color: #e84032;
 }
-body.area-forum a {
+.area-forum a {
   color: #e84032;
 }
-body.area-forum a:hover,
-body.area-forum a:focus {
+.area-forum a:hover,
+.area-forum a:focus {
   color: #a21d12;
 }
-body.area-forum i:before {
+.area-forum i:before {
   color: #e84032;
 }
-body.area-forum .btn {
+.area-forum .btn {
   background: #e84032;
 }
-body.area-forum .bg {
+.area-forum .bg {
   background: rgba(232, 64, 50, 0.8) !important;
 }
-body.area-community h1,
-body.area-community h2,
-body.area-community h3 {
+.area-community h1,
+.area-community h2,
+.area-community h3 {
   background-color: #f9b431;
 }
-body.area-community a {
+.area-community a {
   color: #f9b431;
 }
-body.area-community a:hover,
-body.area-community a:focus {
+.area-community a:hover,
+.area-community a:focus {
   color: #be7f06;
 }
-body.area-community i:before {
+.area-community i:before {
   color: #f9b431;
 }
-body.area-community .btn {
+.area-community .btn {
   background: #f9b431;
 }
-body.area-community .bg {
+.area-community .bg {
   background: rgba(249, 180, 49, 0.8) !important;
 }
-body.area-events h1,
-body.area-events h2,
-body.area-events h3 {
+.area-events h1,
+.area-events h2,
+.area-events h3 {
   background-color: #85c03c;
 }
-body.area-events a {
+.area-events a {
   color: #85c03c;
 }
-body.area-events a:hover,
-body.area-events a:focus {
+.area-events a:hover,
+.area-events a:focus {
   color: #4f7224;
 }
-body.area-events i:before {
+.area-events i:before {
   color: #85c03c;
 }
-body.area-events .btn {
+.area-events .btn {
   background: #85c03c;
 }
-body.area-events .bg {
+.area-events .bg {
   background: rgba(133, 192, 60, 0.8) !important;
 }
 a.skiplink {
