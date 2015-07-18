@@ -29,15 +29,97 @@ body.shownav {
 }
 
 /*** main nav mobile styles ***/
-#mainnav {
-  clip: auto;
-  height: auto;
-  width: auto;
+body.shownav #mainnav {
+
 }
 
 /*** main nav desktop styles ***/
-@media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
-  #mainnav {
+@media (min-width: @screen-sm) {
+  /*** reset mobile-first styles **/
+  body.shownav {
+    #outerwrapper {
+      margin-left: auto;
+    }
+  }
 
+  body.shownav #mainnav, #mainnav {
+    height: auto;
+    width: auto;
+    right: (@grid-gutter-width / 2);
+    top: 30px;
+    overflow: visible;
+
+    a {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /** mainlevel **/
+    > ul {
+      padding: 0;
+      margin: 0;
+
+      > li {
+        display: inline-block;
+
+        &:before {
+          content: "|";
+          display: inline-block;
+          margin: 0 2px;
+          color: white;
+        }
+
+        &:first-child:before {
+          content: "";
+          display: none;
+        }
+      }
+
+      > li > a {
+        padding: 2px 15px;
+      }
+    }
+
+    /*** submenu level 1 ***/
+    > ul > li.active > a, > ul > li:hover > a, > ul > li > a:focus {
+      background: white;
+      border-radius: 5px;
+      text-decoration: none;
+      color: @color-font;
+    }
+
+    > ul > li.parent:hover > a, > ul > li.parent > a:focus {
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+
+    > ul > li:hover > ul, > ul > li:focus > ul {
+      display: block;
+      position: absolute;
+      background: white;
+      padding: 10px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+
+      a {
+        color: @color-font;
+      }
+    }
+
+    /*** all other levels ***/
+    > ul ul {
+      display: none;
+    }
   }
 }
