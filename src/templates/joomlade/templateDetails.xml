@@ -35,6 +35,18 @@
 	</files>
 
     <positions>
+    	<position>aside</position>
+    	<position>footer</position>
+    	<position>header</position>
+    	<position>nav</position>
+    	<position>top-a</position>
+    	<position>top-b</position>
+    	<position>top-c</position>
+    	<position>bottom-a</position>
+    	<position>bottom-b</position>
+    	<position>bottom-c</position>
+    	<position>top-stack</position>
+    	<position>bottom-stack</position>
     </positions>
 
 	<config><!-- no need to change -->
