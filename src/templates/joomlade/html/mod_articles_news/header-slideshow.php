@@ -23,10 +23,12 @@ defined('_JEXEC') or die;
     <?php 
     foreach ($list as $item){
         echo '<pre>';
-        print_r ($item);
+        print_r ($item->introtext);
+        print_r ($item->images);
         echo '</pre>';
     }
     ?>
+
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
