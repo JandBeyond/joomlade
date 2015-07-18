@@ -1,0 +1,155 @@
+{
+  "addFieldPath":true,
+  "FieldPath": "media/plg_system_kickcck/fields",
+  "forms":["com_content.article","com_content.articles.filter","com_menus.items.filter","com_menus.item"],
+  "language":"demo",
+  "languagepath":"media/plg_system_kickcck",
+  "com_content_article": {
+    "FormPath": "media/plg_system_kickcck/forms",
+    "LayoutPath": "media/plg_system_kickcck/layouts",
+    "change_cck": true,
+    "field_name": "cck",
+    "field_label": "KICKCCK_FIELD_CCK_LABEL",
+    "field_desc": "KICKCCK_FIELD_CCK_DESC",
+    "field_default": "none",
+    "options": [
+      {
+        "value": "none",
+        "text": "KICKCCK_OPTION_NONE"
+      },
+      {
+        "value": "demo",
+        "text": "KICKCCK_OPTION_DEMO"
+      }
+    ],
+    "demo": {
+      "cck_content": true,
+      "select": "co.*",
+      "join": "#__content",
+      "contextwhere": "com_content.article",
+      "mappings": [
+        "subtitle"
+      ],
+      "article_layout": "kicktemp:demo",
+      "cckimages": {
+        "fields": {
+          "fullcck": {
+            "label" : "CCK_IMAGE_FULL_LABEL",
+            "description" : "CCK_IMAGE_FULL_DESC",
+            "path" : "images/demo",
+            "folder" : "gallery",
+            "thumbcrop": "2",
+            "thumbnails": "300x300,600x600,800x800,1200x1200"
+          },
+          "introcck": {
+            "label" : "CCK_IMAGE_INTRO_LABEL",
+            "description" : "CCK_IMAGE_INTRO_DESC",
+            "path" : "images/demo",
+            "folder" : "gallery",
+            "thumbcrop": "2",
+            "thumbnails": "300x300,600x600,800x800,1200x1200"
+          },
+          "gallery_1": {
+            "label" : "CCK_IMAGE_GALLERY_LABEL",
+            "description" : "CCK_IMAGE_GALLERY_DESC",
+            "path" : "images/demo",
+            "folder" : "gallery",
+            "thumbcrop": "2,5",
+            "thumbnails": "400x400,600x600,800x800,1200x1200|140x105"
+          },
+          "gallery_2": {
+            "label" : "CCK_IMAGE_GALLERY_LABEL",
+            "description" : "CCK_IMAGE_GALLERY_DESC",
+            "path" : "images/demo",
+            "folder" : "gallery",
+            "thumbcrop": "2,5",
+            "thumbnails": "400x400,600x600,800x800,1200x1200|140x105"
+          },
+          "gallery_3": {
+            "label" : "CCK_IMAGE_GALLERY_LABEL",
+            "description" : "CCK_IMAGE_GALLERY_DESC",
+            "path" : "images/demo",
+            "folder" : "gallery",
+            "thumbcrop": "2,5",
+            "thumbnails": "400x400,600x600,800x800,1200x1200|140x105"
+          },
+          "gallery_4": {
+            "label" : "CCK_IMAGE_GALLERY_LABEL",
+            "description" : "CCK_IMAGE_GALLERY_DESC",
+            "path" : "images/demo",
+            "folder" : "gallery",
+            "thumbcrop": "2,5",
+            "thumbnails": "400x400,600x600,800x800,1200x1200|140x105"
+          },
+          "gallery_5": {
+            "label" : "CCK_IMAGE_GALLERY_LABEL",
+            "description" : "CCK_IMAGE_GALLERY_DESC",
+            "path" : "images/demo",
+            "folder" : "gallery",
+            "thumbcrop": "2,5",
+            "thumbnails": "400x400,600x600,800x800,1200x1200|140x105"
+          },
+          "gallery_6": {
+            "label" : "CCK_IMAGE_GALLERY_LABEL",
+            "description" : "CCK_IMAGE_GALLERY_DESC",
+            "path" : "images/demo",
+            "folder" : "gallery",
+            "thumbcrop": "2,5",
+            "thumbnails": "400x400,600x600,800x800,1200x1200|140x105"
+          },
+          "gallery_7": {
+            "label" : "CCK_IMAGE_GALLERY_LABEL",
+            "description" : "CCK_IMAGE_GALLERY_DESC",
+            "path" : "images/demo",
+            "folder" : "gallery",
+            "thumbcrop": "2,5",
+            "thumbnails": "400x400,600x600,800x800,1200x1200|140x105"
+          },
+          "gallery_8": {
+            "label" : "CCK_IMAGE_GALLERY_LABEL",
+            "description" : "CCK_IMAGE_GALLERY_DESC",
+            "path" : "images/demo",
+            "folder" : "gallery",
+            "thumbcrop": "2,5",
+            "thumbnails": "400x400,600x600,800x800,1200x1200|140x105"
+          },
+          "gallery_9": {
+            "label" : "CCK_IMAGE_GALLERY_LABEL",
+            "description" : "CCK_IMAGE_GALLERY_DESC",
+            "path" : "images/demo",
+            "folder" : "gallery",
+            "thumbcrop": "2,5",
+            "thumbnails": "400x400,600x600,800x800,1200x1200|140x105"
+          },
+          "gallery_10": {
+            "label" : "CCK_IMAGE_GALLERY_LABEL",
+            "description" : "CCK_IMAGE_GALLERY_DESC",
+            "path" : "images/demo",
+            "folder" : "gallery",
+            "thumbcrop": "2,5",
+            "thumbnails": "400x400,600x600,800x800,1200x1200|140x105"
+          }
+        },
+        "select": "i.cckimages",
+        "join": "#__content",
+        "contextwhere": "com_content.article",
+        "mappings": [
+          "cckimages"
+        ]
+      }
+    }
+  },
+  "com_content_articles_filter": {
+    "CCKMenu":{
+      "buttontext": "KICKCCK_MENU",
+      "check": true,
+      "AuthorisedCategories": "com_content",
+      "links": [
+        {
+          "linktext" : "KICKCCK_DEMO",
+          "link":"index.php?option=com_content&view=article&layout=edit&cck=demo"
+        }
+      ]
+    }
+  }
+}
