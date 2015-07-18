@@ -8567,8 +8567,9 @@ button.close {
 h1,
 h2,
 h3 {
-  background: #000000;
+  background: #919191;
   text-transform: uppercase;
+  color: white;
 }
 a {
   text-decoration: underline;
@@ -8664,6 +8665,27 @@ body.area-events .btn {
 }
 body.area-events .bg {
   background: rgba(133, 192, 60, 0.8) !important;
+}
+a.skiplink {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  position: absolute;
+  background: #196dab;
+  color: white;
+}
+a.skiplink:active,
+a.skiplink:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 /* Retina */
 /* Extra small devices (phones, up to 480px) */

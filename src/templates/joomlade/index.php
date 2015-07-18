@@ -66,8 +66,8 @@ $doc->addScript($tpath.'/js/joomlade.js');
 </head>
 <body>
   <!-- Hidden anchor links for accessibility -->
-  <a href="#mainnav" class="hiddenanchor"><?php echo JText::_('TPL_JOOMLADE_ANCHOR_NAV'); ?></a>
-  <a href="#maincontent" class="hiddenanchor"><?php echo JText::_('TPL_JOOMLADE_ANCHOR_CONTENT'); ?></a>
+  <a href="#mainnav" class="skiplink"><?php echo JText::_('TPL_JOOMLADE_ANCHOR_NAV'); ?></a>
+  <a href="#maincontent" class="skiplink"><?php echo JText::_('TPL_JOOMLADE_ANCHOR_CONTENT'); ?></a>
 
   <div id="outerwrapper" class="container">
     <header id="header">
