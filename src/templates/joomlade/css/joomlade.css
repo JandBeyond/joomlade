@@ -8613,7 +8613,7 @@ body {
 .area-joomla a:focus {
   color: #2f6ba6;
 }
-.area-joomla i:before {
+.area-joomla span:before {
   color: #679ed4;
 }
 .area-joomla .btn {
@@ -8634,7 +8634,7 @@ body {
 .area-forum a:focus {
   color: #a21d12;
 }
-.area-forum i:before {
+.area-forum span:before {
   color: #e84032;
 }
 .area-forum .btn {
@@ -8655,7 +8655,7 @@ body {
 .area-community a:focus {
   color: #be7f06;
 }
-.area-community i:before {
+.area-community span:before {
   color: #f9b431;
 }
 .area-community .btn {
@@ -8676,7 +8676,7 @@ body {
 .area-events a:focus {
   color: #4f7224;
 }
-.area-events i:before {
+.area-events span:before {
   color: #85c03c;
 }
 .area-events .btn {
@@ -8685,7 +8685,7 @@ body {
 .area-events .bg {
   background: rgba(133, 192, 60, 0.8) !important;
 }
-.icon_module i:before {
+.icon_module span:before {
   font-size: 60px;
 }
 .icon_module {
