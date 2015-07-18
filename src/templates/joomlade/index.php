@@ -67,7 +67,7 @@ $doc->addScript($tpath.'/js/joomlade.js');
   <script src="<?php echo $tpath; ?>/js/respond.min.js"></script>
   <![endif]-->
 </head>
-<body class="<?php echo $pageclass ?> shownav">
+<body class="<?php echo $pageclass ?>">
   <!-- Hidden anchor links for accessibility -->
   <a href="#mainnav" class="skiplink"><?php echo JText::_('TPL_JOOMLADE_ANCHOR_NAV'); ?></a>
   <a href="#maincontent" class="skiplink"><?php echo JText::_('TPL_JOOMLADE_ANCHOR_CONTENT'); ?></a>
