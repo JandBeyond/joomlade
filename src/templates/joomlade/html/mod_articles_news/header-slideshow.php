@@ -17,14 +17,14 @@ defined('_JEXEC') or die;
     </ol>
     <div class="carousel-inner" role="listbox">
         <?php foreach ($list as $key=>$item): ?>
-        <div class="item <?php echo ($key == '0' ? 'active' : ''); ?>">
-        <?php $images = json_decode($item->images);?>
-        <img class="slide" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="slide">
-        <div class="carousel-caption">
-        <?php echo $item->title; ?>
-        <?php echo $item->introtext; ?>
-        </div>
-        </div>
+            <div class="item <?php echo ($key == '0') ? 'active' : ''; ?>">
+                <?php $images = json_decode($item->images);?>
+                <img class="slide" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo $item->title; ?>">
+                <div class="carousel-caption">
+                    <?php echo $item->title; ?>
+                    <?php echo $item->introtext; ?>
+                </div>
+            </div>
         <?php endforeach; ?>
     </div>
     <!-- Controls -->
