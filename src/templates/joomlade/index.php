@@ -69,7 +69,7 @@ $doc->addScript($tpath.'/js/joomlade.js');
   <a href="#mainnav" class="hiddenanchor"><?php echo JText::_('TPL_JOOMLADE_ANCHOR_NAV'); ?></a>
   <a href="#maincontent" class="hiddenanchor"><?php echo JText::_('TPL_JOOMLADE_ANCHOR_CONTENT'); ?></a>
 
-  <div id="outerwrapper" class="container-fluid">
+  <div id="outerwrapper" class="container">
     <header id="header">
       <img id="logo" src="<?php echo $tpath; ?>" alt="Logo des Joomla Projekts" />
     
