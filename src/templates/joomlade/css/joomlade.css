@@ -8832,12 +8832,9 @@ body.shownav #navtoggler {
   right: calc(250px + 30px);
 }
 /*** main nav mobile styles ***/
-body.shownav #mainnav {
-  /*** main nav desktop styles ***/
-}
 body.shownav #mainnav ul.menu {
   list-style-type: none;
-  margin: calc(30px/2) 0 0 0;
+  margin: calc(30px / 2) 0 0 0;
   padding: 0;
 }
 body.shownav #mainnav ul.menu li {
@@ -8860,7 +8857,7 @@ body.shownav #mainnav ul.menu ul.nav-child li:hover {
   background: none;
 }
 body.shownav #mainnav ul.menu ul.nav-child li a {
-  padding: 0 calc(30px*2);
+  padding: 0 calc(30px * 2);
 }
 body.shownav #mainnav ul.menu li.joomla:focus,
 body.shownav #mainnav ul.menu li.joomla:hover {
@@ -8880,35 +8877,32 @@ body.shownav #mainnav ul.menu li.forum:hover {
 }
 body.shownav #mainnav ul.menu li.joomla.parent li a:hover,
 body.shownav #mainnav ul.menu li.joomla.parent li a:focus {
-  background: none!important;
+  background: none !important;
   color: #679ed4;
 }
 body.shownav #mainnav ul.menu li.community.parent li a:hover,
 body.shownav #mainnav ul.menu li.community.parent li a:focus {
-  background: none!important;
+  background: none !important;
   color: #f9b431;
 }
 body.shownav #mainnav ul.menu li.events.parent li a:hover,
 body.shownav #mainnav ul.menu li.events.parent li a:focus {
-  background: none!important;
+  background: none !important;
   color: #85c03c;
 }
 body.shownav #mainnav ul.menu li.forum.parent li a:hover,
 body.shownav #mainnav ul.menu li.forum.parent li a:focus {
-  background: none!important;
+  background: none !important;
   color: #e84032;
 }
+/*** main nav desktop styles ***/
 @media (min-width: 768px) {
-  body.shownav #mainnav {
-    /*** reset mobile-first styles **/
-    /*** submenu level 1 ***/
-    /*** all other levels ***/
-  }
-  body.shownav #mainnav body.shownav #outerwrapper {
+  /*** reset mobile-first styles **/
+  body.shownav #outerwrapper {
     margin-left: auto;
   }
-  body.shownav #mainnav body.shownav #mainnav,
-  body.shownav #mainnav #mainnav {
+  body.shownav #mainnav,
+  #mainnav {
     height: auto;
     width: auto;
     right: 15px;
@@ -8918,65 +8912,66 @@ body.shownav #mainnav ul.menu li.forum.parent li a:focus {
     clip: auto;
     /** mainlevel **/
   }
-  body.shownav #mainnav body.shownav #mainnav a,
-  body.shownav #mainnav #mainnav a {
+  body.shownav #mainnav a,
+  #mainnav a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     padding: 0;
   }
-  body.shownav #mainnav body.shownav #mainnav a:hover,
-  body.shownav #mainnav #mainnav a:hover {
+  body.shownav #mainnav a:hover,
+  #mainnav a:hover {
     text-decoration: underline;
   }
-  body.shownav #mainnav body.shownav #mainnav ul,
-  body.shownav #mainnav #mainnav ul {
+  body.shownav #mainnav ul,
+  #mainnav ul {
     list-style: none;
   }
-  body.shownav #mainnav body.shownav #mainnav > ul,
-  body.shownav #mainnav #mainnav > ul {
+  body.shownav #mainnav > ul,
+  #mainnav > ul {
     padding: 0;
     margin: 0;
   }
-  body.shownav #mainnav body.shownav #mainnav > ul > li,
-  body.shownav #mainnav #mainnav > ul > li {
+  body.shownav #mainnav > ul > li,
+  #mainnav > ul > li {
     display: inline-block;
   }
-  body.shownav #mainnav body.shownav #mainnav > ul > li:before,
-  body.shownav #mainnav #mainnav > ul > li:before {
+  body.shownav #mainnav > ul > li:before,
+  #mainnav > ul > li:before {
     content: "|";
     display: inline-block;
     margin: 0 2px;
     color: white;
   }
-  body.shownav #mainnav body.shownav #mainnav > ul > li:first-child:before,
-  body.shownav #mainnav #mainnav > ul > li:first-child:before {
+  body.shownav #mainnav > ul > li:first-child:before,
+  #mainnav > ul > li:first-child:before {
     content: "";
     display: none;
   }
-  body.shownav #mainnav body.shownav #mainnav > ul > li.hidden-lg:before,
-  body.shownav #mainnav #mainnav > ul > li.hidden-lg:before {
+  body.shownav #mainnav > ul > li.hidden-lg:before,
+  #mainnav > ul > li.hidden-lg:before {
     display: none;
   }
-  body.shownav #mainnav body.shownav #mainnav > li > a,
-  body.shownav #mainnav #mainnav > li > a {
+  body.shownav #mainnav > li > a,
+  #mainnav > li > a {
     padding: 2px 15px;
   }
-  body.shownav #mainnav > ul > li.active > a,
-  body.shownav #mainnav > ul > li:hover > a,
-  body.shownav #mainnav > ul > li > a:focus {
+  /*** submenu level 1 ***/
+   > ul > li.active > a,
+   > ul > li:hover > a,
+   > ul > li > a:focus {
     background: white;
     border-radius: 5px;
     text-decoration: none;
     color: #000000;
   }
-  body.shownav #mainnav > ul > li.parent:hover > a,
-  body.shownav #mainnav > ul > li.parent > a:focus {
+   > ul > li.parent:hover > a,
+   > ul > li.parent > a:focus {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
   }
-  body.shownav #mainnav > ul > li:hover > ul,
-  body.shownav #mainnav > ul > li:focus > ul {
+   > ul > li:hover > ul,
+   > ul > li:focus > ul {
     display: block;
     position: absolute;
     background: white;
@@ -8985,11 +8980,12 @@ body.shownav #mainnav ul.menu li.forum.parent li a:focus {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
   }
-  body.shownav #mainnav > ul > li:hover > ul a,
-  body.shownav #mainnav > ul > li:focus > ul a {
+   > ul > li:hover > ul a,
+   > ul > li:focus > ul a {
     color: #000000;
   }
-  body.shownav #mainnav > ul ul {
+  /*** all other levels ***/
+   > ul ul {
     display: none;
   }
 }
