@@ -15,7 +15,7 @@ defined('_JEXEC') or die;
   <!-- Indicators -->
   <ol class="carousel-indicators">
       <?php foreach ($list as $key=>$item): ?>
-    <li data-target="#carousel-example-generic" data-slide-to="<?php echo $key; ?>" class="<?php if($key == 0) ? 'active':''; ?>"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="<?php echo $key; ?>" class="<?php ($key == '0' ? 'active' : ''); ?>"></li>
     <li data-target="#carousel-example-generic" data-slide-to="<?php echo $key; ?>"></li>
 
       <?php enforeach; ?>
