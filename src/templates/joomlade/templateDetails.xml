@@ -35,6 +35,15 @@
 	</files>
 
     <positions>
+		<position>nav</position>
+		<position>header</position>
+		<position>footer</position>
+		<position>top-a</position>
+		<position>top-b</position>
+		<position>top-c</position>
+		<position>bottom-a</position>
+		<position>bottom-b</position>
+		<position>bottom-c</position>
     </positions>
 
 	<config><!-- no need to change -->
