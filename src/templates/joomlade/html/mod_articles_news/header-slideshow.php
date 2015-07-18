@@ -18,7 +18,7 @@ defined('_JEXEC') or die;
     <li data-target="#carousel-example-generic" data-slide-to="<?php echo $key; ?>" class="<?php ($key == '0' ? 'active' : ''); ?>"></li>
     <li data-target="#carousel-example-generic" data-slide-to="<?php echo $key; ?>"></li>
 
-      <?php enforeach; ?>
+      <?php endforeach; ?>
   </ol>
     
     <div class="carousel-inner" role="listbox">
@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
         </div>
             
         </div>
-        <?php enforeach; ?>
+        <?php endforeach; ?>
     </div>
 
   <!-- Controls -->
