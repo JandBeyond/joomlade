@@ -26,7 +26,7 @@ $menu               = $app->getMenu();
 $active             = $app->getMenu()->getActive();
 $pageclass          = $app->getParams()->get('pageclass_sfx');
 $tpath              = $this->baseurl.'/templates/'.$this->template;
-$googlefont         = $params->get('googlefont');
+$googlefont         = $params->get('googlefont', 'Open+Sans:400,800');
 $showsystemoutput   = $params->get('showsystemoutput', 1);
 
 $isFrontpage        = false;

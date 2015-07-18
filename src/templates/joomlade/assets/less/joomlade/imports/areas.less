@@ -1,0 +1,43 @@
+.project-area(@color)
+{
+  h1, h2, h3 {
+    background-color: @color;
+  }
+
+  a {
+    color: @color;
+
+    &:hover,
+    &:focus {
+      color: darken(@color, 20%)
+    }
+  }
+
+  i:before {
+    color: @color;
+  }
+
+  .btn {
+    background: @color;
+  }
+
+  .bg {
+    background: fade(@color, 80%) !important;
+  }
+}
+
+body.area-joomla {
+  .project-area(@color-blue);
+}
+
+body.area-forum {
+  .project-area(@color-red);
+}
+
+body.area-community {
+  .project-area(@color-yellow);
+}
+
+body.area-events {
+  .project-area(@color-green);
+}

@@ -2,34 +2,35 @@
 // Variables
 // --------------------------------------------------
 
+// Project specific colors
+@color-yellow:          #f9b431;
+@color-green:           #85c03c;
+@color-blue:            #679ed4;
+@color-grey:            #919191;
+@color-red:             #e84032;
+@color-darkblue:        #196DAB;
+@color-font:            #000;
+@fbig:                  28px;
+@fmedium:               22px;
+@fsmall:                16px;
+@t_uc:                  uppercase;
 
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@gray-base:              #000;
+@gray-base:              @color-grey;
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
 @gray-dark:              lighten(@gray-base, 20%);   // #333
 @gray:                   lighten(@gray-base, 33.5%); // #555
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         darken(#428bca, 6.5%); // #337ab7
-@brand-success:         #5cb85c;
-@brand-info:            #5bc0de;
-@brand-warning:         #f0ad4e;
-@brand-danger:          #d9534f;
-@gelb:                  #f9b431;
-@gruen:                 #85c03c;
-@blau:                  #679ed4;
-@grau:                  #919191;
-@rot:                   #e84032;
-@fbig:                  28px;
-@fmedium:               22px;
-@fsmall:                16px;
-@t_uc:                  uppercase;
-
-
+@brand-primary:         @color-darkblue;
+@brand-success:         @color-green;
+@brand-info:            @color-blue;
+@brand-warning:         @color-yellow;
+@brand-danger:          @color-red;
 
 //== Scaffolding
 //
@@ -38,14 +39,14 @@
 //** Background color for `<body>`.
 @body-bg:               #fff;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+@text-color:            @color-font;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
-@link-hover-decoration: underline;
+@link-hover-decoration: none;
 
 
 //== Typography
@@ -58,25 +59,25 @@
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
+@font-size-base:          16px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
-@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
-@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h1:            floor((@font-size-base * 1.75)); // ~26px
+@font-size-h2:            floor((@font-size-base * 1.4)); // ~22px
+@font-size-h3:            floor((@font-size-base * 1.2)); // ~19px
+@font-size-h4:            ceil((@font-size-base * 1.1)); // ~18px
 @font-size-h5:            @font-size-base;
-@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~14px
 
 //** Unit-less `line-height` for use in components like buttons.
-@line-height-base:        1.428571429; // 20/14
+@line-height-base:        1.375; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
-@headings-font-weight:    500;
+@headings-font-weight:    600;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
@@ -112,9 +113,9 @@
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
-@border-radius-small:       3px;
+@border-radius-base:        0px;
+@border-radius-large:       0px;
+@border-radius-small:       0px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
