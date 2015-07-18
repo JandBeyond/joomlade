@@ -8563,19 +8563,6 @@ button.close {
 .fa-medium:before {
   content: "\f23a";
 }
-/*Überschriften*/
-h1,
-h2,
-h3,
-h1 a,
-h2 a,
-h3 a {
-  background: #919191;
-  text-transform: uppercase;
-  color: white;
-  text-align: center;
-  padding: 5px;
-}
 a {
   text-decoration: underline;
 }
@@ -8632,8 +8619,19 @@ body {
 }
 .area-joomla h1,
 .area-joomla h2,
-.area-joomla h3 {
-  background-color: #679ed4;
+.area-joomla h3,
+.area-joomla h1 a,
+.area-joomla h2 a,
+.area-joomla h3 a {
+  color: #679ed4;
+}
+.area-joomla h1.moduleheading,
+.area-joomla h2.moduleheading,
+.area-joomla h3.moduleheading,
+.area-joomla h1 a.moduleheading,
+.area-joomla h2 a.moduleheading,
+.area-joomla h3 a.moduleheading {
+  background: #679ed4;
 }
 .area-joomla a {
   color: #679ed4;
@@ -8653,8 +8651,19 @@ body {
 }
 .area-forum h1,
 .area-forum h2,
-.area-forum h3 {
-  background-color: #e84032;
+.area-forum h3,
+.area-forum h1 a,
+.area-forum h2 a,
+.area-forum h3 a {
+  color: #e84032;
+}
+.area-forum h1.moduleheading,
+.area-forum h2.moduleheading,
+.area-forum h3.moduleheading,
+.area-forum h1 a.moduleheading,
+.area-forum h2 a.moduleheading,
+.area-forum h3 a.moduleheading {
+  background: #e84032;
 }
 .area-forum a {
   color: #e84032;
@@ -8674,8 +8683,19 @@ body {
 }
 .area-community h1,
 .area-community h2,
-.area-community h3 {
-  background-color: #f9b431;
+.area-community h3,
+.area-community h1 a,
+.area-community h2 a,
+.area-community h3 a {
+  color: #f9b431;
+}
+.area-community h1.moduleheading,
+.area-community h2.moduleheading,
+.area-community h3.moduleheading,
+.area-community h1 a.moduleheading,
+.area-community h2 a.moduleheading,
+.area-community h3 a.moduleheading {
+  background: #f9b431;
 }
 .area-community a {
   color: #f9b431;
@@ -8695,8 +8715,19 @@ body {
 }
 .area-events h1,
 .area-events h2,
-.area-events h3 {
-  background-color: #85c03c;
+.area-events h3,
+.area-events h1 a,
+.area-events h2 a,
+.area-events h3 a {
+  color: #85c03c;
+}
+.area-events h1.moduleheading,
+.area-events h2.moduleheading,
+.area-events h3.moduleheading,
+.area-events h1 a.moduleheading,
+.area-events h2 a.moduleheading,
+.area-events h3 a.moduleheading {
+  background: #85c03c;
 }
 .area-events a {
   color: #85c03c;
@@ -8716,8 +8747,19 @@ body {
 }
 .area-neutral h1,
 .area-neutral h2,
-.area-neutral h3 {
-  background-color: #919191;
+.area-neutral h3,
+.area-neutral h1 a,
+.area-neutral h2 a,
+.area-neutral h3 a {
+  color: #919191;
+}
+.area-neutral h1.moduleheading,
+.area-neutral h2.moduleheading,
+.area-neutral h3.moduleheading,
+.area-neutral h1 a.moduleheading,
+.area-neutral h2 a.moduleheading,
+.area-neutral h3 a.moduleheading {
+  background: #919191;
 }
 .area-neutral a {
   color: #919191;
@@ -8904,6 +8946,18 @@ ul.tags.inline {
 }
 ul.tags.inline li {
   display: inline!important;
+}
+h1.moduleheading,
+h2.moduleheading,
+h3.moduleheading,
+h1.moduleheading a,
+h2.moduleheading a,
+h3.moduleheading a {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  background: #919191;
 }
 .icon_module span.fa:before {
   font-size: 60px;

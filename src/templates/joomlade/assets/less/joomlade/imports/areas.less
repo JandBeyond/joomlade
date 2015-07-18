@@ -1,7 +1,11 @@
 .project-area(@color)
 {
-  h1, h2, h3 {
-    background-color: @color;
+  h1, h2, h3, h1 a, h2 a, h3 a {
+    color: @color;
+
+    &.moduleheading {
+      background: @color;
+    }
   }
 
   a {
