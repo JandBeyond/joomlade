@@ -20,6 +20,7 @@ defined('_JEXEC') or die;
   </ol>
     
     <div class="carousel-inner" role="listbox">
+        <?php $key = '0'; ?>
         <?php foreach ($list as $key=>$item): ?>
             <div class="item" class="<?php echo ($key == '0' ? 'active' : ''); ?>">
             <?php $images = json_decode($item->images);?>
