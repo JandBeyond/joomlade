@@ -1,0 +1,215 @@
+/* 9 Owl Carousel
+----------------------------------------------------------------------------- */
+.owl-carousel {
+	cursor:grab;
+	cursor:-moz-grab;
+	cursor:-webkit-grab;
+}
+.container .owl-carousel {
+	cursor: default;
+	cursor: -moz-default;
+	cursor: -webkit-default;
+}
+.container .content-slider-with-large-controls,
+.container .content-slider-with-large-controls-autoplay { 
+	margin-bottom: 50px;
+	border: 1px solid #f5f5f5;
+}
+/* Styling Next and Prev buttons */
+/*style-1*/
+.content-slider-with-controls .owl-buttons,
+.content-slider-with-controls-autoplay .owl-buttons { 
+	width: 100%; 
+	height: 0; 
+	position: absolute; 
+	top: 50%;
+	margin-top: -15px;
+	z-index: 10;
+}
+.content-slider-with-controls .owl-buttons div,
+.content-slider-with-controls-autoplay .owl-buttons div { 
+	display: inline-block;
+	font-size: 14px;
+	position: absolute;
+	text-transform: capitalize;
+	font-weight: 300;
+	color: transparent;
+	background: rgba(0,0,0,0.5);
+	padding: 5px 5px;
+	.transition(all 0.2s ease-in-out);
+}
+.content-slider-with-controls .owl-buttons div:after,
+.content-slider-with-controls-autoplay .owl-buttons div:after { 
+	font-family: "FontAwesome"; 
+	position: absolute; 
+	font-size: 16px; 
+	line-height: 1; 
+	top: 50%; 
+	margin-top: -8px;
+}
+.content-slider-with-controls .owl-buttons .owl-prev,
+.content-slider-with-controls-autoplay .owl-buttons .owl-prev { 
+	left: 0;
+	padding-left: 0px;
+}
+.content-slider-with-controls .owl-buttons .owl-prev:hover,
+.content-slider-with-controls-autoplay .owl-buttons .owl-prev:hover { 
+	padding-left: 25px;
+	padding-right: 10px;
+	color: #ffffff;
+}
+.content-slider-with-controls .owl-buttons .owl-prev:after,
+.content-slider-with-controls-autoplay .owl-buttons .owl-prev:after { 
+	content: "\f104"; 
+	left: 13px;
+	color: #ffffff;
+	.transition(all 0.2s ease-in-out);
+}
+.content-slider-with-controls .owl-buttons .owl-prev:hover:after,
+.content-slider-with-controls-autoplay .owl-buttons .owl-prev:hover:after { 
+	left: 8px;
+}
+.content-slider-with-controls .owl-buttons .owl-next,
+.content-slider-with-controls-autoplay .owl-buttons .owl-next { 
+	right: 0px; 
+	left: auto;
+	padding-right: 0px;
+}
+.content-slider-with-controls .owl-buttons .owl-next:hover,
+.content-slider-with-controls-autoplay .owl-buttons .owl-next:hover { 
+	padding-right: 25px;
+	padding-left: 10px;
+	color: #ffffff;
+}
+.content-slider-with-controls .owl-buttons .owl-next:after,
+.content-slider-with-controls-autoplay .owl-buttons .owl-next:after { 
+	content: "\f105"; 
+	right: 13px; 
+	color: #ffffff;
+	.transition(all 0.2s ease-in-out);
+}
+.content-slider-with-controls .owl-buttons .owl-next:hover:after,
+.content-slider-with-controls-autoplay .owl-buttons .owl-next:hover:after { 
+	right: 8px;
+}
+/*style-2*/
+.content-slider-with-large-controls .owl-buttons,
+.content-slider-with-large-controls-autoplay .owl-buttons { 
+	width: 100%; 
+	height: 0; 
+	position: absolute; 
+	top: 50%; 
+}
+.container .content-slider-with-large-controls .owl-buttons,
+.container .content-slider-with-large-controls-autoplay .owl-buttons { 
+	top: auto;
+	bottom: -10px;
+}
+.content-slider-with-large-controls .owl-buttons div,
+.content-slider-with-large-controls-autoplay .owl-buttons div { 
+	display: inline-block; 
+	font-size: 18px; 
+	position: absolute;
+	text-transform: capitalize;
+	font-weight: 300;
+	color: @gray-lighter;
+}
+.content-slider-with-large-controls .owl-buttons div:after,
+.content-slider-with-large-controls-autoplay .owl-buttons div:after { 
+	font-family: "FontAwesome"; 
+	position: absolute; 
+	font-size: 16px; 
+	line-height: 1; 
+	top: 50%; 
+	margin-top: -8px;
+}
+.content-slider-with-large-controls .owl-buttons .owl-prev,
+.content-slider-with-large-controls-autoplay .owl-buttons .owl-prev { 
+	left: 0;
+	padding-left: 30px;
+}
+.content-slider-with-large-controls .owl-buttons .owl-prev:after,
+.content-slider-with-large-controls-autoplay .owl-buttons .owl-prev:after { 
+	content: "\f104"; 
+	left: 15px;
+	color: @base-color;
+}
+.content-slider-with-large-controls .owl-buttons .owl-next,
+.content-slider-with-large-controls-autoplay .owl-buttons .owl-next { 
+	right: 0px; 
+	left: auto;
+	padding-right: 30px;
+}
+.content-slider-with-large-controls .owl-buttons .owl-next:after,
+.content-slider-with-large-controls-autoplay .owl-buttons .owl-next:after { 
+	content: "\f105"; 
+	right: 15px; 
+	color: @base-color;
+}
+.container .content-slider-with-large-controls .owl-buttons .owl-prev,
+.container .content-slider-with-large-controls-autoplay .owl-buttons .owl-prev { 
+	padding-left: 15px;
+}
+.container .content-slider-with-large-controls .owl-buttons .owl-prev:after,
+.container .content-slider-with-large-controls-autoplay .owl-buttons .owl-prev:after { 
+	left: 0px;
+}
+.container .content-slider-with-large-controls .owl-buttons .owl-next,
+.container .content-slider-with-large-controls-autoplay .owl-buttons .owl-next { 
+	padding-right: 15px;
+}
+.container .content-slider-with-large-controls .owl-buttons .owl-next:after,
+.container .content-slider-with-large-controls-autoplay .owl-buttons .owl-next:after { 
+	right: 0px; 
+}
+/* Large and Medium devices (desktops, tablets less than 1199px) */
+@media (max-width: 1199px) { 
+	.content-slider-with-large-controls .owl-buttons,
+	.content-slider-with-large-controls-autoplay .owl-buttons { 
+		top: 98%;
+	}
+}
+.buttons-hide .owl-buttons {
+	display: none;
+}
+/* Styling Pagination*/
+.owl-pagination,
+.owl-pagination { 
+	position: absolute;
+	bottom: 0px;
+	text-align: center;
+	width: 100%;
+	z-index: 10;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-page {
+	display: inline-block;
+	zoom: 1;
+}
+.owl-controls .owl-page span,
+.owl-controls .owl-page span  {
+	display: block;
+	width: 9px;
+	height: 9px;
+	margin: 5px 3px;
+	.opacity(0.5);
+	.border-radius(20px);
+	background: #ffffff;
+}
+.dark-controls .owl-controls .owl-page span,
+.dark-controls .owl-controls .owl-page span { 
+	background: #333;
+}
+.owl-controls .owl-page.active span,
+.owl-controls.clickable .owl-page:hover span,
+.owl-controls .owl-page.active span,
+.owl-controls.clickable .owl-page:hover span {
+	.opacity(1);
+}
+/* Small devices (tablets, phones less than 767px) */
+@media (max-width: 767px) { 
+	.owl-controls .owl-page span,
+	.owl-controls .owl-page span  {
+		background: #000000;
+	}
+}

@@ -1,0 +1,24 @@
+html,body {height: 100%;}
+a {
+	&:hover,&:active,&:focus, &:visited {
+		outline: none;
+		background: none;
+	}
+}
+.img-responsive-100 {
+	width: 100%;
+	display: inline-block;
+	height: auto;
+}
+.container > .navbar-collapse {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.text-right {text-align: right;}
+/*Fix Header*/
+@media (min-width: @screen-md-min) {
+	.md-text-right {text-align: right;}
+}
+@media (min-width: @screen-sm-min) {
+	.sm-text-right {text-align: right;}
+}
