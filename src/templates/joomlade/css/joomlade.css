@@ -8904,6 +8904,7 @@ body.shownav #mainnav ul.menu ul.nav-child li a {
     overflow: visible;
     z-index: 10;
     clip: auto;
+    position: absolute;
     /** mainlevel **/
     /*** submenu level 1 ***/
     /*** all other levels ***/
