@@ -8943,13 +8943,9 @@ body.shownav #mainnav ul.menu li.forum.parent li a:focus {
     margin: 0 2px;
     color: white;
   }
-  body.shownav #mainnav > ul > li:first-child:before,
-  #mainnav > ul > li:first-child:before {
+  body.shownav #mainnav > ul > li:nth-child(2):before,
+  #mainnav > ul > li:nth-child(2):before {
     content: "";
-    display: none;
-  }
-  body.shownav #mainnav > ul > li.hidden-lg:before,
-  #mainnav > ul > li.hidden-lg:before {
     display: none;
   }
   body.shownav #mainnav > li > a,
