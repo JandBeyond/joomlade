@@ -8896,11 +8896,6 @@ body.shownav #mainnav ul.menu ul.nav-child li a {
 }
 /*** main nav desktop styles ***/
 @media (min-width: 768px) {
-  /*** reset mobile-first styles **/
-  body.shownav #outerwrapper {
-    margin-left: auto;
-  }
-  body.shownav #mainnav,
   #mainnav {
     height: auto;
     width: auto;
@@ -8913,67 +8908,52 @@ body.shownav #mainnav ul.menu ul.nav-child li a {
     /*** submenu level 1 ***/
     /*** all other levels ***/
   }
-  body.shownav #mainnav a,
   #mainnav a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     padding: 0;
   }
-  body.shownav #mainnav a:hover,
   #mainnav a:hover {
     text-decoration: underline;
   }
-  body.shownav #mainnav ul,
   #mainnav ul {
     list-style: none;
   }
-  body.shownav #mainnav > ul,
   #mainnav > ul {
     padding: 0;
     margin: 0;
   }
-  body.shownav #mainnav > ul > li,
   #mainnav > ul > li {
     display: inline-block;
   }
-  body.shownav #mainnav > ul > li:before,
   #mainnav > ul > li:before {
     content: "|";
     display: inline-block;
     margin: 0 2px;
     color: white;
   }
-  body.shownav #mainnav > ul > li:first-child:before,
   #mainnav > ul > li:first-child:before {
     content: "";
     display: none;
   }
-  body.shownav #mainnav > ul > li > a,
   #mainnav > ul > li > a {
     padding: 2px 15px;
   }
-  body.shownav #mainnav > ul > li.active > a,
   #mainnav > ul > li.active > a,
-  body.shownav #mainnav > ul > li:hover > a,
   #mainnav > ul > li:hover > a,
-  body.shownav #mainnav > ul > li > a:focus,
   #mainnav > ul > li > a:focus {
     background: white;
     border-radius: 5px;
     text-decoration: none;
     color: #000000;
   }
-  body.shownav #mainnav > ul > li.parent:hover > a,
   #mainnav > ul > li.parent:hover > a,
-  body.shownav #mainnav > ul > li.parent > a:focus,
   #mainnav > ul > li.parent > a:focus {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
   }
-  body.shownav #mainnav > ul > li:hover > ul,
   #mainnav > ul > li:hover > ul,
-  body.shownav #mainnav > ul > li:focus > ul,
   #mainnav > ul > li:focus > ul {
     display: block;
     position: absolute;
@@ -8983,13 +8963,10 @@ body.shownav #mainnav ul.menu ul.nav-child li a {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
   }
-  body.shownav #mainnav > ul > li:hover > ul a,
   #mainnav > ul > li:hover > ul a,
-  body.shownav #mainnav > ul > li:focus > ul a,
   #mainnav > ul > li:focus > ul a {
     color: #000000;
   }
-  body.shownav #mainnav > ul ul,
   #mainnav > ul ul {
     display: none;
   }
