@@ -8828,6 +8828,13 @@ body.shownav #mainnav {
   clip: auto;
   background: #1e1e1e;
 }
+body.shownav #navtoggler {
+  right: calc(250px + 30px);
+}
+/*** main nav mobile styles ***/
+body.shownav #mainnav {
+  /*** main nav desktop styles ***/
+}
 body.shownav #mainnav ul.menu {
   list-style-type: none;
   margin: calc(30px/2) 0 0 0;
@@ -8836,6 +8843,24 @@ body.shownav #mainnav ul.menu {
 body.shownav #mainnav ul.menu li {
   line-height: calc(1.375 * 2.25);
   font-size: 20px;
+}
+body.shownav #mainnav ul.menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  padding: 0 30px;
+}
+body.shownav #mainnav ul.menu ul.nav-child {
+  list-style-type: none;
+  padding: 0;
+  background: #1e1e1e;
+}
+body.shownav #mainnav ul.menu ul.nav-child li:focus,
+body.shownav #mainnav ul.menu ul.nav-child li:hover {
+  background: none;
+}
+body.shownav #mainnav ul.menu ul.nav-child li a {
+  padding: 0 calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.joomla:focus,
 body.shownav #mainnav ul.menu li.joomla:hover {
@@ -8852,12 +8877,6 @@ body.shownav #mainnav ul.menu li.events:hover {
 body.shownav #mainnav ul.menu li.forum:focus,
 body.shownav #mainnav ul.menu li.forum:hover {
   background: #e84032;
-}
-body.shownav #mainnav ul.menu a {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
-  padding: 0 30px;
 }
 body.shownav #mainnav ul.menu li.joomla.parent li a:hover,
 body.shownav #mainnav ul.menu li.joomla.parent li a:focus {
@@ -8879,30 +8898,17 @@ body.shownav #mainnav ul.menu li.forum.parent li a:focus {
   background: none!important;
   color: #e84032;
 }
-body.shownav #mainnav ul.menu ul.nav-child {
-  list-style-type: none;
-  padding: 0;
-  background: #1e1e1e;
-}
-body.shownav #mainnav ul.menu ul.nav-child li:focus,
-body.shownav #mainnav ul.menu ul.nav-child li:hover {
-  background: none;
-}
-body.shownav #mainnav ul.menu ul.nav-child li a {
-  padding: 0 calc(30px*2);
-}
-body.shownav #navtoggler {
-  right: calc(250px + 30px);
-}
-/*** main nav mobile styles ***/
-/*** main nav desktop styles ***/
 @media (min-width: 768px) {
-  /*** reset mobile-first styles **/
-  body.shownav #outerwrapper {
+  body.shownav #mainnav {
+    /*** reset mobile-first styles **/
+    /*** submenu level 1 ***/
+    /*** all other levels ***/
+  }
+  body.shownav #mainnav body.shownav #outerwrapper {
     margin-left: auto;
   }
-  body.shownav #mainnav,
-  #mainnav {
+  body.shownav #mainnav body.shownav #mainnav,
+  body.shownav #mainnav #mainnav {
     height: auto;
     width: auto;
     right: 15px;
@@ -8911,71 +8917,66 @@ body.shownav #navtoggler {
     z-index: 10;
     clip: auto;
     /** mainlevel **/
-    /*** submenu level 1 ***/
-    /*** all other levels ***/
   }
-  body.shownav #mainnav a,
-  #mainnav a {
+  body.shownav #mainnav body.shownav #mainnav a,
+  body.shownav #mainnav #mainnav a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
     padding: 0;
   }
-  body.shownav #mainnav a:hover,
-  #mainnav a:hover {
+  body.shownav #mainnav body.shownav #mainnav a:hover,
+  body.shownav #mainnav #mainnav a:hover {
     text-decoration: underline;
   }
-  body.shownav #mainnav ul,
-  #mainnav ul {
+  body.shownav #mainnav body.shownav #mainnav ul,
+  body.shownav #mainnav #mainnav ul {
     list-style: none;
   }
-  body.shownav #mainnav > ul,
-  #mainnav > ul {
+  body.shownav #mainnav body.shownav #mainnav > ul,
+  body.shownav #mainnav #mainnav > ul {
     padding: 0;
     margin: 0;
   }
-  body.shownav #mainnav > ul > li,
-  #mainnav > ul > li {
+  body.shownav #mainnav body.shownav #mainnav > ul > li,
+  body.shownav #mainnav #mainnav > ul > li {
     display: inline-block;
   }
-  body.shownav #mainnav > ul > li:before,
-  #mainnav > ul > li:before {
+  body.shownav #mainnav body.shownav #mainnav > ul > li:before,
+  body.shownav #mainnav #mainnav > ul > li:before {
     content: "|";
     display: inline-block;
     margin: 0 2px;
     color: white;
   }
-  body.shownav #mainnav > ul > li:first-child:before,
-  #mainnav > ul > li:first-child:before {
+  body.shownav #mainnav body.shownav #mainnav > ul > li:first-child:before,
+  body.shownav #mainnav #mainnav > ul > li:first-child:before {
     content: "";
     display: none;
   }
-  body.shownav #mainnav > ul > li > a,
-  #mainnav > ul > li > a {
+  body.shownav #mainnav body.shownav #mainnav > ul > li.hidden-lg:before,
+  body.shownav #mainnav #mainnav > ul > li.hidden-lg:before {
+    display: none;
+  }
+  body.shownav #mainnav body.shownav #mainnav > li > a,
+  body.shownav #mainnav #mainnav > li > a {
     padding: 2px 15px;
   }
   body.shownav #mainnav > ul > li.active > a,
-  #mainnav > ul > li.active > a,
   body.shownav #mainnav > ul > li:hover > a,
-  #mainnav > ul > li:hover > a,
-  body.shownav #mainnav > ul > li > a:focus,
-  #mainnav > ul > li > a:focus {
+  body.shownav #mainnav > ul > li > a:focus {
     background: white;
     border-radius: 5px;
     text-decoration: none;
     color: #000000;
   }
   body.shownav #mainnav > ul > li.parent:hover > a,
-  #mainnav > ul > li.parent:hover > a,
-  body.shownav #mainnav > ul > li.parent > a:focus,
-  #mainnav > ul > li.parent > a:focus {
+  body.shownav #mainnav > ul > li.parent > a:focus {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
   }
   body.shownav #mainnav > ul > li:hover > ul,
-  #mainnav > ul > li:hover > ul,
-  body.shownav #mainnav > ul > li:focus > ul,
-  #mainnav > ul > li:focus > ul {
+  body.shownav #mainnav > ul > li:focus > ul {
     display: block;
     position: absolute;
     background: white;
@@ -8985,13 +8986,10 @@ body.shownav #navtoggler {
     border-bottom-left-radius: 5px;
   }
   body.shownav #mainnav > ul > li:hover > ul a,
-  #mainnav > ul > li:hover > ul a,
-  body.shownav #mainnav > ul > li:focus > ul a,
-  #mainnav > ul > li:focus > ul a {
+  body.shownav #mainnav > ul > li:focus > ul a {
     color: #000000;
   }
-  body.shownav #mainnav > ul ul,
-  #mainnav > ul ul {
+  body.shownav #mainnav > ul ul {
     display: none;
   }
 }
