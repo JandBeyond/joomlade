@@ -1,6 +1,33 @@
-/*Hintergrundfarben faded*/
-.joomla_bg {fade(@blau,80%);}
-.community_bg {fade(@gelb,80%);}
-.veranstaltungen_bg {fade(@rot,80%);}
-.forum_bg {fade(@gruen,80%);}
+body {margin: 0; padding:0;}
 
+
+
+/*Hintergrundfarben faded*/
+.joomla .bg {background:fade(@blau,80%);}
+.community .bg {background:fade(@gelb,80%);}
+.veranstaltungen .bg {background:fade(@rot,80%);}
+.forum .bg {background:fade(@gruen,80%);}
+
+/*Überschriften*/
+
+h1 {font-size:@fbig; color:#fff;}
+h2 {font-size:@fmedium; color:#fff;}
+h3 {font-size:@fsmall; color:#fff;}
+
+.joomla h1, .joomla h2, .joomla h3 {background:@blau;}
+.community h1, .community h2, .community h3 {background:@gelb;}
+.veranstaltungen h1, .veranstaltungen h2, .veranstaltungen h3 {background:@rot;}
+.forum h1, .forum h2, .forum .h3 {background:@gruen;}
+
+
+/*icons und links*/
+.joomla i:before, .joomla a {color:@blau;}
+.community i:before, .community a {color:@gelb;}
+.veranstaltungen i:before, .veranstaltungen a {color:@rot;}
+.forum i:before, .forum a {color:@gruen;}
+
+/*buttons*/
+.joomla .btn-primary {background:@blau; font-size:@fsmall; text-transform: @t_uc; padding:2px;}
+.community .btn-primary {background:@gelb; font-size:@fsmall; text-transform: @t_uc; padding:2px;}
+.veranstaltungen .btn-primary {background:@rot; font-size:@fsmall; text-transform: @t_uc; padding:2px;}
+.joomla .btn-primary {background:@gruen; font-size:@fsmall; text-transform: @t_uc; padding:2px;}
