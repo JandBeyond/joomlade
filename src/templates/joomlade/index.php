@@ -125,7 +125,7 @@ $doc->addScript($tpath.'/js/joomlade.js');
     </div>
 
     <?php if($this->countModules('events')):  ?>
-      <div id="bottom-a" class="row">
+      <div id="events" class="row">
         <h3 class="moduleheading"><?php echo JText::_('TPL_JOOMLADE_HEADING_EVENTS'); ?></h3>
         <jdoc:include type="modules" name="events" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('events')); ?>"  />
       </div>
