@@ -72,16 +72,18 @@ $doc->addScript($tpath.'/js/joomlade.js');
   <a href="#mainnav" class="skiplink"><?php echo JText::_('TPL_JOOMLADE_ANCHOR_NAV'); ?></a>
   <a href="#maincontent" class="skiplink"><?php echo JText::_('TPL_JOOMLADE_ANCHOR_CONTENT'); ?></a>
 
-  <div id="outerwrapper" class="container">
-    <header id="header">
-      <img id="logo" src="<?php echo $tpath; ?>" alt="Logo des Joomla Projekts" />
-    
-      <nav id="#mainnnav">
-        <jdoc:include type="modules" name="nav" />
-      </nav>
+  <div id="outerwrapper" class="container-fluid">
+    <div class="fullwidth">
+      <header id="header">
+        <img id="logo" src="<?php echo $tpath; ?>" alt="Logo des Joomla Projekts" />
 
-      <jdoc:include type="modules" name="header" />
-    </header>
+        <nav id="#mainnnav">
+          <jdoc:include type="modules" name="nav" />
+        </nav>
+
+        <jdoc:include type="modules" name="header" />
+      </header>
+    </div>
 
     <?php if($this->countModules('top-stack')):  ?>
       <div id="top-stack" class="row">
@@ -140,11 +142,11 @@ $doc->addScript($tpath.'/js/joomlade.js');
       </div>
     <?php endif; ?>
 
-    <?php if($this->countModules('footer')):  ?>
-      <footer id="footer">
-        <jdoc:include type="modules" name="footer" style="html5" />
-      </footer>
-    <?php endif; ?>
+      <div class="fullwidth">
+        <footer id="footer">
+          <jdoc:include type="modules" name="footer" style="html5" />
+        </footer>
+      </div>
   </div>
 </body>
 <jdoc:include type="modules" name="debug" />
