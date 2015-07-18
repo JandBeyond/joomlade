@@ -75,9 +75,13 @@ $doc->addScript($tpath.'/js/joomlade.js');
   <div id="outerwrapper" class="container-fluid">
     <div class="fullwidth">
       <header id="header">
-        <img id="logo" src="<?php echo $tpath; ?>" alt="Logo des Joomla Projekts" />
+        <img id="logo" src="<?php echo $tpath; ?>/images/logo.svg" alt="Logo des Joomla Projekts" />
 
-        <nav id="#mainnnav">
+        <button id="navtoggler" class="visible-xs-block">
+          <span class="fa fa-bars"><span class="sr-only">Zeige/Verstecke Navigation</span></span>
+        </button>
+
+        <nav id="mainnav">
           <jdoc:include type="modules" name="nav" />
         </nav>
 

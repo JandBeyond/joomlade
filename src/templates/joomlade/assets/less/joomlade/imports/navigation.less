@@ -1,0 +1,43 @@
+/** hide main nav on mobile **/
+#mainnav {
+  .sr-only();
+  .sr-only-focusable();
+}
+
+/** main nav layout on enabled navigation **/
+body.shownav {
+  overflow-x: hidden;
+  position: relative;
+
+  #outerwrapper {
+    margin-left: ((@width-offcanvas - 2) * -1);
+    width: 100%;
+  }
+
+  #mainnav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: @width-offcanvas;
+    height: 100%;
+    clip: auto;
+  }
+
+  #navtoggler {
+    right: calc(@width-offcanvas + @grid-gutter-width);
+  }
+}
+
+/*** main nav mobile styles ***/
+#mainnav {
+  clip: auto;
+  height: auto;
+  width: auto;
+}
+
+/*** main nav desktop styles ***/
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max) {
+  #mainnav {
+
+  }
+}

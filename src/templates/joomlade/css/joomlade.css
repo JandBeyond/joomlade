@@ -8601,6 +8601,17 @@ body {
   background: #919191;
   min-height: 50px;
 }
+#logo {
+  width: 60%;
+  max-width: 220px;
+  position: absolute;
+  margin: 15px 0 0 15px;
+}
+#navtoggler {
+  top: 15px;
+  right: 15px;
+  position: absolute;
+}
 .area-joomla h1,
 .area-joomla h2,
 .area-joomla h3 {
@@ -8685,6 +8696,53 @@ body {
 .area-events .bg {
   background: rgba(133, 192, 60, 0.8) !important;
 }
+/** hide main nav on mobile **/
+#mainnav {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+#mainnav:active,
+#mainnav:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+/** main nav layout on enabled navigation **/
+body.shownav {
+  overflow-x: hidden;
+  position: relative;
+}
+body.shownav #outerwrapper {
+  margin-left: -248px;
+  width: 100%;
+}
+body.shownav #mainnav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  clip: auto;
+}
+body.shownav #navtoggler {
+  right: calc(250px + 30px);
+}
+/*** main nav mobile styles ***/
+#mainnav {
+  clip: auto;
+  height: auto;
+  width: auto;
+}
+/*** main nav desktop styles ***/
 .icon_module span:before {
   font-size: 60px;
 }
