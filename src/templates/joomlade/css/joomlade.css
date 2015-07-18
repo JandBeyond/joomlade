@@ -8804,11 +8804,11 @@ body {
   background: transparent;
   border: none;
 }
-#navtoggler span {
-  font-size: 30px;
-}
 #navtoggler:focus {
   border: none;
+}
+#navtoggler span {
+  font-size: 30px;
 }
 /** main nav layout on enabled navigation **/
 body.shownav {
@@ -8834,30 +8834,12 @@ body.shownav #navtoggler {
 /*** main nav mobile styles ***/
 body.shownav #mainnav ul.menu {
   list-style-type: none;
-  margin: calc(30px / 2) 0 0 0;
+  margin: calc(30px/2) 0 0 0;
   padding: 0;
 }
 body.shownav #mainnav ul.menu li {
   line-height: calc(1.375 * 2.25);
   font-size: 20px;
-}
-body.shownav #mainnav ul.menu a {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
-  padding: 0 30px;
-}
-body.shownav #mainnav ul.menu ul.nav-child {
-  list-style-type: none;
-  padding: 0;
-  background: #1e1e1e;
-}
-body.shownav #mainnav ul.menu ul.nav-child li:focus,
-body.shownav #mainnav ul.menu ul.nav-child li:hover {
-  background: none;
-}
-body.shownav #mainnav ul.menu ul.nav-child li a {
-  padding: 0 calc(30px * 2);
 }
 body.shownav #mainnav ul.menu li.joomla:focus,
 body.shownav #mainnav ul.menu li.joomla:hover {
@@ -8877,23 +8859,40 @@ body.shownav #mainnav ul.menu li.forum:hover {
 }
 body.shownav #mainnav ul.menu li.joomla.parent li a:hover,
 body.shownav #mainnav ul.menu li.joomla.parent li a:focus {
-  background: none !important;
   color: #679ed4;
 }
 body.shownav #mainnav ul.menu li.community.parent li a:hover,
 body.shownav #mainnav ul.menu li.community.parent li a:focus {
-  background: none !important;
   color: #f9b431;
 }
 body.shownav #mainnav ul.menu li.events.parent li a:hover,
 body.shownav #mainnav ul.menu li.events.parent li a:focus {
-  background: none !important;
   color: #85c03c;
 }
 body.shownav #mainnav ul.menu li.forum.parent li a:hover,
 body.shownav #mainnav ul.menu li.forum.parent li a:focus {
-  background: none !important;
   color: #e84032;
+}
+body.shownav #mainnav ul.menu li li.parent li {
+  background: none !imporant;
+}
+body.shownav #mainnav ul.menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  padding: 0 30px;
+}
+body.shownav #mainnav ul.menu ul.nav-child {
+  list-style-type: none;
+  padding: 0;
+  background: #1e1e1e;
+}
+body.shownav #mainnav ul.menu ul.nav-child li:focus,
+body.shownav #mainnav ul.menu ul.nav-child li:hover {
+  background: none;
+}
+body.shownav #mainnav ul.menu ul.nav-child li a {
+  padding: 0 calc(30px*2);
 }
 /*** main nav desktop styles ***/
 @media (min-width: 768px) {
@@ -8911,6 +8910,8 @@ body.shownav #mainnav ul.menu li.forum.parent li a:focus {
     z-index: 10;
     clip: auto;
     /** mainlevel **/
+    /*** submenu level 1 ***/
+    /*** all other levels ***/
   }
   body.shownav #mainnav a,
   #mainnav a {
@@ -8943,31 +8944,37 @@ body.shownav #mainnav ul.menu li.forum.parent li a:focus {
     margin: 0 2px;
     color: white;
   }
-  body.shownav #mainnav > ul > li:nth-child(2):before,
-  #mainnav > ul > li:nth-child(2):before {
+  body.shownav #mainnav > ul > li:first-child:before,
+  #mainnav > ul > li:first-child:before {
     content: "";
     display: none;
   }
-  body.shownav #mainnav > li > a,
-  #mainnav > li > a {
+  body.shownav #mainnav > ul > li > a,
+  #mainnav > ul > li > a {
     padding: 2px 15px;
   }
-  /*** submenu level 1 ***/
-   > ul > li.active > a,
-   > ul > li:hover > a,
-   > ul > li > a:focus {
+  body.shownav #mainnav > ul > li.active > a,
+  #mainnav > ul > li.active > a,
+  body.shownav #mainnav > ul > li:hover > a,
+  #mainnav > ul > li:hover > a,
+  body.shownav #mainnav > ul > li > a:focus,
+  #mainnav > ul > li > a:focus {
     background: white;
     border-radius: 5px;
     text-decoration: none;
     color: #000000;
   }
-   > ul > li.parent:hover > a,
-   > ul > li.parent > a:focus {
+  body.shownav #mainnav > ul > li.parent:hover > a,
+  #mainnav > ul > li.parent:hover > a,
+  body.shownav #mainnav > ul > li.parent > a:focus,
+  #mainnav > ul > li.parent > a:focus {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
   }
-   > ul > li:hover > ul,
-   > ul > li:focus > ul {
+  body.shownav #mainnav > ul > li:hover > ul,
+  #mainnav > ul > li:hover > ul,
+  body.shownav #mainnav > ul > li:focus > ul,
+  #mainnav > ul > li:focus > ul {
     display: block;
     position: absolute;
     background: white;
@@ -8976,12 +8983,14 @@ body.shownav #mainnav ul.menu li.forum.parent li a:focus {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
   }
-   > ul > li:hover > ul a,
-   > ul > li:focus > ul a {
+  body.shownav #mainnav > ul > li:hover > ul a,
+  #mainnav > ul > li:hover > ul a,
+  body.shownav #mainnav > ul > li:focus > ul a,
+  #mainnav > ul > li:focus > ul a {
     color: #000000;
   }
-  /*** all other levels ***/
-   > ul ul {
+  body.shownav #mainnav > ul ul,
+  #mainnav > ul ul {
     display: none;
   }
 }

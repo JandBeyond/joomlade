@@ -11,13 +11,13 @@
   background:transparent;
   border:none;
 
+  &:focus {
+    border: none;
+  }
+
   span {
     font-size:@font-size-h2;
   }
-}
-
-#navtoggler:focus {
-  border:none;
 }
 
 /** main nav layout on enabled navigation **/
@@ -45,75 +45,73 @@ body.shownav {
   }
 }
 
-
-
 /*** main nav mobile styles ***/
 body.shownav #mainnav {
   ul.menu {
     list-style-type: none;
-    margin: calc(@grid-gutter-width / 2) 0 0 0;
-    padding: 0;
+    margin:calc(@grid-gutter-width/2) 0 0 0;
+    padding:0;
 
     li {
-      line-height: calc(@line-height-base * 2.25);
-      font-size: @font-size-large;
+      line-height:calc(@line-height-base * 2.25);
+      font-size:@font-size-large;
+
+      &.joomla:focus, &.joomla:hover {
+        background:@color-blue;
+      }
+
+      &.community:focus, &.community:hover {
+        background:@color-yellow;
+      }
+
+      &.events:focus, &.events:hover {
+        background:@color-green;
+      }
+
+      &.forum:focus, &.forum:hover {
+        background:@color-red;
+      }
+
+      &.joomla.parent li a:hover,  &.joomla.parent li a:focus {
+        color:@color-blue;
+      }
+
+      &.community.parent li a:hover, &.community.parent li a:focus   {
+        color:@color-yellow;
+      }
+
+      &.events.parent li a:hover, &.events.parent li a:focus  {
+        color:@color-green;
+      }
+
+      &.forum.parent li a:hover, &.forum.parent li a:focus  {
+        color:@color-red;
+      }
+
+      li.parent li {
+        background: none !imporant;
+      }
     }
 
     a {
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #fff;
-      padding: 0 @grid-gutter-width;
+      text-transform:uppercase;
+      text-decoration:none;
+      color:#fff;
+      padding:0 @grid-gutter-width;
     }
 
     ul.nav-child {
-      list-style-type: none;
-      padding: 0;
-      background: darken(@color-grey, 45%);
+      list-style-type:none;
+      padding:0;
+      background:darken(@color-grey,45%);
 
       li:focus, li:hover {
-        background: none;
+        background:none;
       }
 
       li a {
-        padding: 0 calc(@grid-gutter-width * 2);
+        padding:0 calc(@grid-gutter-width*2);
       }
-    }
-
-    li.joomla:focus, li.joomla:hover {
-      background: @color-blue;
-    }
-
-    li.community:focus, li.community:hover {
-      background: @color-yellow;
-    }
-
-    li.events:focus, li.events:hover {
-      background: @color-green;
-    }
-
-    li.forum:focus, li.forum:hover {
-      background: @color-red;
-    }
-
-    li.joomla.parent li a:hover, li.joomla.parent li a:focus {
-      background: none !important;
-      color: @color-blue;
-    }
-
-    li.community.parent li a:hover, li.community.parent li a:focus {
-      background: none !important;
-      color: @color-yellow;
-    }
-
-    li.events.parent li a:hover, li.events.parent li a:focus {
-      background: none !important;
-      color: @color-green;
-    }
-
-    li.forum.parent li a:hover, li.forum.parent li a:focus {
-      background: none !important;
-      color: @color-red;
     }
   }
 }
@@ -130,7 +128,7 @@ body.shownav #mainnav {
   body.shownav #mainnav, #mainnav {
     height: auto;
     width: auto;
-    right: (@grid-gutter-width / 2); 
+    right: (@grid-gutter-width / 2);
     top: 30px;
     overflow: visible;
     z-index: 10;
@@ -166,51 +164,50 @@ body.shownav #mainnav {
           color: white;
         }
 
-        &:nth-child(2):before {
+        &:first-child:before {
           content: "";
           display: none;
         }
       }
+
+      > li > a {
+        padding: 2px 15px;
+      }
     }
 
-    > li > a {
-      padding: 2px 15px;
-    }
-  }
-
-  /*** submenu level 1 ***/
-  > ul > li.active > a, > ul > li:hover > a, > ul > li > a:focus {
-    background: white;
-    border-radius: 5px;
-    text-decoration: none;
-    color: @color-font;
-  }
-
-  > ul > li.parent:hover > a, > ul > li.parent > a:focus {
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-  }
-
-  > ul > li:hover > ul, > ul > li:focus > ul {
-    display: block;
-    position: absolute;
-    background: white;
-    padding: 10px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-
-    a {
+    /*** submenu level 1 ***/
+    > ul > li.active > a, > ul > li:hover > a, > ul > li > a:focus {
+      background: white;
+      border-radius: 5px;
+      text-decoration: none;
       color: @color-font;
     }
-  }
 
-  /*** all other levels ***/
-  > ul ul {
-    display: none;
+    > ul > li.parent:hover > a, > ul > li.parent > a:focus {
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+
+    > ul > li:hover > ul, > ul > li:focus > ul {
+      display: block;
+      position: absolute;
+      background: white;
+      padding: 10px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+
+      a {
+        color: @color-font;
+      }
+    }
+
+    /*** all other levels ***/
+    > ul ul {
+      display: none;
+    }
   }
 }
-
 
 /*** footer nav ***/
 #footer nav > ul {
