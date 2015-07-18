@@ -9015,18 +9015,4 @@ a.skiplink:focus {
     right: calc((100vw -  1140px ) / 2) !important;
   }
 }
-/*Überschriften*/
-.carouselblog .carousel-inner .active.left {
-  left: -33%;
-}
-.carouselblog .carousel-inner .next {
-  left: 33%;
-}
-.carouselblog .carousel-inner .prev {
-  left: -33%;
-}
-.carouselblog .carousel-control.left,
-.carousel-control.right {
-  background-image: none;
-}
 /*# sourceMappingURL=joomlade.css.map */

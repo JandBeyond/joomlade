@@ -19,7 +19,11 @@ defined('_JEXEC') or die;
         <?php foreach ($list as $key=>$item): ?>
             <div class="item <?php echo ($key == '0') ? 'active' : ''; ?>">
                 <?php $images = json_decode($item->images);?>
-                <img class="slide" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo $item->title; ?>">
+
+                <?php if($images->image_intro): ?>
+                    <img class="slide" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo $item->title; ?>" />
+                <?php endif; ?>
+
                 <div class="carousel-caption">
                     <?php echo $item->title; ?>
                     <?php echo $item->introtext; ?>
@@ -30,10 +34,10 @@ defined('_JEXEC') or die;
     <!-- Controls -->
     <a class="left carousel-control" href="#carousel<?php echo $moduleclass_sfx; ?>" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="sr-only"><?php echo JText::_('JPREV'); ?></span>
     </a>
     <a class="right carousel-control" href="#carousel<?php echo $moduleclass_sfx; ?>" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+        <span class="sr-only"><?php echo JText::_('JNEXT'); ?></span>
     </a>
 </div>
