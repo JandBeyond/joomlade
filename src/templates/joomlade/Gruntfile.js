@@ -194,6 +194,26 @@ module.exports = function(grunt) {
 						dest: "assets/less/customfontawesome"
 					},
 				]
+			},
+			jstotemplate: {
+				files: [
+					{
+						cwd: './js/',  // set working folder / root to copy
+						src: '**/*',           // copy all files and subfolders
+						dest: '/Applications/MAMP/htdocs/joomlade/templates/joomlade/js',    // destination folder
+						expand: true           // required when using cwd
+					}
+				]
+			},
+			csstotemplate: {
+				files: [
+					{
+						cwd: './css/',  // set working folder / root to copy
+						src: '**/*',           // copy all files and subfolders
+						dest: '/Applications/MAMP/htdocs/joomlade/templates/joomlade/css',    // destination folder
+						expand: true           // required when using cwd
+					}
+				]
 			}
 
 		},
@@ -213,7 +233,7 @@ module.exports = function(grunt) {
 					port: 3000,
 					open: false,
 					watchTask: true,
-					reloadDelay: 2000
+					reloadDelay: 3000
 				}
 			}
 		},
@@ -221,11 +241,11 @@ module.exports = function(grunt) {
 		watch: {
 			less: {
 				files: "./assets/less/**/*.less",
-				tasks: ["less:compileCore"]
+				tasks: ["less:compileCore",'copy:csstotemplate']
 			},
 			js: {
 				files: "./assets/js/**/*.js",
-				tasks: ["concat"]
+				tasks: ["concat",'copy:jstotemplate']
 			}
 		}
 	});

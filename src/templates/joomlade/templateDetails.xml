@@ -122,6 +122,7 @@
                         description="TPL_JOOMLADE_PARAMETER_PAGETYPE_DESC"
                         >
                     <option value="multipage">TPL_JOOMLADE_PARAMETER_MULTIPAGE</option>
+                    <option value="onepage">TPL_JOOMLADE_PARAMETER_ONEPAGE</option>
                     <option value="joomlade">TPL_JOOMLADE_PARAMETER_JOOMLADE</option>
                 </field>
 			</fieldset>
