@@ -21,6 +21,7 @@ defined('_JEXEC') or die;
         <?php $images = json_decode($item->images);?>
         <img class="slide" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="slide">
         <div class="carousel-caption">
+        <?php echo $item->title; ?>
         <?php echo $item->introtext; ?>
         </div>
         </div>
