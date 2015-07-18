@@ -23,7 +23,7 @@ defined('_JEXEC') or die;
     
     <div class="carousel-inner" role="listbox">
         <?php foreach ($list as $key=>$item): ?>
-            <div class="item" class="<?php if($key == 0) ? 'active':''; ?>">
+            <div class="item" class="<?php ($key == '0' ? 'active' : ''); ?>">
             <?php $images = json_decode($item->images);?>
             <?php echo htmlspecialchars($images->image_intro); ?>
             
