@@ -14,35 +14,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 JHtml::_('behavior.caption');
 ?>
 
-<style>
-    .carousel-inner .active.left { left: -33%; }
-.carousel-inner .next        { left:  33%; }
-.carousel-inner .prev        { left: -33%; }
-.carousel-control.left,.carousel-control.right {background-image:none;}
-</style>
-<script>
-    $('#myCarousel').carousel({
-  interval: 10000
-})
-
-$('.carousel .item').each(function(){
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().appendTo($(this));
-  
-  if (next.next().length>0) {
-    next.next().children(':first-child').clone().appendTo($(this));
-  }
-  else {
-  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-  }
-});
-</script>
-
-
-<div class="blog<?php echo $this->pageclass_sfx; ?> col-md-12" itemscope itemtype="http://schema.org/Blog">
+<div class="carouselblog <?php echo $this->pageclass_sfx; ?> col-md-12" itemscope itemtype="http://schema.org/Blog">
     <div class="carousel slide" id="myCarouselblogcarousel">
         <div class="carousel-inner">
 	<?php $leadingcount = 0; ?>

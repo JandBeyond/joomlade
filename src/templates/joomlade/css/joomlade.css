@@ -8566,10 +8566,15 @@ button.close {
 /*Überschriften*/
 h1,
 h2,
-h3 {
+h3,
+h1 a,
+h2 a,
+h3 a {
   background: #919191;
   text-transform: uppercase;
   color: white;
+  text-align: center;
+  padding: 5px;
 }
 a {
   text-decoration: underline;
@@ -8685,11 +8690,43 @@ body {
 .area-events .bg {
   background: rgba(133, 192, 60, 0.8) !important;
 }
-.icon_module span:before {
+.area-neutral h1,
+.area-neutral h2,
+.area-neutral h3 {
+  background-color: #919191;
+}
+.area-neutral a {
+  color: #919191;
+}
+.area-neutral a:hover,
+.area-neutral a:focus {
+  color: #5e5e5e;
+}
+.area-neutral span:before {
+  color: #919191;
+}
+.area-neutral .btn {
+  background: #919191;
+}
+.area-neutral .bg {
+  background: rgba(145, 145, 145, 0.8) !important;
+}
+ul.tags.inline {
+  list-style-type: none;
+}
+ul.tags.inline li {
+  display: inline!important;
+}
+.icon_module span.fa:before {
   font-size: 60px;
+}
+.icon_module span.fa {
+  display: block;
+  margin-bottom: 10px;
 }
 .icon_module {
   text-align: center;
+  padding: 20px 0;
 }
 a.skiplink {
   width: 1px;
@@ -8727,5 +8764,25 @@ a.skiplink:focus {
     width: 100%;
     margin-left: 0;
   }
+}
+/*Überschriften*/
+h1,
+h2,
+h3,
+h1 a,
+h2 a,
+h3 a {
+  background: #919191;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+a {
+  text-decoration: underline;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
 }
 /*# sourceMappingURL=joomlade.css.map */
