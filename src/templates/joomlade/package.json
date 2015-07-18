@@ -1,12 +1,12 @@
 {
   "name": "joomlade",
   "version": "0.0.1",
-  "homepage": "http://www.nn-medienagentur.de",
-  "author": "Niels Nübel. NN-Medienagentur",
+  "homepage": "http://www.joomla.de",
+  "author": "Joomla.de Team",
   "private": true,
   "license": {
-	"type": "MIT",
-	"url": "https://github.com/nn-medienagentur/grunttheme/blob/master/LICENSE"
+	"type": "GPL v3",
+	"url": "http://www.gnu.org/licenses/gpl-3.0.de.html"
   },
   "devDependencies": {
 	"grunt": "~0.4",

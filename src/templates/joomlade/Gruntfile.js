@@ -2,7 +2,6 @@ module.exports = function(grunt) {
 	'use strict';
 
 	var configBridge = grunt.file.readJSON('./grunt/configBridge.json', { encoding: 'utf8' });
-	var generateCommonJSModule = require('./grunt/commonjs-generator.js');
 
 	grunt.initConfig({
 
@@ -40,22 +39,7 @@ module.exports = function(grunt) {
 					'./bower_components/bootstrap/js/popover.js',
 					'./bower_components/bootstrap/js/scrollspy.js',
 					'./bower_components/bootstrap/js/tab.js',
-					'./bower_components/bootstrap/js/affix.js',
-					'./assets/plugins/modernizr.js',
-					'./assets/plugins/rs-plugin/js/jquery.themepunch.tools.min.js',
-					'./assets/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js',
-					'./assets/plugins/isotope/isotope.pkgd.js',
-					'./assets/plugins/magnific-popup/jquery.magnific-popup.min.js',
-					'./assets/plugins/waypoints/jquery.waypoints.min.js',
-					'./assets/plugins/jquery.countTo.js',
-					'./assets/plugins/jquery.parallax-1.1.3.js',
-					'./assets/plugins/jquery.validate.js',
-					'./assets/plugins/vide/jquery.vide.js',
-					'./assets/plugins/owl-carousel/owl.carousel.js',
-					'./assets/plugins/jquery.browser.j',
-					'./assets/plugins/SmoothScroll.js',
-					'./assets/js/template.js',
-					'./assets/js/custom.js'
+					'./assets/js/template.js'
 				],
 				dest: './js/<%= pkg.name %>.js'
 			}
@@ -194,28 +178,7 @@ module.exports = function(grunt) {
 						dest: "assets/less/customfontawesome"
 					},
 				]
-			},
-			jstotemplate: {
-				files: [
-					{
-						cwd: './js/',  // set working folder / root to copy
-						src: '**/*',           // copy all files and subfolders
-						dest: '/Applications/MAMP/htdocs/joomlade/templates/joomlade/js',    // destination folder
-						expand: true           // required when using cwd
-					}
-				]
-			},
-			csstotemplate: {
-				files: [
-					{
-						cwd: './css/',  // set working folder / root to copy
-						src: '**/*',           // copy all files and subfolders
-						dest: '/Applications/MAMP/htdocs/joomlade/templates/joomlade/css',    // destination folder
-						expand: true           // required when using cwd
-					}
-				]
 			}
-
 		},
 
 		browserSync: {
@@ -241,11 +204,11 @@ module.exports = function(grunt) {
 		watch: {
 			less: {
 				files: "./assets/less/**/*.less",
-				tasks: ["less:compileCore",'copy:csstotemplate']
+				tasks: ["less:compileCore"]
 			},
 			js: {
 				files: "./assets/js/**/*.js",
-				tasks: ["concat",'copy:jstotemplate']
+				tasks: ["concat"]
 			}
 		}
 	});
@@ -258,7 +221,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('create-css', ['less:compileCore', 'autoprefixer:core', 'usebanner', 'csscomb:dist', 'cssmin:minifyCore']);
 
 	// JS distribution task.
-	grunt.registerTask('create-js', ['concat', 'uglify:core', 'commonjs']);
+	grunt.registerTask('create-js', ['concat', 'uglify:core']);
 
 	// Default task.
 	grunt.registerTask('cleantemplate', ['clean:css', 'clean:js']);
@@ -266,10 +229,4 @@ module.exports = function(grunt) {
 
 	// define default task
 	grunt.registerTask('startwatch', ["browserSync", "watch"]);
-
-	grunt.registerTask('commonjs', 'Generate CommonJS entrypoint module in dist dir.', function () {
-		var srcFiles = grunt.config.get('concat.theme.src');
-		var destFilepath = './js/npm.js';
-		generateCommonJSModule(grunt, srcFiles, destFilepath);
-	});
 };

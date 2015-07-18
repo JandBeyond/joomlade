@@ -3,30 +3,12 @@
 <extension version="3.1" type="template" client="site">
 	<name>joomlade</name>
 	<creationDate>18 July 2015</creationDate>
-	<author>Niels Nübel</author>
-	<copyright>Copyright © 2015 niels-nuebel.de</copyright>
-	<authorEmail>niels@niels-nuebel.de</authorEmail>
-	<authorUrl>http://www.niels-nuebel.de</authorUrl>
+	<author>Joomla.de Team | Niels Nübel</author>
+	<copyright>Copyright © 2015 joomla.de</copyright>
+	<authorEmail>info@joomla.de</authorEmail>
+	<authorUrl>http://www.joomla.de</authorUrl>
 	<version>1.0.0</version>
-	<description><![CDATA[ 
-		<h1>JOOMLADE</h1>
-		<p><img src="../templates/joomlade/template_preview.png" /></p>
-		<h2>Module positions</h2>
-		<ol>
-            <li>logo</li>
-            <li>menu</li>
-            <li>search</li>
-            <li>top</li>
-            <li>inner-top</li>
-            <li>sidebar-a</li>
-            <li>sidebar-b</li>
-            <li>inner-bottom</li>
-            <li>bottom</li>
-            <li>footer</li>
-            <li>debug</li>
-		</ol>
-		<p>Created by <a href="http://www.niels-nuebel.de" target="_blank">Niels Nübel | niels-nuebel.de</a>.</p>
-	]]></description>
+	<description>The Joomla.de Template</description>
 	
 	<files><!-- no need to change -->
 		<folder>assets</folder>
@@ -44,8 +26,6 @@
 		<filename>favicon.ico</filename>
 		<filename>Gruntfile.js</filename>
 		<filename>index.php</filename>
-		<filename>index_multipage.php</filename>
-		<filename>index_joomlade.php</filename>
 		<filename>LICENSE</filename>
 		<filename>package.json</filename>
 		<filename>README.md</filename>
@@ -54,41 +34,14 @@
 		<filename>templateDetails.xml</filename>
 	</files>
 
-    <positions><!-- define the positions for modules here -->
-        <position>social-links-top</position>
-        <position>address-top</position>
-        <position>logo</position>
-        <position>main-menu</position>
-        <position>search</position>
-        <position>breadcrumb</position>
-        <position>topnav</position>
-        <position>onepage</position>
-        <position>top</position>
-        <position>inner-top</position>
-        <position>sidebar-a</position>
-        <position>sidebar-b</position>
-        <position>inner-bottom</position>
-        <position>bottom</position>
-        <position>onepagebottom</position>
-        <position>footer</position>
-        <position>footernav</position>
-        <position>slider</position>
-        <position>debug</position>
+    <positions>
     </positions>
 
 	<config><!-- no need to change -->
 		<fields name="params" addfieldpath="templates/joomlade/nnframework/joomla/config/elements">
 
 			<fieldset name="advanced">
-                <!-- FILENAME -->
-                <field  name="filename"
-                        class=""
-                        type="text"
-                        default="joomlade.min"
-                        label="TPL_JOOMLADE_PARAMETER_FILENAME_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_FILENAME_DESC"
-                        />
-
+                
                 <!-- SHOWSYSTEMOUTPUT -->
                 <field  name="showsystemoutput"
                         type="radio"
@@ -100,162 +53,7 @@
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
-
-                <!-- SHOWONFRONTPAGE -->
-                <field  name="hidecontentwrapper"
-                        type="radio"
-                        class="btn-group"
-                        default="0"
-                        label="TPL_JOOMLADE_PARAMETER_HIDECONTENTWRAPPER_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_HIDECONTENTWRAPPER_DESC"
-                        >
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
-
-                <!-- PAGETYPE -->
-                <field  name="pagetype"
-                        type="radio"
-                        class="btn-group"
-                        default="multipage"
-                        label="TPL_JOOMLADE_PARAMETER_PAGETYPE_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_PAGETYPE_DESC"
-                        >
-                    <option value="multipage">TPL_JOOMLADE_PARAMETER_MULTIPAGE</option>
-                    <option value="onepage">TPL_JOOMLADE_PARAMETER_ONEPAGE</option>
-                    <option value="joomlade">TPL_JOOMLADE_PARAMETER_JOOMLADE</option>
-                </field>
 			</fieldset>
-
-            <fieldset name="boostrap">
-
-                <!-- SHOWSYSTEMOUTPUT -->
-                <field  name="show_caret"
-                        type="radio"
-                        class="btn-group"
-                        default="1"
-                        label="TPL_JOOMLADE_PARAMETER_SHOWCARET_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_SHOWCARET_DESC"
-                        >
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
-                <!-- SIDEBAR A -->
-                <field  name="sidebar-a"
-                        class=""
-                        type="text"
-                        default="col-md-4 col-lg-3 col-md-pull-8 col-lg-pull-9"
-                        label="TPL_JOOMLADE_PARAMETER_SIDEBAR_A_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_SIDEBAR_A_DESC"
-                        />
-
-	            <field  name="sidebar-a-3-col"
-	                    class=""
-	                    type="text"
-	                    default="col-md-3 col-md-pull-6"
-	                    label="TPL_JOOMLADE_PARAMETER_SIDEBAR_A_3_COL_LABEL"
-	                    description="TPL_JOOMLADE_PARAMETER_SIDEBAR_A_3_COL_DESC"
-			            />
-
-                <!-- SIDEBAR B -->
-                <field  name="sidebar-b"
-                        class=""
-                        type="text"
-                        default="col-md-4 col-lg-3 col-lg-offset-1"
-                        label="TPL_JOOMLADE_PARAMETER_SIDEBAR_B_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_SIDEBAR_B_DESC"
-                        />
-
-	            <field  name="sidebar-b-3-col"
-	                    class=""
-	                    type="text"
-	                    default="col-md-3"
-	                    label="TPL_JOOMLADE_PARAMETER_SIDEBAR_B_3_COL_LABEL"
-	                    description="TPL_JOOMLADE_PARAMETER_SIDEBAR_B_3_COL_DESC"
-			            />
-
-                <!-- CONTENT 1 -->
-                <field  name="content-1-col"
-                        class=""
-                        type="text"
-                        default="main col-md-12"
-                        label="TPL_JOOMLADE_PARAMETER_CONTENT_1_COL_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_CONTENT_1_COL_DESC"
-                        />
-
-                <!-- CONTENT 2 -->
-                <field  name="content-2-col-a"
-                        class=""
-                        type="text"
-                        default="main col-md-8 col-lg-offset-1 col-md-push-4 col-lg-push-3"
-                        label="TPL_JOOMLADE_PARAMETER_CONTENT_2_COL_A_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_CONTENT_2_COL_A_DESC"
-                        />
-
-	            <field  name="content-2-col-b"
-	                    class=""
-	                    type="text"
-	                    default="main col-md-8"
-	                    label="TPL_JOOMLADE_PARAMETER_CONTENT_2_COL_B_LABEL"
-	                    description="TPL_JOOMLADE_PARAMETER_CONTENT_2_COL_B_DESC"
-			            />
-
-                <!-- CONTENT 3 -->
-                <field  name="content-3-col"
-                        class=""
-                        type="text"
-                        default="main col-md-6 col-md-push-3"
-                        label="TPL_JOOMLADE_PARAMETER_CONTENT_3_COL_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_CONTENT_3_COL_DESC"
-                        />
-            </fieldset>
-
-            <fieldset name="analytics">
-                <!-- GOOGLE ANALYTICS -->
-                <field  name="googleanalytics"
-                        type="radio"
-                        class="btn-group"
-                        default="0"
-                        label="TPL_JOOMLADE_PARAMETER_GOOGLEANALYTICS_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_GOOGLEANALYTICS_DESC"
-                        >
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
-
-                <!-- GOOGLE ANALYTICS CODE-->
-                <field  name="googleanalyticscode"
-                        class=""
-                        type="text"
-                        default=""
-                        label="TPL_JOOMLADE_PARAMETER_GOOGLEANALYTICS_CODE_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_GOOGLEANALYTICS_CODE_DESC"
-                        />
-
-                <!-- GOOGLE ANALYTICS LINKZUORDNUNG-->
-                <field  name="googlelinkid"
-                        type="radio"
-                        class="btn-group"
-                        default="0"
-                        label="TPL_JOOMLADE_PARAMETER_GOOGLELINKID_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_GOOGLELINKID_DESC"
-                        >
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
-
-                <!-- GOOGLE ANALYTICS DISPLAYFEATURES-->
-                <field  name="googledisplayfeatures"
-                        type="radio"
-                        class="btn-group"
-                        default="0"
-                        label="TPL_JOOMLADE_PARAMETER_GOOGLEADISPLAYFEATURES_LABEL"
-                        description="TPL_JOOMLADE_PARAMETER_GOOGLEADISPLAYFEATURES_DESC"
-                        >
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
-            </fieldset>
 
             <fieldset name="webfonts">
                 <!-- GOOGLE FONT-->
