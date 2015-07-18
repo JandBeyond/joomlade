@@ -65,7 +65,84 @@ $doc->addScript($tpath.'/js/joomlade.js');
   <![endif]-->
 </head>
 <body>
-  
+  <!-- Hidden anchor links for accessibility -->
+  <a href="#mainnav" class="hiddenanchor"><?php echo JText::_('TPL_JOOMLADE_ANCHOR_NAV'); ?></a>
+  <a href="#maincontent" class="hiddenanchor"><?php echo JText::_('TPL_JOOMLADE_ANCHOR_CONTENT'); ?></a>
+
+  <div id="outerwrapper" class="container-fluid">
+    <header id="header">
+      <img id="logo" src="<?php echo $tpath; ?>" alt="Logo des Joomla Projekts" />
+    
+      <nav id="#mainnnav">
+        <jdoc:include type="modules" name="nav" />
+      </nav>
+
+      <jdoc:include type="modules" name="header" />
+    </header>
+
+    <?php if($this->countModules('top-stack')):  ?>
+      <div id="top-stack" class="row">
+        <jdoc:include type="modules" name="top-stack" style="html5" />
+      </div>
+    <?php endif; ?>
+
+    <?php if($this->countModules('top-a')):  ?>
+      <div id="top-a" class="row">
+        <jdoc:include type="modules" name="top-a" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('top-a')); ?>"  />
+      </div>
+    <?php endif; ?>
+    <?php if($this->countModules('top-b')):  ?>
+      <div id="top-b" class="row">
+        <jdoc:include type="modules" name="top-b" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('top-b')); ?>"  />
+      </div>
+    <?php endif; ?>
+    <?php if($this->countModules('top-c')):  ?>
+      <div id="top-c" class="row">
+        <jdoc:include type="modules" name="top-c" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('top-c')); ?>"  />
+      </div>
+    <?php endif; ?>
+
+    <div id="mainwrapper" class="row">
+      <main id="maincontent" role="main" class="<?php if($this->countModules('aside')) {echo 'col-lg-9';} else {echo 'col-lg-12';} ?>">
+        <jdoc:include type="message" />
+        <jdoc:include type="component" />
+      </main>
+
+      <?php if($this->countModules('aside')): ?>
+        <section id="aside" class="col-lg-3">
+          <jdoc:include type="modules" name="aside" style="html5" />
+        </section>
+      <?php endif; ?>
+    </div>
+
+    <?php if($this->countModules('bottom-a')):  ?>
+      <div id="bottom-a" class="row">
+        <jdoc:include type="modules" name="bottom-a" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('bottom-a')); ?>"  />
+      </div>
+    <?php endif; ?>
+    <?php if($this->countModules('bottom-b')):  ?>
+      <div id="bottom-b" class="row">
+        <jdoc:include type="modules" name="bottom-b" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('bottom-b')); ?>"  />
+      </div>
+    <?php endif; ?>
+    <?php if($this->countModules('bottom-c')):  ?>
+      <div id="bottom-c" class="row">
+        <jdoc:include type="modules" name="bottom-c" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('bottom-c')); ?>"  />
+      </div>
+    <?php endif; ?>
+
+    <?php if($this->countModules('bottom-stack')):  ?>
+      <div id="bottom-stack" class="row">
+        <jdoc:include type="modules" name="bottom-stack" style="html5" />
+      </div>
+    <?php endif; ?>
+
+    <?php if($this->countModules('footer')):  ?>
+      <footer id="footer">
+        <jdoc:include type="modules" name="footer" style="html5" />
+      </footer>
+    <?php endif; ?>
+  </div>
 </body>
 <jdoc:include type="modules" name="debug" />
 </html>
