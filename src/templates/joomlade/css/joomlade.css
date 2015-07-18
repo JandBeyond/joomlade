@@ -9023,6 +9023,9 @@ h3.moduleheading a {
 .icon_module {
   text-align: center;
 }
+#events > h3 {
+  margin: 0 15px;
+}
 a.skiplink {
   position: absolute;
   width: 1px;
