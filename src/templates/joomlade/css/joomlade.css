@@ -9148,6 +9148,9 @@ a.skiplink:focus {
   #logo {
     position: absolute;
   }
+  #carouselslideshowheader span.fa {
+    display: block;
+  }
 }
 /* Medium desktop */
 /* Intermediate size for navigation */
@@ -9173,14 +9176,22 @@ a.skiplink:focus {
     width: 33.333%;
   }
 }
+#carouselslideshowheader .carousel-inner > .item img {
+  width: 100%;
+}
 #carouselslideshowheader .carousel-inner > .item span {
   display: block;
   text-align: center;
   text-transform: uppercase;
+  text-shadow: none;
 }
 #carouselslideshowheader .carousel-inner > .item span.fa {
   font-size: 8em;
   opacity: 0.3;
+  display: none;
+}
+#carouselslideshowheader .carousel-inner > .item .carousel-caption {
+  padding-bottom: 55px;
 }
 #carouselslideshowheader .carousel-inner > .item:after {
   height: 100%;
