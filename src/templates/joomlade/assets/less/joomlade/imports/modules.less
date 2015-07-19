@@ -101,3 +101,17 @@
     display: none;
   }
 }
+
+.staticheader {
+  position: relative;
+
+  &:after {
+    height: 100%;
+    width: 100%;
+    display: block;
+    content: " ";
+    top: 0px;
+    position: absolute;
+    background: fade(@color-yellow, 80%)
+  }
+}
