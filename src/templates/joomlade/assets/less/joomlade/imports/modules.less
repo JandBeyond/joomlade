@@ -45,10 +45,11 @@
   color: white;
   height: 160px;
   width: 100%;
-  display: table;
 }
 
 .moduletable.download {
+  display: table;
+
   .btn.btn-download {
     border: 0;
     text-transform: uppercase;
@@ -66,5 +67,37 @@
     font-size: 1em;
     text-transform: uppercase;
     margin-bottom: 0px;
+  }
+}
+
+.moduletable.features {
+  > div {
+    height: 160px;
+  }
+
+  .carousel-control.right,
+  .carousel-control.left {
+    background: transparent !important;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  .item {
+    margin-top: 40px;
+  }
+
+  .carousel-indicators {
+    display: none;
   }
 }
