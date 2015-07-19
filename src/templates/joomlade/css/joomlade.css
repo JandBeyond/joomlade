@@ -9062,6 +9062,12 @@ body.shownav #mainnav ul.menu li.module {
     border-bottom-left-radius: 5px;
     width: 300px;
   }
+  #mainnav > ul > li:hover > ul:last-child,
+  #mainnav > ul > li:focus > ul:last-child {
+    right: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0px;
+  }
   #mainnav > ul > li:hover > ul a,
   #mainnav > ul > li:focus > ul a {
     color: #000000;

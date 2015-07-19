@@ -282,6 +282,13 @@ body.shownav #mainnav {
       border-bottom-left-radius: 5px;
       width: 300px;
 
+      // last submenu should open to the left
+      &:last-child {
+        right: 0px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 0px;
+      }
+
       a {
         color: @color-font;
       }
