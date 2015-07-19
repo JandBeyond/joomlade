@@ -9125,11 +9125,8 @@ a.skiplink:focus {
   #logo {
     position: absolute;
   }
-  #carouselslideshowheader .fa {
+  #carouselslideshowheader span.fa {
     display: block;
-  }
-  #carouselslideshowheader .span {
-    font-size: 1em;
   }
 }
 /* Medium desktop */
