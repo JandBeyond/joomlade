@@ -9032,15 +9032,18 @@ h3.moduleheading a {
   padding: 5px;
   background: #919191;
 }
-.icon_module span.fa:before {
-  font-size: 60px;
+.icon_module {
+  text-align: center;
 }
 .icon_module span.fa {
   display: block;
   margin-bottom: 10px;
 }
-.icon_module {
-  text-align: center;
+.icon_module span.fa:before {
+  font-size: 60px;
+}
+.icon_module a {
+  text-decoration: none;
 }
 #events > h3 {
   margin: 0 15px;
