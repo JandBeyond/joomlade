@@ -271,7 +271,6 @@ body.shownav #mainnav {
     }
 
     /*** menu level 2 ***/
-
     > ul > li:hover > ul, > ul > li:focus > ul {
       display: block;
       position: absolute;
@@ -281,13 +280,6 @@ body.shownav #mainnav {
       border-bottom-right-radius: 5px;
       border-bottom-left-radius: 5px;
       width: 300px;
-
-      // last submenu should open to the left
-      &:last-child {
-        right: 0px;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 0px;
-      }
 
       a {
         color: @color-font;
@@ -303,6 +295,13 @@ body.shownav #mainnav {
         right: 10px;
         width: 150px;
       }
+    }
+
+    // last submenu should open to the left
+    > ul > li:last-child:hover > ul, > ul > li:last-child:focus > ul {
+      right: 0;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 0;
     }
 
     /*** all other levels ***/
