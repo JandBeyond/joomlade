@@ -45,6 +45,18 @@ body.shownav {
       li {
         line-height:calc(@line-height-base * 2.25);
         font-size:@font-size-large;
+        font-weight:600;
+        width:100%;
+      }
+
+      li.divider {
+        border-bottom:1px solid #fff;
+      }
+
+      li.divider span {
+        color:#fff;
+        text-transform:uppercase;
+        font-weight:600;
       }
 
       li.joomla:focus, li.joomla:hover {
@@ -102,8 +114,21 @@ body.shownav {
 
         li {
 
-          a {
-            padding:0 calc(@grid-gutter-width*2);
+          a, span {
+          padding:0 calc(@grid-gutter-width*1);
+          font-weight:300;
+          width:100%;
+
+          }
+
+
+          li {
+
+            a, span {
+              padding: 0 calc(@grid-gutter-width * 1);
+              font-weight: 300;
+              color: fade(#fff, 70%);
+            }
           }
 
         }
