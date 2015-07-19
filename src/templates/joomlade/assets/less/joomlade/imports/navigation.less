@@ -71,20 +71,42 @@ body.shownav #mainnav {
         font-weight: 600;
       }
 
+      &.joomla:before {
+        font-family:  FontAwesome;
+        color:@color-blue;
+        content:"/f1aa";
+      }
+      
       &.joomla:focus, &.joomla:hover {
         background:@color-blue;
       }
 
       &.joomla>ul {
-        border-right:4px @color-blue solid;
+        border-left:4px @color-blue solid;
+        padding-left:@grid-gutter-width;
       }
+
+      &.community:before {
+        font-family:  FontAwesome;
+        color:@color-yellow;
+        content:"/f0c0";
+      }
+
 
       &.community:focus, &.community:hover {
         background:@color-yellow;
       }
 
       &.community>ul {
-        border-right:4px @color-yellow solid;
+        border-left:4px @color-yellow solid;
+        padding-left:@grid-gutter-width;
+
+      }
+
+      &.events:before {
+        font-family:  FontAwesome;
+        color:@color-green;
+        content:"/f19d";
       }
 
       &.events:focus, &.events:hover {
@@ -92,16 +114,25 @@ body.shownav #mainnav {
       }
 
       &.events>ul {
-        border-right:4px @color-green solid;
+        border-left:4px @color-green solid;
+        padding-left:@grid-gutter-width;
+
       }
 
+      &.events:before {
+        font-family:  FontAwesome;
+        color:@color-red;
+        content:"/f073";
+      }
 
       &.forum:focus, &.forum:hover {
         background:@color-red;
       }
 
       &.forum>ul {
-        border-right:4px @color-red solid;
+        border-left:4px @color-red solid;
+        padding-left:@grid-gutter-width;
+
       }
 
       &.joomla.parent li a:hover,  &.joomla.parent li a:focus {
