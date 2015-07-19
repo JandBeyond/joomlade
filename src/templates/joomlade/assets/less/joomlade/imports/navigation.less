@@ -53,9 +53,22 @@ body.shownav #mainnav {
     margin:calc(@grid-gutter-width/2) 0 0 0;
     padding:0;
 
+    // mainlevel
     li {
       line-height:calc(@line-height-base * 2.25);
       font-size:@font-size-large;
+      font-weight:600;
+      width:100%;
+
+      &.divider {
+        border-bottom:1px solid #fff;
+      }
+
+      &.divider span {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
 
       &.joomla:focus, &.joomla:hover {
         background:@color-blue;
@@ -94,6 +107,7 @@ body.shownav #mainnav {
       }
     }
 
+    // basic link styles
     a {
       text-transform:uppercase;
       text-decoration:none;
@@ -101,20 +115,35 @@ body.shownav #mainnav {
       padding:0 @grid-gutter-width;
     }
 
+    /*** sublevel 1 ***/
     ul.nav-child {
-      list-style-type:none;
-      padding:0;
-      background:darken(@color-grey,45%);
+      list-style-type: none;
+      padding: 0;
+      background: darken(@color-grey, 45%);
 
       li:focus, li:hover {
-        background:none;
+        background: none;
       }
 
-      li a {
-        padding:0 calc(@grid-gutter-width*2);
+      li {
+        a, span {
+          padding: 0 calc(@grid-gutter-width * 1);
+          font-weight: 300;
+          width: 100%;
+        }
       }
     }
 
+    /*** sublevel 2 ***/
+    ul.nav-child li li {
+      a, span {
+        padding: 0 calc(@grid-gutter-width * 1);
+        font-weight: 300;
+        color: fade(#fff, 70%);
+      }
+    }
+
+    // hide megamenu modules
     li.module {
       display: none;
     }
