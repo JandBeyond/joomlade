@@ -8855,33 +8855,57 @@ body.shownav #mainnav ul.menu li.divider span {
   text-transform: uppercase;
   font-weight: 600;
 }
+body.shownav #mainnav ul.menu li.joomla:before {
+  font-family: FontAwesome;
+  color: #679ed4;
+  content: "/f1aa";
+}
 body.shownav #mainnav ul.menu li.joomla:focus,
 body.shownav #mainnav ul.menu li.joomla:hover {
   background: #679ed4;
 }
 body.shownav #mainnav ul.menu li.joomla > ul {
-  border-right: 4px #679ed4 solid;
+  border-left: 4px #679ed4 solid;
+  padding-left: 30px;
+}
+body.shownav #mainnav ul.menu li.community:before {
+  font-family: FontAwesome;
+  color: #f9b431;
+  content: "/f0c0";
 }
 body.shownav #mainnav ul.menu li.community:focus,
 body.shownav #mainnav ul.menu li.community:hover {
   background: #f9b431;
 }
 body.shownav #mainnav ul.menu li.community > ul {
-  border-right: 4px #f9b431 solid;
+  border-left: 4px #f9b431 solid;
+  padding-left: 30px;
+}
+body.shownav #mainnav ul.menu li.events:before {
+  font-family: FontAwesome;
+  color: #85c03c;
+  content: "/f19d";
 }
 body.shownav #mainnav ul.menu li.events:focus,
 body.shownav #mainnav ul.menu li.events:hover {
   background: #85c03c;
 }
 body.shownav #mainnav ul.menu li.events > ul {
-  border-right: 4px #85c03c solid;
+  border-left: 4px #85c03c solid;
+  padding-left: 30px;
+}
+body.shownav #mainnav ul.menu li.events:before {
+  font-family: FontAwesome;
+  color: #e84032;
+  content: "/f073";
 }
 body.shownav #mainnav ul.menu li.forum:focus,
 body.shownav #mainnav ul.menu li.forum:hover {
   background: #e84032;
 }
 body.shownav #mainnav ul.menu li.forum > ul {
-  border-right: 4px #e84032 solid;
+  border-left: 4px #e84032 solid;
+  padding-left: 30px;
 }
 body.shownav #mainnav ul.menu li.joomla.parent li a:hover,
 body.shownav #mainnav ul.menu li.joomla.parent li a:focus {
@@ -9143,6 +9167,18 @@ h3.moduleheading a {
 }
 .moduletable.features .carousel-indicators {
   display: none;
+}
+.staticheader {
+  position: relative;
+}
+.staticheader:after {
+  height: 100%;
+  width: 100%;
+  display: block;
+  content: " ";
+  top: 0px;
+  position: absolute;
+  background: rgba(249, 180, 49, 0.8);
 }
 a.skiplink {
   position: absolute;
