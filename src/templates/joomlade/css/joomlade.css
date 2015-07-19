@@ -8888,7 +8888,7 @@ body.shownav #mainnav ul.menu li.divider span {
 body.shownav #mainnav ul.menu li.joomla:before {
   font-family: FontAwesome;
   color: #679ed4;
-  content: "/f1aa";
+  content: "\f1aa";
 }
 body.shownav #mainnav ul.menu li.joomla:focus,
 body.shownav #mainnav ul.menu li.joomla:hover {
@@ -8896,12 +8896,12 @@ body.shownav #mainnav ul.menu li.joomla:hover {
 }
 body.shownav #mainnav ul.menu li.joomla > ul {
   border-left: 4px #679ed4 solid;
-  padding-left: 30px;
+  padding-left: calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.community:before {
   font-family: FontAwesome;
   color: #f9b431;
-  content: "/f0c0";
+  content: "\f0c0";
 }
 body.shownav #mainnav ul.menu li.community:focus,
 body.shownav #mainnav ul.menu li.community:hover {
@@ -8909,12 +8909,12 @@ body.shownav #mainnav ul.menu li.community:hover {
 }
 body.shownav #mainnav ul.menu li.community > ul {
   border-left: 4px #f9b431 solid;
-  padding-left: 30px;
+  padding-left: calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.events:before {
   font-family: FontAwesome;
   color: #85c03c;
-  content: "/f19d";
+  content: "\f19d";
 }
 body.shownav #mainnav ul.menu li.events:focus,
 body.shownav #mainnav ul.menu li.events:hover {
@@ -8922,12 +8922,12 @@ body.shownav #mainnav ul.menu li.events:hover {
 }
 body.shownav #mainnav ul.menu li.events > ul {
   border-left: 4px #85c03c solid;
-  padding-left: 30px;
+  padding-left: calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.events:before {
   font-family: FontAwesome;
   color: #e84032;
-  content: "/f073";
+  content: "\f073";
 }
 body.shownav #mainnav ul.menu li.forum:focus,
 body.shownav #mainnav ul.menu li.forum:hover {
@@ -8935,7 +8935,7 @@ body.shownav #mainnav ul.menu li.forum:hover {
 }
 body.shownav #mainnav ul.menu li.forum > ul {
   border-left: 4px #e84032 solid;
-  padding-left: 30px;
+  padding-left: calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.joomla.parent li a:hover,
 body.shownav #mainnav ul.menu li.joomla.parent li a:focus {
@@ -9406,6 +9406,29 @@ a.skiplink:focus {
 }
 .slideshowheader .carousel-inner > .item:nth-child(4n+4):after {
   background: rgba(232, 64, 50, 0.8);
+}
+.slideshowheader .carousel-inner .item {
+  transition-property: opacity;
+}
+.slideshowheader .carousel-inner .item,
+.slideshowheader .carousel-inner .active.left,
+.slideshowheader .carousel-inner .active.right {
+  opacity: 0;
+}
+.slideshowheader .carousel-inner .active,
+.slideshowheader .carousel-inner .next.left,
+.slideshowheader .carousel-inner .prev.right {
+  opacity: 1;
+}
+.slideshowheader .carousel-inner .next,
+.slideshowheader .carousel-inner .prev,
+.slideshowheader .carousel-inner .active.left,
+.slideshowheader .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+.slideshowheader .carousel-control {
+  z-index: 2;
 }
 #maincontent .carousel-inner > div {
   text-align: center;
