@@ -8859,17 +8859,29 @@ body.shownav #mainnav ul.menu li.joomla:focus,
 body.shownav #mainnav ul.menu li.joomla:hover {
   background: #679ed4;
 }
+body.shownav #mainnav ul.menu li.joomla > ul {
+  border-right: 4px #679ed4 solid;
+}
 body.shownav #mainnav ul.menu li.community:focus,
 body.shownav #mainnav ul.menu li.community:hover {
   background: #f9b431;
+}
+body.shownav #mainnav ul.menu li.community > ul {
+  border-right: 4px #f9b431 solid;
 }
 body.shownav #mainnav ul.menu li.events:focus,
 body.shownav #mainnav ul.menu li.events:hover {
   background: #85c03c;
 }
+body.shownav #mainnav ul.menu li.events > ul {
+  border-right: 4px #85c03c solid;
+}
 body.shownav #mainnav ul.menu li.forum:focus,
 body.shownav #mainnav ul.menu li.forum:hover {
   background: #e84032;
+}
+body.shownav #mainnav ul.menu li.forum > ul {
+  border-right: 4px #e84032 solid;
 }
 body.shownav #mainnav ul.menu li.joomla.parent li a:hover,
 body.shownav #mainnav ul.menu li.joomla.parent li a:focus {
@@ -8887,8 +8899,11 @@ body.shownav #mainnav ul.menu li.forum.parent li a:hover,
 body.shownav #mainnav ul.menu li.forum.parent li a:focus {
   color: #e84032;
 }
+body.shownav #mainnav ul.menu li ul {
+  border-right: none;
+}
 body.shownav #mainnav ul.menu li li.parent li {
-  background: none !imporant;
+  background: none!important;
 }
 body.shownav #mainnav ul.menu a {
   text-transform: uppercase;
