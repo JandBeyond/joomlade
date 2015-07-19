@@ -59,6 +59,7 @@ body.shownav #mainnav {
       font-size:@font-size-large;
       font-weight:600;
       width:100%;
+      margin-left:@grid-gutter-width;
 
 
       &.divider {
@@ -83,7 +84,6 @@ body.shownav #mainnav {
 
       &.joomla>ul {
         border-left:4px @color-blue solid;
-        margin-left:calc(@grid-gutter-width*2);
       }
 
       &.community:before {
@@ -99,7 +99,6 @@ body.shownav #mainnav {
 
       &.community>ul {
         border-left:4px @color-yellow solid;
-        margin-left:calc(@grid-gutter-width*2);
 
       }
 
@@ -115,7 +114,6 @@ body.shownav #mainnav {
 
       &.events>ul {
         border-left:4px @color-green solid;
-        margin-left:calc(@grid-gutter-width*2);
 
       }
 
@@ -131,8 +129,6 @@ body.shownav #mainnav {
 
       &.forum>ul {
         border-left:4px @color-red solid;
-        margin-left:calc(@grid-gutter-width*2);
-
       }
 
       &.joomla.parent li a:hover,  &.joomla.parent li a:focus {
