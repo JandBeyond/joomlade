@@ -8650,6 +8650,12 @@ body {
 .area-joomla .bg {
   background: rgba(103, 158, 212, 0.8) !important;
 }
+.area-joomla #aside ul.menu ul li:before {
+  color: #679ed4;
+}
+.area-joomla #aside ul.menu li.active > a {
+  color: #679ed4;
+}
 .area-forum h1,
 .area-forum h2,
 .area-forum h3,
@@ -8681,6 +8687,12 @@ body {
 }
 .area-forum .bg {
   background: rgba(232, 64, 50, 0.8) !important;
+}
+.area-forum #aside ul.menu ul li:before {
+  color: #e84032;
+}
+.area-forum #aside ul.menu li.active > a {
+  color: #e84032;
 }
 .area-community h1,
 .area-community h2,
@@ -8714,6 +8726,12 @@ body {
 .area-community .bg {
   background: rgba(249, 180, 49, 0.8) !important;
 }
+.area-community #aside ul.menu ul li:before {
+  color: #f9b431;
+}
+.area-community #aside ul.menu li.active > a {
+  color: #f9b431;
+}
 .area-events h1,
 .area-events h2,
 .area-events h3,
@@ -8746,6 +8764,12 @@ body {
 .area-events .bg {
   background: rgba(133, 192, 60, 0.8) !important;
 }
+.area-events #aside ul.menu ul li:before {
+  color: #85c03c;
+}
+.area-events #aside ul.menu li.active > a {
+  color: #85c03c;
+}
 .area-neutral h1,
 .area-neutral h2,
 .area-neutral h3,
@@ -8777,6 +8801,12 @@ body {
 }
 .area-neutral .bg {
   background: rgba(145, 145, 145, 0.8) !important;
+}
+.area-neutral #aside ul.menu ul li:before {
+  color: #919191;
+}
+.area-neutral #aside ul.menu li.active > a {
+  color: #919191;
 }
 /** hide main nav on mobile **/
 #mainnav {
@@ -9073,6 +9103,37 @@ body.shownav #mainnav ul.menu li.module {
 #footer nav > ul a:focus,
 #footer nav > ul li.active a {
   text-decoration: underline;
+}
+#aside ul.menu {
+  padding: 0;
+}
+#aside ul.menu,
+#aside ul.menu ul {
+  list-style: none;
+}
+#aside ul.menu a {
+  text-decoration: none;
+  color: #000000;
+}
+#aside ul.menu a:hover,
+#aside ul.menu a:focus {
+  text-decoration: underline;
+}
+#aside ul.menu > li > a {
+  text-transform: uppercase;
+}
+#aside ul.menu ul {
+  margin: 1.5em 0;
+  padding: 0 0 0 15px;
+}
+#aside ul.menu ul li.active:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  margin-left: -15px;
+  position: absolute;
+}
+#aside ul.menu li.module {
+  display: none;
 }
 ul.tags.inline {
   list-style-type: none;

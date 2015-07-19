@@ -331,3 +331,45 @@ body.shownav #mainnav {
     text-decoration: underline;
   }
 }
+
+#aside ul.menu {
+  padding: 0;
+
+  &, ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: @color-font;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  // Level 1
+  > li {
+    > a {
+      text-transform: uppercase;
+    }
+  }
+
+  // level 2
+  ul {
+    margin: 1.5em 0;
+    padding: 0 0 0 15px;
+
+    li.active:before {
+      content: "\f054";
+      font-family: FontAwesome;
+      margin-left: -15px;
+      position: absolute;
+    }
+  }
+
+
+  li.module {
+    display: none;
+  }
+}
