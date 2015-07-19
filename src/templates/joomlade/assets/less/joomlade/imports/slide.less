@@ -1,11 +1,24 @@
 #carouselslideshowheader .carousel-inner > .item {
+	span{
+		display:block;
+		text-align:center;
+	}
+	
+	span.headline{
+		font-size: @font-size-h1;
+	}
+	
+	span.subtext{
+		font-size: @font-size-h4;
+	}
+	
 	&:after {
 		height: 100%;
 		width: 100%;
 		display: block;
 		content: " ";
 		top: 0px;
-		position: absolute;
+		position: absolute; 
 	}
 
 	&:nth-child(4n+1):after{

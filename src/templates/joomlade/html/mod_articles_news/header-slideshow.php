@@ -25,7 +25,6 @@ defined('_JEXEC') or die;
                 <?php endif; ?>
 
                 <div class="carousel-caption">
-                    <?php echo $item->title; ?>
                     <?php echo $item->introtext; ?>
                 </div>
             </div>
