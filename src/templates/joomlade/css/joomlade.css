@@ -9148,8 +9148,8 @@ a.skiplink:focus {
   #logo {
     position: absolute;
   }
-  #carouselslideshowheader .carousel-inner > .item span {
-    display: block;
+  #carouselslideshowheader .carousel-inner > .item span.fa {
+    display: block !important;
   }
 }
 /* Medium desktop */
@@ -9179,11 +9179,14 @@ a.skiplink:focus {
 #carouselslideshowheader .carousel-inner > .item img {
   width: 100%;
 }
-#carouselslideshowheader .carousel-inner > .item span {
+#carouselslideshowheader .carousel-inner > .item span.headline {
   display: block;
   text-align: center;
   text-transform: uppercase;
   text-shadow: none;
+}
+#carouselslideshowheader .carousel-inner > .item span.subtext {
+  font-weight: 300;
 }
 #carouselslideshowheader .carousel-inner > .item span.fa {
   font-size: 8em;
