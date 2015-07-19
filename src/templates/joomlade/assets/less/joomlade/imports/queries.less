@@ -77,8 +77,20 @@
 }
 
 @media (min-width: (@screen-lg-min)) {
- .moduletable.download {
+ .moduletable.download,
+ .moduletable.features {
   width: 33.333%;
+
+  &:first-child:after {
+   content: " ";
+   width: 0;
+   height: 0;
+   border-style: solid;
+   border-width: 0 0 160px 40px;
+   border-color: transparent transparent white transparent;
+   display: block;
+   margin-left: -40px;
+   position: absolute;
+  }
  }
 }
-
