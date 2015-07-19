@@ -79,18 +79,46 @@
 @media (min-width: (@screen-lg-min)) {
  .moduletable.download,
  .moduletable.features {
-  width: 33.333%;
+    width: 33.333%;
 
-  &:first-child:after {
-   content: " ";
-   width: 0;
-   height: 0;
-   border-style: solid;
-   border-width: 0 0 160px 40px;
-   border-color: transparent transparent white transparent;
-   display: block;
-   margin-left: -40px;
-   position: absolute;
-  }
+   &:nth-child(1):after,
+   &:nth-child(2):after {
+    content: " ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 160px 20px;
+    border-color: transparent transparent white transparent;
+    display: block;
+    margin-left: -20px;
+    position: absolute;
+   }
+
+   &:nth-child(2):before,
+   &:nth-child(3):before {
+    content: " ";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 160px 20px 0 0px;
+    border-color: white transparent transparent transparent;
+    display: block;
+    margin-left: 0px;
+    position: absolute;
+   }
+
+   &:nth-child(3):before {
+    margin-left: 2px;
+   }
+
+   &:nth-child(2):before,
+   &:nth-child(2):after {
+    z-index: 2;
+   }
+
+   &:nth-child(2):after {
+    top: 0;
+    right: 15px;
+   }
  }
 }
