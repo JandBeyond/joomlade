@@ -8577,9 +8577,6 @@ body {
 #outerwrapper {
   max-width: 1170px;
 }
-#outerwrapper > .row {
-  margin-top: 3em;
-}
 .fullwidth {
   margin-left: calc(-30px / 2);
   width: calc(100% +  30px);
@@ -8589,7 +8586,7 @@ body {
   width: 100%;
 }
 #header {
-  background: #196dab;
+  background: #1e1e1e;
   min-height: 200px;
 }
 #footer {
@@ -8608,7 +8605,6 @@ body {
 #logo {
   width: 60%;
   max-width: 220px;
-  position: absolute;
   margin: 15px 0 0 15px;
 }
 #navtoggler {
@@ -9056,6 +9052,11 @@ a.skiplink:focus {
 /* Retina */
 /* Extra small devices (phones, up to 480px) */
 /*Extra small devices*/
+@media (max-width: 768px) {
+  #logo {
+    position: absolute;
+  }
+}
 /* Small devices Tablets  */
 /* Medium desktop */
 /* Large desktop  */
