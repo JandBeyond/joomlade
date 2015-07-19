@@ -32,6 +32,7 @@ foreach ($list as $i => &$item)
 	if ($matches)
 	{
 		$item->type = "module";
+		$class .= ' module';
 	}
 
 	if (($item->id == $active_id) OR ($item->type == 'alias' AND $item->params->get('aliasoptions') == $active_id))
