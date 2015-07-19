@@ -8,11 +8,11 @@
 */
 defined('_JEXEC') or die;
 ?>
-<div id="carousel-header-slideshow" class="carousel slide" data-ride="carousel">
+<div id="carousel-slideshow-<?php echo $module->id; ?>" class="<?php echo $moduleclass_sfx; ?> carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <?php foreach ($list as $key=>$item): ?>
-        <li data-target="#carousel-header-slideshow" data-slide-to="<?php echo $key; ?>" <?php echo ($key == '0' ? 'class="active"' : ''); ?>></li>
+        <li data-target="#carousel-slideshow-<?php echo $module->id; ?>" data-slide-to="<?php echo $key; ?>" <?php echo ($key == '0' ? 'class="active"' : ''); ?>></li>
         <?php endforeach; ?>
     </ol>
     <div class="carousel-inner" role="listbox">
@@ -22,20 +22,22 @@ defined('_JEXEC') or die;
 
                 <?php if($images->image_intro): ?>
                     <img class="slide" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo $item->title; ?>" />
-                <?php endif; ?>
 
-                <div class="carousel-caption">
+                    <div class="carousel-caption">
+                        <?php echo $item->introtext; ?>
+                    </div>
+                <?php else: ?>
                     <?php echo $item->introtext; ?>
-                </div>
+                <?php endif; ?>
             </div>
         <?php endforeach; ?>
     </div>
     <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-header-slideshow" role="button" data-slide="prev">
+    <a class="left carousel-control" href="#carousel-slideshow-<?php echo $module->id; ?>" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only"><?php echo JText::_('JPREV'); ?></span>
     </a>
-    <a class="right carousel-control" href="#carousel-header-slideshow" role="button" data-slide="next">
+    <a class="right carousel-control" href="#carousel-slideshow-<?php echo $module->id; ?>" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only"><?php echo JText::_('JNEXT'); ?></span>
     </a>
