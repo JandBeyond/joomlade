@@ -9401,6 +9401,29 @@ a.skiplink:focus {
 .slideshowheader .carousel-inner > .item:nth-child(4n+4):after {
   background: rgba(232, 64, 50, 0.8);
 }
+.slideshowheader .carousel-inner .item {
+  transition-property: opacity;
+}
+.slideshowheader .carousel-inner .item,
+.slideshowheader .carousel-inner .active.left,
+.slideshowheader .carousel-inner .active.right {
+  opacity: 0;
+}
+.slideshowheader .carousel-inner .active,
+.slideshowheader .carousel-inner .next.left,
+.slideshowheader .carousel-inner .prev.right {
+  opacity: 1;
+}
+.slideshowheader .carousel-inner .next,
+.slideshowheader .carousel-inner .prev,
+.slideshowheader .carousel-inner .active.left,
+.slideshowheader .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+.slideshowheader .carousel-control {
+  z-index: 2;
+}
 #maincontent .carousel-inner > div {
   text-align: center;
 }
