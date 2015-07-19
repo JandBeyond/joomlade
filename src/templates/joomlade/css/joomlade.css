@@ -1250,19 +1250,19 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 41px;
+  font-size: 36px;
 }
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 24px;
 }
 h3,
 .h3 {
-  font-size: 25px;
+  font-size: 22px;
 }
 h4,
 .h4 {
-  font-size: 22px;
+  font-size: 20px;
 }
 h5,
 .h5 {
@@ -8810,7 +8810,7 @@ body {
   border: none;
 }
 #navtoggler span {
-  font-size: 30px;
+  font-size: 24px;
 }
 /** main nav layout on enabled navigation **/
 body.shownav {
@@ -9150,10 +9150,10 @@ a.skiplink:focus {
   text-align: center;
 }
 #carouselslideshowheader .carousel-inner > .item span.headline {
-  font-size: 41px;
+  font-size: 36px;
 }
 #carouselslideshowheader .carousel-inner > .item span.subtext {
-  font-size: 22px;
+  font-size: 20px;
 }
 #carouselslideshowheader .carousel-inner > .item:after {
   height: 100%;
