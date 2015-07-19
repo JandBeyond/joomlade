@@ -8876,6 +8876,7 @@ body.shownav #mainnav ul.menu li {
   font-size: 20px;
   font-weight: 600;
   width: 100%;
+  margin-left: 30px;
 }
 body.shownav #mainnav ul.menu li.divider {
   border-bottom: 1px solid #fff;
@@ -8896,7 +8897,6 @@ body.shownav #mainnav ul.menu li.joomla:hover {
 }
 body.shownav #mainnav ul.menu li.joomla > ul {
   border-left: 4px #679ed4 solid;
-  margin-left: calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.community:before {
   font-family: FontAwesome;
@@ -8909,7 +8909,6 @@ body.shownav #mainnav ul.menu li.community:hover {
 }
 body.shownav #mainnav ul.menu li.community > ul {
   border-left: 4px #f9b431 solid;
-  margin-left: calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.events:before {
   font-family: FontAwesome;
@@ -8922,7 +8921,6 @@ body.shownav #mainnav ul.menu li.events:hover {
 }
 body.shownav #mainnav ul.menu li.events > ul {
   border-left: 4px #85c03c solid;
-  margin-left: calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.events:before {
   font-family: FontAwesome;
@@ -8935,7 +8933,6 @@ body.shownav #mainnav ul.menu li.forum:hover {
 }
 body.shownav #mainnav ul.menu li.forum > ul {
   border-left: 4px #e84032 solid;
-  margin-left: calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.joomla.parent li a:hover,
 body.shownav #mainnav ul.menu li.joomla.parent li a:focus {
