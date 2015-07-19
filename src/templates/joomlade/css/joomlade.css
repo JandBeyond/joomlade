@@ -9145,6 +9145,9 @@ a.skiplink:focus {
     right: calc((100vw -  1140px ) / 2) !important;
   }
 }
+#carouselslideshowheader .carousel-inner > .item img {
+  width: 100%;
+}
 #carouselslideshowheader .carousel-inner > .item span {
   display: block;
   text-align: center;
