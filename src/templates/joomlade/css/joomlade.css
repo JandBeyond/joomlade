@@ -9232,4 +9232,10 @@ a.skiplink:focus {
 #carouselslideshowheader .carousel-inner > .item:nth-child(4n+4):after {
   background: rgba(232, 64, 50, 0.8);
 }
+#maincontent .carousel-inner > div {
+  text-align: center;
+}
+#maincontent .carousel-inner img {
+  border-radius: 80px;
+}
 /*# sourceMappingURL=joomlade.css.map */
