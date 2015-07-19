@@ -8896,7 +8896,7 @@ body.shownav #mainnav ul.menu li.joomla:hover {
 }
 body.shownav #mainnav ul.menu li.joomla > ul {
   border-left: 4px #679ed4 solid;
-  padding-left: calc(30px*2);
+  margin-left: calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.community:before {
   font-family: FontAwesome;
@@ -8909,7 +8909,7 @@ body.shownav #mainnav ul.menu li.community:hover {
 }
 body.shownav #mainnav ul.menu li.community > ul {
   border-left: 4px #f9b431 solid;
-  padding-left: calc(30px*2);
+  margin-left: calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.events:before {
   font-family: FontAwesome;
@@ -8922,11 +8922,11 @@ body.shownav #mainnav ul.menu li.events:hover {
 }
 body.shownav #mainnav ul.menu li.events > ul {
   border-left: 4px #85c03c solid;
-  padding-left: calc(30px*2);
+  margin-left: calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.events:before {
   font-family: FontAwesome;
-  color: #e84032;
+  color: #85c03c;
   content: "\f073";
 }
 body.shownav #mainnav ul.menu li.forum:focus,
@@ -8935,7 +8935,7 @@ body.shownav #mainnav ul.menu li.forum:hover {
 }
 body.shownav #mainnav ul.menu li.forum > ul {
   border-left: 4px #e84032 solid;
-  padding-left: calc(30px*2);
+  margin-left: calc(30px*2);
 }
 body.shownav #mainnav ul.menu li.joomla.parent li a:hover,
 body.shownav #mainnav ul.menu li.joomla.parent li a:focus {
