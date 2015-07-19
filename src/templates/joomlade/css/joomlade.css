@@ -9044,6 +9044,10 @@ h3.moduleheading a {
 }
 .icon_module a {
   text-decoration: none;
+  color: #000000 !important;
+}
+.icon_module > div {
+  padding: 30px 0;
 }
 #events > h3 {
   margin: 0 15px;
