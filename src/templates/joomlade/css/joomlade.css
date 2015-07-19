@@ -8786,6 +8786,7 @@ body {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+  width: 0px;
 }
 #mainnav:active,
 #mainnav:focus {
@@ -9071,15 +9072,15 @@ a.skiplink:focus {
 /* Non-desktop devices*/
 @media (max-width: 767px) {
   #outerwrapper {
-    transition: margin-left 0.5s;
+    transition: margin-left 0.25s;
     margin-left: 0;
   }
   #mainnav {
     width: 0px;
-    transition: width 0.5s;
+    transition: width 0.25s;
   }
   #navtoggler {
-    transition: right 0.5s;
+    transition: right 0.25s;
   }
 }
 /* Small devices Tablets  */
