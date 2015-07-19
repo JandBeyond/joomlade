@@ -26,6 +26,16 @@ foreach ($list as $i => &$item)
 {
 	$class = 'item-' . $item->id . " " . $item->anchor_css;
 
+	// Load module in menu
+	preg_match("/{loadmodule ([0-9]{0,4})}/", $item->title, $matches);
+
+	if ($matches)
+	{
+		$item->type = "module";
+		$item->module_id = $matches[1];
+		$class .= ' module';
+	}
+
 	if (($item->id == $active_id) OR ($item->type == 'alias' AND $item->params->get('aliasoptions') == $active_id))
 	{
 		$class .= ' current';
@@ -75,6 +85,7 @@ foreach ($list as $i => &$item)
 	switch ($item->type) :
 		case 'separator':
 		case 'url':
+		case 'module':
 		case 'component':
 		case 'heading':
 			require JModuleHelper::getLayoutPath('mod_menu', 'default_' . $item->type);

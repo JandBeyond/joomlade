@@ -8893,6 +8893,9 @@ body.shownav #mainnav ul.menu ul.nav-child li:hover {
 body.shownav #mainnav ul.menu ul.nav-child li a {
   padding: 0 calc(30px*2);
 }
+body.shownav #mainnav ul.menu li.module {
+  display: none;
+}
 /*** main nav desktop styles ***/
 @media (min-width: 768px) {
   #mainnav {
@@ -8905,7 +8908,8 @@ body.shownav #mainnav ul.menu ul.nav-child li a {
     clip: auto;
     position: absolute !important;
     /** mainlevel **/
-    /*** submenu level 1 ***/
+    /*** active and hover for menu level 2 ***/
+    /*** menu level 2 ***/
     /*** all other levels ***/
   }
   #mainnav a {
@@ -8963,10 +8967,22 @@ body.shownav #mainnav ul.menu ul.nav-child li a {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    width: 300px;
   }
   #mainnav > ul > li:hover > ul a,
   #mainnav > ul > li:focus > ul a {
     color: #000000;
+  }
+  #mainnav > ul > li:hover > ul li,
+  #mainnav > ul > li:focus > ul li {
+    margin: 0 0 5px 0;
+  }
+  #mainnav > ul > li:hover > ul .module,
+  #mainnav > ul > li:focus > ul .module {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 150px;
   }
   #mainnav > ul ul {
     display: none;
@@ -9052,6 +9068,20 @@ a.skiplink:focus {
 /* Retina */
 /* Extra small devices (phones, up to 480px) */
 /*Extra small devices*/
+/* Non-desktop devices*/
+@media (max-width: 767px) {
+  #outerwrapper {
+    transition: margin-left 0.5s;
+    margin-left: 0;
+  }
+  #mainnav {
+    width: 0px;
+    transition: width 0.5s;
+  }
+  #navtoggler {
+    transition: right 0.5s;
+  }
+}
 /* Small devices Tablets  */
 /* Everything above Small devices Tablets  */
 @media (min-width: 768px) {
@@ -9061,7 +9091,7 @@ a.skiplink:focus {
 }
 /* Medium desktop */
 /* Large desktop  */
-@media (min-width: 1200px) {
+@media (min-width: 1170px) {
   .fullwidth {
     width: 100vw;
     margin-left: calc((100vw -  1170px + 30px ) / 2 * -1);
