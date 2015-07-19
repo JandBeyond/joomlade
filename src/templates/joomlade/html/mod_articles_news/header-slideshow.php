@@ -22,11 +22,13 @@ defined('_JEXEC') or die;
 
                 <?php if($images->image_intro): ?>
                     <img class="slide" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo $item->title; ?>" />
-                <?php endif; ?>
 
-                <div class="carousel-caption">
+                    <div class="carousel-caption">
+                        <?php echo $item->introtext; ?>
+                    </div>
+                <?php else: ?>
                     <?php echo $item->introtext; ?>
-                </div>
+                <?php endif; ?>
             </div>
         <?php endforeach; ?>
     </div>
