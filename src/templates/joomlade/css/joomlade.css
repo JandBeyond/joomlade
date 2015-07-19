@@ -8577,6 +8577,9 @@ body {
 #outerwrapper {
   max-width: 1170px;
 }
+#outerwrapper > .row {
+  margin-top: 3em;
+}
 .fullwidth {
   margin-left: calc(-30px / 2);
   width: calc(100% +  30px);
@@ -8587,7 +8590,6 @@ body {
 }
 #header {
   background: #1e1e1e;
-  min-height: 200px;
 }
 #footer {
   background: #196dab;
@@ -8605,10 +8607,10 @@ body {
 #logo {
   width: 60%;
   max-width: 220px;
-  margin: 15px 0 0 15px;
+  margin: 15px 0 15px 15px;
 }
 #navtoggler {
-  top: 15px;
+  top: 17px;
   right: 15px;
   position: absolute;
 }

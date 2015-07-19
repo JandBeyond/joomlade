@@ -4,6 +4,10 @@ body {
 
 #outerwrapper {
   max-width: @container-large-desktop;
+  
+  > .row {
+    margin-top:3em;
+  }
 }
 
 .fullwidth {
@@ -18,7 +22,6 @@ body {
 
 #header {
   background:darken(@color-grey,45%);
-  min-height: 200px;
 }
 
 #footer {
@@ -39,11 +42,11 @@ body {
 #logo {
   width: 60%;
   max-width: 220px;
-  margin: (@grid-gutter-width / 2) 0 0 (@grid-gutter-width / 2);
+  margin: (@grid-gutter-width / 2) 0 (@grid-gutter-width / 2) (@grid-gutter-width / 2);
 }
 
 #navtoggler {
-  top: (@grid-gutter-width / 2);
+  top: 17px;
   right: (@grid-gutter-width / 2);
   position: absolute;
 }
