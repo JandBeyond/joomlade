@@ -9184,10 +9184,10 @@ a.skiplink:focus {
   text-align: center;
   text-shadow: none;
 }
-#carouselslideshowheader .carousel-inner > .item span.headline {
+#carouselslideshowheader .carousel-inner > .item span.h1 {
   text-transform: uppercase;
 }
-#carouselslideshowheader .carousel-inner > .item span.subtext {
+#carouselslideshowheader .carousel-inner > .item span.h4 {
   font-weight: 300;
 }
 #carouselslideshowheader .carousel-inner > .item span.fa {
