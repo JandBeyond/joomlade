@@ -9109,4 +9109,24 @@ a.skiplink:focus {
     right: calc((100vw -  1140px ) / 2) !important;
   }
 }
+#carouselslideshowheader .carousel-inner > .item:after {
+  height: 100%;
+  width: 100%;
+  display: block;
+  content: " ";
+  top: 0px;
+  position: absolute;
+}
+#carouselslideshowheader .carousel-inner > .item:nth-child(4n+1):after {
+  background: rgba(103, 158, 212, 0.8);
+}
+#carouselslideshowheader .carousel-inner > .item:nth-child(4n+2):after {
+  background: rgba(249, 180, 49, 0.8);
+}
+#carouselslideshowheader .carousel-inner > .item:nth-child(4n+3):after {
+  background: rgba(133, 192, 60, 0.8);
+}
+#carouselslideshowheader .carousel-inner > .item:nth-child(4n+4):after {
+  background: rgba(232, 64, 50, 0.8);
+}
 /*# sourceMappingURL=joomlade.css.map */
