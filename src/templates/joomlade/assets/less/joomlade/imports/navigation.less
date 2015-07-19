@@ -113,6 +113,10 @@ body.shownav #mainnav {
         padding:0 calc(@grid-gutter-width*2);
       }
     }
+
+    li.module {
+      display: none;
+    }
   }
 }
 
@@ -169,7 +173,8 @@ body.shownav #mainnav {
       }
     }
 
-    /*** submenu level 1 ***/
+    /*** active and hover for menu level 2 ***/
+
     > ul > li.active > a, > ul > li:hover > a, > ul > li > a:focus {
       background: white;
       border-radius: 5px;
@@ -182,6 +187,8 @@ body.shownav #mainnav {
       border-bottom-left-radius: 0px;
     }
 
+    /*** menu level 2 ***/
+
     > ul > li:hover > ul, > ul > li:focus > ul {
       display: block;
       position: absolute;
@@ -190,9 +197,21 @@ body.shownav #mainnav {
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
       border-bottom-left-radius: 5px;
+      width: 300px;
 
       a {
         color: @color-font;
+      }
+
+      li {
+        margin: 0 0 5px 0;
+      }
+
+      .module {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 150px;
       }
     }
 

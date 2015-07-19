@@ -12552,4 +12552,17 @@ jQuery( document ).ready(function( $ ) {
             $('body').removeClass('shownav');
         }
     });
+
+    $('#mainnav > ul > li.parent').hover(function(){
+        if($(this).find(' > ul > li.module').length)
+        {
+            var list = $(this).children('ul');
+            var module = list.children('li.module');
+
+            if(module.height() > list.height())
+            {
+                list.height(module.height());
+            }
+        }
+    });
 });
