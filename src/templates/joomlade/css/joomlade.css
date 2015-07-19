@@ -9148,12 +9148,11 @@ a.skiplink:focus {
 #carouselslideshowheader .carousel-inner > .item span {
   display: block;
   text-align: center;
+  text-transform: uppercase;
 }
-#carouselslideshowheader .carousel-inner > .item span.headline {
-  font-size: 36px;
-}
-#carouselslideshowheader .carousel-inner > .item span.subtext {
-  font-size: 20px;
+#carouselslideshowheader .carousel-inner > .item span.fa {
+  font-size: 8em;
+  opacity: 0.3;
 }
 #carouselslideshowheader .carousel-inner > .item:after {
   height: 100%;

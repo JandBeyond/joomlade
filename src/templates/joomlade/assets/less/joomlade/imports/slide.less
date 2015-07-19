@@ -2,14 +2,12 @@
 	span{
 		display:block;
 		text-align:center;
+		text-transform: uppercase;
 	}
 	
-	span.headline{
-		font-size: @font-size-h1;
-	}
-	
-	span.subtext{
-		font-size: @font-size-h4;
+	span.fa{
+		font-size:8em;
+		opacity: 0.3;
 	}
 	
 	&:after {
@@ -18,7 +16,7 @@
 		display: block;
 		content: " ";
 		top: 0px;
-		position: absolute; 
+		position: absolute;
 	}
 
 	&:nth-child(4n+1):after{
