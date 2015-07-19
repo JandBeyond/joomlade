@@ -9125,6 +9125,12 @@ a.skiplink:focus {
   #logo {
     position: absolute;
   }
+  #carouselslideshowheader .fa {
+    display: block;
+  }
+  #carouselslideshowheader .span {
+    font-size: 1em;
+  }
 }
 /* Medium desktop */
 /* Large desktop  */
@@ -9153,13 +9159,15 @@ a.skiplink:focus {
   text-align: center;
   text-transform: uppercase;
   text-shadow: none;
+  font-size: 0.6em;
 }
 #carouselslideshowheader .carousel-inner > .item span.fa {
   font-size: 8em;
   opacity: 0.3;
+  display: none;
 }
 #carouselslideshowheader .carousel-inner > .item .carousel-caption {
-  padding-bottom: 90px;
+  padding-bottom: 55px;
 }
 #carouselslideshowheader .carousel-inner > .item:after {
   height: 100%;
