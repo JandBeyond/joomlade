@@ -1,0 +1,23 @@
+#carouselslideshowheader .carousel-inner > .item {
+	&:after {
+		height: 100%;
+		width: 100%;
+		display: block;
+		content: " ";
+		top: 0px;
+		position: absolute;
+	}
+
+	&:nth-child(4n+1):after{
+		background: fade(@color-blue, 80%)
+	}
+	&:nth-child(4n+2):after{
+		background: fade(@color-yellow, 80%)
+	}
+	&:nth-child(4n+3):after{
+		background: fade(@color-green, 80%)
+	}
+	&:nth-child(4n+4):after{
+		background: fade(@color-red, 80%)
+	}
+}
