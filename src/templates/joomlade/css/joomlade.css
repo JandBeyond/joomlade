@@ -9149,7 +9149,7 @@ a.skiplink:focus {
   #logo {
     position: absolute;
   }
-  #carouselslideshowheader .carousel-inner > .item span.fa {
+  .slideshowheader .carousel-inner > .item span.fa {
     display: block !important;
   }
 }
@@ -9190,29 +9190,29 @@ a.skiplink:focus {
     position: absolute;
   }
 }
-#carouselslideshowheader .carousel-inner > .item img {
+.slideshowheader .carousel-inner > .item img {
   width: 100%;
 }
-#carouselslideshowheader .carousel-inner > .item span {
+.slideshowheader .carousel-inner > .item span {
   display: block;
   text-align: center;
   text-shadow: none;
 }
-#carouselslideshowheader .carousel-inner > .item span.h1 {
+.slideshowheader .carousel-inner > .item span.h1 {
   text-transform: uppercase;
 }
-#carouselslideshowheader .carousel-inner > .item span.h4 {
+.slideshowheader .carousel-inner > .item span.h4 {
   font-weight: 300;
 }
-#carouselslideshowheader .carousel-inner > .item span.fa {
+.slideshowheader .carousel-inner > .item span.fa {
   font-size: 8em;
   opacity: 0.3;
   display: none;
 }
-#carouselslideshowheader .carousel-inner > .item .carousel-caption {
+.slideshowheader .carousel-inner > .item .carousel-caption {
   padding-bottom: 55px;
 }
-#carouselslideshowheader .carousel-inner > .item:after {
+.slideshowheader .carousel-inner > .item:after {
   height: 100%;
   width: 100%;
   display: block;
@@ -9220,16 +9220,16 @@ a.skiplink:focus {
   top: 0px;
   position: absolute;
 }
-#carouselslideshowheader .carousel-inner > .item:nth-child(4n+1):after {
+.slideshowheader .carousel-inner > .item:nth-child(4n+1):after {
   background: rgba(103, 158, 212, 0.8);
 }
-#carouselslideshowheader .carousel-inner > .item:nth-child(4n+2):after {
+.slideshowheader .carousel-inner > .item:nth-child(4n+2):after {
   background: rgba(249, 180, 49, 0.8);
 }
-#carouselslideshowheader .carousel-inner > .item:nth-child(4n+3):after {
+.slideshowheader .carousel-inner > .item:nth-child(4n+3):after {
   background: rgba(133, 192, 60, 0.8);
 }
-#carouselslideshowheader .carousel-inner > .item:nth-child(4n+4):after {
+.slideshowheader .carousel-inner > .item:nth-child(4n+4):after {
   background: rgba(232, 64, 50, 0.8);
 }
 #maincontent .carousel-inner > div {
