@@ -50,7 +50,7 @@
 
 }
 
- /* Large desktop  */
+ /* Intermediate size for navigation */
 @media (min-width: (@screen-lg-min - @grid-gutter-width)) {
  .fullwidth {
   width: 100vw;
@@ -71,3 +71,10 @@
   right: calc(~"(100vw - "(@container-lg - @grid-gutter-width)~") / 2") !important;
  }
 }
+
+@media (min-width: (@screen-lg-min)) {
+ .moduletable.download {
+  width: 33.333%;
+ }
+}
+
