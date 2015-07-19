@@ -8954,7 +8954,7 @@ body.shownav #mainnav ul.menu li.forum.parent li a:focus {
   color: #e84032;
 }
 body.shownav #mainnav ul.menu li ul {
-  border-right: none;
+  border-left: none;
 }
 body.shownav #mainnav ul.menu li li.parent li {
   background: none!important;
