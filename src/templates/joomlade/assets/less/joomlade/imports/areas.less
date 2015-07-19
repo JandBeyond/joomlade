@@ -28,6 +28,16 @@
   .bg {
     background: fade(@color, 80%) !important;
   }
+
+  #aside ul.menu {
+    ul li:before {
+      color: @color;
+    }
+
+    li.active > a {
+      color: @color;
+    }
+  }
 }
 
 .area-joomla {
