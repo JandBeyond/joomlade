@@ -9179,11 +9179,13 @@ a.skiplink:focus {
 #carouselslideshowheader .carousel-inner > .item img {
   width: 100%;
 }
-#carouselslideshowheader .carousel-inner > .item span.headline {
+#carouselslideshowheader .carousel-inner > .item span {
   display: block;
   text-align: center;
-  text-transform: uppercase;
   text-shadow: none;
+}
+#carouselslideshowheader .carousel-inner > .item span.headline {
+  text-transform: uppercase;
 }
 #carouselslideshowheader .carousel-inner > .item span.subtext {
   font-weight: 300;
