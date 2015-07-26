@@ -8868,6 +8868,7 @@ body.shownav #mainnav ul.menu {
   list-style-type: none;
   margin: calc(30px/2) 0 0 0;
   padding: 0;
+  margin-left: 10px;
   /*** sublevel 1 ***/
   /*** sublevel 2 ***/
 }
@@ -8876,7 +8877,7 @@ body.shownav #mainnav ul.menu li {
   font-size: 20px;
   font-weight: 600;
   width: 100%;
-  margin-left: 30px;
+  margin-left: calc(30px / 1.5);
 }
 body.shownav #mainnav ul.menu li.divider {
   border-bottom: 1px solid #fff;
@@ -8889,6 +8890,7 @@ body.shownav #mainnav ul.menu li.divider span {
 body.shownav #mainnav ul.menu li.joomla:before {
   font-family: FontAwesome;
   color: #679ed4;
+  font-size: 28px;
   content: "\f1aa";
 }
 body.shownav #mainnav ul.menu li.joomla:focus,
@@ -8896,43 +8898,46 @@ body.shownav #mainnav ul.menu li.joomla:hover {
   background: #679ed4;
 }
 body.shownav #mainnav ul.menu li.joomla > ul {
-  border-left: 4px #679ed4 solid;
+  border-left: 2px #679ed4 solid;
 }
 body.shownav #mainnav ul.menu li.community:before {
   font-family: FontAwesome;
   color: #f9b431;
   content: "\f0c0";
+  font-size: 28px;
 }
 body.shownav #mainnav ul.menu li.community:focus,
 body.shownav #mainnav ul.menu li.community:hover {
   background: #f9b431;
 }
 body.shownav #mainnav ul.menu li.community > ul {
-  border-left: 4px #f9b431 solid;
+  border-left: 2px #f9b431 solid;
 }
 body.shownav #mainnav ul.menu li.events:before {
   font-family: FontAwesome;
   color: #85c03c;
   content: "\f19d";
+  font-size: 28px;
 }
 body.shownav #mainnav ul.menu li.events:focus,
 body.shownav #mainnav ul.menu li.events:hover {
   background: #85c03c;
 }
 body.shownav #mainnav ul.menu li.events > ul {
-  border-left: 4px #85c03c solid;
+  border-left: 2px #85c03c solid;
 }
 body.shownav #mainnav ul.menu li.events:before {
   font-family: FontAwesome;
   color: #85c03c;
   content: "\f073";
+  font-size: 28px;
 }
 body.shownav #mainnav ul.menu li.forum:focus,
 body.shownav #mainnav ul.menu li.forum:hover {
   background: #e84032;
 }
 body.shownav #mainnav ul.menu li.forum > ul {
-  border-left: 4px #e84032 solid;
+  border-left: 2px #e84032 solid;
 }
 body.shownav #mainnav ul.menu li.joomla.parent li a:hover,
 body.shownav #mainnav ul.menu li.joomla.parent li a:focus {
