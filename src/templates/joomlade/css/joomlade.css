@@ -8970,7 +8970,7 @@ body.shownav #mainnav ul.menu ul.nav-child {
   list-style-type: none;
   padding: 0;
   background: #1e1e1e;
-  margin-left: calc(30px*0.6);
+  margin-left: calc(30px*0.3);
 }
 body.shownav #mainnav ul.menu ul.nav-child li:focus,
 body.shownav #mainnav ul.menu ul.nav-child li:hover {
