@@ -8892,6 +8892,10 @@ body.shownav #mainnav ul.menu li.joomla:before {
   font-size: 28px;
   content: "\f1aa";
 }
+body.shownav #mainnav ul.menu li.joomla:focus::before,
+body.shownav #mainnav ul.menu li.joomla:hover::before {
+  color: #fff;
+}
 body.shownav #mainnav ul.menu li.joomla:focus,
 body.shownav #mainnav ul.menu li.joomla:hover {
   background: #679ed4;
@@ -8904,6 +8908,10 @@ body.shownav #mainnav ul.menu li.community:before {
   color: #f9b431;
   content: "\f0c0";
   font-size: 28px;
+}
+body.shownav #mainnav ul.menu li.community:focus::before,
+body.shownav #mainnav ul.menu li.community:hover::before {
+  color: #fff;
 }
 body.shownav #mainnav ul.menu li.community:focus,
 body.shownav #mainnav ul.menu li.community:hover {
@@ -8918,6 +8926,10 @@ body.shownav #mainnav ul.menu li.events:before {
   content: "\f19d";
   font-size: 28px;
 }
+body.shownav #mainnav ul.menu li.events:focus::before,
+body.shownav #mainnav ul.menu li.events:hover::before {
+  color: #fff;
+}
 body.shownav #mainnav ul.menu li.events:focus,
 body.shownav #mainnav ul.menu li.events:hover {
   background: #85c03c;
@@ -8930,6 +8942,10 @@ body.shownav #mainnav ul.menu li.events:before {
   color: #85c03c;
   content: "\f073";
   font-size: 28px;
+}
+body.shownav #mainnav ul.menu li.forum:focus::before,
+body.shownav #mainnav ul.menu li.forum:hover::before {
+  color: #fff;
 }
 body.shownav #mainnav ul.menu li.forum:focus,
 body.shownav #mainnav ul.menu li.forum:hover {
@@ -8978,6 +8994,7 @@ body.shownav #mainnav ul.menu ul.nav-child li:hover {
 }
 body.shownav #mainnav ul.menu ul.nav-child li {
   margin: 0;
+  font-size: 16px;
 }
 body.shownav #mainnav ul.menu ul.nav-child li a,
 body.shownav #mainnav ul.menu ul.nav-child li span {

@@ -80,6 +80,10 @@ body.shownav #mainnav {
         content:"\f1aa";
       }
 
+      &.joomla:focus::before, &.joomla:hover::before {
+        color:#fff;
+      }
+
       &.joomla:focus, &.joomla:hover {
         background:@color-blue;
       }
@@ -96,6 +100,9 @@ body.shownav #mainnav {
 
       }
 
+      &.community:focus::before, &.community:hover::before {
+        color:#fff;
+      }
 
       &.community:focus, &.community:hover {
         background:@color-yellow;
@@ -114,6 +121,10 @@ body.shownav #mainnav {
 
       }
 
+      &.events:focus::before, &.events:hover::before {
+        color:#fff;
+      }
+
       &.events:focus, &.events:hover {
         background:@color-green;
       }
@@ -128,6 +139,10 @@ body.shownav #mainnav {
         color:@color-green;
         content:"\f073";
         font-size:28px;
+      }
+
+      &.forum:focus::before, &.forum:hover::before {
+        color:#fff;
       }
 
       &.forum:focus, &.forum:hover {
@@ -185,6 +200,7 @@ body.shownav #mainnav {
 
       li {
         margin:0;
+        font-size:16px;
 
         a, span {
           padding: 0 calc(@grid-gutter-width * 1);
