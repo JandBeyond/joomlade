@@ -8876,7 +8876,9 @@ body.shownav #mainnav ul.menu li {
   font-size: 20px;
   font-weight: 600;
   width: 100%;
-  margin-left: calc(30px / 0.75);
+  margin-left: calc(30px / 1.5);
+  margin-right: calc(30px / 1.5);
+  padding: 0 5px;
 }
 body.shownav #mainnav ul.menu li.divider {
   border-bottom: 1px solid #fff;
