@@ -8878,7 +8878,6 @@ body.shownav #mainnav ul.menu li {
   width: 100%;
   margin-left: calc(30px / 1.5);
   margin-right: calc(30px / 1.5);
-  padding: 0 5px;
 }
 body.shownav #mainnav ul.menu li.divider {
   border-bottom: 1px solid #fff;
@@ -8893,6 +8892,7 @@ body.shownav #mainnav ul.menu li.joomla:before {
   color: #679ed4;
   font-size: 28px;
   content: "\f1aa";
+  padding: 0 5px;
 }
 body.shownav #mainnav ul.menu li.joomla:focus::before,
 body.shownav #mainnav ul.menu li.joomla:hover::before {
@@ -8910,6 +8910,7 @@ body.shownav #mainnav ul.menu li.community:before {
   color: #f9b431;
   content: "\f0c0";
   font-size: 28px;
+  padding: 0 5px;
 }
 body.shownav #mainnav ul.menu li.community:focus::before,
 body.shownav #mainnav ul.menu li.community:hover::before {
@@ -8925,8 +8926,9 @@ body.shownav #mainnav ul.menu li.community > ul {
 body.shownav #mainnav ul.menu li.events:before {
   font-family: FontAwesome;
   color: #85c03c;
-  content: "\f19d";
+  content: "\f073";
   font-size: 28px;
+  padding: 0 5px;
 }
 body.shownav #mainnav ul.menu li.events:focus::before,
 body.shownav #mainnav ul.menu li.events:hover::before {
@@ -8939,11 +8941,12 @@ body.shownav #mainnav ul.menu li.events:hover {
 body.shownav #mainnav ul.menu li.events > ul {
   border-left: 2px #85c03c solid;
 }
-body.shownav #mainnav ul.menu li.events:before {
+body.shownav #mainnav ul.menu li.forum:before {
   font-family: FontAwesome;
-  color: #85c03c;
-  content: "\f073";
+  color: #e84032;
+  content: "\f19d";
   font-size: 28px;
+  padding: 0 5px;
 }
 body.shownav #mainnav ul.menu li.forum:focus::before,
 body.shownav #mainnav ul.menu li.forum:hover::before {

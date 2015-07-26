@@ -62,7 +62,6 @@ body.shownav #mainnav {
       width:100%;
       margin-left:calc(@grid-gutter-width / 1.5);
       margin-right:calc(@grid-gutter-width / 1.5);
-      padding: 0 5px;
 
 
       &.divider {
@@ -80,6 +79,8 @@ body.shownav #mainnav {
         color:@color-blue;
         font-size:28px;
         content:"\f1aa";
+        padding: 0 5px;
+
       }
 
       &.joomla:focus::before, &.joomla:hover::before {
@@ -99,6 +100,7 @@ body.shownav #mainnav {
         color:@color-yellow;
         content:"\f0c0";
         font-size:28px;
+        padding: 0 5px;
 
       }
 
@@ -118,8 +120,9 @@ body.shownav #mainnav {
       &.events:before {
         font-family:FontAwesome;
         color:@color-green;
-        content:"\f19d";
+        content:"\f073";
         font-size:28px;
+        padding: 0 5px;
 
       }
 
@@ -136,11 +139,13 @@ body.shownav #mainnav {
 
       }
 
-      &.events:before {
+      &.forum:before {
         font-family:FontAwesome;
-        color:@color-green;
-        content:"\f073";
+        color:@color-red;
+        content:"\f19d";
         font-size:28px;
+        padding: 0 5px;
+
       }
 
       &.forum:focus::before, &.forum:hover::before {
