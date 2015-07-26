@@ -176,7 +176,7 @@ body.shownav #mainnav {
       list-style-type: none;
       padding: 0;
       background: darken(@color-grey, 45%);
-      margin-left:calc(@grid-gutter-width/1.5);
+      margin-left:calc(@grid-gutter-width/2);
 
 
       li:focus, li:hover {
@@ -184,6 +184,8 @@ body.shownav #mainnav {
       }
 
       li {
+        margin:0;
+
         a, span {
           padding: 0 calc(@grid-gutter-width * 1);
           font-weight: 300;
