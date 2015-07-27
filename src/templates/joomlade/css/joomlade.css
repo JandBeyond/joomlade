@@ -8976,26 +8976,26 @@ body.shownav #mainnav ul.menu li.forum > ul {
 }
 body.shownav #mainnav ul.menu li.joomla.parent li a:hover,
 body.shownav #mainnav ul.menu li.joomla.parent li a:focus,
-body.shownav #mainnav ul.menu li.joomla li a.active,
-body.shownav #mainnav ul.menu li.joomla li a.current {
+body.shownav #mainnav ul.menu li.joomla li.active a,
+body.shownav #mainnav ul.menu li.joomla li.current a {
   color: #679ed4;
 }
 body.shownav #mainnav ul.menu li.community.parent li a:hover,
 body.shownav #mainnav ul.menu li.community.parent li a:focus,
-body.shownav #mainnav ul.menu li.community li a.active,
-body.shownav #mainnav ul.menu li.community li a.current {
+body.shownav #mainnav ul.menu li.community li.active a,
+body.shownav #mainnav ul.menu li.community li.current a {
   color: #f9b431;
 }
 body.shownav #mainnav ul.menu li.events.parent li a:hover,
 body.shownav #mainnav ul.menu li.events.parent li a:focus,
-body.shownav #mainnav ul.menu li.events li a.active,
-body.shownav #mainnav ul.menu li.events li a.current {
+body.shownav #mainnav ul.menu li.events li.active a,
+body.shownav #mainnav ul.menu li.events li.current a {
   color: #85c03c;
 }
 body.shownav #mainnav ul.menu li.forum.parent li a:hover,
 body.shownav #mainnav ul.menu li.forum.parent li a:focus,
-body.shownav #mainnav ul.menu li.forum li a.active,
-body.shownav #mainnav ul.menu li.forum li a.current {
+body.shownav #mainnav ul.menu li.forum li.active a,
+body.shownav #mainnav ul.menu li.forum li.current a {
   color: #e84032;
 }
 body.shownav #mainnav ul.menu li ul {
