@@ -8890,7 +8890,7 @@ body.shownav #mainnav ul.menu li.divider span {
 body.shownav #mainnav ul.menu li.joomla:before {
   font-family: FontAwesome;
   color: #679ed4;
-  font-size: 28px;
+  font-size: 26px;
   content: "\f1aa";
   padding: 0 5px;
 }
@@ -8909,7 +8909,7 @@ body.shownav #mainnav ul.menu li.community:before {
   font-family: FontAwesome;
   color: #f9b431;
   content: "\f0c0";
-  font-size: 28px;
+  font-size: 26px;
   padding: 0 5px;
 }
 body.shownav #mainnav ul.menu li.community:focus::before,
@@ -8927,7 +8927,7 @@ body.shownav #mainnav ul.menu li.events:before {
   font-family: FontAwesome;
   color: #85c03c;
   content: "\f073";
-  font-size: 28px;
+  font-size: 26px;
   padding: 0 5px;
 }
 body.shownav #mainnav ul.menu li.events:focus::before,
@@ -8945,7 +8945,7 @@ body.shownav #mainnav ul.menu li.forum:before {
   font-family: FontAwesome;
   color: #e84032;
   content: "\f19d";
-  font-size: 28px;
+  font-size: 26px;
   padding: 0 5px;
 }
 body.shownav #mainnav ul.menu li.forum:focus::before,
@@ -8985,13 +8985,13 @@ body.shownav #mainnav ul.menu a {
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
-  padding: 0 30px;
+  padding: 0 calc(30px/2);
 }
 body.shownav #mainnav ul.menu ul.nav-child {
   list-style-type: none;
   padding: 0;
   background: #1e1e1e;
-  margin-left: calc(30px*0.3);
+  margin-left: calc(30px*0.5);
 }
 body.shownav #mainnav ul.menu ul.nav-child li:focus,
 body.shownav #mainnav ul.menu ul.nav-child li:hover {
