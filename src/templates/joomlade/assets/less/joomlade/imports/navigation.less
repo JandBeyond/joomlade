@@ -82,7 +82,7 @@ body.shownav #mainnav {
 
       }
 
-      &.joomla:focus::before, &.joomla:hover::before {
+      &.joomla:focus::before, &.joomla:hover::before, &.joomla.active:before, &.joomla.current:before {
         color:#fff;
       }
 
@@ -103,7 +103,7 @@ body.shownav #mainnav {
 
       }
 
-      &.community:focus::before, &.community:hover::before {
+      &.community:focus::before, &.community:hover::before, &.community.active:before, &.community.current:before {
         color:#fff;
       }
 
@@ -125,7 +125,7 @@ body.shownav #mainnav {
 
       }
 
-      &.events:focus::before, &.events:hover::before {
+      &.events:focus::before, &.events:hover::before, &.events.active:before, &.events.current:before {
         color:#fff;
       }
 
@@ -147,7 +147,7 @@ body.shownav #mainnav {
 
       }
 
-      &.forum:focus::before, &.forum:hover::before {
+      &.forum:focus::before, &.forum:hover::before, &.forum.active:before, &.forum.current:before  {
         color:#fff;
       }
 
@@ -159,19 +159,19 @@ body.shownav #mainnav {
         border-left:2px @color-red solid;
       }
 
-      &.joomla.parent li a:hover,  &.joomla.parent li a:focus, &.joomla.active, &.joomla.current  {
+      &.joomla.parent li a:hover,  &.joomla.parent li a:focus, &.joomla li a.active, &.joomla li a.current  {
         color:@color-blue;
       }
 
-      &.community.parent li a:hover, &.community.parent li a:focus, &.community.active, &.community.current    {
+      &.community.parent li a:hover, &.community.parent li a:focus, &.community li a.active, &.community li a.current    {
         color:@color-yellow;
       }
 
-      &.events.parent li a:hover, &.events.parent li a:focus, &.events.active, &.events.current   {
+      &.events.parent li a:hover, &.events.parent li a:focus, &.events li a.active, &.events li a.current   {
         color:@color-green;
       }
 
-      &.forum.parent li a:hover, &.forum.parent li a:focus, &.forum.active, &.forum.current  {
+      &.forum.parent li a:hover, &.forum.parent li a:focus, &.forum li a.active, &.forum li a.current  {
         color:@color-red;
       }
 
