@@ -8898,7 +8898,9 @@ body.shownav #mainnav ul.menu li.joomla:hover::before {
   color: #fff;
 }
 body.shownav #mainnav ul.menu li.joomla:focus,
-body.shownav #mainnav ul.menu li.joomla:hover {
+body.shownav #mainnav ul.menu li.joomla:hover,
+body.shownav #mainnav ul.menu li.joomla.active,
+body.shownav #mainnav ul.menu li.joomla.current {
   background: #679ed4;
 }
 body.shownav #mainnav ul.menu li.joomla > ul {
@@ -8916,7 +8918,9 @@ body.shownav #mainnav ul.menu li.community:hover::before {
   color: #fff;
 }
 body.shownav #mainnav ul.menu li.community:focus,
-body.shownav #mainnav ul.menu li.community:hover {
+body.shownav #mainnav ul.menu li.community:hover,
+body.shownav #mainnav ul.menu li.community.active,
+body.shownav #mainnav ul.menu li.community.current {
   background: #f9b431;
 }
 body.shownav #mainnav ul.menu li.community > ul {
@@ -8934,7 +8938,9 @@ body.shownav #mainnav ul.menu li.events:hover::before {
   color: #fff;
 }
 body.shownav #mainnav ul.menu li.events:focus,
-body.shownav #mainnav ul.menu li.events:hover {
+body.shownav #mainnav ul.menu li.events:hover,
+body.shownav #mainnav ul.menu li.events.active,
+body.shownav #mainnav ul.menu li.events.current {
   background: #85c03c;
 }
 body.shownav #mainnav ul.menu li.events > ul {
@@ -8952,26 +8958,36 @@ body.shownav #mainnav ul.menu li.forum:hover::before {
   color: #fff;
 }
 body.shownav #mainnav ul.menu li.forum:focus,
-body.shownav #mainnav ul.menu li.forum:hover {
+body.shownav #mainnav ul.menu li.forum:hover,
+body.shownav #mainnav ul.menu li.forum.active,
+body.shownav #mainnav ul.menu li.forum.current {
   background: #e84032;
 }
 body.shownav #mainnav ul.menu li.forum > ul {
   border-left: 2px #e84032 solid;
 }
 body.shownav #mainnav ul.menu li.joomla.parent li a:hover,
-body.shownav #mainnav ul.menu li.joomla.parent li a:focus {
+body.shownav #mainnav ul.menu li.joomla.parent li a:focus,
+body.shownav #mainnav ul.menu li.joomla.active,
+body.shownav #mainnav ul.menu li.joomla.current {
   color: #679ed4;
 }
 body.shownav #mainnav ul.menu li.community.parent li a:hover,
-body.shownav #mainnav ul.menu li.community.parent li a:focus {
+body.shownav #mainnav ul.menu li.community.parent li a:focus,
+body.shownav #mainnav ul.menu li.community.active,
+body.shownav #mainnav ul.menu li.community.current {
   color: #f9b431;
 }
 body.shownav #mainnav ul.menu li.events.parent li a:hover,
-body.shownav #mainnav ul.menu li.events.parent li a:focus {
+body.shownav #mainnav ul.menu li.events.parent li a:focus,
+body.shownav #mainnav ul.menu li.events.active,
+body.shownav #mainnav ul.menu li.events.current {
   color: #85c03c;
 }
 body.shownav #mainnav ul.menu li.forum.parent li a:hover,
-body.shownav #mainnav ul.menu li.forum.parent li a:focus {
+body.shownav #mainnav ul.menu li.forum.parent li a:focus,
+body.shownav #mainnav ul.menu li.forum.active,
+body.shownav #mainnav ul.menu li.forum.current {
   color: #e84032;
 }
 body.shownav #mainnav ul.menu li ul {
