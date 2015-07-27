@@ -86,7 +86,7 @@ body.shownav #mainnav {
         color:#fff;
       }
 
-      &.joomla:focus, &.joomla:hover {
+      &.joomla:focus, &.joomla:hover, &.joomla.active, &.joomla.current  {
         background:@color-blue;
       }
 
@@ -107,7 +107,7 @@ body.shownav #mainnav {
         color:#fff;
       }
 
-      &.community:focus, &.community:hover {
+      &.community:focus, &.community:hover, &.community.active, &.community.current  {
         background:@color-yellow;
       }
 
@@ -129,7 +129,7 @@ body.shownav #mainnav {
         color:#fff;
       }
 
-      &.events:focus, &.events:hover {
+      &.events:focus, &.events:hover, &.events.active, &.events.current  {
         background:@color-green;
       }
 
@@ -151,7 +151,7 @@ body.shownav #mainnav {
         color:#fff;
       }
 
-      &.forum:focus, &.forum:hover {
+      &.forum:focus, &.forum:hover, &.forum.active, &.forum.current {
         background:@color-red;
       }
 
@@ -159,22 +159,22 @@ body.shownav #mainnav {
         border-left:2px @color-red solid;
       }
 
-      &.joomla.parent li a:hover,  &.joomla.parent li a:focus {
+      &.joomla.parent li a:hover,  &.joomla.parent li a:focus, &.joomla.active, &.joomla.current  {
         color:@color-blue;
       }
 
-      &.community.parent li a:hover, &.community.parent li a:focus   {
+      &.community.parent li a:hover, &.community.parent li a:focus, &.community.active, &.community.current    {
         color:@color-yellow;
       }
 
-      &.events.parent li a:hover, &.events.parent li a:focus  {
+      &.events.parent li a:hover, &.events.parent li a:focus, &.events.active, &.events.current   {
         color:@color-green;
       }
 
-      &.forum.parent li a:hover, &.forum.parent li a:focus  {
+      &.forum.parent li a:hover, &.forum.parent li a:focus, &.forum.active, &.forum.current  {
         color:@color-red;
       }
-
+      
       ul {
         border-left:none;
       }
