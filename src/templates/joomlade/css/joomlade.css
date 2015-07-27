@@ -8874,7 +8874,6 @@ body.shownav #mainnav ul.menu {
 body.shownav #mainnav ul.menu li {
   line-height: calc(1.375 * 2.25);
   font-size: 20px;
-  font-weight: 600;
   width: 100%;
   margin-left: calc(30px / 1.5);
   margin-right: calc(30px / 1.5);
