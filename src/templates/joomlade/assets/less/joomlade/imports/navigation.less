@@ -58,7 +58,6 @@ body.shownav #mainnav {
     li {
       line-height: calc(@line-height-base * 2.25);
       font-size:@font-size-large;
-      font-weight:600;
       width:100%;
       margin-left:calc(@grid-gutter-width / 1.5);
       margin-right:calc(@grid-gutter-width / 1.5);
@@ -190,7 +189,7 @@ body.shownav #mainnav {
       text-transform:uppercase;
       text-decoration:none;
       color:#fff;
-      padding:0 @grid-gutter-width;
+      padding:0 calc(@grid-gutter-width/2);
     }
 
     /*** sublevel 1 ***/
@@ -198,7 +197,7 @@ body.shownav #mainnav {
       list-style-type: none;
       padding: 0;
       background: darken(@color-grey, 45%);
-      margin-left:calc(@grid-gutter-width*0.3);
+      margin-left:calc(@grid-gutter-width*0.5);
 
 
       li:focus, li:hover {
