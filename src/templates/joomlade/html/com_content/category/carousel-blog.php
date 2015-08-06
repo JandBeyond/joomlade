@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 
 ?>
 
-<h3 class="moduleheading"><?php echo JText::_('TPL_JOOMLADE_HEADING_NEWS'); ?></h3>
+<h3 class="moduleheading moduleheading fullwidth"><?php echo JText::_('TPL_JOOMLADE_HEADING_NEWS'); ?></h3>
 
 <div id="carousel-blog" class="carousel slide" data-ride="carousel">
 	<!-- Indicators -->
