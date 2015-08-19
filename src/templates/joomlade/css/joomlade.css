@@ -9487,4 +9487,8 @@ a.skiplink:focus {
 #maincontent .carousel-inner img {
   border-radius: 80px;
 }
+/* Module Navigation Joomla */
+#mainnav .joomla .module p {
+  color: #000;
+}
 /*# sourceMappingURL=joomlade.css.map */
