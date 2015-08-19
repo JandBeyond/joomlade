@@ -9500,8 +9500,12 @@ a.skiplink:focus {
   border-radius: 80px;
 }
 ul.tags {
-  margin: 10px 0;
-  padding: 0;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  background: #dedede;
+}
+.items-leading ul.tags {
+  background: #cce5f7;
 }
 ul.tags li {
   margin-right: 10px;
@@ -9527,6 +9531,47 @@ ul.tags.inline a {
 }
 .area-neutral .label-info {
   background: #919191;
+}
+.page-header {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #196dab;
+}
+.page-header h1 {
+  text-transform: uppercase;
+  color: #196dab;
+  font-size: 24px;
+}
+.page-header h2 {
+  text-transform: uppercase;
+  color: #196dab;
+}
+.items-leading {
+  padding: 30px;
+  background: #f8fbfe;
+  border: 1px solid #196dab;
+}
+.item {
+  padding: 30px;
+  background: #f7f7f7;
+  border: 1px solid #919191;
+  margin: 30px 0;
+}
+.blog img {
+  border-radius: 75px;
+}
+.blog .pull-left.item-image {
+  margin-right: 30px;
+}
+.readmore .btn {
+  border-radius: 6px;
+  background: #196dab;
+  color: #fff;
+  text-decoration: none;
+  float: right;
+}
+.readmore .btn:hover {
+  background: #12517f;
 }
 /* Module Navigation Joomla */
 #mainnav .joomla .module p {
