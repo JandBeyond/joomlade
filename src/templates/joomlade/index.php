@@ -85,6 +85,8 @@ $doc->addScript($tpath.'/js/joomlade.js');
           <jdoc:include type="modules" name="nav" />
         </nav>
 
+
+
         <jdoc:include type="modules" name="header" />
       </header>
     </div>
