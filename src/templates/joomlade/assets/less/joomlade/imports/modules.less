@@ -112,6 +112,42 @@
     content: " ";
     top: 0px;
     position: absolute;
-    background: fade(@color-yellow, 80%)
+    background: fade(@color-blue, 80%)
+  }
+}
+
+body.joomla {
+.staticheader {
+
+  &:after {
+    background: fade(@color-blue, 80%)
+  }
+}
+}
+
+body.community {
+  .staticheader {
+
+    &:after {
+      background: fade(@color-yellow, 80%)
+    }
+  }
+}
+
+body.events {
+  .staticheader {
+
+    &:after {
+      background: fade(@color-green, 80%)
+    }
+  }
+}
+
+body.wissen {
+  .staticheader {
+
+    &:after {
+      background: fade(@color-red, 80%)
+    }
   }
 }

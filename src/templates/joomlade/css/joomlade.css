@@ -9296,7 +9296,19 @@ h3.moduleheading a {
   content: " ";
   top: 0px;
   position: absolute;
+  background: rgba(103, 158, 212, 0.8);
+}
+body.joomla .staticheader:after {
+  background: rgba(103, 158, 212, 0.8);
+}
+body.community .staticheader:after {
   background: rgba(249, 180, 49, 0.8);
+}
+body.events .staticheader:after {
+  background: rgba(133, 192, 60, 0.8);
+}
+body.wissen .staticheader:after {
+  background: rgba(232, 64, 50, 0.8);
 }
 a.skiplink {
   position: absolute;
@@ -9518,6 +9530,19 @@ ul.tags.inline a {
 }
 /* Module Navigation Joomla */
 #mainnav .joomla .module p {
-  color: #000;
+  text-align: center;
+}
+#mainnav .joomla .module .name {
+  color: #679ed4;
+  font-weight: bold;
+}
+#mainnav .joomla .module .btn.blue {
+  color: #fff !important;
+}
+#mainnav .joomla .module .btn.orange {
+  background-color: #f9b431;
+  border-color: #f9b431;
+  color: #fff !important;
+  width: 100%;
 }
 /*# sourceMappingURL=joomlade.css.map */
