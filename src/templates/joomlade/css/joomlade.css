@@ -9487,6 +9487,35 @@ a.skiplink:focus {
 #maincontent .carousel-inner img {
   border-radius: 80px;
 }
+ul.tags {
+  margin: 10px 0;
+  padding: 0;
+}
+ul.tags li {
+  margin-right: 10px;
+}
+ul.tags.inline a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.label-info {
+  background: #196dab;
+}
+.area-joomla .label-info {
+  background: #679ed4;
+}
+.area-forum .label-info {
+  background: #e84032;
+}
+.area-community .label-info {
+  background: #f9b431;
+}
+.area-events .label-info {
+  background: #85c03c;
+}
+.area-neutral .label-info {
+  background: #919191;
+}
 /* Module Navigation Joomla */
 #mainnav .joomla .module p {
   color: #000;
