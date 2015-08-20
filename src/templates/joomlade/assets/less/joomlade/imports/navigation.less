@@ -341,6 +341,40 @@ body.shownav #mainnav {
   }
 }
 
+/*** wissenslink ***/
+
+#mainnav > ul > li.wissen::after {
+    content: "";
+    display: none;
+}
+
+/*** forumlink ***/
+
+#mainnav {
+
+  > ul > li > a.forumlink {
+    background-color: #383838;
+    color: #fff;
+    padding: 5px 20px;
+    margin: 0 0 0 15px;
+  }
+
+  > ul > li.active > a.forumlink, > ul > li:hover > a.forumlink, > ul > li.forumlink > a:focus {
+    background: #fff;
+    border-radius: 0;
+    text-decoration: none;
+    color: @color-font;
+  }
+
+  > ul > li.forumlink > a:before {
+    content: '\f08e';
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    padding: 0 4px;
+  }
+}
+
 /*** footer nav ***/
 #footer nav > ul {
   padding: 0;
