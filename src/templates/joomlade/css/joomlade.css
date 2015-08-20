@@ -9165,7 +9165,7 @@ body.shownav #mainnav ul.menu li.module {
   font-weight: normal;
   padding: 0 4px;
 }
-/* footer nav */
+/** footer nav **/
 #footer nav > ul {
   padding: 0;
   margin-top: 2em;
@@ -9524,6 +9524,7 @@ a.skiplink:focus {
 .slideshowheader .carousel-control {
   z-index: 2;
 }
+/**/
 #maincontent .carousel-inner > div {
   text-align: center;
 }
