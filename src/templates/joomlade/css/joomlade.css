@@ -9388,7 +9388,7 @@ body.shownav #mainnav ul.menu li.module {
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
-  padding: 0 4px 0;
+  padding: 0 5px;
 }
 /*** footer nav ***/
 #footer nav > ul {
@@ -9682,7 +9682,7 @@ a.skiplink:focus {
 }
 .carousel {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .slideshowheader .carousel-inner > .item img {
   width: 100%;
