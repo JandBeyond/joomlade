@@ -9326,7 +9326,7 @@ h3.moduleheading a {
   background: rgba(103, 158, 212, 0.8);
 }
 body.joomla .staticheader:after {
-  background: rgba(103, 158, 212, 0.8);
+  background: rgba(25, 109, 171, 0.8);
 }
 body.community .staticheader:after {
   background: rgba(249, 180, 49, 0.8);
@@ -9490,7 +9490,7 @@ a.skiplink:focus {
   position: absolute;
 }
 .slideshowheader .carousel-inner > .item:nth-child(4n+1):after {
-  background: rgba(103, 158, 212, 0.8);
+  background: rgba(25, 109, 171, 0.8);
 }
 .slideshowheader .carousel-inner > .item:nth-child(4n+2):after {
   background: rgba(249, 180, 49, 0.8);
