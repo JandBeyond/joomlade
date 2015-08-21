@@ -15,20 +15,23 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 $canEdit = $this->item->params->get('access-edit');
 $info    = $params->get('info_block_position', 0);
 ?>
+ <div class="news_<?php echo $this->item->category_alias; ?> clearfix">
 <?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime(JFactory::getDate())
 || ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != '0000-00-00 00:00:00' )) : ?>
 <div class="system-unpublished">
     <?php endif; ?>
 
-    <?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
+    <div class="col-lg-4 nopadding news_infobereich">
+        <div class="news_category"><span class="news_icon"></span> <?php echo $this->item->category_alias; ?>      </div>
+<div class="news_titel">
+        <span class="news_datum"><?php echo JHtml::_('date', $this->item->created, JText::_('DATE_FORMAT_LC2')); ?></span>
+        <?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
 
     <?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
         <?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
     <?php endif; ?>
 
-    <?php if ($params->get('show_tags') && !empty($this->item->tags->itemTags)) : ?>
-        <?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
-    <?php endif; ?>
+
 
     <?php // Todo Not that elegant would be nice to group the params ?>
     <?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
@@ -39,13 +42,21 @@ $info    = $params->get('info_block_position', 0);
     <?php endif; ?>
 
     <?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
-
-
+</div>
+    </div>
+    <div class="col-lg-8 nopadding news_contentbereich">
+        <?php if ($params->get('show_tags') && !empty($this->item->tags->itemTags)) : ?>
+         <div class="news_tags">
+             <span>Tags: </span>
+             <?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
+         </div>
+        <?php endif; ?>
+        <div class="news_beitrag">
     <?php if (!$params->get('show_intro')) : ?>
         <?php echo $this->item->event->afterDisplayTitle; ?>
     <?php endif; ?>
     <?php echo $this->item->event->beforeDisplayContent; ?> <?php echo $this->item->introtext; ?>
-
+        </div>
     <?php if ($useDefList && ($info == 1 || $info == 2)) : ?>
         <?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
     <?php  endif; ?>
@@ -73,3 +84,5 @@ $info    = $params->get('info_block_position', 0);
 <?php endif; ?>
 
 <?php echo $this->item->event->afterDisplayContent; ?>
+</div>
+ </div>

@@ -18,16 +18,16 @@ JHtml::_('behavior.caption');
 switch ($this->columns)
 {
     case 2:
-        $bs3class = ' col-xs-12 col-sm-6 col-md-6 col-lg-6';
+        $bs3class = ' col-xs-12 col-sm-6 col-md-6 col-lg-6 nopadding';
         break;
     case 3:
-        $bs3class = ' col-xs-12 col-sm-12 col-md-4 col-lg-4';
+        $bs3class = ' col-xs-12 col-sm-12 col-md-4 col-lg-4 nopadding';
         break;
     case 4:
-        $bs3class = ' col-xs-12 col-sm-12 col-md-3 col-lg-3';
+        $bs3class = ' col-xs-12 col-sm-12 col-md-3 col-lg-3 nopadding';
         break;
     default:
-        $bs3class = ' col-xs-12 col-sm-12 col-md-12 col-lg-12';
+        $bs3class = ' col-xs-12 col-sm-12 col-md-12 col-lg-12 nopadding';
         break;
 }
 
@@ -73,7 +73,7 @@ switch ($this->columns)
     <?php if (!empty($this->lead_items)) : ?>
         <div class="items-leading clearfix">
             <?php foreach ($this->lead_items as &$item) : ?>
-                <div class="leading-<?php echo $leadingcount; ?><?php echo $bs3class; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
+                <div class="leading-<?php echo $leadingcount; ?> col-lg-12 nopadding <?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
                      itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
                     <?php
                     $this->item = & $item;
@@ -124,7 +124,7 @@ switch ($this->columns)
     <?php if (($this->params->def('show_pagination', 1) == 1 || ($this->params->get('show_pagination') == 2)) && ($this->pagination->get('pages.total') > 1)) : ?>
         <div class="pagination">
             <?php if ($this->params->def('show_pagination_results', 1)) : ?>
-                <p class="counter pull-right"> <?php echo $this->pagination->getPagesCounter(); ?> </p>
+                <p class="counter"> <?php echo $this->pagination->getPagesCounter(); ?> </p>
             <?php endif; ?>
             <?php echo $this->pagination->getPagesLinks(); ?> </div>
     <?php endif; ?>
