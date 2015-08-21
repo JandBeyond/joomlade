@@ -9572,7 +9572,7 @@ ul.tags.inline a {
   border-radius: 75px;
 }
 .news_titel {
-  padding-bottom: 30px;
+  padding: 0 30px 30px 30px;
 }
 .news_category {
   height: 40px;
