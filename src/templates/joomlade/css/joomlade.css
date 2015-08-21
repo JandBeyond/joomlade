@@ -9323,7 +9323,7 @@ h3.moduleheading a {
   content: " ";
   top: 0px;
   position: absolute;
-  background: rgba(103, 158, 212, 0.8);
+  background: rgba(25, 109, 171, 0.8);
 }
 body.joomla .staticheader:after {
   background: rgba(25, 109, 171, 0.8);
