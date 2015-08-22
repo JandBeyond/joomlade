@@ -8881,6 +8881,20 @@ body {
 .area-joomla #aside ul.menu li.active > a {
   color: #679ed4;
 }
+.area-joomla.info {
+  background-color: #deeaf6;
+}
+.area-joomla.info h3 {
+  border-bottom: 1px solid #679ed4;
+}
+.area-joomla.info-content {
+  background-color: #deeaf6;
+  border: 1px solid #679ed4;
+  color: #679ed4;
+}
+.area-joomla.info-content:before {
+  color: #679ed4;
+}
 .area-forum h1,
 .area-forum h2,
 .area-forum h3,
@@ -8917,6 +8931,20 @@ body {
   color: #e84032;
 }
 .area-forum #aside ul.menu li.active > a {
+  color: #e84032;
+}
+.area-forum.info {
+  background-color: #f7c0bc;
+}
+.area-forum.info h3 {
+  border-bottom: 1px solid #e84032;
+}
+.area-forum.info-content {
+  background-color: #f7c0bc;
+  border: 1px solid #e84032;
+  color: #e84032;
+}
+.area-forum.info-content:before {
   color: #e84032;
 }
 .area-community h1,
@@ -8957,6 +8985,20 @@ body {
 .area-community #aside ul.menu li.active > a {
   color: #f9b431;
 }
+.area-community.info {
+  background-color: #fdeac6;
+}
+.area-community.info h3 {
+  border-bottom: 1px solid #f9b431;
+}
+.area-community.info-content {
+  background-color: #fdeac6;
+  border: 1px solid #f9b431;
+  color: #f9b431;
+}
+.area-community.info-content:before {
+  color: #f9b431;
+}
 .area-events h1,
 .area-events h2,
 .area-events h3,
@@ -8995,6 +9037,20 @@ body {
 .area-events #aside ul.menu li.active > a {
   color: #85c03c;
 }
+.area-events.info {
+  background-color: #cde6af;
+}
+.area-events.info h3 {
+  border-bottom: 1px solid #85c03c;
+}
+.area-events.info-content {
+  background-color: #cde6af;
+  border: 1px solid #85c03c;
+  color: #85c03c;
+}
+.area-events.info-content:before {
+  color: #85c03c;
+}
 .area-neutral h1,
 .area-neutral h2,
 .area-neutral h3,
@@ -9031,6 +9087,20 @@ body {
   color: #919191;
 }
 .area-neutral #aside ul.menu li.active > a {
+  color: #919191;
+}
+.area-neutral.info {
+  background-color: #dedede;
+}
+.area-neutral.info h3 {
+  border-bottom: 1px solid #919191;
+}
+.area-neutral.info-content {
+  background-color: #dedede;
+  border: 1px solid #919191;
+  color: #919191;
+}
+.area-neutral.info-content:before {
   color: #919191;
 }
 /** hide main nav on mobile **/
@@ -9455,6 +9525,23 @@ ul.tags.inline li {
 .moduletable.features > div {
   background: #196dab url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAQAAADa613fAAAD5ElEQVR42u3a25ajIBAF0FIE7///uWcekiiXQsEGxVmQp05rtkQtkByi2mqrrbb/tKGBhIJEu70jsWCCwoAWi7GtQI8eCk0u46KABiPW7dVv7w8QUFgxYNW2nbRtZXrjqkBEmLUdNeaLTJgxb4i9bZfW8AghpwbS2nHF+jn5kGjRQUBsrHK2XNIaHgEDFBQkhPPRLTooKHTGify9lOeAuG2TGrxA2h/zfrVBsJubu/IdWQ73SmDwAllvTGiIMJwAxs0Y1ZEERlhHViijdvhfnls46AD/ZPACXSSmgyK6JOrGFCPQJWI8qkNonfKY2OAEwgiBBhILpEMoNGjRW7drFzC0DdZBJTZcwTeurlj2YmnsFDS8oeUukZQGLxCRQ3T7yYU4Hz8sRnCHldLgBY5YsGL+MEbvL3ckrcEI1hRsJ9YfY0wK4i+tIYdhCwRpzV104jt8GX+3gVNAfZ8shikQVkjtRlsgIKw6PWnvTMHzZbOqZDBMgYza/q0iaB3m9w12wR1pPeNHMsMUaGMmoxjazIzOP1EMnJgnN3SBNEZY/bUZEf1w3DtdSWzsAvkeGSEhHaaJZuyuJDZ2gXjmW6U7a04zRn9bo78rfzd0gThGG2xsJnwpQWzzLJXHMAX2OrYqvs7MwR0ZtQfdLIYpEBqDWZxaM1warBrjMzIYtmDe+wzhFFIZPdfqcxiusI+SHsLqfdiksdP2EDkMTvgx0reGYfQ+/ozIHIazPfs88LluBTvJ76PPyJzDcATMkOicujJgwIoRHaSz+nQ6/jrrHMkNVyB+Yex0Uefg5J8uu/3Z4AS6RByUSGZldk1r8AIxRBd0KH3gmjrfjT8YvEDcrs5Ujl138nQk8PCuG/y2ZK4+aRPs4QQaLnUkgeHriICA8FyN7ed/Tr05uBXZdcSkBi+E/ii2OOUuZKA6PHdXjavCb+fFmPYdTOusqjKlN64K5hW9YDh7ioPA+F18U3mMq0JttdVWW2211faS9uoYmS68N0ZmClRojCxaoEJjZNEClRkjixeozBhZvEBlxsjiBSozRhYvUJkxsniByoyRxQtUZowsfRju9509EiNLG4aj52JkacNw9FCMLHkYjp6IkeUIw7nD1g0xsjxhOLo/RpYnDEf3x8jyhOH4iXnWGFmuMNzng26MkeULw9G9MbJ8YbibY2S5wnC3x8jyhOHo/hhZnjDcAzGyHGE4eiZGlj4MR0/FyFKH4eiRGFlywf2+7omRxQtlxsjiBSozRhYvUJkxsnjhbKXxoRhZvEBlxsjihbNF7IdiZPEClRkjixforTEyW6D3xshMgd4cI9OF+vt8bbXV9q72D4K9aoVBmVovAAAAAElFTkSuQmCC);
 }
+/* Infokasten Content */
+#maincontent .info-content {
+  padding: 40px 15px 20px 15px;
+  position: relative;
+  text-align: center;
+}
+#maincontent .info-content:before {
+  content: '\f086';
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  padding: 0 4px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
 h1.moduleheading,
 h2.moduleheading,
 h3.moduleheading,
@@ -9590,7 +9677,7 @@ body.wissen .staticheader:after {
 }
 /* Module info aside */
 #aside .moduletable.info {
-  background-color: #e6e6e6;
+  /*  background-color: @gray;*/
   font-size: 14px;
 }
 #aside .moduletable.info h3 {
@@ -9598,14 +9685,12 @@ body.wissen .staticheader:after {
   margin-bottom: 0;
   padding: 10px 15px;
   font-size: 18px;
-  border-bottom: 1px solid #919191;
 }
 #aside .moduletable.info h3:before {
   content: '!';
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
-  color: #919191;
   padding: 0 10px 0 0;
 }
 #aside .moduletable.info ul,

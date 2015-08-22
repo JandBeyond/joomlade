@@ -38,6 +38,24 @@
       color: @color;
     }
   }
+
+  &.info {
+    background-color: lighten(@color, 30%);
+
+    h3 {
+      border-bottom: 1px solid @color;
+    }
+  }
+
+  &.info-content {
+    background-color: lighten(@color, 30%);
+    border: 1px solid @color;
+    color: @color;
+
+    &:before {
+      color: @color;
+    }
+  }
 }
 
 .area-joomla {

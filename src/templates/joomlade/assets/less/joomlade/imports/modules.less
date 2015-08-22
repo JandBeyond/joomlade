@@ -189,7 +189,7 @@ body.wissen {
 
 #aside .moduletable.info {
 
-  background-color: @gray;
+/*  background-color: @gray;*/
   font-size: 14px;
 
   h3 {
@@ -197,16 +197,14 @@ body.wissen {
     margin-bottom: 0;
     padding: 10px 15px;
     font-size: 18px;
-    border-bottom: 1px solid @color-grey;
-  }
 
-  h3:before{
-    content: '!';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    color: @color-grey;
-    padding: 0 10px 0 0;
+    &:before {
+      content: '!';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      padding: 0 10px 0 0;
+    }
   }
 
   ul,ol {
