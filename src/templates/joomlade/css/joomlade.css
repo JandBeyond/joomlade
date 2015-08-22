@@ -9588,6 +9588,34 @@ body.wissen .staticheader:after {
   color: #fff !important;
   width: 100%;
 }
+/* Module info aside */
+#aside .moduletable.info {
+  background-color: #e6e6e6;
+  font-size: 14px;
+}
+#aside .moduletable.info h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-bottom: 1px solid #919191;
+}
+#aside .moduletable.info h3:before {
+  content: '!';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  color: #919191;
+  padding: 0 10px 0 0;
+}
+#aside .moduletable.info ul,
+#aside .moduletable.info ol {
+  padding: 10px 15px;
+  margin-left: 10px;
+}
+#aside .moduletable.info p {
+  padding: 10px 15px;
+}
 a.skiplink {
   position: absolute;
   width: 1px;
