@@ -1,0 +1,24 @@
+body.wissen .panel-default {
+
+  border: 1px solid @color-red;
+
+  .panel-heading {
+
+    background: lighten(@color-red, 35%);
+    border-bottom: 1px solid @color-red;
+
+    .panel-title > a {
+      color: @color-red;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .panel-title > a > span.fa-chevron-right {
+      content:"\f054";
+      font-family:FontAwesome;
+      color:@color-red;
+      margin-right:10px;
+    }
+
+  }
+}

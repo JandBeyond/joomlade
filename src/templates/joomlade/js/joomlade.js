@@ -12565,4 +12565,13 @@ jQuery( document ).ready(function( $ ) {
             }
         }
     });
+
+
+    /*accordion icon */
+    $('.collapse').on('shown.bs.collapse', function(){
+        $(this).parent().find(".fa-chevron-right").removeClass("fa-chevron-right").addClass("fa-chevron-down");
+    }).on('hidden.bs.collapse', function(){
+        $(this).parent().find(".fa-chevron-down").removeClass("fa-chevron-down").addClass("fa-chevron-right");
+    });
+
 });
