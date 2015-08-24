@@ -8623,6 +8623,10 @@ body.events #maincontent ul li:before {
   margin: calc(30px/2);
   text-align: center;
 }
+.page-header {
+  margin: 0;
+  border-bottom: none;
+}
 body {
   margin: 0;
   padding: 0;
@@ -9804,10 +9808,6 @@ ul.tags.inline a {
 .news_infobereich {
   color: #fff;
   text-align: center;
-}
-.news_infobereich .page-header {
-  margin: 0;
-  border-bottom: none;
 }
 .news_infobereich h1,
 .news_infobereich h2 {
