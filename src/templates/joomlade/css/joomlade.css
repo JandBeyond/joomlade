@@ -9580,6 +9580,12 @@ a.skiplink:focus {
     right: calc((100vw -  1140px ) / 2) !important;
   }
 }
+/* Non-desktop devices*/
+@media (max-width: 1200px) {
+  #aside nav.moduletable {
+    display: none;
+  }
+}
 @media (min-width: 1200px) {
   .moduletable.download,
   .moduletable.features {
