@@ -8600,6 +8600,9 @@ body.community #maincontent ul li:before {
 body.events #maincontent ul li:before {
   color: #85c03c;
 }
+#maincontent ul.nav li:before {
+  content: normal;
+}
 body {
   margin: 0;
   padding: 0;
@@ -9963,12 +9966,34 @@ div.pagination .page-section ul.pagination {
 .pull-left.item-image {
   width: auto;
 }
+.tab-content {
+  padding: calc(30px/2);
+}
+body.wissen ul.nav-tabs {
+  border-bottom: 1px solid #e84032;
+}
+body.wissen ul.nav-tabs li a {
+  color: #e84032;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+body.wissen ul.nav-tabs li:hover > a,
+body.wissen ul.nav-tabs li.active > a {
+  color: #d02517;
+  background: #fad6d2;
+  background: -webkit-linear-gradient(top, #fad6d2, #ffffff);
+  border: 1px solid #e84032;
+  border-bottom-color: #fff;
+}
 body.wissen .panel-default {
   border: 1px solid #e84032;
 }
+body.wissen .panel-default .panel-collapse > .panel-body {
+  border: none;
+}
 body.wissen .panel-default .panel-heading {
   background: #fad6d2;
-  border-bottom: 1px solid #e84032;
+  border-bottom: transparent;
 }
 body.wissen .panel-default .panel-heading .panel-title > a {
   color: #e84032;
@@ -9979,6 +10004,120 @@ body.wissen .panel-default .panel-heading .panel-title > a > span.fa-chevron-rig
   content: "\f054";
   font-family: FontAwesome;
   color: #e84032;
+  margin-right: 10px;
+}
+/*area joomla */
+body.joomla ul.nav-tabs {
+  border-bottom: 1px solid #679ed4;
+}
+body.joomla ul.nav-tabs li a {
+  color: #679ed4;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+body.joomla ul.nav-tabs li:hover > a,
+body.joomla ul.nav-tabs li.active > a {
+  color: #3f85c9;
+  background: #f2f7fb;
+  background: -webkit-linear-gradient(top, #f2f7fb, #ffffff);
+  border: 1px solid #679ed4;
+  border-bottom-color: #fff;
+}
+body.joomla .panel-default {
+  border: 1px solid #679ed4;
+}
+body.joomla .panel-default .panel-collapse > .panel-body {
+  border: none;
+}
+body.joomla .panel-default .panel-heading {
+  background: #f2f7fb;
+  border-bottom: transparent;
+}
+body.joomla .panel-default .panel-heading .panel-title > a {
+  color: #679ed4;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+body.joomla .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
+  content: "\f054";
+  font-family: FontAwesome;
+  color: #679ed4;
+  margin-right: 10px;
+}
+/*area community */
+body.community ul.nav-tabs {
+  border-bottom: 1px solid #f9b431;
+}
+body.community ul.nav-tabs li a {
+  color: #f9b431;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+body.community ul.nav-tabs li:hover > a,
+body.community ul.nav-tabs li.active > a {
+  color: #f0a007;
+  background: #fef3de;
+  background: -webkit-linear-gradient(top, #fef3de, #ffffff);
+  border: 1px solid #f9b431;
+  border-bottom-color: #fff;
+}
+body.community .panel-default {
+  border: 1px solid #f9b431;
+}
+body.community .panel-default .panel-collapse > .panel-body {
+  border: none;
+}
+body.community .panel-default .panel-heading {
+  background: #fef3de;
+  border-bottom: transparent;
+}
+body.community .panel-default .panel-heading .panel-title > a {
+  color: #f9b431;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+body.community .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
+  content: "\f054";
+  font-family: FontAwesome;
+  color: #f9b431;
+  margin-right: 10px;
+}
+/*area community */
+body.events ul.nav-tabs {
+  border-bottom: 1px solid #85c03c;
+}
+body.events ul.nav-tabs li a {
+  color: #85c03c;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+body.events ul.nav-tabs li:hover > a,
+body.events ul.nav-tabs li.active > a {
+  color: #6a9930;
+  background: #d9ecc2;
+  background: -webkit-linear-gradient(top, #d9ecc2, #ffffff);
+  border: 1px solid #85c03c;
+  border-bottom-color: #fff;
+}
+body.events .panel-default {
+  border: 1px solid #85c03c;
+}
+body.events .panel-default .panel-collapse > .panel-body {
+  border: none;
+}
+body.events .panel-default .panel-heading {
+  background: #d9ecc2;
+  border-bottom: transparent;
+}
+body.events .panel-default .panel-heading .panel-title > a {
+  color: #85c03c;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+body.events .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
+  content: "\f054";
+  font-family: FontAwesome;
+  color: #85c03c;
   margin-right: 10px;
 }
 /* Module Navigation */

@@ -1,24 +1,239 @@
-body.wissen .panel-default {
+.tab-content {
+  padding:calc(@grid-gutter-width/2);
+}
 
-  border: 1px solid @color-red;
+body.wissen {
 
-  .panel-heading {
-
-    background: lighten(@color-red, 35%);
+  ul.nav-tabs {
     border-bottom: 1px solid @color-red;
 
-    .panel-title > a {
-      color: @color-red;
-      text-decoration: none;
-      text-transform: uppercase;
+    li {
+
+      a {
+        color: @color-red;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
     }
 
-    .panel-title > a > span.fa-chevron-right {
-      content:"\f054";
-      font-family:FontAwesome;
-      color:@color-red;
-      margin-right:10px;
+    li:hover, li.active {
+      > a {
+        color: darken(@color-red, 10%);
+        background: lighten(@color-red, 35%);
+        background: -webkit-linear-gradient(top, lighten(@color-red, 35%), #fff);
+        border: 1px solid @color-red;
+        border-bottom-color:#fff;
+      }
+
+    }
+  }
+
+  .panel-default {
+
+    border:1px solid @color-red;
+
+    .panel-collapse > .panel-body {
+      border:none;
     }
 
+    .panel-heading {
+
+      background: lighten(@color-red, 35%);
+      border-bottom:transparent;
+
+      .panel-title > a {
+        color: @color-red;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .panel-title > a > span.fa-chevron-right {
+        content: "\f054";
+        font-family: FontAwesome;
+        color: @color-red;
+        margin-right: 10px;
+      }
+
+    }
+  }
+}
+
+
+/*area joomla */
+
+body.joomla {
+
+  ul.nav-tabs {
+    border-bottom: 1px solid @color-blue;
+
+    li {
+
+      a {
+        color: @color-blue;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+    }
+
+    li:hover, li.active {
+      > a {
+        color: darken(@color-blue, 10%);
+        background: lighten(@color-blue, 35%);
+        background: -webkit-linear-gradient(top, lighten(@color-blue, 35%), #fff);
+        border: 1px solid @color-blue;
+        border-bottom-color:#fff;
+      }
+
+    }
+  }
+
+  .panel-default {
+
+    border:1px solid @color-blue;
+
+    .panel-collapse > .panel-body {
+      border:none;
+    }
+
+    .panel-heading {
+
+      background: lighten(@color-blue, 35%);
+      border-bottom:transparent;
+
+      .panel-title > a {
+        color: @color-blue;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .panel-title > a > span.fa-chevron-right {
+        content: "\f054";
+        font-family: FontAwesome;
+        color: @color-blue;
+        margin-right: 10px;
+      }
+
+    }
+  }
+}
+
+
+/*area community */
+
+body.community {
+
+  ul.nav-tabs {
+    border-bottom: 1px solid @color-yellow;
+
+    li {
+
+      a {
+        color: @color-yellow;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+    }
+
+    li:hover, li.active {
+      > a {
+        color: darken(@color-yellow, 10%);
+        background: lighten(@color-yellow, 35%);
+        background: -webkit-linear-gradient(top, lighten(@color-yellow, 35%), #fff);
+        border: 1px solid @color-yellow;
+        border-bottom-color:#fff;
+      }
+
+    }
+  }
+
+  .panel-default {
+
+    border:1px solid @color-yellow;
+
+    .panel-collapse > .panel-body {
+      border:none;
+    }
+
+    .panel-heading {
+
+      background: lighten(@color-yellow, 35%);
+      border-bottom:transparent;
+
+      .panel-title > a {
+        color: @color-yellow;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .panel-title > a > span.fa-chevron-right {
+        content: "\f054";
+        font-family: FontAwesome;
+        color: @color-yellow;
+        margin-right: 10px;
+      }
+
+    }
+  }
+}
+
+/*area community */
+
+body.events {
+
+  ul.nav-tabs {
+    border-bottom: 1px solid @color-green;
+
+    li {
+
+      a {
+        color: @color-green;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+    }
+
+    li:hover, li.active {
+      > a {
+        color: darken(@color-green, 10%);
+        background: lighten(@color-green, 35%);
+        background: -webkit-linear-gradient(top, lighten(@color-green, 35%), #fff);
+        border: 1px solid @color-green;
+        border-bottom-color:#fff;
+      }
+
+    }
+  }
+
+  .panel-default {
+
+    border:1px solid @color-green;
+
+    .panel-collapse > .panel-body {
+      border:none;
+    }
+
+    .panel-heading {
+
+      background: lighten(@color-green, 35%);
+      border-bottom:transparent;
+
+      .panel-title > a {
+        color: @color-green;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .panel-title > a > span.fa-chevron-right {
+        content: "\f054";
+        font-family: FontAwesome;
+        color: @color-green;
+        margin-right: 10px;
+      }
+
+    }
   }
 }
