@@ -8573,6 +8573,7 @@ a:focus {
 body {
   margin: 0;
   padding: 0;
+  line-height: 1.55em;
 }
 #outerwrapper {
   max-width: 1170px;
@@ -8582,7 +8583,7 @@ body {
 }
 .fullwidth {
   margin-left: calc(-30px / 2);
-  width: calc(100% +  30px);
+  width: calc(100% + 30px);
 }
 .fullwidth img.img-responsive {
   max-width: none;
