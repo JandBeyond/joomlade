@@ -90,10 +90,11 @@ content: normal!important;
 /* icons im contentbereich zur Textauflockerung */
 .art-icon {
   float: left;
+  width:calc(@grid-gutter-width*3);
 }
 
 .art-icon:before {
-  font-size:80px;
+  font-size:calc(@grid-gutter-width*2);
   color:@color-blue;
-  margin:@grid-gutter-width;
+  margin:calc(@grid-gutter-width/2);
 }

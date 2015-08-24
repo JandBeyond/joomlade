@@ -8620,11 +8620,12 @@ body.events #maincontent ul li:before {
 /* icons im contentbereich zur Textauflockerung */
 .art-icon {
   float: left;
+  width: calc(30px*3);
 }
 .art-icon:before {
-  font-size: 80px;
+  font-size: calc(30px*2);
   color: #679ed4;
-  margin: 30px;
+  margin: calc(30px/2);
 }
 body {
   margin: 0;
