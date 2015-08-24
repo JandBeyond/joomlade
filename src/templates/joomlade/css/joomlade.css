@@ -8632,7 +8632,7 @@ img {
 #footer {
   background: #196dab;
   min-height: 50px;
-  padding: 15px 0;
+  padding: 15px;
   margin-top: 1.5em;
   color: white;
   font-size: 0.85em;
@@ -9581,6 +9581,12 @@ a.skiplink:focus {
   }
   #mainnav {
     right: calc((100vw -  1140px ) / 2) !important;
+  }
+}
+/* Non-desktop devices*/
+@media (max-width: 1200px) {
+  #aside nav.moduletable {
+    display: none;
   }
 }
 @media (min-width: 1200px) {
