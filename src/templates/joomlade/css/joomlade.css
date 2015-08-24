@@ -8623,9 +8623,10 @@ body.events #maincontent ul li:before {
   width: calc(30px*3);
 }
 .art-icon:before {
-  font-size: calc(30px*2);
+  font-size: calc(30px*1.75);
   color: #679ed4;
   margin: calc(30px/2);
+  text-align: center;
 }
 body {
   margin: 0;
