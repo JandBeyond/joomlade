@@ -8625,11 +8625,6 @@ body.events #maincontent ul li:before {
   font-size: 80px;
   color: #679ed4;
   margin: 30px;
-  display: inline-block;
-  width: auto;
-  height: auto;
-  line-height: normal;
-  vertical-align: baseline;
 }
 body {
   margin: 0;
