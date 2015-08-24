@@ -8570,6 +8570,18 @@ a:hover,
 a:focus {
   text-decoration: none;
 }
+body.wissen a {
+  color: #e84032;
+}
+body.joomla a {
+  color: #679ed4;
+}
+body.events a {
+  color: #85c03c;
+}
+body.community a {
+  color: #f9b431;
+}
 #maincontent ul {
   list-style-type: none;
   padding: 0;
