@@ -7,3 +7,60 @@ a {
     text-decoration: none;
   }
 }
+
+#maincontent ul {
+  list-style-type: none;
+  padding:0;
+  counter-reset: foo;
+  display: table;
+
+  li {
+    counter-increment: foo;
+    display: table-row;
+  }
+
+  li:before {
+ font-family: FontAwesome;
+    content:"\f00c";
+    margin-right:10px;
+    padding-right: 10px;
+    display: table-cell;
+    text-align: right;
+
+  }
+}
+
+
+
+
+body.wissen {
+
+  #maincontent ul li:before {
+    color:@color-red;
+  }
+
+}
+
+body.joomla {
+
+  #maincontent ul li:before {
+    color:@color-blue;
+  }
+
+}
+
+body.community {
+
+  #maincontent ul li:before {
+    color:@color-yellow;
+  }
+
+}
+
+body.events {
+
+  #maincontent ul li:before {
+    color:@color-green;
+  }
+
+}

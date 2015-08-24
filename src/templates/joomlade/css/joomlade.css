@@ -8570,6 +8570,36 @@ a:hover,
 a:focus {
   text-decoration: none;
 }
+#maincontent ul {
+  list-style-type: none;
+  padding: 0;
+  counter-reset: foo;
+  display: table;
+}
+#maincontent ul li {
+  counter-increment: foo;
+  display: table-row;
+}
+#maincontent ul li:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+  margin-right: 10px;
+  padding-right: 10px;
+  display: table-cell;
+  text-align: right;
+}
+body.wissen #maincontent ul li:before {
+  color: #e84032;
+}
+body.joomla #maincontent ul li:before {
+  color: #679ed4;
+}
+body.community #maincontent ul li:before {
+  color: #f9b431;
+}
+body.events #maincontent ul li:before {
+  color: #85c03c;
+}
 body {
   margin: 0;
   padding: 0;
