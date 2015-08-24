@@ -8582,17 +8582,17 @@ body.events a {
 body.community a {
   color: #f9b431;
 }
-#maincontent ul {
+#maincontent ul.aufzaehlung {
   list-style-type: none;
   padding: 0;
   counter-reset: foo;
   display: table;
 }
-#maincontent ul li {
+#maincontent ul.aufzaehlung li {
   counter-increment: foo;
   display: table-row;
 }
-#maincontent ul li:before {
+#maincontent ul.aufzaehlung li:before {
   font-family: FontAwesome;
   content: "\f00c";
   margin-right: 10px;
@@ -8611,12 +8611,6 @@ body.community #maincontent ul li:before {
 }
 body.events #maincontent ul li:before {
   color: #85c03c;
-}
-/*tags und navigation ausschließen */
-#maincontent ul.nav li:before,
-#maincontent ul.tags li:before,
-#maincontent ul.pagination li:before {
-  content: normal!important;
 }
 /* icons im contentbereich zur Textauflockerung */
 .art-icon {
