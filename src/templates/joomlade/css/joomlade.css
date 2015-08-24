@@ -8619,6 +8619,10 @@ body {
   max-width: none;
   width: 100%;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 #header {
   background: #1e1e1e;
 }
