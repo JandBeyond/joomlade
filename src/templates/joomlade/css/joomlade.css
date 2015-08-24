@@ -8600,7 +8600,9 @@ body.community #maincontent ul li:before {
 body.events #maincontent ul li:before {
   color: #85c03c;
 }
-#maincontent ul.nav li:before {
+/*tags und navigation ausschließen */
+ul.nav li:before,
+ul.tags li:before {
   content: normal;
 }
 body {

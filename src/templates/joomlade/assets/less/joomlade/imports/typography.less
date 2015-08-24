@@ -20,7 +20,7 @@ a {
   }
 
   li:before {
- font-family: FontAwesome;
+    font-family: FontAwesome;
     content:"\f00c";
     margin-right:10px;
     padding-right: 10px;
@@ -65,6 +65,8 @@ body.events {
 
 }
 
-#maincontent ul.nav li:before {
+/*tags und navigation ausschließen */
+
+ul.nav li:before, ul.tags li:before {
 content: normal;
 }
