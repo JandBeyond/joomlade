@@ -8614,7 +8614,8 @@ body.events #maincontent ul li:before {
 }
 /*tags und navigation ausschließen */
 #maincontent ul.nav li:before,
-#maincontent ul.tags li:before {
+#maincontent ul.tags li:before,
+#maincontent ul.pagination li:before {
   content: normal!important;
 }
 /* icons im contentbereich zur Textauflockerung */
