@@ -8601,9 +8601,9 @@ body.events #maincontent ul li:before {
   color: #85c03c;
 }
 /*tags und navigation ausschließen */
-ul.nav li:before,
-ul.tags li:before {
-  content: normal;
+#maincontent ul.nav li:before,
+#maincontent ul.tags li:before {
+  content: normal!important;
 }
 body {
   margin: 0;
