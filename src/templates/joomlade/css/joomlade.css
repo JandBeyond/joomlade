@@ -9556,6 +9556,24 @@ body.wissen .staticheader:after {
 #aside .moduletable.info p {
   padding: 10px 15px;
 }
+.social-media > li > a {
+  padding: 5px;
+}
+.social-media span.fa-facebook-official:before {
+  color: #679ed4;
+}
+.social-media span.fa-youtube-square:before {
+  color: #e84032;
+}
+.social-media span.fa-xing-square:before {
+  color: #85c03c;
+}
+.social-media span.fa-stack-overflow:before {
+  color: #919191;
+}
+.social-media span.fa-life-ring:before {
+  color: #e84032;
+}
 a.skiplink {
   position: absolute;
   width: 1px;
