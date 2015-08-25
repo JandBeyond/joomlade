@@ -9276,7 +9276,7 @@ body.shownav #mainnav ul.menu li.module {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 150px;
+    width: 250px;
   }
   #mainnav > ul > li:last-child:hover > ul,
   #mainnav > ul > li:last-child:focus > ul {
