@@ -9261,7 +9261,7 @@ body.shownav #mainnav ul.menu li.module {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    width: 500px;
+    width: 400px;
   }
   #mainnav > ul > li:hover > ul a,
   #mainnav > ul > li:focus > ul a {
