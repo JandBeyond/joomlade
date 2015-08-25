@@ -8582,17 +8582,17 @@ body.events a {
 body.community a {
   color: #f9b431;
 }
-#maincontent ul.aufzaehlung {
+ul.aufzaehlung {
   list-style-type: none;
   padding: 0;
   counter-reset: foo;
   display: table;
 }
-#maincontent ul.aufzaehlung li {
+ul.aufzaehlung li {
   counter-increment: foo;
   display: table-row;
 }
-#maincontent ul.aufzaehlung li:before {
+ul.aufzaehlung li:before {
   font-family: FontAwesome;
   content: "\f00c";
   margin-right: 10px;
