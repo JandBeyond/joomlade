@@ -8603,25 +8603,43 @@ body.community a {
 body.wissen #maincontent ul li:before {
   color: #e84032;
 }
+body.wissen .art-icon:before {
+  font-size: calc(30px*1.75);
+  color: #e84032;
+  margin: calc(30px/2);
+  text-align: center;
+}
 body.joomla #maincontent ul li:before {
   color: #679ed4;
+}
+body.joomla .art-icon:before {
+  font-size: calc(30px*1.75);
+  color: #679ed4;
+  margin: calc(30px/2);
+  text-align: center;
 }
 body.community #maincontent ul li:before {
   color: #f9b431;
 }
+body.community .art-icon:before {
+  font-size: calc(30px*1.75);
+  color: #f9b431;
+  margin: calc(30px/2);
+  text-align: center;
+}
 body.events #maincontent ul li:before {
   color: #85c03c;
+}
+body.events .art-icon:before {
+  font-size: calc(30px*1.75);
+  color: #85c03c;
+  margin: calc(30px/2);
+  text-align: center;
 }
 /* icons im contentbereich zur Textauflockerung */
 .art-icon {
   float: left;
   width: calc(30px*3);
-}
-.art-icon:before {
-  font-size: calc(30px*1.75);
-  color: #679ed4;
-  margin: calc(30px/2);
-  text-align: center;
 }
 .page-header {
   margin: 0;
