@@ -8699,211 +8699,307 @@ img {
   z-index: 10;
 }
 .area-joomla h1,
+.joomla h1,
 .area-joomla h2,
+.joomla h2,
 .area-joomla h3,
+.joomla h3,
 .area-joomla h1 a,
+.joomla h1 a,
 .area-joomla h2 a,
-.area-joomla h3 a {
+.joomla h2 a,
+.area-joomla h3 a,
+.joomla h3 a {
   color: #679ed4;
 }
 .area-joomla h1.moduleheading,
+.joomla h1.moduleheading,
 .area-joomla h2.moduleheading,
+.joomla h2.moduleheading,
 .area-joomla h3.moduleheading,
+.joomla h3.moduleheading,
 .area-joomla h1 a.moduleheading,
+.joomla h1 a.moduleheading,
 .area-joomla h2 a.moduleheading,
-.area-joomla h3 a.moduleheading {
+.joomla h2 a.moduleheading,
+.area-joomla h3 a.moduleheading,
+.joomla h3 a.moduleheading {
   background: #679ed4;
 }
-.area-joomla a {
+.area-joomla a,
+.joomla a {
   color: #679ed4;
 }
 .area-joomla a:hover,
-.area-joomla a:focus {
+.joomla a:hover,
+.area-joomla a:focus,
+.joomla a:focus {
   color: #2f6ba6;
 }
-.area-joomla span:before {
+.area-joomla span:before,
+.joomla span:before {
   color: #679ed4;
 }
-.area-joomla .btn {
+.area-joomla .btn,
+.joomla .btn {
   background: #679ed4;
 }
-.area-joomla .bg {
+.area-joomla .bg,
+.joomla .bg {
   background: rgba(103, 158, 212, 0.8) !important;
 }
-.area-joomla #aside ul.menu ul li:before {
+.area-joomla #aside ul.menu ul li:before,
+.joomla #aside ul.menu ul li:before {
   color: #679ed4;
 }
-.area-joomla #aside ul.menu li.active > a {
+.area-joomla #aside ul.menu li.active > a,
+.joomla #aside ul.menu li.active > a {
   color: #679ed4;
 }
-.area-joomla.info {
+.area-joomla.info,
+.joomla.info {
   background-color: #deeaf6;
 }
-.area-joomla.info h3 {
+.area-joomla.info h3,
+.joomla.info h3 {
   border-bottom: 1px solid #679ed4;
 }
-.area-joomla.info-content {
+.area-joomla.info-content,
+.joomla.info-content {
   background-color: #deeaf6;
   border: 1px solid #679ed4;
   color: #679ed4;
 }
-.area-joomla.info-content:before {
+.area-joomla.info-content:before,
+.joomla.info-content:before {
   color: #679ed4;
 }
 .area-forum h1,
+.forum h1,
 .area-forum h2,
+.forum h2,
 .area-forum h3,
+.forum h3,
 .area-forum h1 a,
+.forum h1 a,
 .area-forum h2 a,
-.area-forum h3 a {
+.forum h2 a,
+.area-forum h3 a,
+.forum h3 a {
   color: #e84032;
 }
 .area-forum h1.moduleheading,
+.forum h1.moduleheading,
 .area-forum h2.moduleheading,
+.forum h2.moduleheading,
 .area-forum h3.moduleheading,
+.forum h3.moduleheading,
 .area-forum h1 a.moduleheading,
+.forum h1 a.moduleheading,
 .area-forum h2 a.moduleheading,
-.area-forum h3 a.moduleheading {
+.forum h2 a.moduleheading,
+.area-forum h3 a.moduleheading,
+.forum h3 a.moduleheading {
   background: #e84032;
 }
-.area-forum a {
+.area-forum a,
+.forum a {
   color: #e84032;
 }
 .area-forum a:hover,
-.area-forum a:focus {
+.forum a:hover,
+.area-forum a:focus,
+.forum a:focus {
   color: #a21d12;
 }
-.area-forum span:before {
+.area-forum span:before,
+.forum span:before {
   color: #e84032;
 }
-.area-forum .btn {
+.area-forum .btn,
+.forum .btn {
   background: #e84032;
 }
-.area-forum .bg {
+.area-forum .bg,
+.forum .bg {
   background: rgba(232, 64, 50, 0.8) !important;
 }
-.area-forum #aside ul.menu ul li:before {
+.area-forum #aside ul.menu ul li:before,
+.forum #aside ul.menu ul li:before {
   color: #e84032;
 }
-.area-forum #aside ul.menu li.active > a {
+.area-forum #aside ul.menu li.active > a,
+.forum #aside ul.menu li.active > a {
   color: #e84032;
 }
-.area-forum.info {
+.area-forum.info,
+.forum.info {
   background-color: #f7c0bc;
 }
-.area-forum.info h3 {
+.area-forum.info h3,
+.forum.info h3 {
   border-bottom: 1px solid #e84032;
 }
-.area-forum.info-content {
+.area-forum.info-content,
+.forum.info-content {
   background-color: #f7c0bc;
   border: 1px solid #e84032;
   color: #e84032;
 }
-.area-forum.info-content:before {
+.area-forum.info-content:before,
+.forum.info-content:before {
   color: #e84032;
 }
 .area-community h1,
+.community h1,
 .area-community h2,
+.community h2,
 .area-community h3,
+.community h3,
 .area-community h1 a,
+.community h1 a,
 .area-community h2 a,
-.area-community h3 a {
+.community h2 a,
+.area-community h3 a,
+.community h3 a {
   color: #f9b431;
 }
 .area-community h1.moduleheading,
+.community h1.moduleheading,
 .area-community h2.moduleheading,
+.community h2.moduleheading,
 .area-community h3.moduleheading,
+.community h3.moduleheading,
 .area-community h1 a.moduleheading,
+.community h1 a.moduleheading,
 .area-community h2 a.moduleheading,
-.area-community h3 a.moduleheading {
+.community h2 a.moduleheading,
+.area-community h3 a.moduleheading,
+.community h3 a.moduleheading {
   background: #f9b431;
 }
-.area-community a {
+.area-community a,
+.community a {
   color: #f9b431;
 }
 .area-community a:hover,
-.area-community a:focus {
+.community a:hover,
+.area-community a:focus,
+.community a:focus {
   color: #be7f06;
 }
-.area-community span:before {
+.area-community span:before,
+.community span:before {
   color: #f9b431;
 }
-.area-community .btn {
+.area-community .btn,
+.community .btn {
   background: #f9b431;
 }
-.area-community .bg {
+.area-community .bg,
+.community .bg {
   background: rgba(249, 180, 49, 0.8) !important;
 }
-.area-community #aside ul.menu ul li:before {
+.area-community #aside ul.menu ul li:before,
+.community #aside ul.menu ul li:before {
   color: #f9b431;
 }
-.area-community #aside ul.menu li.active > a {
+.area-community #aside ul.menu li.active > a,
+.community #aside ul.menu li.active > a {
   color: #f9b431;
 }
-.area-community.info {
+.area-community.info,
+.community.info {
   background-color: #fdeac6;
 }
-.area-community.info h3 {
+.area-community.info h3,
+.community.info h3 {
   border-bottom: 1px solid #f9b431;
 }
-.area-community.info-content {
+.area-community.info-content,
+.community.info-content {
   background-color: #fdeac6;
   border: 1px solid #f9b431;
   color: #f9b431;
 }
-.area-community.info-content:before {
+.area-community.info-content:before,
+.community.info-content:before {
   color: #f9b431;
 }
 .area-events h1,
+.events h1,
 .area-events h2,
+.events h2,
 .area-events h3,
+.events h3,
 .area-events h1 a,
+.events h1 a,
 .area-events h2 a,
-.area-events h3 a {
+.events h2 a,
+.area-events h3 a,
+.events h3 a {
   color: #85c03c;
 }
 .area-events h1.moduleheading,
+.events h1.moduleheading,
 .area-events h2.moduleheading,
+.events h2.moduleheading,
 .area-events h3.moduleheading,
+.events h3.moduleheading,
 .area-events h1 a.moduleheading,
+.events h1 a.moduleheading,
 .area-events h2 a.moduleheading,
-.area-events h3 a.moduleheading {
+.events h2 a.moduleheading,
+.area-events h3 a.moduleheading,
+.events h3 a.moduleheading {
   background: #85c03c;
 }
-.area-events a {
+.area-events a,
+.events a {
   color: #85c03c;
 }
 .area-events a:hover,
-.area-events a:focus {
+.events a:hover,
+.area-events a:focus,
+.events a:focus {
   color: #4f7224;
 }
-.area-events span:before {
+.area-events span:before,
+.events span:before {
   color: #85c03c;
 }
-.area-events .btn {
+.area-events .btn,
+.events .btn {
   background: #85c03c;
 }
-.area-events .bg {
+.area-events .bg,
+.events .bg {
   background: rgba(133, 192, 60, 0.8) !important;
 }
-.area-events #aside ul.menu ul li:before {
+.area-events #aside ul.menu ul li:before,
+.events #aside ul.menu ul li:before {
   color: #85c03c;
 }
-.area-events #aside ul.menu li.active > a {
+.area-events #aside ul.menu li.active > a,
+.events #aside ul.menu li.active > a {
   color: #85c03c;
 }
-.area-events.info {
+.area-events.info,
+.events.info {
   background-color: #cde6af;
 }
-.area-events.info h3 {
+.area-events.info h3,
+.events.info h3 {
   border-bottom: 1px solid #85c03c;
 }
-.area-events.info-content {
+.area-events.info-content,
+.events.info-content {
   background-color: #cde6af;
   border: 1px solid #85c03c;
   color: #85c03c;
 }
-.area-events.info-content:before {
+.area-events.info-content:before,
+.events.info-content:before {
   color: #85c03c;
 }
 .area-neutral h1,
