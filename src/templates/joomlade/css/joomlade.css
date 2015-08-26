@@ -8729,6 +8729,12 @@ img {
   color: #fff;
   border: none;
   border-radius: 6px;
+  text-decoration: none;
+  padding: 3px 20px;
+  text-transform: uppercase;
+}
+.area-joomla .btn:hover {
+  background: #3f85c9;
 }
 .area-joomla .bg {
   background: rgba(103, 158, 212, 0.8) !important;
@@ -8784,6 +8790,12 @@ img {
   color: #fff;
   border: none;
   border-radius: 6px;
+  text-decoration: none;
+  padding: 3px 20px;
+  text-transform: uppercase;
+}
+.area-forum .btn:hover {
+  background: #d02517;
 }
 .area-forum .bg {
   background: rgba(232, 64, 50, 0.8) !important;
@@ -8839,6 +8851,12 @@ img {
   color: #fff;
   border: none;
   border-radius: 6px;
+  text-decoration: none;
+  padding: 3px 20px;
+  text-transform: uppercase;
+}
+.area-community .btn:hover {
+  background: #f0a007;
 }
 .area-community .bg {
   background: rgba(249, 180, 49, 0.8) !important;
@@ -8894,6 +8912,12 @@ img {
   color: #fff;
   border: none;
   border-radius: 6px;
+  text-decoration: none;
+  padding: 3px 20px;
+  text-transform: uppercase;
+}
+.area-events .btn:hover {
+  background: #6a9930;
 }
 .area-events .bg {
   background: rgba(133, 192, 60, 0.8) !important;
@@ -8949,6 +8973,12 @@ img {
   color: #fff;
   border: none;
   border-radius: 6px;
+  text-decoration: none;
+  padding: 3px 20px;
+  text-transform: uppercase;
+}
+.area-neutral .btn:hover {
+  background: #787878;
 }
 .area-neutral .bg {
   background: rgba(145, 145, 145, 0.8) !important;
@@ -9457,13 +9487,6 @@ h3.moduleheading a {
 .moduletable.download {
   display: table;
 }
-.moduletable.download .btn.btn-download {
-  border: none;
-  text-transform: uppercase;
-  color: #196dab !important;
-  text-decoration: none;
-  padding: 3px 20px;
-}
 .moduletable.download > div {
   vertical-align: middle;
   display: table-cell;
@@ -9538,6 +9561,7 @@ body.wissen .staticheader:after {
   color: #fff !important;
   width: 100%;
   margin-bottom: 20px;
+  background-color: #196dab !important;
 }
 #aside .moduletable.download-joomla .btn.orange {
   background-color: #f9b431 !important;
