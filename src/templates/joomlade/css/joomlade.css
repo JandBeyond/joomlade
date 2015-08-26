@@ -9458,9 +9458,9 @@ h3.moduleheading a {
   display: table;
 }
 .moduletable.download .btn.btn-download {
-  border: 0;
+  border: none;
   text-transform: uppercase;
-  color: #196dab;
+  color: #196dab !important;
   text-decoration: none;
   padding: 3px 20px;
 }
@@ -9540,8 +9540,8 @@ body.wissen .staticheader:after {
   margin-bottom: 20px;
 }
 #aside .moduletable.download-joomla .btn.orange {
-  background-color: #f9b431;
-  border-color: #f9b431;
+  background-color: #f9b431 !important;
+  border: none;
   color: #fff !important;
   width: 100%;
 }
