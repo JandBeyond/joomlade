@@ -8780,6 +8780,11 @@ img {
   border: 1px solid #679ed4;
   border-bottom-color: #fff;
 }
+.area-joomla ul.social-media,
+.area-joomla ul.social-media > li.active > a,
+.area-joomla ul.social-media > li:hover > a {
+  border: none!important;
+}
 .area-joomla .panel-default {
   border: 1px solid #f2f7fb;
 }
@@ -8877,6 +8882,11 @@ img {
   background: #fff;
   border: 1px solid #e84032;
   border-bottom-color: #fff;
+}
+.area-forum ul.social-media,
+.area-forum ul.social-media > li.active > a,
+.area-forum ul.social-media > li:hover > a {
+  border: none!important;
 }
 .area-forum .panel-default {
   border: 1px solid #fad6d2;
@@ -8976,6 +8986,11 @@ img {
   border: 1px solid #f9b431;
   border-bottom-color: #fff;
 }
+.area-community ul.social-media,
+.area-community ul.social-media > li.active > a,
+.area-community ul.social-media > li:hover > a {
+  border: none!important;
+}
 .area-community .panel-default {
   border: 1px solid #fef3de;
 }
@@ -9074,6 +9089,11 @@ img {
   border: 1px solid #85c03c;
   border-bottom-color: #fff;
 }
+.area-events ul.social-media,
+.area-events ul.social-media > li.active > a,
+.area-events ul.social-media > li:hover > a {
+  border: none!important;
+}
 .area-events .panel-default {
   border: 1px solid #d9ecc2;
 }
@@ -9171,6 +9191,11 @@ img {
   background: #fff;
   border: 1px solid #919191;
   border-bottom-color: #fff;
+}
+.area-neutral ul.social-media,
+.area-neutral ul.social-media > li.active > a,
+.area-neutral ul.social-media > li:hover > a {
+  border: none!important;
 }
 .area-neutral .panel-default {
   border: 1px solid #eaeaea;
@@ -9785,11 +9810,6 @@ body.wissen .staticheader:after {
 }
 .social-media > li > a {
   padding: 5px;
-}
-ul.social-media,
-ul.social-media > li.active > a,
-ul.social-media > li:hover > a {
-  border: none!important;
 }
 .social-media li span:before {
   color: #919191;
