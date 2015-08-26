@@ -8645,6 +8645,9 @@ body.events .art-icon:before {
   margin: 0;
   border-bottom: none;
 }
+.tab-content {
+  padding: calc(30px/2);
+}
 body {
   margin: 0;
   padding: 0;
@@ -8762,6 +8765,42 @@ img {
 .area-joomla.info-content:before {
   color: #679ed4;
 }
+.area-joomla ul.nav-tabs {
+  border-bottom: 1px solid #679ed4;
+}
+.area-joomla ul.nav-tabs li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.area-joomla ul.nav-tabs li:hover > a,
+.area-joomla ul.nav-tabs li.active > a {
+  color: #3f85c9;
+  background: #fff;
+  border: 1px solid #679ed4;
+  border-bottom-color: #fff;
+}
+.area-joomla .panel-default {
+  border: 1px solid #f2f7fb;
+}
+.area-joomla .panel-default .panel-collapse > .panel-body {
+  border: none;
+}
+.area-joomla .panel-default .panel-heading {
+  background: #679ed4;
+  border-bottom: transparent;
+}
+.area-joomla .panel-default .panel-heading .panel-title > a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.area-joomla .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
+  content: "\f054";
+  font-family: FontAwesome;
+  color: #fff;
+  margin-right: 10px;
+}
 .area-forum h1,
 .area-forum h2,
 .area-forum h3,
@@ -8825,6 +8864,42 @@ img {
 }
 .area-forum.info-content:before {
   color: #e84032;
+}
+.area-forum ul.nav-tabs {
+  border-bottom: 1px solid #e84032;
+}
+.area-forum ul.nav-tabs li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.area-forum ul.nav-tabs li:hover > a,
+.area-forum ul.nav-tabs li.active > a {
+  color: #d02517;
+  background: #fff;
+  border: 1px solid #e84032;
+  border-bottom-color: #fff;
+}
+.area-forum .panel-default {
+  border: 1px solid #fad6d2;
+}
+.area-forum .panel-default .panel-collapse > .panel-body {
+  border: none;
+}
+.area-forum .panel-default .panel-heading {
+  background: #e84032;
+  border-bottom: transparent;
+}
+.area-forum .panel-default .panel-heading .panel-title > a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.area-forum .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
+  content: "\f054";
+  font-family: FontAwesome;
+  color: #fff;
+  margin-right: 10px;
 }
 .area-community h1,
 .area-community h2,
@@ -8890,6 +8965,42 @@ img {
 .area-community.info-content:before {
   color: #f9b431;
 }
+.area-community ul.nav-tabs {
+  border-bottom: 1px solid #f9b431;
+}
+.area-community ul.nav-tabs li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.area-community ul.nav-tabs li:hover > a,
+.area-community ul.nav-tabs li.active > a {
+  color: #f0a007;
+  background: #fff;
+  border: 1px solid #f9b431;
+  border-bottom-color: #fff;
+}
+.area-community .panel-default {
+  border: 1px solid #fef3de;
+}
+.area-community .panel-default .panel-collapse > .panel-body {
+  border: none;
+}
+.area-community .panel-default .panel-heading {
+  background: #f9b431;
+  border-bottom: transparent;
+}
+.area-community .panel-default .panel-heading .panel-title > a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.area-community .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
+  content: "\f054";
+  font-family: FontAwesome;
+  color: #fff;
+  margin-right: 10px;
+}
 .area-events h1,
 .area-events h2,
 .area-events h3,
@@ -8954,6 +9065,42 @@ img {
 .area-events.info-content:before {
   color: #85c03c;
 }
+.area-events ul.nav-tabs {
+  border-bottom: 1px solid #85c03c;
+}
+.area-events ul.nav-tabs li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.area-events ul.nav-tabs li:hover > a,
+.area-events ul.nav-tabs li.active > a {
+  color: #6a9930;
+  background: #fff;
+  border: 1px solid #85c03c;
+  border-bottom-color: #fff;
+}
+.area-events .panel-default {
+  border: 1px solid #d9ecc2;
+}
+.area-events .panel-default .panel-collapse > .panel-body {
+  border: none;
+}
+.area-events .panel-default .panel-heading {
+  background: #85c03c;
+  border-bottom: transparent;
+}
+.area-events .panel-default .panel-heading .panel-title > a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.area-events .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
+  content: "\f054";
+  font-family: FontAwesome;
+  color: #fff;
+  margin-right: 10px;
+}
 .area-neutral h1,
 .area-neutral h2,
 .area-neutral h3,
@@ -9017,6 +9164,42 @@ img {
 }
 .area-neutral.info-content:before {
   color: #919191;
+}
+.area-neutral ul.nav-tabs {
+  border-bottom: 1px solid #919191;
+}
+.area-neutral ul.nav-tabs li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.area-neutral ul.nav-tabs li:hover > a,
+.area-neutral ul.nav-tabs li.active > a {
+  color: #787878;
+  background: #fff;
+  border: 1px solid #919191;
+  border-bottom-color: #fff;
+}
+.area-neutral .panel-default {
+  border: 1px solid #eaeaea;
+}
+.area-neutral .panel-default .panel-collapse > .panel-body {
+  border: none;
+}
+.area-neutral .panel-default .panel-heading {
+  background: #919191;
+  border-bottom: transparent;
+}
+.area-neutral .panel-default .panel-heading .panel-title > a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.area-neutral .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
+  content: "\f054";
+  font-family: FontAwesome;
+  color: #fff;
+  margin-right: 10px;
 }
 /** hide main nav on mobile **/
 #mainnav {
@@ -10081,160 +10264,6 @@ div.pagination .page-section ul.pagination {
 .pull-right.item-image,
 .pull-left.item-image {
   width: auto;
-}
-.tab-content {
-  padding: calc(30px/2);
-}
-body.wissen ul.nav-tabs {
-  border-bottom: 1px solid #e84032;
-}
-body.wissen ul.nav-tabs li a {
-  color: #e84032;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-body.wissen ul.nav-tabs li:hover > a,
-body.wissen ul.nav-tabs li.active > a {
-  color: #d02517;
-  background: #fad6d2;
-  background: -webkit-linear-gradient(top, #fad6d2, #ffffff);
-  border: 1px solid #e84032;
-  border-bottom-color: #fff;
-}
-body.wissen .panel-default {
-  border: 1px solid #e84032;
-}
-body.wissen .panel-default .panel-collapse > .panel-body {
-  border: none;
-}
-body.wissen .panel-default .panel-heading {
-  background: #fad6d2;
-  border-bottom: transparent;
-}
-body.wissen .panel-default .panel-heading .panel-title > a {
-  color: #e84032;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-body.wissen .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
-  content: "\f054";
-  font-family: FontAwesome;
-  color: #e84032;
-  margin-right: 10px;
-}
-/*area joomla */
-body.joomla ul.nav-tabs {
-  border-bottom: 1px solid #679ed4;
-}
-body.joomla ul.nav-tabs li a {
-  color: #679ed4;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-body.joomla ul.nav-tabs li:hover > a,
-body.joomla ul.nav-tabs li.active > a {
-  color: #3f85c9;
-  background: #f2f7fb;
-  background: -webkit-linear-gradient(top, #f2f7fb, #ffffff);
-  border: 1px solid #679ed4;
-  border-bottom-color: #fff;
-}
-body.joomla .panel-default {
-  border: 1px solid #679ed4;
-}
-body.joomla .panel-default .panel-collapse > .panel-body {
-  border: none;
-}
-body.joomla .panel-default .panel-heading {
-  background: #f2f7fb;
-  border-bottom: transparent;
-}
-body.joomla .panel-default .panel-heading .panel-title > a {
-  color: #679ed4;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-body.joomla .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
-  content: "\f054";
-  font-family: FontAwesome;
-  color: #679ed4;
-  margin-right: 10px;
-}
-/*area community */
-body.community ul.nav-tabs {
-  border-bottom: 1px solid #f9b431;
-}
-body.community ul.nav-tabs li a {
-  color: #f9b431;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-body.community ul.nav-tabs li:hover > a,
-body.community ul.nav-tabs li.active > a {
-  color: #f0a007;
-  background: #fef3de;
-  background: -webkit-linear-gradient(top, #fef3de, #ffffff);
-  border: 1px solid #f9b431;
-  border-bottom-color: #fff;
-}
-body.community .panel-default {
-  border: 1px solid #f9b431;
-}
-body.community .panel-default .panel-collapse > .panel-body {
-  border: none;
-}
-body.community .panel-default .panel-heading {
-  background: #fef3de;
-  border-bottom: transparent;
-}
-body.community .panel-default .panel-heading .panel-title > a {
-  color: #f9b431;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-body.community .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
-  content: "\f054";
-  font-family: FontAwesome;
-  color: #f9b431;
-  margin-right: 10px;
-}
-/* area events */
-body.events ul.nav-tabs {
-  border-bottom: 1px solid #85c03c;
-}
-body.events ul.nav-tabs li a {
-  color: #85c03c;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-body.events ul.nav-tabs li:hover > a,
-body.events ul.nav-tabs li.active > a {
-  color: #6a9930;
-  background: #d9ecc2;
-  background: -webkit-linear-gradient(top, #d9ecc2, #ffffff);
-  border: 1px solid #85c03c;
-  border-bottom-color: #fff;
-}
-body.events .panel-default {
-  border: 1px solid #85c03c;
-}
-body.events .panel-default .panel-collapse > .panel-body {
-  border: none;
-}
-body.events .panel-default .panel-heading {
-  background: #d9ecc2;
-  border-bottom: transparent;
-}
-body.events .panel-default .panel-heading .panel-title > a {
-  color: #85c03c;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-body.events .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
-  content: "\f054";
-  font-family: FontAwesome;
-  color: #85c03c;
-  margin-right: 10px;
 }
 /* Module Navigation */
 #mainnav .nav-child .module {

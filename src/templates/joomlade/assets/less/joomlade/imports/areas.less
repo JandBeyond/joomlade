@@ -70,7 +70,61 @@
       color: @color;
     }
   }
+
+  ul.nav-tabs {
+    border-bottom: 1px solid @color;
+
+    li {
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+    }
+
+    li:hover, li.active {
+      > a {
+        color: darken(@color, 10%);
+        background:#fff;
+        border: 1px solid @color;
+        border-bottom-color:#fff;
+      }
+
+    }
+  }
+
+  .panel-default {
+
+    border:1px solid lighten(@color,35%);
+
+    .panel-collapse > .panel-body {
+      border:none;
+    }
+
+    .panel-heading {
+
+      background: @color;
+      border-bottom:transparent;
+
+      .panel-title > a {
+        color:#fff;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .panel-title > a > span.fa-chevron-right {
+        content: "\f054";
+        font-family: FontAwesome;
+        color: #fff;
+        margin-right: 10px;
+      }
+
+    }
+  }
 }
+
 
 .area-joomla {
   .project-area(@color-blue);
@@ -91,3 +145,4 @@
 .area-neutral {
   .project-area(@color-grey);
 }
+
