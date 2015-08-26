@@ -9786,10 +9786,10 @@ body.wissen .staticheader:after {
 .social-media > li > a {
   padding: 5px;
 }
-.social-media ul.nav-tabs,
-.social-media ul.nav-tabs > li.active > a,
-.social-media ul.nav-tabs > li:hover > a {
-  border: none;
+ul.social-media,
+ul.social-media > li.active > a,
+ul.social-media > li:hover > a {
+  border: none!important;
 }
 .social-media li span:before {
   color: #919191;
