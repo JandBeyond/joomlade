@@ -8648,6 +8648,9 @@ body.events .art-icon:before {
 .tab-content {
   padding: calc(30px/2);
 }
+.tab-content.social {
+  padding: 0;
+}
 body {
   margin: 0;
   padding: 0;
