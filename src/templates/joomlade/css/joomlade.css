@@ -8733,6 +8733,9 @@ img {
   padding: 3px 20px;
   text-transform: uppercase;
 }
+.area-joomla .btn span:before {
+  color: #fff;
+}
 .area-joomla .btn:hover {
   background: #3f85c9;
 }
@@ -8793,6 +8796,9 @@ img {
   text-decoration: none;
   padding: 3px 20px;
   text-transform: uppercase;
+}
+.area-forum .btn span:before {
+  color: #fff;
 }
 .area-forum .btn:hover {
   background: #d02517;
@@ -8855,6 +8861,9 @@ img {
   padding: 3px 20px;
   text-transform: uppercase;
 }
+.area-community .btn span:before {
+  color: #fff;
+}
 .area-community .btn:hover {
   background: #f0a007;
 }
@@ -8916,6 +8925,9 @@ img {
   padding: 3px 20px;
   text-transform: uppercase;
 }
+.area-events .btn span:before {
+  color: #fff;
+}
 .area-events .btn:hover {
   background: #6a9930;
 }
@@ -8976,6 +8988,9 @@ img {
   text-decoration: none;
   padding: 3px 20px;
   text-transform: uppercase;
+}
+.area-neutral .btn span:before {
+  color: #fff;
 }
 .area-neutral .btn:hover {
   background: #787878;
