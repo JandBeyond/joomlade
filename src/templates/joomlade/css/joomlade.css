@@ -8772,13 +8772,13 @@ img {
   border-bottom: 1px solid #679ed4;
 }
 .area-joomla ul.nav-tabs li a {
-  color: #679ed4;
+  color: #f2f7fb;
   text-decoration: none;
   text-transform: uppercase;
 }
 .area-joomla ul.nav-tabs li:hover > a,
 .area-joomla ul.nav-tabs li.active > a {
-  color: #3f85c9;
+  color: #679ed4;
   background: #fff;
   border: 1px solid #679ed4;
   border-bottom-color: #fff;
@@ -8875,13 +8875,13 @@ img {
   border-bottom: 1px solid #e84032;
 }
 .area-forum ul.nav-tabs li a {
-  color: #e84032;
+  color: #fad6d2;
   text-decoration: none;
   text-transform: uppercase;
 }
 .area-forum ul.nav-tabs li:hover > a,
 .area-forum ul.nav-tabs li.active > a {
-  color: #d02517;
+  color: #e84032;
   background: #fff;
   border: 1px solid #e84032;
   border-bottom-color: #fff;
@@ -8978,13 +8978,13 @@ img {
   border-bottom: 1px solid #f9b431;
 }
 .area-community ul.nav-tabs li a {
-  color: #f9b431;
+  color: #fef3de;
   text-decoration: none;
   text-transform: uppercase;
 }
 .area-community ul.nav-tabs li:hover > a,
 .area-community ul.nav-tabs li.active > a {
-  color: #f0a007;
+  color: #f9b431;
   background: #fff;
   border: 1px solid #f9b431;
   border-bottom-color: #fff;
@@ -9081,13 +9081,13 @@ img {
   border-bottom: 1px solid #85c03c;
 }
 .area-events ul.nav-tabs li a {
-  color: #85c03c;
+  color: #d9ecc2;
   text-decoration: none;
   text-transform: uppercase;
 }
 .area-events ul.nav-tabs li:hover > a,
 .area-events ul.nav-tabs li.active > a {
-  color: #6a9930;
+  color: #85c03c;
   background: #fff;
   border: 1px solid #85c03c;
   border-bottom-color: #fff;
@@ -9184,13 +9184,13 @@ img {
   border-bottom: 1px solid #919191;
 }
 .area-neutral ul.nav-tabs li a {
-  color: #919191;
+  color: #eaeaea;
   text-decoration: none;
   text-transform: uppercase;
 }
 .area-neutral ul.nav-tabs li:hover > a,
 .area-neutral ul.nav-tabs li.active > a {
-  color: #787878;
+  color: #919191;
   background: #fff;
   border: 1px solid #919191;
   border-bottom-color: #fff;
