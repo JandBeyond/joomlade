@@ -8772,7 +8772,7 @@ img {
   border-bottom: 1px solid #679ed4;
 }
 .area-joomla ul.nav-tabs li a {
-  color: #fff;
+  color: #679ed4;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -8875,7 +8875,7 @@ img {
   border-bottom: 1px solid #e84032;
 }
 .area-forum ul.nav-tabs li a {
-  color: #fff;
+  color: #e84032;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -8978,7 +8978,7 @@ img {
   border-bottom: 1px solid #f9b431;
 }
 .area-community ul.nav-tabs li a {
-  color: #fff;
+  color: #f9b431;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -9081,7 +9081,7 @@ img {
   border-bottom: 1px solid #85c03c;
 }
 .area-events ul.nav-tabs li a {
-  color: #fff;
+  color: #85c03c;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -9184,7 +9184,7 @@ img {
   border-bottom: 1px solid #919191;
 }
 .area-neutral ul.nav-tabs li a {
-  color: #fff;
+  color: #919191;
   text-decoration: none;
   text-transform: uppercase;
 }
