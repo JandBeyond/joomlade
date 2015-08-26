@@ -8795,9 +8795,7 @@ img {
   text-decoration: none;
   text-transform: uppercase;
 }
-.area-joomla .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
-  content: "\f054";
-  font-family: FontAwesome;
+.area-joomla .panel-default .panel-heading .panel-title > a > span:before {
   color: #fff;
   margin-right: 10px;
 }
@@ -8895,9 +8893,7 @@ img {
   text-decoration: none;
   text-transform: uppercase;
 }
-.area-forum .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
-  content: "\f054";
-  font-family: FontAwesome;
+.area-forum .panel-default .panel-heading .panel-title > a > span:before {
   color: #fff;
   margin-right: 10px;
 }
@@ -8995,9 +8991,7 @@ img {
   text-decoration: none;
   text-transform: uppercase;
 }
-.area-community .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
-  content: "\f054";
-  font-family: FontAwesome;
+.area-community .panel-default .panel-heading .panel-title > a > span:before {
   color: #fff;
   margin-right: 10px;
 }
@@ -9095,9 +9089,7 @@ img {
   text-decoration: none;
   text-transform: uppercase;
 }
-.area-events .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
-  content: "\f054";
-  font-family: FontAwesome;
+.area-events .panel-default .panel-heading .panel-title > a > span:before {
   color: #fff;
   margin-right: 10px;
 }
@@ -9195,9 +9187,7 @@ img {
   text-decoration: none;
   text-transform: uppercase;
 }
-.area-neutral .panel-default .panel-heading .panel-title > a > span.fa-chevron-right {
-  content: "\f054";
-  font-family: FontAwesome;
+.area-neutral .panel-default .panel-heading .panel-title > a > span:before {
   color: #fff;
   margin-right: 10px;
 }
