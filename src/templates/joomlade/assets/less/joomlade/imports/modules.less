@@ -215,8 +215,11 @@ body.wissen {
   padding: 5px;
 }
 
-.social-media span.fa-facebook-official:before {color:@color-blue;}
-.social-media span.fa-youtube-square:before {color:@color-red;}
-.social-media span.fa-xing-square:before {color:@color-green;}
-.social-media span.fa-stack-overflow:before {color:@color-grey;}
-.social-media span.fa-life-ring:before {color:@color-red;}
+.social-media > li.active > a {border: none;}
+
+.social-media li span:before {color:@color-grey;}
+.social-media li.active span.fa-facebook-official:before {color:@color-blue;}
+.social-media li.active span.fa-youtube-square:before {color:@color-red;}
+.social-media li.active span.fa-xing-square:before {color:@color-green;}
+.social-media li.active span.fa-stack-overflow:before {color:@color-yellow;}
+.social-media li.active span.fa-life-ring:before {color:@color-red;}

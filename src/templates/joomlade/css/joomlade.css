@@ -9786,19 +9786,25 @@ body.wissen .staticheader:after {
 .social-media > li > a {
   padding: 5px;
 }
-.social-media span.fa-facebook-official:before {
-  color: #679ed4;
+.social-media > li.active > a {
+  border: none;
 }
-.social-media span.fa-youtube-square:before {
-  color: #e84032;
-}
-.social-media span.fa-xing-square:before {
-  color: #85c03c;
-}
-.social-media span.fa-stack-overflow:before {
+.social-media li span:before {
   color: #919191;
 }
-.social-media span.fa-life-ring:before {
+.social-media li.active span.fa-facebook-official:before {
+  color: #679ed4;
+}
+.social-media li.active span.fa-youtube-square:before {
+  color: #e84032;
+}
+.social-media li.active span.fa-xing-square:before {
+  color: #85c03c;
+}
+.social-media li.active span.fa-stack-overflow:before {
+  color: #f9b431;
+}
+.social-media li.active span.fa-life-ring:before {
   color: #e84032;
 }
 a.skiplink {
