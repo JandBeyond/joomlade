@@ -113,19 +113,21 @@ $doc->addScript($tpath.'/js/joomlade.js');
       </div>
     <?php endif; ?>
 
-    <div id="mainwrapper" class="row">
-      <main id="maincontent" class="<?php if($this->countModules('aside')) {echo 'col-lg-9';} else {echo 'col-lg-12';} ?>">
-        <jdoc:include type="message" />
-        <jdoc:include type="component" />
-        <jdoc:include type="modules" name="mainbody-bottom" style="html5" />
-      </main>
+    <?php if(!$isFrontpage): ?>
+        <div id="mainwrapper" class="row">
+            <main id="maincontent" class="<?php if($this->countModules('aside')) {echo 'col-lg-9';} else {echo 'col-lg-12';} ?>">
+                <jdoc:include type="message" />
+                <jdoc:include type="component" />
+                <jdoc:include type="modules" name="mainbody-bottom" style="html5" />
+            </main>
 
-      <?php if($this->countModules('aside')): ?>
-        <section id="aside" class="col-lg-3">
-          <jdoc:include type="modules" name="aside" style="html5" />
-        </section>
-      <?php endif; ?>
-    </div>
+            <?php if($this->countModules('aside')): ?>
+                <section id="aside" class="col-lg-3">
+                    <jdoc:include type="modules" name="aside" style="html5" />
+                </section>
+            <?php endif; ?>
+        </div>
+    <?php endif ;?>
 
     <?php if($this->countModules('events')):  ?>
       <div id="events" class="row area-events">

@@ -25,7 +25,7 @@ function modChrome_joomlade ($module, &$params, &$attribs)
 	if (!empty ($module->content)) : ?>
 		<<?php echo $moduleTag; ?> class="moduletable<?php echo $boxClass ?>">
 		<?php if ((bool) $module->showtitle) :?>
-			<<?php echo $headerTag . ' class="'. $headerClass . '"">' . $module->title; ?></<?php echo $headerTag; ?>>
+			<<?php echo $headerTag . ' class="'. $headerClass . '">' . $module->title; ?></<?php echo $headerTag; ?>>
 		<?php endif; ?>
 		<?php echo $module->content; ?>
 		</<?php echo $moduleTag; ?>>

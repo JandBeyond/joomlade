@@ -21,7 +21,7 @@ $info    = $params->get('info_block_position', 0);
 <div class="system-unpublished">
     <?php endif; ?>
 
-    <div class="col-lg-4 nopadding news_infobereich">
+    <div class="col-sm-4 nopadding news_infobereich">
         <div class="news_category"><span class="news_icon"></span> <?php echo $this->item->category_alias; ?>      </div>
 <div class="news_titel">
         <span class="news_datum"><?php echo JHtml::_('date', $this->item->created, JText::_('DATE_FORMAT_LC2')); ?></span>
@@ -44,7 +44,7 @@ $info    = $params->get('info_block_position', 0);
     <?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
 </div>
     </div>
-    <div class="col-lg-8 nopadding news_contentbereich">
+    <div class="col-sm-8 nopadding news_contentbereich">
         <?php if ($params->get('show_tags') && !empty($this->item->tags->itemTags)) : ?>
          <div class="news_tags">
              <span>Tags: </span>
