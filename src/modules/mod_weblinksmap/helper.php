@@ -124,7 +124,6 @@ class ModWeblinksmapHelper
                 data.addColumn(\'string\', \'City\');
                 data.addColumn(\'number\', \'Value\');
                 data.addColumn({type:\'string\', role:\'tooltip\'});
-                data.addColumn({type:\'string\', role:\'link\'});
 
                 for (var i = 0; i < objects[0].length; i++) {
                     data.addRow([objects[0][i].metadesc,0,"JUG " + objects[0][i].title,objects[0][i].link]);
@@ -153,25 +152,10 @@ class ModWeblinksmapHelper
 
                     if (selectedItem.length > 0) {
                         var row = selectedItem[0].row;
-                        console.log(row);
-                        console.log(data.getValue(row));
                         var elementId = data.getValue(row,0);
-                        var defaultColor = document.getElementById(elementId).style.color;
+                        var link = jQuery(\'#\' + elementId).attr(\'href\');
 
-                        window.location = \'#\' + elementId;
-
-                        document.getElementById(elementId).style.backgroundColor = \'#85c03c;\';
-                        document.getElementById(elementId).style.fontWeight = \'bold\';
-                        document.getElementById(elementId).style.color = \'#fff;\';
-
-                        jQuery(\'#\' + elementId).children(\'.hidden-phone\').tooltip(\'show\');
-
-                        setTimeout(function(){
-                            document.getElementById(elementId).style.backgroundColor = defaultColor;
-                            document.getElementById(elementId).style.fontWeight = \'normal\';
-                            jQuery(\'#\' + elementId).children(\'.hidden-phone\').tooltip(\'hide\');
-                        }, 1500);
-
+                        window.location = link;
                     }
                 });
 
