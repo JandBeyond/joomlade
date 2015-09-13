@@ -20,7 +20,9 @@ defined('_JEXEC') or die;
                         <?php $images = json_decode($item->images); ?>
 
                         <?php if($images->image_intro): ?>
-                            <img src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo $item->title; ?>" class="intro"/>
+                            <a href="<?php echo $item->link; ?>">
+                                <img src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo $item->title; ?>" class="intro"/>
+                            </a>
                         <?php endif; ?>
 
                         <h4><?php echo $item->title; ?></h4>

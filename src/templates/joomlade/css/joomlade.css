@@ -10083,6 +10083,7 @@ a.skiplink:focus {
 .carousel.slide.news .item > div {
   padding-top: 30px;
   padding-bottom: 15px;
+  min-height: 435px;
 }
 .carousel.slide.news .item h4 {
   text-transform: uppercase;
