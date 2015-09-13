@@ -27,8 +27,8 @@ class ModGCalendarHelper {
 	 */
 	public function __construct(Registry $params)
 	{
-		$this->apiKey        = $params->get('api_key', null);
-		$this->calendarId    = $params->get('calendar_id', null);
+		$this->apiKey     = $params->get('api_key', null);
+		$this->calendarId = $params->get('calendar_id', null);
 	}
 
 	/**
@@ -41,19 +41,55 @@ class ModGCalendarHelper {
 	public function nextEvents($maxEvents)
 	{
 		$options = array(
-			'timeMin'      => JDate::getInstance()->toISO8601(),
-			'maxResults'   => $maxEvents,
+			'timeMin'    => JDate::getInstance()->toISO8601(),
+			'maxResults' => $maxEvents,
 		);
 
 		$events = $this->getEvents($options);
 
-		return $events;
+		return $this->prepareEvents($events);
+	}
+
+	/**
+	 * Template helper to get the duration
+	 *
+	 * @param $event
+	 *
+	 * @return string
+	 */
+	public static function duration($event)
+	{
+		$startTimezone = (isset($event->start->timezone)) ? $event->start->timezone : null;
+		$endTimezone   = (isset($event->end->timezone)) ? $event->end->timezone : null;
+
+		$startDate = isset($event->start->dateTime)
+			? JDate::getInstance($event->start->dateTime, $startTimezone)
+			: JDate::getInstance($event->start->date, $startTimezone);
+
+		$endDate = isset($event->end->dateTime)
+			? JDate::getInstance($event->end->dateTime, $endTimezone)
+			: JDate::getInstance($event->end->date, $endTimezone);
+
+		$startDateFormat = isset($event->start->dateTime) ? 'd.m.Y H:i' : 'd.m.Y';
+		$endDateFormat   = isset($event->end->dateTime) ? 'd.m.Y H:i' : 'd.m.Y';
+
+		if($startDate == $endDate)
+		{
+			return $startDate->format($startDateFormat);
+		}
+
+		if($startDate->dayofyear == $endDate->dayofyear)
+		{
+			return $startDate->format($startDateFormat) . ' - ' . $endDate->format('H:i');
+		}
+
+		return $startDate->format($startDateFormat) . ' - ' . $endDate->format($endDateFormat);
 	}
 
 	/**
 	 * Get the events from the google calendar api
 	 *
-	 * @param $options The query parameter options
+	 * @param array $options The query parameter options
 	 *
 	 * @return mixed
 	 */
@@ -75,7 +111,7 @@ class ModGCalendarHelper {
 		$response = $http->get($url);
 		$data     = json_decode($response->body);
 
-		// todo exception handling
+		//TODO exception handling
 
 		return $data->items;
 	}
@@ -106,7 +142,7 @@ class ModGCalendarHelper {
 	 */
 	protected function prepareItem($event)
 	{
-		//$item->startDate = $this->getItemDate($item->start)
+		// here you can prepare each event
 
 		return $event;
 	}
