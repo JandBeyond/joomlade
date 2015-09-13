@@ -126,7 +126,7 @@ $doc->addScript($tpath.'/js/joomlade.js');
 <jdoc:include type="component" />
     <jdoc:include type="modules" name="mainbody-bottom" style="html5" />
       </main>
-       <?php if($this->countModules(\'aside\')): ?>
+       <?php if($this->countModules("aside")): ?>
         <section id="aside" class="col-lg-3">
           <jdoc:include type="modules" name="aside" style="html5" />
         </section>
