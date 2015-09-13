@@ -9,11 +9,15 @@ defined('_JEXEC') or die;
 			<div class="event-duration">
 				<?php echo ModGCalendarHelper::duration($event); ?>
 			</div>
-			<a href="<?php echo $event->htmlLink; ?>" target="_blank">
-				<span class="event-title" itemprop="name">
-					<?php echo $event->summary; ?>
-				</span>
-			</a>
+			<div class="event-title">
+				<?php if($params->get('show_link', true)) : ?>
+					<a href="<?php echo $event->htmlLink; ?>" target="_blank">
+				<?php endif; ?>
+					<span itemprop="name"><?php echo $event->summary; ?></span>
+				<?php if($params->get('show_link', true)) : ?>
+					</a>
+				<?php endif; ?>
+			</div>
 			<?php if($params->get('show_location', false) && !empty($event->location)) : ?>
 				<div class="event-location"><?php echo $event->location; ?></div>
 			<?php endif; ?>

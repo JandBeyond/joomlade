@@ -40,6 +40,15 @@
 						description="MOD_GCALENDAR_FIELD_MAX_LIST_EVENTS_DESC"
 						/>
 				<field
+						name="show_link"
+						type="list"
+						default="1"
+						label="MOD_GCALENDAR_FIELD_SHOW_LINK"
+						description="MOD_GCALENDAR_FIELD_SHOW_LINK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
 						name="show_location"
 						type="list"
 						default="0"
