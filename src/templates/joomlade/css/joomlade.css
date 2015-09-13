@@ -9690,7 +9690,7 @@ h3.moduleheading a {
 .referenzen img {
   border: 1px solid #919191;
 }
-#events > h3 {
+#events .moduletable h3 {
   margin: 0 15px;
 }
 .moduletable.download,
