@@ -6,22 +6,22 @@ require_once __DIR__ . '/helper.php';
 
 $list = ModWeblinksmapHelper::getList($params);
 
-//chart
+// chart
 
 $chart_data = array();
 
-foreach ($list as $item){
-	$image = json_decode($item->images);
+foreach ($list as $item)
+{
+    $image = json_decode($item->images);
 
-	$chart_data[] = array('metadesc' => $item->metadesc, 'title' =>$item->title);
-
+    $chart_data[] = array('metadesc' => $item->metadesc, 'title' =>$item->title, 'link' => $item->link);
 }
 
 ModWeblinksmapHelper::drawChart($chart_data);
 
 if (!count($list))
 {
-	return;
+    return;
 }
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
