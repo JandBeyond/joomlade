@@ -126,7 +126,7 @@ class ModWeblinksmapHelper
                 data.addColumn({type:\'string\', role:\'tooltip\'});
 
                 for (var i = 0; i < objects[0].length; i++) {
-                    data.addRow([objects[0][i].metadesc,0,"JUG " + objects[0][i].title);
+                    data.addRow([objects[0][i].metadesc,0,"JUG " + objects[0][i].title]);
                 }
 
                 options = {
