@@ -104,7 +104,7 @@ $doc->addScript($tpath.'/js/joomlade.js');
     <?php endif; ?>
     <?php if($this->countModules('top-b')):  ?>
       <div id="top-b" class="row">
-        <jdoc:include type="modules" name="top-b" style="joomlade" width="col-md-<?php echo round(12 / $this->countModules('top-b')); ?>"  />
+        <jdoc:include type="modules" name="top-b" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('top-b')); ?>"  />
       </div>
     <?php endif; ?>
     <?php if($this->countModules('top-c')):  ?>
@@ -116,7 +116,16 @@ $doc->addScript($tpath.'/js/joomlade.js');
     <div id="mainwrapper" class="row">
       <main id="maincontent" class="<?php if($this->countModules('aside')) {echo 'col-lg-9';} else {echo 'col-lg-12';} ?>">
         <jdoc:include type="message" />
-        <jdoc:include type="component" />
+          <?php
+          $app = JFactory::getApplication();
+          $menu = $app->getMenu();
+          if ($menu->getActive() == $menu->getDefault()) {
+          }
+          else {
+              echo '<jdoc:include type="component" />';
+          }
+          ?>
+
         <jdoc:include type="modules" name="mainbody-bottom" style="html5" />
       </main>
 
