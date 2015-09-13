@@ -18,11 +18,6 @@ class ModGCalendarHelper {
 	protected $calendarId;
 
 	/**
-	 * @var int
-	 */
-	protected $maxListEvents;
-
-	/**
 	 * @param Registry $params
 	 */
 	public function __construct(Registry $params)

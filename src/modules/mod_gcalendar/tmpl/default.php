@@ -9,7 +9,7 @@ defined('_JEXEC') or die;
 			<div class="event-duration">
 				<?php echo ModGCalendarHelper::duration($event); ?>
 			</div>
-			<div class="event-title">
+			<div class="event-name">
 				<?php if($params->get('show_link', true)) : ?>
 					<a href="<?php echo $event->htmlLink; ?>" target="_blank">
 				<?php endif; ?>
