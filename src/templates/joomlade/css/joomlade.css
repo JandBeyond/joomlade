@@ -9549,32 +9549,46 @@ body.shownav #mainnav ul.menu li.module {
     display: none;
   }
 }
-/*** wissenslink ***/
-#mainnav > ul > li.wissen::after {
-  content: "";
-  display: none;
+@media (min-width: 1200px) {
+  /*** wissenslink ***/
+  #mainnav > ul > li.wissen::after {
+    content: "";
+    display: none;
+  }
+  /*** forumlink ***/
+  #mainnav > ul > li > a.forumlink {
+    background-color: #383838;
+    color: #fff;
+    padding: 5px 20px;
+    margin: 0 0 0 15px;
+  }
+  #mainnav > ul > li.active > a.forumlink,
+  #mainnav > ul > li:hover > a.forumlink,
+  #mainnav > ul > li.forumlink > a:focus {
+    background: #fff;
+    border-radius: 0;
+    text-decoration: none;
+    color: #000000;
+  }
+  #mainnav > ul > li.forumlink > a:before {
+    content: '\f08e';
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    padding: 0 4px;
+  }
 }
-/*** forumlink ***/
-#mainnav > ul > li > a.forumlink {
-  background-color: #383838;
-  color: #fff;
-  padding: 5px 20px;
-  margin: 0 0 0 15px;
-}
-#mainnav > ul > li.active > a.forumlink,
-#mainnav > ul > li:hover > a.forumlink,
-#mainnav > ul > li.forumlink > a:focus {
-  background: #fff;
-  border-radius: 0;
-  text-decoration: none;
-  color: #000000;
-}
-#mainnav > ul > li.forumlink > a:before {
-  content: '\f08e';
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  padding: 0 4px;
+/** table menu fixes **/
+@media (min-width: 768px) and (max-width: 1070px) {
+  #mainnav li.wissen:after {
+    content: "";
+  }
+  #mainnav a.forumlink {
+    display: none;
+  }
+  #logo {
+    max-width: 190px;
+  }
 }
 /** footer nav **/
 #footer nav > ul {
