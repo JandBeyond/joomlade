@@ -134,7 +134,7 @@ class ModWeblinksmapHelper
                     displayMode: \'markers\',
                     enableRegionInteractivity: false,
                     backgroundColor: {fill: \'#fff\', stroke: \'#c1c1c1\'},
-                    datalessRegionColor: \'#1e1e1e\',
+                    datalessRegionColor: \'#e1e1e1\',
                     markerOpacity: \'0.7\',
                     defaultColor: \'#345\',
                     colorAxis: {colors:[\'#f9b431\',\'#f9b431\']},
