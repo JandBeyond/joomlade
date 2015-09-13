@@ -133,7 +133,7 @@ class ModWeblinksmapHelper
                     region: \'155\',
                     displayMode: \'markers\',
                     enableRegionInteractivity: false,
-                    backgroundColor {fill: \'#e1e1e1\', stroke: \'#c1c1c1\'},
+                    backgroundColor: {fill: \'#e1e1e1\', stroke: \'#c1c1c1\'},
                     markerOpacity: \'0.7\',
                     colorAxis: {colors:[\'#f9b431\',\'#f9b431\']},
                     legend: \'none\',
