@@ -125,18 +125,19 @@ $doc->addScript($tpath.'/js/joomlade.js');
         <jdoc:include type="message" />
 <jdoc:include type="component" />
     <jdoc:include type="modules" name="mainbody-bottom" style="html5" />
-      </main>';
-          }
-          ?> 
-
-
-
-      <?php if($this->countModules('aside')): ?>
+      </main>
+       <?php if($this->countModules(\'aside\')): ?>
         <section id="aside" class="col-lg-3">
           <jdoc:include type="modules" name="aside" style="html5" />
         </section>
       <?php endif; ?>
-    </div>
+    </div>';
+          }
+          ?>
+
+
+
+
 
     <?php if($this->countModules('events')):  ?>
       <div id="events" class="row area-events">
