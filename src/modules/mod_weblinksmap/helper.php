@@ -124,9 +124,10 @@ class ModWeblinksmapHelper
                 data.addColumn(\'string\', \'City\');
                 data.addColumn(\'number\', \'Value\');
                 data.addColumn({type:\'string\', role:\'tooltip\'});
+                data.addColumn({type:\'string\', role:\'link\'});
 
                 for (var i = 0; i < objects[0].length; i++) {
-                    data.addRow([objects[0][i].metadesc,0,"JUG " + objects[0][i].title]);
+                    data.addRow([objects[0][i].metadesc,0,"JUG " + objects[0][i].title,objects[0][i].link);
                 }
 
                 options = {
@@ -152,6 +153,8 @@ class ModWeblinksmapHelper
 
                     if (selectedItem.length > 0) {
                         var row = selectedItem[0].row;
+                        console.log(row);
+                        console.log(data.getValue(row));
                         var elementId = data.getValue(row,0);
                         var defaultColor = document.getElementById(elementId).style.color;
 
