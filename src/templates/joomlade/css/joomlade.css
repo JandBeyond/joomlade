@@ -10314,6 +10314,22 @@ div.pagination .page-section ul.pagination {
 .pull-left.item-image {
   width: auto;
 }
+/* Übernommen von Joomla.de */
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+}
+ul.inline > li,
+ol.inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+  line-height: 25px;
+}
+.unstyled {
+  margin-bottom: 20px;
+}
 /* Module Navigation */
 #mainnav .nav-child .module {
   margin-left: 15px;
