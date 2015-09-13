@@ -8590,16 +8590,16 @@ body.community a {
   color: #f9b431;
 }
 .btn.blue {
-  color: #679ed4 !important;
+  background: #679ed4 !important;
 }
 .btn.yellow {
-  color: #f9b431 !important;
+  background: #f9b431 !important;
 }
 .btn.red {
-  color: #e84032 !important;
+  background: #e84032 !important;
 }
 .btn.green {
-  color: #85c03c !important;
+  background: #85c03c !important;
 }
 .img-rounded {
   border-radius: 4px;
