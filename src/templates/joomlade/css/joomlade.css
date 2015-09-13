@@ -9704,8 +9704,10 @@ h3.moduleheading a {
 .referenzen img {
   border: 1px solid #919191;
 }
-#events .moduletable h3 {
-  margin: 0 15px;
+#events .moduletable h4.moduleheading-news {
+  color: #000000;
+  text-transform: uppercase;
+  margin: 2em 0 1em 0;
 }
 .moduletable.download,
 .moduletable.features {
