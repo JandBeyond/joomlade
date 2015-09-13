@@ -10376,6 +10376,16 @@ div.pagination .page-section ul.pagination {
 .pull-left.item-image {
   width: auto;
 }
+#maincontent .item-page .tags {
+  margin: 1em 0;
+  float: none;
+}
+#maincontent .item-page .tags li:first-child {
+  padding-left: 0px;
+}
+#maincontent .item-page .item-image {
+  margin: 1em 0;
+}
 /* Übernommen von Joomla.de */
 ul.inline,
 ol.inline {
