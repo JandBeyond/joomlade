@@ -113,7 +113,7 @@ $doc->addScript($tpath.'/js/joomlade.js');
       </div>
     <?php endif; ?>
 
-    <?php if(!$active): ?>
+    <?php if(!$isFrontpage): ?>
         <div id="mainwrapper" class="row">
             <main id="maincontent" class="<?php if($this->countModules('aside')) {echo 'col-lg-9';} else {echo 'col-lg-12';} ?>">
                 <jdoc:include type="message" />
