@@ -8589,6 +8589,18 @@ body.events a {
 body.community a {
   color: #f9b431;
 }
+.btn.blue {
+  color: #679ed4;
+}
+.btn.yellow {
+  color: #f9b431;
+}
+.btn.red {
+  color: #e84032;
+}
+.btn.green {
+  color: #85c03c;
+}
 .img-rounded {
   border-radius: 4px;
 }
