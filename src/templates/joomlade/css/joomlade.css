@@ -8570,6 +8570,13 @@ a:hover,
 a:focus {
   text-decoration: none;
 }
+.btn {
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  padding: 3px 20px;
+  text-transform: uppercase;
+}
 body.wissen a {
   color: #e84032;
 }
@@ -8581,6 +8588,9 @@ body.events a {
 }
 body.community a {
   color: #f9b431;
+}
+.img-rounded {
+  border-radius: 4px;
 }
 ul.aufzaehlung {
   list-style-type: none;
@@ -8734,11 +8744,6 @@ img {
 .area-joomla .btn {
   background: #679ed4;
   color: #fff;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  padding: 3px 20px;
-  text-transform: uppercase;
 }
 .area-joomla .btn span:before {
   color: #fff;
@@ -8837,11 +8842,6 @@ img {
 .area-forum .btn {
   background: #e84032;
   color: #fff;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  padding: 3px 20px;
-  text-transform: uppercase;
 }
 .area-forum .btn span:before {
   color: #fff;
@@ -8940,11 +8940,6 @@ img {
 .area-community .btn {
   background: #f9b431;
   color: #fff;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  padding: 3px 20px;
-  text-transform: uppercase;
 }
 .area-community .btn span:before {
   color: #fff;
@@ -9043,11 +9038,6 @@ img {
 .area-events .btn {
   background: #85c03c;
   color: #fff;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  padding: 3px 20px;
-  text-transform: uppercase;
 }
 .area-events .btn span:before {
   color: #fff;
@@ -9146,11 +9136,6 @@ img {
 .area-neutral .btn {
   background: #919191;
   color: #fff;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  padding: 3px 20px;
-  text-transform: uppercase;
 }
 .area-neutral .btn span:before {
   color: #fff;
