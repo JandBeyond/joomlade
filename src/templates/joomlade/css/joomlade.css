@@ -10374,7 +10374,8 @@ div.pagination .page-section ul.pagination {
 /* Übernommen von Joomla.de */
 ul.inline,
 ol.inline {
-  margin-left: 0;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 ul.inline > li,
