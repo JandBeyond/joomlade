@@ -153,7 +153,7 @@ class ModWeblinksmapHelper
                     if (selectedItem.length > 0) {
                         var row = selectedItem[0].row;
                         var elementId = data.getValue(row,0);
-                        var link = jQuery(\'#\' + elementId).attr(\'href\');
+                        var link = jQuery(\'#\' + elementId + \' a\').attr(\'href\');
 
                         window.location = link;
                     }
