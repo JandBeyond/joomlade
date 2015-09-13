@@ -8655,6 +8655,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.55em;
+  overflow-x: hidden;
 }
 #outerwrapper {
   max-width: 1170px;
