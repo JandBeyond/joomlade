@@ -157,8 +157,9 @@ class ModWeblinksmapHelper
 
 						window.location = \'#\' + elementId;
 
-						document.getElementById(elementId).style.backgroundColor = \'#d9edf7\';
+						document.getElementById(elementId).style.backgroundColor = \'#85c03c;\';
 						document.getElementById(elementId).style.fontWeight = \'bold\';
+						document.getElementById(elementId).style.color = \'#fff;\'; 
 
 						jQuery(\'#\' + elementId).children(\'.hidden-phone\').tooltip(\'show\');
 
