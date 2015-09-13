@@ -10043,6 +10043,7 @@ a.skiplink:focus {
   }
   .slideshowheader .carousel-inner > .item .title {
     font-size: 36px;
+    margin-top: 15px;
   }
   .slideshowheader .carousel-inner > .item .subtitle {
     margin-top: 10px;
