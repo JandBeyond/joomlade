@@ -10072,7 +10072,7 @@ a.skiplink:focus {
   }
 }
 .carousel.slide.news {
-  padding-bottom: 30px;
+  padding-bottom: 55px;
 }
 .carousel.slide.news .item {
   text-align: center;
@@ -10092,6 +10092,7 @@ a.skiplink:focus {
 }
 .carousel.slide.news .item .tags {
   float: none;
+  margin: 10px 0;
 }
 .carousel.slide.news .item .tags a {
   color: white;
