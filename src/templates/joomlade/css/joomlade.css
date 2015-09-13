@@ -9701,6 +9701,7 @@ h3.moduleheading a {
 }
 .icon_module > div {
   padding: 30px 0;
+  min-height: 230px;
 }
 .referenzen img {
   border: 1px solid #919191;
