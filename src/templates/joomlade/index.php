@@ -113,21 +113,23 @@ $doc->addScript($tpath.'/js/joomlade.js');
       </div>
     <?php endif; ?>
 
-    <div id="mainwrapper" class="row">
-      <main id="maincontent" class="<?php if($this->countModules('aside')) {echo 'col-lg-9';} else {echo 'col-lg-12';} ?>">
-        <jdoc:include type="message" />
+
           <?php
           $app = JFactory::getApplication();
           $menu = $app->getMenu();
           if ($menu->getActive() == $menu->getDefault()) {
           }
           else {
-              echo '<jdoc:include type="component" />';
+              echo '<div id="mainwrapper" class="row">
+      <main id="maincontent" class="<?php if($this->countModules(\'aside\')) {echo \'col-lg-9\';} else {echo \'col-lg-12\';}?>">
+        <jdoc:include type="message" />
+<jdoc:include type="component" />
+    <jdoc:include type="modules" name="mainbody-bottom" style="html5" />
+      </main>';
           }
-          ?>
+          ?> 
 
-        <jdoc:include type="modules" name="mainbody-bottom" style="html5" />
-      </main>
+
 
       <?php if($this->countModules('aside')): ?>
         <section id="aside" class="col-lg-3">
