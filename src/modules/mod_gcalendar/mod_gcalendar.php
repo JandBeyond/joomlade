@@ -1,9 +1,4 @@
-<?php
-
-// TODO styling
-// TODO prepare the results
-
-defined('_JEXEC') or die;
+<?php defined('_JEXEC') or die;
 
 // Require the module helper file
 require_once __DIR__ . '/helper.php';
