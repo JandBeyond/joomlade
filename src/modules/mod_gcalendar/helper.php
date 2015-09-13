@@ -29,19 +29,20 @@ class ModGCalendarHelper {
 	{
 		$this->apiKey        = $params->get('api_key', null);
 		$this->calendarId    = $params->get('calendar_id', null);
-		$this->maxListEvents = (int) $params->get('max_list_events', 5);
 	}
 
 	/**
 	 * Get the next google events
 	 *
+	 * @param $maxEvents
+	 *
 	 * @return array
 	 */
-	public function nextEvents()
+	public function nextEvents($maxEvents)
 	{
 		$options = array(
 			'timeMin'      => JDate::getInstance()->toISO8601(),
-			'maxResults'   => $this->maxListEvents,
+			'maxResults'   => $maxEvents,
 		);
 
 		$events = $this->getEvents($options);
@@ -88,9 +89,9 @@ class ModGCalendarHelper {
 	 */
 	protected function prepareEvents($events)
 	{
-		foreach ($events AS $event)
+		foreach ($events AS $i => $event)
 		{
-			$event = $this->prepareItem($event);
+			$events[$i] = $this->prepareItem($event);
 		}
 
 		return $events;

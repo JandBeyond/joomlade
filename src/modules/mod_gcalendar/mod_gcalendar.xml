@@ -48,6 +48,12 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
+				<field
+						name="api_cache_time"
+						type="text"
+						default="60"
+						label="MOD_GCALENDAR_FIELD_API_CACHE_TIME_MINUTES"
+						description="MOD_GCALENDAR_FIELD_API_CACHE_TIME_MINUTES_DESC"/>
 			</fieldset>
 			<fieldset
 					name="advanced">

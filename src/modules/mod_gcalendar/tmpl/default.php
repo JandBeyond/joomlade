@@ -16,7 +16,7 @@
 						<?php echo JDate::getInstance($event->end->date)->format('d.m.Y'); ?>
 					<?php endif; ?>
 				</div>
-				<a href="<?php echo $event->htmlLink; ?>">
+				<a href="<?php echo $event->htmlLink; ?>" target="_blank">
 					<span class="event-title" itemprop="name">
 						<?php echo $event->summary; ?>
 					</span>
