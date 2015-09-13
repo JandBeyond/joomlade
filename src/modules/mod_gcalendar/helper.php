@@ -127,7 +127,7 @@ class ModGCalendarHelper {
 	{
 		foreach ($events AS $i => $event)
 		{
-			$events[$i] = $this->prepareItem($event);
+			$events[$i] = $this->prepareEvent($event);
 		}
 
 		return $events;
@@ -140,10 +140,29 @@ class ModGCalendarHelper {
 	 *
 	 * @return object
 	 */
-	protected function prepareItem($event)
+	protected function prepareEvent($event)
 	{
-		// here you can prepare each event
+		$event->startDate    = $this->unifyDate($event->start);
+		$event->endDate      = $this->unifyDate($event->end);
 
 		return $event;
+	}
+
+	/**
+	 * Unify the api dates
+	 *
+	 * @param $date
+	 *
+	 * @return JDate
+	 */
+	protected function unifyDate($date)
+	{
+		$timeZone =  (isset($date->timezone)) ? $date->timezone : null;
+		if(isset($date->dateTime))
+		{
+			return JDate::getInstance($date->dateTime, $timeZone);
+		}
+
+		return JDate::getInstance($date->date, $timeZone);
 	}
 }
