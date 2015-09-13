@@ -127,7 +127,7 @@ $doc->addScript($tpath.'/js/joomlade.js');
     <jdoc:include type="modules" name="mainbody-bottom" style="html5" />
       </main>';
           }
-          ?>
+          ?> 
 
 
 
