@@ -9956,10 +9956,6 @@ a.skiplink:focus {
     margin-left: 0px;
     position: absolute;
   }
-  .moduletable.download:nth-child(3):before,
-  .moduletable.features:nth-child(3):before {
-    margin-left: 2px;
-  }
   .moduletable.download:nth-child(2):before,
   .moduletable.features:nth-child(2):before,
   .moduletable.download:nth-child(2):after,
