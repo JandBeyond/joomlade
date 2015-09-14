@@ -54,31 +54,20 @@ class ModGCalendarHelper {
 	 */
 	public static function duration($event)
 	{
-		$startTimezone = (isset($event->start->timezone)) ? $event->start->timezone : null;
-		$endTimezone   = (isset($event->end->timezone)) ? $event->end->timezone : null;
-
-		$startDate = isset($event->start->dateTime)
-			? JDate::getInstance($event->start->dateTime, $startTimezone)
-			: JDate::getInstance($event->start->date, $startTimezone);
-
-		$endDate = isset($event->end->dateTime)
-			? JDate::getInstance($event->end->dateTime, $endTimezone)
-			: JDate::getInstance($event->end->date, $endTimezone);
-
 		$startDateFormat = isset($event->start->dateTime) ? 'd.m.Y H:i' : 'd.m.Y';
 		$endDateFormat   = isset($event->end->dateTime) ? 'd.m.Y H:i' : 'd.m.Y';
 
-		if($startDate == $endDate)
+		if($event->startDate == $event->endDate)
 		{
-			return $startDate->format($startDateFormat);
+			return $event->startDate->format($startDateFormat);
 		}
 
-		if($startDate->dayofyear == $endDate->dayofyear)
+		if($event->startDate->dayofyear == $event->endDate->dayofyear)
 		{
-			return $startDate->format($startDateFormat) . ' - ' . $endDate->format('H:i');
+			return $event->startDate->format($startDateFormat) . ' - ' . $event->endDate->format('H:i');
 		}
 
-		return $startDate->format($startDateFormat) . ' - ' . $endDate->format($endDateFormat);
+		return $event->startDate->format($startDateFormat) . ' - ' . $event->endDate->format($endDateFormat);
 	}
 
 	/**
@@ -87,6 +76,8 @@ class ModGCalendarHelper {
 	 * @param array $options The query parameter options
 	 *
 	 * @return mixed
+	 *
+	 * @throws UnexpectedValueException
 	 */
 	protected function getEvents($options)
 	{
@@ -106,9 +97,16 @@ class ModGCalendarHelper {
 		$response = $http->get($url);
 		$data     = json_decode($response->body);
 
-		//TODO exception handling
+		if ($data && isset($data->items))
+		{
+			return $data->items;
+		}
+		elseif ($data)
+		{
+			return array();
+		}
 
-		return $data->items;
+		throw new UnexpectedValueException("Unexpected data received from Google: `{$response->body}`.");
 	}
 
 	/**
@@ -137,8 +135,8 @@ class ModGCalendarHelper {
 	 */
 	protected function prepareEvent($event)
 	{
-		$event->startDate    = $this->unifyDate($event->start);
-		$event->endDate      = $this->unifyDate($event->end);
+		$event->startDate = $this->unifyDate($event->start);
+		$event->endDate   = $this->unifyDate($event->end);
 
 		return $event;
 	}
@@ -152,7 +150,7 @@ class ModGCalendarHelper {
 	 */
 	protected function unifyDate($date)
 	{
-		$timeZone =  (isset($date->timezone)) ? $date->timezone : null;
+		$timeZone = (isset($date->timezone)) ? $date->timezone : null;
 		if(isset($date->dateTime))
 		{
 			return JDate::getInstance($date->dateTime, $timeZone);
