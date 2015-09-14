@@ -10117,7 +10117,7 @@ ul.next-events li:before {
   content: "\f041";
   position: absolute;
   left: 0;
-  top: 5px;
+  top: 3px;
 }
 a.skiplink {
   position: absolute;
