@@ -10113,7 +10113,7 @@ ul.next-events li:before {
   background: #85c03c;
   border-radius: 100px;
   padding: 7px 15px;
-  color: #fff;
+  color: #fff !important;
   content: "\f041";
   position: absolute;
   left: 0;
