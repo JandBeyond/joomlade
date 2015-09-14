@@ -6,17 +6,17 @@ defined('_JEXEC') or die;
 		<li class="event" itemscope itemtype="http://schema.org/Event">
 			<meta itemprop="startDate" content="<?php echo JDate::getInstance($event->startDate)->toISO8601(); ?>">
 			<meta itemprop="endDate" content="<?php echo JDate::getInstance($event->endDate)->toISO8601(); ?>">
-			<div class="event-duration">
-				<?php echo ModGCalendarHelper::duration($event); ?>
-			</div>
 			<div class="event-name">
 				<?php if($params->get('show_link', true)) : ?>
-					<a href="<?php echo $event->htmlLink; ?>" target="_blank">
-				<?php endif; ?>
+				<a href="<?php echo $event->htmlLink; ?>" target="_blank">
+					<?php endif; ?>
 					<span itemprop="name"><?php echo $event->summary; ?></span>
-				<?php if($params->get('show_link', true)) : ?>
-					</a>
-				<?php endif; ?>
+					<?php if($params->get('show_link', true)) : ?>
+				</a>
+			<?php endif; ?>
+			</div>
+			<div class="event-duration">
+				<?php echo ModGCalendarHelper::duration($event); ?>
 			</div>
 			<?php if($params->get('show_location', false) && !empty($event->location)) : ?>
 				<div class="event-location"><?php echo $event->location; ?></div>
