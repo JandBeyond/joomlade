@@ -62,6 +62,7 @@ $doc->addScript($tpath.'/js/joomlade.js');
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/images/apple-touch-icon-72x72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/images/apple-touch-icon-114x114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $tpath; ?>/images/apple-touch-icon-144x144-precomposed.png">
+  <meta property="og:image" content="<?php echo $tpath; ?>/images/og-logo.png" />
   <!--[if lte IE 9]>
   <script src="<?php echo $tpath; ?>/js/html5shiv.min.js"></script>
   <script src="<?php echo $tpath; ?>/js/respond.min.js"></script>
