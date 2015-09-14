@@ -9548,9 +9548,12 @@ body.shownav #mainnav ul.menu li.module {
   }
   #mainnav > ul ul.next-events {
     display: block;
+    li: before;
   }
-  #mainnav > ul ul.next-events .event-name {
+  #mainnav > ul ul.next-events .event-name,
+  #mainnav > ul ul.next-events .event-name a {
     font-size: 14px;
+    line-height: 1.1em;
   }
 }
 @media (min-width: 1200px) {

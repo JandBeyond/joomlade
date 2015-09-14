@@ -342,8 +342,21 @@ body.shownav #mainnav {
       &.next-events {
         display: block;
 
-        .event-name {
+        .event-name, .event-name a {
           font-size: 14px;
+          line-height: 1.1em;
+        }
+
+        .event-duration {
+          font-size: 12px;
+        }
+
+        li {
+          padding-left: 40px;
+        }
+
+        li:before {
+          padding: 4px 12px;
         }
       }
     }
