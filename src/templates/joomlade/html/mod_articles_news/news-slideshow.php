@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 <div class="area-joomla">
     <h3 class="moduleheading fullwidth"><?php echo JText::_('TPL_JOOMLADE_HEADING_NEWS'); ?></h3>
 
-    <div id="carousel-slideshow-<?php echo $module->id; ?>" class="<?php echo $moduleclass_sfx; ?> carousel slide news" data-ride="carousel">
+    <div id="carousel-slideshow-<?php echo $module->id; ?>" class="<?php echo $moduleclass_sfx; ?> carousel slide news">
         <div class="carousel-inner" role="listbox">
             <?php for($i = 0; $i < count($list); $i = $i + 3): ?>
             <div class="item <?php if($i == 0) { echo 'active'; } ?>">

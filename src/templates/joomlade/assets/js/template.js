@@ -12,6 +12,13 @@ jQuery( document ).ready(function( $ ) {
         }
     });
 
+    if($('.carousel.news.slide').length)
+    {
+        $('.carousel').carousel({
+            interval: false
+        });
+    }
+
     $('#mainnav > ul > li.parent').hover(function(){
         if($(this).find(' > ul > li.module').length)
         {
