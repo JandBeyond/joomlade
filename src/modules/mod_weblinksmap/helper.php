@@ -155,7 +155,7 @@ class ModWeblinksmapHelper
                         var elementId = data.getValue(row,0);
                         var link = jQuery(\'#\' + elementId + \' a\').attr(\'href\');
 
-                        window.location = link;
+                        window.open(link, \'_blank\');
                     }
                 });
 
