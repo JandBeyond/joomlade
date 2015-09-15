@@ -105,7 +105,7 @@ $doc->addScript($tpath.'/js/joomlade.js');
     <?php endif; ?>
     <?php if($this->countModules('top-b')):  ?>
       <div id="top-b" class="row">
-        <jdoc:include type="modules" name="top-b" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('top-b')); ?>"  />
+        <jdoc:include type="modules" name="top-b" style="joomlade" width="col-md-<?php echo round(12 / $this->countModules('top-b')); ?>"  />
       </div>
     <?php endif; ?>
     <?php if($this->countModules('top-c')):  ?>
