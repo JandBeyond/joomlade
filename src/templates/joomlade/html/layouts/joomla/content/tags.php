@@ -21,7 +21,9 @@ JLoader::register('TagsHelperRoute', JPATH_BASE . '/components/com_tags/helpers/
 				<?php $tagParams = new Registry($tag->params); ?>
 				<?php $link_class = $tagParams->get('tag_link_class', 'label label-info'); ?>
 				<li class="tag-<?php echo $tag->tag_id; ?> tag-list<?php echo $i ?>" itemprop="keywords">
-					<?php echo $this->escape($tag->title); ?>
+					<span class="<?php echo $link_class; ?>">
+						<?php echo $this->escape($tag->title); ?>
+					</span>
 				</li>
 			<?php endif; ?>
 		<?php endforeach; ?>
