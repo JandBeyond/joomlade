@@ -10193,6 +10193,7 @@ ul.tags.inline span {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: normal;
+  color: white;
 }
 .label-info {
   background: #196dab;
