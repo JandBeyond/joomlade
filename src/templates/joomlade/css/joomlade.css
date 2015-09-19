@@ -10065,6 +10065,7 @@ a.skiplink:focus {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: normal;
+  line-height: 1.55em;
 }
 .slideshowheader .carousel-inner > .item span.subtitle {
   font-size: 16px;
@@ -10170,10 +10171,10 @@ a.skiplink:focus {
   text-shadow: none;
 }
 .carousel.slide.news .carousel-control.left {
-  left: 38%;
+  left: 35%;
 }
 .carousel.slide.news .carousel-control.right {
-  right: 38%;
+  right: 35%;
 }
 .carousel.slide.news .carousel-control .glyphicon {
   font-size: 50px;
