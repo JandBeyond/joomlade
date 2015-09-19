@@ -10060,10 +10060,14 @@ a.skiplink:focus {
   text-align: center;
   text-shadow: none;
 }
-.slideshowheader .carousel-inner > .item span.title {
+.slideshowheader .carousel-inner > .item span.title,
+.slideshowheader .carousel-inner > .item h1 {
   text-transform: uppercase;
+  font-size: 16px;
+  font-weight: normal;
 }
 .slideshowheader .carousel-inner > .item span.subtitle {
+  font-size: 16px;
   font-weight: 300;
 }
 .slideshowheader .carousel-inner > .item span.fa {
