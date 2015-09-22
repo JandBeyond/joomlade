@@ -10,7 +10,7 @@ $document->addScript(JUri::root() . '/modules/mod_gcalendar/media/fullcalendar/g
 ?>
 <script>
 	jQuery(document).ready(function($) {
-		jQuery('#calendar').fullCalendar({
+		jQuery('#calendar-<?php echo $module->id; ?>').fullCalendar({
 			googleCalendarApiKey: '<?php echo $params->get('api_key', null); ?>',
 			events: {
 				googleCalendarId: '<?php echo $params->get('calendar_id', null); ?>'
@@ -31,4 +31,4 @@ $document->addScript(JUri::root() . '/modules/mod_gcalendar/media/fullcalendar/g
 		});
 	});
 </script>
-<div id="calendar"></div>
+<div id="calendar-<?php echo $module->id; ?>"></div>
