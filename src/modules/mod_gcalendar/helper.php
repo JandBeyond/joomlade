@@ -59,15 +59,15 @@ class ModGCalendarHelper {
 
 		if($event->startDate == $event->endDate)
 		{
-			return $event->startDate->format($startDateFormat);
+			return $event->startDate->format($startDateFormat, true);
 		}
 
 		if($event->startDate->dayofyear == $event->endDate->dayofyear)
 		{
-			return $event->startDate->format($startDateFormat) . ' - ' . $event->endDate->format('H:i');
+			return $event->startDate->format($startDateFormat, true) . ' - ' . $event->endDate->format('H:i', true);
 		}
 
-		return $event->startDate->format($startDateFormat) . ' - ' . $event->endDate->format($endDateFormat);
+		return $event->startDate->format($startDateFormat, true) . ' - ' . $event->endDate->format($endDateFormat, true);
 	}
 
 	/**
@@ -151,6 +151,7 @@ class ModGCalendarHelper {
 	protected function unifyDate($date)
 	{
 		$timeZone = (isset($date->timezone)) ? $date->timezone : null;
+
 		if(isset($date->dateTime))
 		{
 			return JDate::getInstance($date->dateTime, $timeZone);
