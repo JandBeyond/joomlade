@@ -2,7 +2,7 @@
 
 joomlade is ...
 
-* [Homepage](http://joomlade.com) - Learn more about JOOMLADE
+* [Homepage](http://joomla.de) - Learn more about JOOMLADE
 
 ## Getting started
 
