@@ -9913,15 +9913,6 @@ ul.tags.inline li {
   left: 10px;
 }
 /* Google Kalender */
-button.fc-button {
-  background-color: #85c03c;
-  background-image: none;
-  color: white;
-}
-button.fc-button:hover,
-button.fc-button:focus {
-  background-color: #6a9930;
-}
 th.fc-day-header {
   background-color: #ffffff;
 }
