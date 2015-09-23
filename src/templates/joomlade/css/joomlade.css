@@ -9914,7 +9914,7 @@ ul.tags.inline li {
 }
 /* Google Kalender */
 th.fc-day-header {
-  background-color: #ffffff;
+  background-color: #e9e9e9;
 }
 a.fc-event {
   background-color: #85c03c;
@@ -9928,6 +9928,9 @@ a.fc-event:focus {
 }
 .fc-content span {
   color: white;
+}
+.fc-unthemed .fc-today {
+  background: #e9e9e9;
 }
 h1.moduleheading,
 h2.moduleheading,
