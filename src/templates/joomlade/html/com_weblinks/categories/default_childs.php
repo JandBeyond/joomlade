@@ -28,7 +28,7 @@ $child_images = false; ?>
                 <?php else : ?>
                 <div class="figure">
                 <?php endif; ?>
-                    <img src="<?php echo $child_images->image_first; ?>" alt="<?php echo $child_images->image_first_alt; ?>" class="img-circle img-responsive link-list"/>
+                    <img src="<?php echo $child_images->image_first; ?>" alt="<?php echo $child_images->image_first_alt; ?>" class="img-circle img-responsive img-thumbnail link-list"/>
                     <?php if($child_images->image_first_caption != '') : ?>
                         <figcaption><?php echo $this->escape($child_images->image_first_caption); ?></figcaption>
                     <?php endif; ?>
