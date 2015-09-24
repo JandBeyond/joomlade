@@ -9914,7 +9914,7 @@ ul.tags.inline li {
 }
 /* Google Kalender */
 th.fc-day-header {
-  background-color: #e9e9e9;
+  background-color: #ffffff;
 }
 a.fc-event {
   background-color: #85c03c;
@@ -9930,7 +9930,31 @@ a.fc-event:focus {
   color: white;
 }
 .fc-unthemed .fc-today {
-  background: #e9e9e9;
+  background: #ffffff;
+}
+/* Linksammlung */
+.link-list .item-title.link-list {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000000;
+}
+.link-list .item-title.link-list a {
+  color: #000000;
+}
+.link-list .item-title.link-list a:hover,
+.link-list .item-title.link-list a:focus {
+  text-decoratation: underline;
+}
+.link-list ul {
+  padding-left: 0;
+  list-style: none;
+}
+.link-list li {
+  padding-left: 1rem;
+  text-indent: -0.7rem;
+}
+.link-list li::before {
+  content: "» ";
 }
 h1.moduleheading,
 h2.moduleheading,
