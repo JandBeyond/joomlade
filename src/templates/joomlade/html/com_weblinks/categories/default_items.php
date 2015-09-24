@@ -15,8 +15,7 @@ $class = ' class="first"';
 
 if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
     ?>
-    <?php foreach ($this->items[$this->parent->id] as $id => $item) : ?>
-    <?php
+    <?php foreach ($this->items[$this->parent->id] as $id => $item) :
 
     // Get an instance of the generic articles model
     $model = JModelLegacy::getInstance('Category', 'WeblinksModel', array('ignore_request' => true));
@@ -81,20 +80,23 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
         <div <?php echo $class; ?> >
             <?php $class = ''; ?>
             <h3 class="page-header item-title">
-                    <?php echo $this->escape($item->title); ?>
+                <?php echo $this->escape($item->title); ?>
                 <?php if ($this->params->get('show_cat_num_articles_cat') == 1) : ?>
                     <span class="badge badge-info tip hasTooltip" title="<?php echo JHtml::tooltipText('COM_WEBLINKS_NUM_ITEMS'); ?>">
 							<?php echo $item->numitems; ?>
 						</span>
                 <?php endif; ?>
             </h3>
-            <?php
-        if(count($childs) > 0)
-        {
-            $this->weblinks = $childs;
-            echo $this->loadTemplate('childs');
-        }
-            ?>
+            <?php if ($this->params->get('show_description') && $item->description != '') : ?>
+                <div class="category-desc">
+                    <?php echo JHtml::_('content.prepare', $item->description, '', 'com_weblinks.categories'); ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if (count($childs) > 0) :
+                $this->weblinks = $childs;
+                echo $this->loadTemplate('childs');
+            endif; ?>
         </div>
     <?php endif; ?>
 <?php endforeach; ?>
