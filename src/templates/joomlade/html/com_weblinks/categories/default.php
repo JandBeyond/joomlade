@@ -17,5 +17,5 @@ require_once JPATH_SITE . '/components/com_weblinks/helpers/category.php';
 JHtml::_('behavior.caption');
 echo JLayoutHelper::render('joomla.content.categories_default', $this);
 echo $this->loadTemplate('items');
-?>
-</div>
+
+
