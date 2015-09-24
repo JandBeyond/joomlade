@@ -77,7 +77,7 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
             $class = ' last';
         }
         ?>
-        <div  class="linksammlung category<?php echo $class; ?> clearfix" >
+        <div  class="link-list category<?php echo $class; ?> clearfix" >
             <?php $class = ''; ?>
             <h2 class="page-header item-title">
                 <?php echo $this->escape($item->title); ?>

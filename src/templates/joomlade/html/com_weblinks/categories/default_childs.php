@@ -23,16 +23,24 @@ $child_images = false; ?>
         <?php $class = ''; ?>
         <div class="col-xs-12 col-sm-3">
             <?php if($child_images && $child_images->image_first != '') : ?>
-            <figure>
-                <img src="<?php echo $child_images->image_first; ?>" alt="<?php echo $child_images->image_first_alt; ?>" class="img-circle img-responsive linksammlung"/>
                 <?php if($child_images->image_first_caption != '') : ?>
-                    <figcaption><?php echo $this->escape($child_images->image_first_caption); ?></figcaption>
+                <figure>
+                <?php else : ?>
+                <div class="figure">
                 <?php endif; ?>
-            </figure>
+                    <img src="<?php echo $child_images->image_first; ?>" alt="<?php echo $child_images->image_first_alt; ?>" class="img-circle img-responsive link-list"/>
+                    <?php if($child_images->image_first_caption != '') : ?>
+                        <figcaption><?php echo $this->escape($child_images->image_first_caption); ?></figcaption>
+                    <?php endif; ?>
+                <?php if($child_images->image_first_caption != '') : ?>
+                </figure>
+                <?php else : ?>
+                </div>
+                <?php endif; ?>
             <?php endif; ?>
         </div>
         <div class="col-xs-12 col-sm-9">
-            <h3 class="item-title linksammlung">
+            <h3 class="item-title link-list">
                 <a target="_blank" href="<?php echo JRoute::_(WeblinksHelperRoute::getWeblinkRoute($child->id, $child->catid)); ?>"><?php echo $this->escape($child->title); ?></a>
             </h3>
             <?php if ($child->description) : ?>
