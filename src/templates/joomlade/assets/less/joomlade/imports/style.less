@@ -61,13 +61,25 @@ a.fc-event {
         font-weight: 700; 
         font-size: @font-size-base;
         color: @color-font;
+        margin-top: 0;
 
         a {color: @color-font;
+           text-decoration: none;
 
             &:hover,&:focus {
                 text-decoratation: underline;
             }
         }
+    }
+    
+    h2.page-header.item-title {
+        color: @color-font;
+        margin-top: 2rem;
+    }
+    
+    img.link-list {
+        border: none;
+        box-shadow: 0 0 5px @gray-dark;
     }
     
     ul {
@@ -81,6 +93,7 @@ a.fc-event {
         
         &::before {
             content: "» ";
+            color: @color-font;
         }
     
     }

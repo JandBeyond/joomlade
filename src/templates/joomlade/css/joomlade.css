@@ -9937,13 +9937,23 @@ a.fc-event:focus {
   font-weight: 700;
   font-size: 16px;
   color: #000000;
+  margin-top: 0;
 }
 .link-list .item-title.link-list a {
   color: #000000;
+  text-decoration: none;
 }
 .link-list .item-title.link-list a:hover,
 .link-list .item-title.link-list a:focus {
   text-decoratation: underline;
+}
+.link-list h2.page-header.item-title {
+  color: #000000;
+  margin-top: 2rem;
+}
+.link-list img.link-list {
+  border: none;
+  box-shadow: 0 0 5px #c4c4c4;
 }
 .link-list ul {
   padding-left: 0;
@@ -9955,6 +9965,7 @@ a.fc-event:focus {
 }
 .link-list li::before {
   content: "» ";
+  color: #000000;
 }
 h1.moduleheading,
 h2.moduleheading,
