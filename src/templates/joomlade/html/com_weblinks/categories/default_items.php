@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 
 JHtml::_('bootstrap.tooltip');
 
-$class = ' class="first"';
+$class = ' first';
 
 if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
     ?>
@@ -74,23 +74,23 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
     if ($this->params->get('show_empty_categories_cat') || $item->numitems || count($item->getChildren())) :
         if (!isset($this->items[$this->parent->id][$id + 1]))
         {
-            $class = ' class="last"';
+            $class = ' last';
         }
         ?>
-        <div <?php echo $class; ?> >
+        <div  class="linksammlung category<?php echo $class; ?> clearfix" >
             <?php $class = ''; ?>
-            <h3 class="page-header item-title">
+            <h2 class="page-header item-title">
                 <?php echo $this->escape($item->title); ?>
                 <?php if ($this->params->get('show_cat_num_articles_cat') == 1) : ?>
                     <span class="badge badge-info tip hasTooltip" title="<?php echo JHtml::tooltipText('COM_WEBLINKS_NUM_ITEMS'); ?>">
 							<?php echo $item->numitems; ?>
 						</span>
                 <?php endif; ?>
-            </h3>
+            </h2>
             <?php if ($this->params->get('show_description') && $item->description != '') : ?>
-                <div class="category-desc">
+                <details class="category-desc">
                     <?php echo JHtml::_('content.prepare', $item->description, '', 'com_weblinks.categories'); ?>
-                </div>
+                </details>
             <?php endif; ?>
 
             <?php if (count($childs) > 0) :
