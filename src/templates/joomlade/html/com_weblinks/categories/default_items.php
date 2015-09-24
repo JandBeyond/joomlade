@@ -88,9 +88,9 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
                 <?php endif; ?>
             </h2>
             <?php if ($this->params->get('show_description') && $item->description != '') : ?>
-                <details class="category-desc">
+                <div class="category-desc">
                     <?php echo JHtml::_('content.prepare', $item->description, '', 'com_weblinks.categories'); ?>
-                </details>
+                </div>
             <?php endif; ?>
 
             <?php if (count($childs) > 0) :
