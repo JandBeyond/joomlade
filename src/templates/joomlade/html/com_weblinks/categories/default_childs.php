@@ -21,7 +21,7 @@ $class = ' class="first"'; ?>
         ?>
         <li<?php echo $class; ?>>
             <?php $class = ''; ?>
-            <span class="item-title"><a href="<?php echo JRoute::_(WeblinksHelperRoute::getCategoryRoute($child->id)); ?>">
+            <span class="item-title"><a target="_blank" href="<?php echo JRoute::_(WeblinksHelperRoute::getWeblinkRoute($child->id, $child->catid)); ?>">
                     <?php echo $this->escape($child->title); ?></a>
             </span>
         </li>
