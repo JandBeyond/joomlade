@@ -10153,6 +10153,12 @@ body.wissen .staticheader:after {
 .social-media li:hover span.fa-life-ring:before {
   color: #e84032;
 }
+/* Sidebar Menü */
+section#aside ul.menu li {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
 /* Google Calendar Module */
 ul.next-events {
   padding: 0;
