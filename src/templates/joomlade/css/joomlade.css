@@ -9869,6 +9869,11 @@ body.shownav #mainnav ul.menu li.module {
 #aside ul.menu a:focus {
   text-decoration: underline;
 }
+#aside ul.menu > li {
+  padding: 1rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
 #aside ul.menu > li > a {
   text-transform: uppercase;
 }
@@ -10152,12 +10157,6 @@ body.wissen .staticheader:after {
 .social-media li.active span.fa-life-ring:before,
 .social-media li:hover span.fa-life-ring:before {
   color: #e84032;
-}
-/* Sidebar Menü */
-section#aside ul.menu li {
-  padding: 1rem;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ffffff;
 }
 /* Google Calendar Module */
 ul.next-events {
