@@ -89,9 +89,7 @@ defined('_JEXEC') or die;
 	{
 		case 1:
 			// open in a new window
-			echo '<a class="hidden-phone" href="'. $link .'" target="_blank" rel="tooltip" data-html="true" data-original-title="<img src=\''.$images->image_first.'\' />" data-toggle="tooltip" data-placement="bottom">'.
-			htmlspecialchars($item->title, ENT_COMPAT, 'UTF-8') .'</a>';
-			echo '<a class="visible-phone" href="'. $link .'" target="_blank" title="JUG '.$item->title.'">'.
+			echo '<a href="'. $link .'" target="_blank" title="JUG '.$item->title.'">'.
 			htmlspecialchars($item->title, ENT_COMPAT, 'UTF-8') .'</a>';
 			break;
 

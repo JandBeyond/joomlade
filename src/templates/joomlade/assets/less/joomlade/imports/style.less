@@ -32,7 +32,7 @@ ul.tags.inline li {
 
 /* Google Kalender */
 th.fc-day-header {
-    background-color: @gray-lighter;
+    background-color: lighten(@gray, 10%);
 }
 
 a.fc-event {
@@ -48,4 +48,54 @@ a.fc-event {
 
 .fc-content span {
     color: white;
+}
+
+.fc-unthemed .fc-today {
+    background: lighten(@gray, 10%);
+}
+
+/* Linksammlung */
+.link-list {
+    
+    .item-title.link-list {
+        font-weight: 700; 
+        font-size: @font-size-base;
+        color: @color-font;
+        margin-top: 0;
+
+        a {color: @color-font;
+           text-decoration: none;
+
+            &:hover,&:focus {
+                text-decoratation: underline;
+            }
+        }
+    }
+    
+    h2.page-header.item-title {
+        color: @color-font;
+        margin-top: 2rem;
+    }
+    
+    img.link-list {
+        border: none;
+        box-shadow: 0 0 5px @gray-dark;
+    }
+    
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
+    
+    li {
+        padding-left: 1rem; 
+        text-indent: -.7rem;
+        
+        &::before {
+            content: "» ";
+            color: @color-font;
+        }
+    
+    }
+    
 }

@@ -451,7 +451,7 @@ body.shownav #mainnav {
   &, ul {
     list-style: none;
   }
-
+ 
   a {
     text-decoration: none;
     color: @color-font;
@@ -463,6 +463,9 @@ body.shownav #mainnav {
 
   // Level 1
   > li {
+        padding: 1rem;
+        background-color: @gray-lighter;
+        border-bottom: 1px solid @body-bg;
     > a {
       text-transform: uppercase;
     }
