@@ -22,9 +22,9 @@ JModelLegacy::addIncludePath(JPATH_SITE . '/components/com_weblinks/models', 'We
 class ModWeblinksmapHelper
 {
 	/**
-	 * Helper for mod_weblinks
+	 * This method retrun the items
 	 *
-	 * @since 1.0.2
+	 * @since  1.0.2
 	 */
 	public static function getList($params)
 	{
@@ -91,9 +91,7 @@ class ModWeblinksmapHelper
 		{
 			foreach ($items as $item)
 			{
-
 				$item->link = $item->url;
-
 			}
 
 			return $items;
@@ -103,7 +101,7 @@ class ModWeblinksmapHelper
 	}
 
 	/**
-	 * This method drawt the chatrt and add the needed javastript
+	 * This method draw the chart and add the needed javascript
 	 *
 	 * @param  array  $chart_data  Data for the chart
 	 *
