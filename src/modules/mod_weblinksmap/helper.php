@@ -1,9 +1,9 @@
 <?php
 /**
- * @package     Joomla.Site
- * @subpackage  mod_weblinks
+ * @package     JoomlaDE
+ * @subpackage  mod_weblinksmap
  *
- * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2015 Open Source Matters and Christian Hent. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -17,159 +17,168 @@ JModelLegacy::addIncludePath(JPATH_SITE . '/components/com_weblinks/models', 'We
 /**
  * Helper for mod_weblinks
  *
- * @package     Joomla.Site
- * @subpackage  mod_weblinks
+ * @since 1.0.2
  */
 class ModWeblinksmapHelper
 {
-    public static function getList($params)
-    {
-        // Get an instance of the generic articles model
-        $model = JModelLegacy::getInstance('Category', 'WeblinksModel', array('ignore_request' => true));
+	/**
+	 * Helper for mod_weblinks
+	 *
+	 * @since 1.0.2
+	 */
+	public static function getList($params)
+	{
+		// Get an instance of the generic articles model
+		$model = JModelLegacy::getInstance('Category', 'WeblinksModel', array('ignore_request' => true));
 
-        // Set application parameters in model
-        $app = JFactory::getApplication();
-        $appParams = $app->getParams();
-        $model->setState('params', $appParams);
+		// Set application parameters in model
+		$app = JFactory::getApplication();
+		$appParams = $app->getParams();
+		$model->setState('params', $appParams);
 
-        // Set the filters based on the module params
-        $model->setState('list.start', 0);
-        $model->setState('list.limit', (int) $params->get('count', 5));
+		// Set the filters based on the module params
+		$model->setState('list.start', 0);
+		$model->setState('list.limit', (int) $params->get('count', 5));
 
-        $model->setState('filter.state', 1);
-        $model->setState('filter.publish_date', true);
+		$model->setState('filter.state', 1);
+		$model->setState('filter.publish_date', true);
 
-        // Access filter
-        $access = !JComponentHelper::getParams('com_weblinks')->get('show_noauth');
-        $model->setState('filter.access', $access);
+		// Access filter
+		$access = !JComponentHelper::getParams('com_weblinks')->get('show_noauth');
+		$model->setState('filter.access', $access);
 
-        $ordering = $params->get('ordering', 'ordering');
-        $model->setState('list.ordering', $ordering == 'order' ? 'ordering' : $ordering);
-        $model->setState('list.direction', $params->get('direction', 'asc'));
+		$ordering = $params->get('ordering', 'ordering');
+		$model->setState('list.ordering', $ordering == 'order' ? 'ordering' : $ordering);
+		$model->setState('list.direction', $params->get('direction', 'asc'));
 
-        $catid	= (int) $params->get('catid', 0);
-        $model->setState('category.id', $catid);
+		$catid = (int) $params->get('catid', 0);
+		$model->setState('category.id', $catid);
 
-        // Create query object
-        $db = JFactory::getDbo();
-        $query = $db->getQuery(true);
+		// Create query object
+		$db    = JFactory::getDbo();
+		$query = $db->getQuery(true);
 
-        $case_when1 = ' CASE WHEN ';
-        $case_when1 .= $query->charLength('a.alias', '!=', '0');
-        $case_when1 .= ' THEN ';
-        $a_id = $query->castAsChar('a.id');
-        $case_when1 .= $query->concatenate(array($a_id, 'a.alias'), ':');
-        $case_when1 .= ' ELSE ';
-        $case_when1 .= $a_id.' END as slug';
+		$case_when1  = ' CASE WHEN ';
+		$case_when1 .= $query->charLength('a.alias', '!=', '0');
+		$case_when1 .= ' THEN ';
+		$a_id = $query->castAsChar('a.id');
+		$case_when1 .= $query->concatenate(array($a_id, 'a.alias'), ':');
+		$case_when1 .= ' ELSE ';
+		$case_when1 .= $a_id.' END as slug';
 
-        $case_when2 = ' CASE WHEN ';
-        $case_when2 .= $query->charLength('c.alias', '!=', '0');
-        $case_when2 .= ' THEN ';
-        $c_id = $query->castAsChar('c.id');
-        $case_when2 .= $query->concatenate(array($c_id, 'c.alias'), ':');
-        $case_when2 .= ' ELSE ';
-        $case_when2 .= $c_id.' END as catslug';
+		$case_when2  = ' CASE WHEN ';
+		$case_when2 .= $query->charLength('c.alias', '!=', '0');
+		$case_when2 .= ' THEN ';
 
-        $model->setState(
-            'list.select',
-            'a.*, c.published AS c_published,' . $case_when1 . ',' . $case_when2 . ',' . 'DATE_FORMAT(a.created, "%Y-%m-%d") AS created'
-        );
+		$c_id        = $query->castAsChar('c.id');
+		$case_when2 .= $query->concatenate(array($c_id, 'c.alias'), ':');
+		$case_when2 .= ' ELSE ';
+		$case_when2 .= $c_id.' END as catslug';
 
-        $model->setState('filter.c.published', 1);
+		$model->setState(
+			'list.select',
+			'a.*, c.published AS c_published,' . $case_when1 . ',' . $case_when2 . ',' . 'DATE_FORMAT(a.created, "%Y-%m-%d") AS created'
+		);
 
-        // Filter by language
-        $model->setState('filter.language', $app->getLanguageFilter());
+		$model->setState('filter.c.published', 1);
 
-        $items = $model->getItems();
+		// Filter by language
+		$model->setState('filter.language', $app->getLanguageFilter());
 
-        if ($items)
-        {
-            foreach ($items as $item)
-            {
+		$items = $model->getItems();
 
-                $item->link = $item->url;
+		if ($items)
+		{
+			foreach ($items as $item)
+			{
 
-            }
-            return $items;
-        }
-        else
-        {
-            return;
-        }
-    }
+				$item->link = $item->url;
 
-    public static function drawChart($chart_data)
-    {
+			}
 
-        $chart_data= json_encode($chart_data);
+			return $items;
+		}
 
-        $doc =& JFactory::getDocument();
+		return;
+	}
 
-        $doc->addScript('https://www.google.com/jsapi');
+	/**
+	 * This method drawt the chatrt and add the needed javastript
+	 *
+	 * @param  array  $chart_data  Data for the chart
+	 *
+	 * @since  1.0.2
+	 */
+	public static function drawChart($chart_data)
+	{
 
-        $chart = '
-            google.load(\'visualization\', \'1\', {\'packages\': [\'geomap\'], \'language\': \'de\'});
-            google.setOnLoadCallback(drawRegionsMap);
+		$chart_data = json_encode($chart_data);
+		$doc        = JFactory::getDocument();
 
-            var chart;
-            var options;
-            var objects = [];
-            var results;
-            var data;
+		$doc->addScript('https://www.google.com/jsapi');
 
-            objects.push('. $chart_data.');
+		$chart = '
+			google.load(\'visualization\', \'1\', {\'packages\': [\'geomap\'], \'language\': \'de\'});
+			google.setOnLoadCallback(drawRegionsMap);
 
-            function drawRegionsMap() {
-                data = new google.visualization.DataTable();
-                data.addColumn(\'string\', \'City\');
-                data.addColumn(\'number\', \'Value\');
-                data.addColumn({type:\'string\', role:\'tooltip\'});
+			var chart;
+			var options;
+			var objects = [];
+			var results;
+			var data;
 
-                for (var i = 0; i < objects[0].length; i++) {
-                    data.addRow([objects[0][i].metadesc,0,"JUG " + objects[0][i].title]);
-                }
+			objects.push('. $chart_data.');
 
-                options = {
-                    region: \'155\',
-                    displayMode: \'markers\',
-                    enableRegionInteractivity: false,
-                    backgroundColor: {fill: \'#fff\', stroke: \'#c1c1c1\'},
-                    datalessRegionColor: \'#e1e1e1\',
-                    markerOpacity: \'0.7\',
-                    defaultColor: \'#345\',
-                    colorAxis: {colors:[\'#f9b431\',\'#f9b431\']},
-                    legend: \'none\',
-                    keepAspectRatio: true,
-                    tooltip: {textStyle: {color: \'#484848\', fontSize: \'15\'}, showColorCode: true, trigger: \'focus\'},
-                };
+			function drawRegionsMap() {
+				data = new google.visualization.DataTable();
+				data.addColumn(\'string\', \'City\');
+				data.addColumn(\'number\', \'Value\');
+				data.addColumn({type:\'string\', role:\'tooltip\'});
 
-                chart = new google.visualization.GeoChart(document.getElementById(\'chart_div\'));
-                chart.draw(data, options);
+				for (var i = 0; i < objects[0].length; i++) {
+					data.addRow([objects[0][i].metadesc,0,"JUG " + objects[0][i].title]);
+				}
 
-                google.visualization.events.addListener(chart, \'select\', function() {
+				options = {
+					region: \'155\',
+					displayMode: \'markers\',
+					enableRegionInteractivity: false,
+					backgroundColor: {fill: \'#fff\', stroke: \'#c1c1c1\'},
+					datalessRegionColor: \'#e1e1e1\',
+					markerOpacity: \'0.7\',
+					defaultColor: \'#345\',
+					colorAxis: {colors:[\'#f9b431\',\'#f9b431\']},
+					legend: \'none\',
+					keepAspectRatio: true,
+					tooltip: {textStyle: {color: \'#484848\', fontSize: \'15\'}, showColorCode: true, trigger: \'focus\'},
+				};
 
-                    var selectedItem = chart.getSelection();
+				chart = new google.visualization.GeoChart(document.getElementById(\'chart_div\'));
+				chart.draw(data, options);
 
-                    if (selectedItem.length > 0) {
-                        var row = selectedItem[0].row;
-                        var elementId = data.getValue(row,0);
-                        var link = jQuery(\'#\' + elementId + \' a\').attr(\'href\');
+				google.visualization.events.addListener(chart, \'select\', function() {
 
-                        window.open(link, \'_blank\');
-                    }
-                });
+					var selectedItem = chart.getSelection();
 
-            }
+					if (selectedItem.length > 0) {
+						var row = selectedItem[0].row;
+						var elementId = data.getValue(row,0);
+						var link = jQuery(\'#\' + elementId + \' a\').attr(\'href\');
 
-            jQuery(document).ready(function () {
-                jQuery(window).resize(function(){
-                    drawRegionsMap();
-                });
-            });
+						window.open(link, \'_blank\');
+					}
+				});
 
+			}
 
-        ';
+			jQuery(document).ready(function () {
+				jQuery(window).resize(function(){
+					drawRegionsMap();
+				});
+			});
 
-        $doc->addScriptDeclaration($chart);
-    }
+		';
+
+		$doc->addScriptDeclaration($chart);
+	}
 }
