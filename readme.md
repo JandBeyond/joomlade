@@ -1,6 +1,6 @@
 # Joomla.de Repository
 
-* [Joomla.de](http://joomla.de) - Joomla.de, die deutschsprachige Landesseite des preisgekrönten Open Source Content Management Systems Joomla.
+[Joomla.de](http://joomla.de) - Joomla.de, die deutschsprachige Landesseite des preisgekrönten Open Source Content Management Systems Joomla.
 
 ## Mitarbeit erwünscht!
 
