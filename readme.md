@@ -1,6 +1,6 @@
 # Joomla.de Repository
 
-* [Joomla.de](http://joomla.de) - Joomla.de, die deutschsprachige Landesseite des preisgekrönten Open Source Content Management Systems Joomla.
+[Joomla.de](http://joomla.de) - Joomla.de, die deutschsprachige Landesseite des preisgekrönten Open Source Content Management Systems Joomla.
 
 ## Mitarbeit erwünscht!
 
@@ -41,4 +41,5 @@ Um Änderungen am Template, den Stylesheets oder Javascript Dateien vorzunehmen,
 
 	grunt watch
 	
-Wenn alles fehlerfrei funktioniert hat, kannst du jetzt Änderungen am Template durchführen. Bitte ändere die css Dateien nicht manuell, sondern ändere/erweitere die enstsprechenden less Dateien und benutze den Watcher.
+Wenn alles fehlerfrei funktioniert hat, kannst du jetzt Änderungen am Template durchführen. Bitte ändere die css Dateien nicht manuell, sondern ändere/erweitere die entsprechenden less Dateien und benutze den Watcher.
+
