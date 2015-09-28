@@ -1,4 +1,11 @@
 <?php
+/**
+ * @package     JoomlaDE
+ * @subpackage  mod_weblinksmap
+ *
+ * @copyright   Copyright (C) 2005 - 2015 Open Source Matters and Christian Hent. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
 
 defined('_JEXEC') or die;
 
@@ -6,7 +13,7 @@ require_once __DIR__ . '/helper.php';
 
 $list = ModWeblinksmapHelper::getList($params);
 
-// chart
+// Chart
 
 $chart_data = array();
 
