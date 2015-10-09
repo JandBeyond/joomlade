@@ -48,6 +48,9 @@ if ($googlefont !='') $doc->addStyleSheet("https://fonts.googleapis.com/css?fami
 $doc->addStyleSheet($tpath . '/css/joomlade.css');
 $doc->addScript($tpath.'/js/joomlade.js');
 
+//Add Apple touch Icon
+$doc->addHeadLink($tpath.'/images/apple-touch-icon.png', 'apple-touch-icon');
+
 ?>
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>"> <![endif]-->
@@ -58,10 +61,7 @@ $doc->addScript($tpath.'/js/joomlade.js');
   <meta name="x-ua-compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <jdoc:include type="head" />
-  <link rel="apple-touch-icon-precomposed" href="<?php echo $tpath; ?>/images/apple-touch-icon-57x57-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $tpath; ?>/images/apple-touch-icon-72x72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $tpath; ?>/images/apple-touch-icon-114x114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $tpath; ?>/images/apple-touch-icon-144x144-precomposed.png">
+
   <meta property="og:image" content="<?php echo $tpath; ?>/images/og-logo.png" />
   <!--[if lte IE 9]>
   <script src="<?php echo $tpath; ?>/js/html5shiv.min.js"></script>
