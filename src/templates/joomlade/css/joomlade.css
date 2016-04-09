@@ -9572,7 +9572,7 @@ body.shownav #mainnav ul.menu li.module {
     content: "";
   }
   #mainnav > ul > li > a {
-    padding: 2px 15px;
+    padding: 3px 15px;
   }
   #mainnav > ul > li.active > a,
   #mainnav > ul > li:hover > a,
@@ -9593,7 +9593,6 @@ body.shownav #mainnav ul.menu li.module {
     display: block;
     width: 430px;
     padding: 10px;
-    margin-top: 1px;
     background: white;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
