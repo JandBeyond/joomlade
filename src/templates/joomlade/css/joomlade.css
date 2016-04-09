@@ -9561,6 +9561,7 @@ body.shownav #mainnav ul.menu li.module {
   }
   #mainnav > ul > li:after {
     display: inline-block;
+    width: 10px;
     margin: 0 2px;
     color: white;
     content: "|";
@@ -9611,6 +9612,14 @@ body.shownav #mainnav ul.menu li.module {
     top: 10px;
     right: 10px;
     width: 250px;
+  }
+  #mainnav > ul > li.events {
+    position: relative;
+  }
+  #mainnav > ul > li.events > ul {
+    right: 14px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0;
   }
   #mainnav > ul > li:last-child:hover > ul,
   #mainnav > ul > li:last-child:focus > ul {

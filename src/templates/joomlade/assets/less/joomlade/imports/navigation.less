@@ -273,6 +273,7 @@ body.shownav #mainnav {
           display: inline-block;
           margin: 0 2px;
           color: white;
+          width: 10px;
         }
 
         &:last-child:after, &:nth-child(1):after {
@@ -325,6 +326,17 @@ body.shownav #mainnav {
         top: 10px;
         right: 10px;
         width: 250px;
+      }
+    }
+
+    // events submenu should open to the left
+    > ul > li.events {
+      position: relative;
+
+      > ul {
+        right: 14px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 0;
       }
     }
 
