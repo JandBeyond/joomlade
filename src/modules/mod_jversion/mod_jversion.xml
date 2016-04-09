@@ -51,6 +51,7 @@
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
+                <field name="test1" label ="Test Field" type="editor" width="300" filter="safehtml" />
             </fieldset>
             <fieldset name="advanced">
                 <field
