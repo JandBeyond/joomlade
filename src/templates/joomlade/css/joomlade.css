@@ -9593,6 +9593,7 @@ body.shownav #mainnav ul.menu li.module {
     display: block;
     width: 430px;
     padding: 10px;
+    margin-top: 1px;
     background: white;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
