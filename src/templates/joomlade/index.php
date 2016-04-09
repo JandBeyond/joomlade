@@ -46,7 +46,7 @@ if ($googlefont !='') $doc->addStyleSheet("https://fonts.googleapis.com/css?fami
 
 //Add CSS and Javascript
 $doc->addStyleSheet($tpath . '/css/joomlade.css');
-$doc->addScript($tpath.'/js/joomlade.js');
+$doc->addScript($tpath.'/js/joomlade.min.js');
 
 //Add Apple touch Icon
 $doc->addHeadLink($tpath.'/images/apple-touch-icon.png', 'apple-touch-icon');
