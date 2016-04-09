@@ -44,9 +44,8 @@ $this->setGenerator(null);
 
 if ($googlefont !='') $doc->addStyleSheet("https://fonts.googleapis.com/css?family=".$googlefont);
 
-//Add CSS and Javascript
+//Add CSS
 $doc->addStyleSheet($tpath . '/css/joomlade.css');
-$doc->addScript($tpath.'/js/joomlade.min.js');
 
 //Add Apple touch Icon
 $doc->addHeadLink($tpath.'/images/apple-touch-icon.png', 'apple-touch-icon');
@@ -61,6 +60,8 @@ $doc->addHeadLink($tpath.'/images/favicon.ico', 'shortcut icon', 'rel', array('t
 <head>
   <meta name="x-ua-compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="<?php echo $tpath; ?>/js/joomlade.min.j"></script>
+
   <jdoc:include type="head" />
 
   <meta property="og:image" content="<?php echo $tpath; ?>/images/og-logo.png" />
