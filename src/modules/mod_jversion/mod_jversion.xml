@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0" client="site" method="upgrade">
+    <name>mod_jversion</name>
+    <author>David Neukirchen</author>
+    <creationDate>April 2016</creationDate>
+    <copyright>Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>david@rheinsurfen.de</authorEmail>
+    <authorUrl>www.rheinsurfen.de</authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_JVERSION_DESCRIPTION</description>
+    <files>
+        <filename module="mod_jversion">mod_jversion.php</filename>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="api_cache_time"
+                        type="text"
+                        default="360"
+                        label="MOD_JVERSION_FIELD_API_CACHE_TIME_MINUTES"
+                        description="MOD_JVERSION_FIELD_API_CACHE_TIME_MINUTES_DESC"/>
+                <field
+                        name="show_version"
+                        type="list"
+                        default="1"
+                        label="MOD_JVERSION_FIELD_SHOW_VERSION"
+                        description="MOD_JVERSION_FIELD_SHOW_VERSION_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="show_download"
+                        type="list"
+                        default="1"
+                        label="MOD_JVERSION_FIELD_SHOW_DOWNLOAD"
+                        description="MOD_JVERSION_FIELD_SHOW_DOWNLOAD_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field
+                        name="show_download_count"
+                        type="list"
+                        default="1"
+                        label="MOD_JVERSION_FIELD_SHOW_DOWNLOAD_COUNT"
+                        description="MOD_JVERSION_FIELD_SHOW_DOWNLOAD_COUNT_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
