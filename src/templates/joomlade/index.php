@@ -50,6 +50,7 @@ $doc->addScript($tpath.'/js/joomlade.js');
 
 //Add Apple touch Icon
 $doc->addHeadLink($tpath.'/images/apple-touch-icon.png', 'apple-touch-icon');
+$doc->addHeadLink($tpath.'/images/favicon.ico', 'shortcut icon', array('type' => 'image/vnd.microsoft.icon'));
 
 ?>
 <!doctype html>
