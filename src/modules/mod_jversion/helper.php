@@ -20,13 +20,23 @@ class ModJVersionHelper
         $release   = json_decode($response->body);
 
         $release->downloads = 0;
-        foreach ($release->assets as $asset) {
-            $release->downloads = $release->downloads + $asset->download_count;
-            if ($asset->content_type == 'application/zip' && strpos($asset->name, 'Full') !== false) {
-                $release->downloadUrl = $asset->browser_download_url;
+
+        // Don't show a prerelease
+        if ($release->prerelease == false)
+        {
+            foreach ($release->assets as $asset)
+            {
+                $release->downloads = $release->downloads + $asset->download_count;
+    
+                if ($asset->content_type == 'application/zip' && strpos($asset->name, 'Full') !== false)
+                {
+                    $release->downloadUrl = $asset->browser_download_url;
+                }
             }
+
+            // Return the release data
+            return $release;
         }
 
-        return $release;
     }
 }
