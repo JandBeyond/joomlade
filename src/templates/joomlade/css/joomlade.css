@@ -10430,42 +10430,52 @@ ul.tags.inline span {
 .news_infobereich img {
   margin: 0 auto;
 }
-.news_joomla {
+.news_joomla,
+.news_interviews {
   border-bottom: 1px solid #8fb7df;
 }
-.news_joomla .news_infobereich {
+.news_joomla .news_infobereich,
+.news_interviews .news_infobereich {
   background: #8fb7df;
 }
-.news_joomla .news_infobereich .news_category {
+.news_joomla .news_infobereich .news_category,
+.news_interviews .news_infobereich .news_category {
   background: #679ed4;
 }
-.news_joomla .news_icon:before {
+.news_joomla .news_icon:before,
+.news_interviews .news_icon:before {
   padding: 0 5px;
   font-family: FontAwesome;
   font-size: 26px;
   color: #fff;
   content: "\f1aa";
 }
-.news_joomla .news_tags {
+.news_joomla .news_tags,
+.news_interviews .news_tags {
   background: #caddf0;
 }
-.news_joomla .news_tags span {
+.news_joomla .news_tags span,
+.news_interviews .news_tags span {
   color: #679ed4;
 }
-.news_joomla .label-info {
+.news_joomla .label-info,
+.news_interviews .label-info {
   background: #679ed4;
 }
-.news_joomla .label-info:hover {
+.news_joomla .label-info:hover,
+.news_interviews .label-info:hover {
   background: #3f85c9;
 }
-.news_joomla .readmore .btn {
+.news_joomla .readmore .btn,
+.news_interviews .readmore .btn {
   float: right;
   color: #fff;
   text-decoration: none;
   background: #679ed4;
   border-radius: 6px;
 }
-.news_joomla .readmore .btn:hover {
+.news_joomla .readmore .btn:hover,
+.news_interviews .readmore .btn:hover {
   background: #3f85c9;
 }
 .news_events {
