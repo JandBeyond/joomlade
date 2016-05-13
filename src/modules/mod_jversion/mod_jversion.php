@@ -13,7 +13,7 @@ try {
     $cache->setLifeTime($params->get('cache_time', 360));
 
     // Get the latest version
-    $release = $cache->call(array($helper, 'latest'));
+    $release = $cache->call(array($helper, 'latestRelease'));
 
     require JModuleHelper::getLayoutPath('mod_jversion', $params->get('layout', 'default'));
 } catch (Exception $e) {
