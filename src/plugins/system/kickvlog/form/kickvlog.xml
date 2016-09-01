@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="attribs">
+        <fieldset name="kickvlog">
+            <field  name="youtube_id"
+                    type="text"
+                    label="COM_CONTENT_FIELD_YOUTUBE_LINK_LABEL"
+                    description="COM_CONTENT_FIELD_YOUTUBE_LINK_DESC"
+            />
+            <field
+                    name="vlog_cat"
+                    type="list"
+                    label="COM_CONTENT_FIELD_VLOG_CAT_LABEL"
+                    description="COM_CONTENT_FIELD_VLOG_CAT_DESC"
+                    default="1"
+            >
+                <option value="anfaenger">COM_CONTENT_VLOG_CAT_VALUE_ANFAENGER</option>
+                <option value="fortgeschrittener">COM_CONTENT_VLOG_CAT_VALUE_FORTGESCHRITTENER</option>
+                <option value="profi">COM_CONTENT_VLOG_CAT_VALUE_PROFI</option>
+                <option value="designer">COM_CONTENT_VLOG_CAT_VALUE_DESIGNER</option>
+            </field>
+        </fieldset>
+    </fields>
+</form>
