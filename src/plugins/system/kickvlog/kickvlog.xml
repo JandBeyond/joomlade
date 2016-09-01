@@ -15,4 +15,15 @@
         <folder>form</folder>
         <file plugin="kickvlog">kickvlog.php</file>
     </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="youtube_api" type="text"
+                       default="128"
+                       label="PLG_KICKVLOG_FIELD_YOUTUBE_API_LABEL"
+                       description="PLG_KICKVLOG_FIELD_YOUTUBE_API_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
 </extension>

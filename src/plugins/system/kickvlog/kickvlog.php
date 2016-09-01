@@ -97,4 +97,31 @@ class plgSystemKickVlog extends JPlugin
 			$data->$attrname = json_encode($attribs);
 		}
 	}
+
+	public function onAjaxYoutubeJSON()
+	{
+		$app = JFactory::getApplication();
+		$youtube_id = $app->input->getString('youtube_id',false);
+		$youtube_id = urldecode($youtube_id);
+		$youtube_id = str_replace('https://youtu.be/','',$youtube_id);
+
+		$data = $this->getYoutubeData($youtube_id);
+
+		echo json_encode($data);
+
+		$app->close();
+	}
+
+	protected function getYoutubeData($youtube_id)
+	{
+		$vId = $youtube_id;
+		$gkey = $this->params->get('youtube_api');
+
+		$data = file_get_contents("https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails&id=".$vId."&key=".$gkey."");
+
+		$data = json_decode($data, true);
+		$data = $data['items'][0]['snippet'];
+
+		return $data;
+	}
 }

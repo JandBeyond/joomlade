@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
     <fields name="attribs">
-        <fieldset name="kickvlog">
+        <fieldset name="kickvlog" addfieldpath="/plugins/system/kickvlog/fields/">
+            <field name="youtubejson"
+                   label="COM_CONTENT_FIELD_YOUTUBEJSON_LABEL"
+                   description="COM_CONTENT_FIELD_YOUTUBEJSON_DESC"
+                   type="youtubejson"
+            />
             <field  name="youtube_id"
                     type="text"
                     label="COM_CONTENT_FIELD_YOUTUBE_LINK_LABEL"
                     description="COM_CONTENT_FIELD_YOUTUBE_LINK_DESC"
+            />
+            <field  name="youtube_title"
+                    type="text"
+                    label="COM_CONTENT_FIELD_YOUTUBE_TITLE_LABEL"
+                    description="COM_CONTENT_FIELD_YOUTUBE_TITLE_DESC"
+            />
+            <field  name="youtube_desc"
+                    type="textarea"
+                    label="COM_CONTENT_FIELD_YOUTUBE_DESC_LABEL"
+                    description="COM_CONTENT_FIELD_YOUTUBE_DESC_DESC"
+                    rows="10"
+                    cols="20"
             />
             <field
                     name="vlog_cat"
