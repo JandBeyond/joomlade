@@ -16,7 +16,7 @@ $introimage = false;
 if ($youtube)
 {
 	$youtube = str_replace('https://youtu.be/','',$youtube);
-	$introimage = 'http://img.youtube.com/vi/' . $youtube .'/hqdefault.jpg';
+	$introimage = 'https://img.youtube.com/vi/' . $youtube .'/hqdefault.jpg';
 }
 ?>
 	<div class="pull-none item-image">
