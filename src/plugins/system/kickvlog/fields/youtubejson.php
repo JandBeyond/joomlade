@@ -26,6 +26,7 @@ class JFormFieldYoutubeJSON extends JFormField {
 		$js[] = "success: function (data) {";
 		$js[] = "jQuery('#jform_title,#jform_attribs_youtube_title').val(data.title);";
 		$js[] = "jQuery('#jform_attribs_youtube_desc').val(data.description);";
+		$js[] = "jQuery('#jform_articletext').val('<p>' + data.description.replace(/(?:\\r\\n|\\r|\\n)/g, '<br />') + '</p>');";
 		$js[] = "}";
 		$js[] = "});";
 		$js[] = "});";
