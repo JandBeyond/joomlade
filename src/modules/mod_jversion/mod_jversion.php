@@ -8,7 +8,7 @@ try {
 
     // Setup joomla cache
     $helper = new ModJVersionHelper;
-    $cache  = JFactory::getCache();
+    $cache  = JFactory::getCache('mod_jversion');
     $cache->setCaching(true);
     $cache->setLifeTime($params->get('cache_time', 360));
 
