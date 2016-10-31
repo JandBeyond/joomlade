@@ -1,6 +1,6 @@
 # Joomla.de Repository
 
-[Joomla.de](http://joomla.de) - Joomla.de, die deutschsprachige Landesseite des preisgekrönten Open Source Content Management Systems Joomla.
+[Joomla.de](https://joomla.de) - Joomla.de, die deutschsprachige Landesseite des preisgekrönten Open Source Content Management Systems Joomla.
 
 ## Mitarbeit erwünscht!
 
@@ -29,7 +29,7 @@ Um Änderungen am Template, den Stylesheets oder Javascript Dateien vorzunehmen,
 
 	cd /src/templates/joomlade
 
-2) Als nächstes installierst du mit Bower die externen Bibliotheken (bootstrap, fontawesome, jquery). Solltest du bower nicht lokal installiert haben, findest du auf der [Bower-Website](http://bower.io/) eine Installationsanleitung.
+2) Als nächstes installierst du mit Bower die externen Bibliotheken (bootstrap, fontawesome, jquery). Solltest du bower nicht lokal installiert haben, findest du auf der [Bower-Website](https://bower.io/) eine Installationsanleitung.
 
 	bower install
 
