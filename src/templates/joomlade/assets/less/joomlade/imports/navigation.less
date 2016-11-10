@@ -330,13 +330,25 @@ body.shownav #mainnav {
     }
 
     // events submenu should open to the left
-    > ul > li.events {
+    > ul > li.events, > ul > li.wissen {
       position: relative;
 
       > ul {
-        right: 14px;
+        right: 15px;
         border-top-left-radius: 5px;
         border-top-right-radius: 0;
+      }
+    }
+
+    // events submenu should open to the left
+    > ul > li.wissen {
+      > a  {
+        display:block;
+      }
+
+      > ul {
+        right: 0px;
+        width: 230px;
       }
     }
 
