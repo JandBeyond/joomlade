@@ -270,3 +270,71 @@ ul.next-events {
     }
   }
 }
+
+// Mod article newsflash curtain override
+.curtain {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.curtain-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.curtain-wrapper input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+.curtain-wrapper input[type=checkbox]:checked ~ div.curtain-panel-left {
+  transform: translateX(0);
+}
+
+.curtain-wrapper input[type=checkbox]:checked ~ div.curtain-panel-right {
+  transform: translateX(0);
+}
+
+.curtain-panel {
+  display: flex;
+  align-items: center;
+  background: #e84032;
+  color: #fff;
+  float: left;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transition: all 1s ease-out;
+  z-index: 2;
+  font-size: 30px;
+}
+
+.curtain-panel-left {
+  justify-content: flex-end;
+  transform: translateX(-100%);
+}
+
+.curtain-panel-right {
+  justify-content: flex-start;
+  transform: translateX(100%);
+}
+
+.curtain-body {
+  background: #fff;
+  padding: 30px 0;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
