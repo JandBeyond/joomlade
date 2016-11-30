@@ -10240,7 +10240,7 @@ ul.next-events li:before {
   height: 100%;
   transition: all 1s ease-out;
   z-index: 2;
-  font-size: 30px;
+  font-size: 80px;
 }
 .curtain-panel-left {
   justify-content: flex-end;
@@ -10251,14 +10251,16 @@ ul.next-events li:before {
   transform: translateX(100%);
 }
 .curtain-body {
-  background: #fff;
-  padding: 30px 0;
   position: absolute;
-  text-align: center;
   z-index: 1;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  padding: 15px 0;
+}
+.curtain-body .item-image img {
+  margin: 0 auto;
+  border-radius: 75px;
 }
 a.skiplink {
   position: absolute;

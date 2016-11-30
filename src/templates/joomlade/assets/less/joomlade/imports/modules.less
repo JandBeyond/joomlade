@@ -13,11 +13,11 @@
 
   span.fa {
     display: block;
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
 
   span.fa:before {
-    font-size:60px;
+    font-size: 60px;
   }
 
   a {
@@ -45,7 +45,6 @@
   margin: 2em 0 1em 0;
 }
 
-
 .moduletable.download,
 .moduletable.features {
   text-align: center;
@@ -61,10 +60,9 @@
 .moduletable.download {
   display: table;
 
-
   > div {
     vertical-align: middle;
-    display:table-cell;
+    display: table-cell;
   }
 
   h4 {
@@ -121,12 +119,12 @@
 }
 
 body.joomla {
-.staticheader {
+  .staticheader {
 
-  &:after {
-    background: fade(@color-darkblue, 80%)
+    &:after {
+      background: fade(@color-darkblue, 80%)
+    }
   }
-}
 }
 
 body.community {
@@ -178,11 +176,11 @@ body.wissen {
   .btn.blue {
     color: #fff !important;
     width: 100%;
-    background-color: @color-darkblue!important;
+    background-color: @color-darkblue !important;
   }
 
   .btn.orange {
-    background-color: @color-yellow!important;
+    background-color: @color-yellow !important;
     border: none;
     color: #fff !important;
     width: 100%;
@@ -193,7 +191,7 @@ body.wissen {
 
 #aside .moduletable.info {
 
-/*  background-color: @gray;*/
+  /*  background-color: @gray;*/
   font-size: 14px;
 
   h3 {
@@ -211,7 +209,7 @@ body.wissen {
     }
   }
 
-  ul,ol {
+  ul, ol {
     padding: 10px 15px;
     margin-left: 10px;
   }
@@ -226,12 +224,29 @@ body.wissen {
 }
 
 /* Module social-media */
-.social-media li span:before {color:@color-grey;}
-.social-media li.active span.fa-facebook-official:before, .social-media li:hover span.fa-facebook-official:before {color:@color-blue;}
-.social-media li.active span.fa-youtube-square:before, .social-media li:hover span.fa-youtube-square:before {color:@color-red;}
-.social-media li.active span.fa-xing-square:before, .social-media li:hover span.fa-xing-square:before {color:@color-green;}
-.social-media li.active span.fa-stack-overflow:before, .social-media li:hover span.fa-stack-overflow:before {color:@color-yellow;}
-.social-media li.active span.fa-life-ring:before, .social-media li:hover span.fa-life-ring:before {color:@color-red;}
+.social-media li span:before {
+  color: @color-grey;
+}
+
+.social-media li.active span.fa-facebook-official:before, .social-media li:hover span.fa-facebook-official:before {
+  color: @color-blue;
+}
+
+.social-media li.active span.fa-youtube-square:before, .social-media li:hover span.fa-youtube-square:before {
+  color: @color-red;
+}
+
+.social-media li.active span.fa-xing-square:before, .social-media li:hover span.fa-xing-square:before {
+  color: @color-green;
+}
+
+.social-media li.active span.fa-stack-overflow:before, .social-media li:hover span.fa-stack-overflow:before {
+  color: @color-yellow;
+}
+
+.social-media li.active span.fa-life-ring:before, .social-media li:hover span.fa-life-ring:before {
+  color: @color-red;
+}
 
 /* Google Calendar Module */
 ul.next-events {
@@ -255,7 +270,8 @@ ul.next-events {
     .event-location {
       color: @color-grey;
     }
-    .event-duration {}
+    .event-duration {
+    }
     &:before {
       font-family: FontAwesome;
       display: inline-block;
@@ -315,7 +331,7 @@ ul.next-events {
   height: 100%;
   transition: all 1s ease-out;
   z-index: 2;
-  font-size: 30px;
+  font-size: 80px;
 }
 
 .curtain-panel-left {
@@ -329,12 +345,14 @@ ul.next-events {
 }
 
 .curtain-body {
-  background: #fff;
-  padding: 30px 0;
   position: absolute;
-  text-align: center;
   z-index: 1;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  padding: 15px 0;
+  .item-image img {
+    margin: 0 auto;
+    border-radius: 75px;
+  }
 }
