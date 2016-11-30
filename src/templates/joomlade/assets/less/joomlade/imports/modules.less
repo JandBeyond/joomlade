@@ -312,7 +312,14 @@ ul.next-events {
   left: 0;
 }
 
-.curtain-wrapper input[type=checkbox]:checked ~ div.curtain-panel-left {
+.curtain-wrapper input[type=checkbox] {
+  display: none;
+  &:checked {
+    display: block;
+  }
+}
+
+.curtain-wrapper input[type=checkbox]:checked ~ div.curtain-panel {
   transform: translateX(0);
 }
 
