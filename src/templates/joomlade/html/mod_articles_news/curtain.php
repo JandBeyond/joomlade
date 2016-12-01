@@ -23,13 +23,13 @@ defined('_JEXEC') or die; ?>
             <div class="curtain-body">
                 <div class="row">
                     <?php if(!empty($images->image_intro)) : ?>
-                    <div class="col-md-3 text-center">
+                    <div class="col-md-3 text-center hidden-xs hidden-sm">
                         <div class="pull-none item-image">
                             <img src="<?php echo $images->image_intro; ?>" alt="<?php echo $images->image_intro_alt; ?>" class="img-rounded">
                         </div>
                     </div>
                     <?php endif; ?>
-                    <div class="col-md-<?php echo (empty($images->image_intro)) ? '12' : '8'; ?>">
+                    <div class="col-xs-12 col-md-<?php echo (empty($images->image_intro)) ? '12' : '8'; ?>">
                         <h4><?php echo $item->title; ?></h4>
 
                         <?php if (!$params->get('intro_only')) : ?>

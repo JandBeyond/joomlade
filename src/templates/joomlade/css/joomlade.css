@@ -10267,6 +10267,7 @@ ul.next-events li:before {
 .curtain-body .item-image img {
   margin: 0 auto;
   border-radius: 75px;
+  max-width: 150px;
 }
 a.skiplink {
   position: absolute;
