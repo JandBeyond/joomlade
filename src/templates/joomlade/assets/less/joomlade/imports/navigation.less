@@ -273,6 +273,7 @@ body.shownav #mainnav {
           display: inline-block;
           margin: 0 2px;
           color: white;
+          width: 10px;
         }
 
         &:last-child:after, &:nth-child(1):after {
@@ -282,7 +283,7 @@ body.shownav #mainnav {
       }
 
       > li > a {
-        padding: 2px 15px;
+        padding: 3px 15px;
       }
     }
 
@@ -325,6 +326,29 @@ body.shownav #mainnav {
         top: 10px;
         right: 10px;
         width: 250px;
+      }
+    }
+
+    // events submenu should open to the left
+    > ul > li.events, > ul > li.wissen {
+      position: relative;
+
+      > ul {
+        right: 15px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 0;
+      }
+    }
+
+    // events submenu should open to the left
+    > ul > li.wissen {
+      > a  {
+        display:block;
+      }
+
+      > ul {
+        right: 0px;
+        width: 230px;
       }
     }
 

@@ -9,13 +9,21 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\Registry\Registry;
+
 // Create a shortcut for params.
 $params = $this->item->params;
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 $canEdit = $this->item->params->get('access-edit');
 $info    = $params->get('info_block_position', 0);
+$attribs = new Registry();
+$attribs->loadString($this->item->attribs);
+
+$attribs->set('art_title', $this->item->title);
+
+$this->item->attribs = $attribs;
 ?>
- <div class="news_<?php echo $this->item->category_alias; ?> clearfix">
+<div class="vlog_<?php echo $this->item->attribs->get('vlog_cat','anfaenger'); ?> vlog clearfix">
 <?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime(JFactory::getDate())
 || ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != '0000-00-00 00:00:00' )) : ?>
 <div class="system-unpublished">
@@ -31,7 +39,7 @@ $info    = $params->get('info_block_position', 0);
         <?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
     <?php endif; ?>
 
-    <?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
+    <?php echo JLayoutHelper::render('joomla.content.intro_vlogimage', $this->item); ?>
 </div>
     </div>
     <div class="col-sm-8 nopadding news_contentbereich">
@@ -48,7 +56,7 @@ $info    = $params->get('info_block_position', 0);
     <?php echo $this->item->event->beforeDisplayContent; ?> <?php echo $this->item->introtext; ?>
         </div>
 
-    <?php if ($params->get('show_readmore') && $this->item->readmore) :
+    <?php if ($params->get('show_readmore1',true )) :
         if ($params->get('access-view')) :
             $link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid));
         else :
@@ -61,7 +69,7 @@ $info    = $params->get('info_block_position', 0);
             $link->setVar('return', base64_encode($returnURL));
         endif; ?>
 
-        <?php echo JLayoutHelper::render('joomla.content.readmore', array('item' => $this->item, 'params' => $params, 'link' => $link)); ?>
+        <?php echo JLayoutHelper::render('joomla.content.readmore_vlog', array('item' => $this->item, 'params' => $params, 'link' => $link)); ?>
 
     <?php endif; ?>
 

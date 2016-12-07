@@ -44,12 +44,12 @@ $this->setGenerator(null);
 
 if ($googlefont !='') $doc->addStyleSheet("https://fonts.googleapis.com/css?family=".$googlefont);
 
-//Add CSS and Javascript
+//Add CSS
 $doc->addStyleSheet($tpath . '/css/joomlade.css');
-$doc->addScript($tpath.'/js/joomlade.js');
 
 //Add Apple touch Icon
 $doc->addHeadLink($tpath.'/images/apple-touch-icon.png', 'apple-touch-icon');
+$doc->addHeadLink($tpath.'/images/favicon.ico', 'shortcut icon', 'rel', array('type' => 'image/vnd.microsoft.icon'));
 
 ?>
 <!doctype html>
@@ -60,6 +60,8 @@ $doc->addHeadLink($tpath.'/images/apple-touch-icon.png', 'apple-touch-icon');
 <head>
   <meta name="x-ua-compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="<?php echo $tpath; ?>/js/joomlade.min.js"></script>
+
   <jdoc:include type="head" />
 
   <meta property="og:image" content="<?php echo $tpath; ?>/images/og-logo.png" />
@@ -167,17 +169,22 @@ $doc->addHeadLink($tpath.'/images/apple-touch-icon.png', 'apple-touch-icon');
         </footer>
       </div>
   </div>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-55288205-1', 'auto');
-    ga('set', 'anonymizeIp', true);
-    ga('require', 'displayfeatures');
-    ga('send', 'pageview');
+  <!-- Piwik -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(["setDomains", ["*.www.joomla.de"]]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//stats.joomla.de/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 3]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
   </script>
+  <noscript><p><img src="//stats.joomla.de/piwik.php?idsite=3" style="border:0;" alt="" /></p></noscript>
+  <!-- End Piwik Code -->
 </body>
 <jdoc:include type="modules" name="debug" />
 </html>
