@@ -1,6 +1,6 @@
 /*!
  * joomlade v0.0.1 (http://www.joomla.de)
- * Copyright 2015-2016 Joomla.de Team
+ * Copyright 2015-2017 Joomla.de Team
  * Licensed under GPL v3 (http://www.gnu.org/licenses/gpl-3.0.de.html)
  */
 
@@ -10602,6 +10602,64 @@ ul.tags.inline span {
 .news_feature-adventskalender .readmore .btn:hover,
 .vlog .readmore .btn:hover {
   background: #3f85c9;
+}
+.news_joomla-magazin-2016-01,
+.news_joomla-magazin-2016-02,
+.news_joomla-magazin-2016-03 {
+  border-bottom: 1px solid #fac663;
+}
+.news_joomla-magazin-2016-01 .news_infobereich,
+.news_joomla-magazin-2016-02 .news_infobereich,
+.news_joomla-magazin-2016-03 .news_infobereich {
+  background: #fac663;
+}
+.news_joomla-magazin-2016-01 .news_infobereich .news_category,
+.news_joomla-magazin-2016-02 .news_infobereich .news_category,
+.news_joomla-magazin-2016-03 .news_infobereich .news_category {
+  background: #f9b431;
+}
+.news_joomla-magazin-2016-01 .news_icon:before,
+.news_joomla-magazin-2016-02 .news_icon:before,
+.news_joomla-magazin-2016-03 .news_icon:before {
+  padding: 0 5px;
+  font-family: FontAwesome;
+  font-size: 26px;
+  color: #fff;
+  content: "\f1aa";
+}
+.news_joomla-magazin-2016-01 .news_tags,
+.news_joomla-magazin-2016-02 .news_tags,
+.news_joomla-magazin-2016-03 .news_tags {
+  background: #fde1ad;
+}
+.news_joomla-magazin-2016-01 .news_tags span,
+.news_joomla-magazin-2016-02 .news_tags span,
+.news_joomla-magazin-2016-03 .news_tags span {
+  color: #f9b431;
+}
+.news_joomla-magazin-2016-01 .label-info,
+.news_joomla-magazin-2016-02 .label-info,
+.news_joomla-magazin-2016-03 .label-info {
+  background: #f9b431;
+}
+.news_joomla-magazin-2016-01 .label-info:hover,
+.news_joomla-magazin-2016-02 .label-info:hover,
+.news_joomla-magazin-2016-03 .label-info:hover {
+  background: #f0a007;
+}
+.news_joomla-magazin-2016-01 .readmore .btn,
+.news_joomla-magazin-2016-02 .readmore .btn,
+.news_joomla-magazin-2016-03 .readmore .btn {
+  float: right;
+  color: #fff;
+  text-decoration: none;
+  background: #f9b431;
+  border-radius: 6px;
+}
+.news_joomla-magazin-2016-01 .readmore .btn:hover,
+.news_joomla-magazin-2016-02 .readmore .btn:hover,
+.news_joomla-magazin-2016-03 .readmore .btn:hover {
+  background: #f0a007;
 }
 .vlog.vlog_fortgeschrittener {
   border-bottom: 1px solid #8fb7df;
