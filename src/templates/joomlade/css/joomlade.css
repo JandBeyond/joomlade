@@ -1,6 +1,6 @@
 /*!
  * joomlade v0.0.1 (http://www.joomla.de)
- * Copyright 2015-2016 Joomla.de Team
+ * Copyright 2015-2017 Joomla.de Team
  * Licensed under GPL v3 (http://www.gnu.org/licenses/gpl-3.0.de.html)
  */
 
@@ -10807,42 +10807,52 @@ ul.tags.inline span {
 .news_events .readmore .btn:hover {
   background: #6a9930;
 }
-.news_community {
+.news_community,
+[class*='news_joomla-magazin'] {
   border-bottom: 1px solid #fac663;
 }
-.news_community .news_infobereich {
+.news_community .news_infobereich,
+[class*='news_joomla-magazin'] .news_infobereich {
   background: #fac663;
 }
-.news_community .news_infobereich .news_category {
+.news_community .news_infobereich .news_category,
+[class*='news_joomla-magazin'] .news_infobereich .news_category {
   background: #f9b431;
 }
-.news_community .news_icon:before {
+.news_community .news_icon:before,
+[class*='news_joomla-magazin'] .news_icon:before {
   padding: 0 5px;
   font-family: FontAwesome;
   font-size: 26px;
   color: #fff;
   content: "\f0c0";
 }
-.news_community .news_tags {
+.news_community .news_tags,
+[class*='news_joomla-magazin'] .news_tags {
   background: #fde1ad;
 }
-.news_community .news_tags span {
+.news_community .news_tags span,
+[class*='news_joomla-magazin'] .news_tags span {
   color: #f9b431;
 }
-.news_community .label-info {
+.news_community .label-info,
+[class*='news_joomla-magazin'] .label-info {
   background: #f9b431;
 }
-.news_community .label-info:hover {
+.news_community .label-info:hover,
+[class*='news_joomla-magazin'] .label-info:hover {
   background: #f0a007;
 }
-.news_community .readmore .btn {
+.news_community .readmore .btn,
+[class*='news_joomla-magazin'] .readmore .btn {
   float: right;
   color: #fff;
   text-decoration: none;
   background: #f9b431;
   border-radius: 6px;
 }
-.news_community .readmore .btn:hover {
+.news_community .readmore .btn:hover,
+[class*='news_joomla-magazin'] .readmore .btn:hover {
   background: #f0a007;
 }
 .news_wissen {
