@@ -10808,31 +10808,19 @@ ul.tags.inline span {
   background: #6a9930;
 }
 .news_community,
-.news_joomla-magazin,
-.news_joomla-magazin-2016-01,
-.news_joomla-magazin-2016-02,
-.news_joomla-magazin-2016-03 {
+[class*='news_joomla-magazin'] {
   border-bottom: 1px solid #fac663;
 }
 .news_community .news_infobereich,
-.news_joomla-magazin .news_infobereich,
-.news_joomla-magazin-2016-01 .news_infobereich,
-.news_joomla-magazin-2016-02 .news_infobereich,
-.news_joomla-magazin-2016-03 .news_infobereich {
+[class*='news_joomla-magazin'] .news_infobereich {
   background: #fac663;
 }
 .news_community .news_infobereich .news_category,
-.news_joomla-magazin .news_infobereich .news_category,
-.news_joomla-magazin-2016-01 .news_infobereich .news_category,
-.news_joomla-magazin-2016-02 .news_infobereich .news_category,
-.news_joomla-magazin-2016-03 .news_infobereich .news_category {
+[class*='news_joomla-magazin'] .news_infobereich .news_category {
   background: #f9b431;
 }
 .news_community .news_icon:before,
-.news_joomla-magazin .news_icon:before,
-.news_joomla-magazin-2016-01 .news_icon:before,
-.news_joomla-magazin-2016-02 .news_icon:before,
-.news_joomla-magazin-2016-03 .news_icon:before {
+[class*='news_joomla-magazin'] .news_icon:before {
   padding: 0 5px;
   font-family: FontAwesome;
   font-size: 26px;
@@ -10840,38 +10828,23 @@ ul.tags.inline span {
   content: "\f0c0";
 }
 .news_community .news_tags,
-.news_joomla-magazin .news_tags,
-.news_joomla-magazin-2016-01 .news_tags,
-.news_joomla-magazin-2016-02 .news_tags,
-.news_joomla-magazin-2016-03 .news_tags {
+[class*='news_joomla-magazin'] .news_tags {
   background: #fde1ad;
 }
 .news_community .news_tags span,
-.news_joomla-magazin .news_tags span,
-.news_joomla-magazin-2016-01 .news_tags span,
-.news_joomla-magazin-2016-02 .news_tags span,
-.news_joomla-magazin-2016-03 .news_tags span {
+[class*='news_joomla-magazin'] .news_tags span {
   color: #f9b431;
 }
 .news_community .label-info,
-.news_joomla-magazin .label-info,
-.news_joomla-magazin-2016-01 .label-info,
-.news_joomla-magazin-2016-02 .label-info,
-.news_joomla-magazin-2016-03 .label-info {
+[class*='news_joomla-magazin'] .label-info {
   background: #f9b431;
 }
 .news_community .label-info:hover,
-.news_joomla-magazin .label-info:hover,
-.news_joomla-magazin-2016-01 .label-info:hover,
-.news_joomla-magazin-2016-02 .label-info:hover,
-.news_joomla-magazin-2016-03 .label-info:hover {
+[class*='news_joomla-magazin'] .label-info:hover {
   background: #f0a007;
 }
 .news_community .readmore .btn,
-.news_joomla-magazin .readmore .btn,
-.news_joomla-magazin-2016-01 .readmore .btn,
-.news_joomla-magazin-2016-02 .readmore .btn,
-.news_joomla-magazin-2016-03 .readmore .btn {
+[class*='news_joomla-magazin'] .readmore .btn {
   float: right;
   color: #fff;
   text-decoration: none;
@@ -10879,10 +10852,7 @@ ul.tags.inline span {
   border-radius: 6px;
 }
 .news_community .readmore .btn:hover,
-.news_joomla-magazin .readmore .btn:hover,
-.news_joomla-magazin-2016-01 .readmore .btn:hover,
-.news_joomla-magazin-2016-02 .readmore .btn:hover,
-.news_joomla-magazin-2016-03 .readmore .btn:hover {
+[class*='news_joomla-magazin'] .readmore .btn:hover {
   background: #f0a007;
 }
 .news_wissen {
