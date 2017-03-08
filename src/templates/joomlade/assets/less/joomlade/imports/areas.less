@@ -63,12 +63,13 @@
   }
 
   ul.nav-tabs {
-    border-bottom: 1px solid @color;
+    border-bottom: none;
+	background: #f9f9f9;
 
     li {
 
       a {
-        color: lighten(@color,35%);
+        color: lighten(@color,10%);
         text-decoration: none;
         text-transform: uppercase;
       }
@@ -78,9 +79,8 @@
     li:hover, li.active {
       > a {
         color: @color;
-        background:#fff;
-        border: 1px solid @color;
-        border-bottom-color:#fff;
+        background: transparent;
+        border: none;
       }
 
     }

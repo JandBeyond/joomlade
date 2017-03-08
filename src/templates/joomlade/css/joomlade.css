@@ -8863,19 +8863,19 @@ img {
   color: #679ed4;
 }
 .area-joomla ul.nav-tabs {
-  border-bottom: 1px solid #679ed4;
+  background: #f9f9f9;
+  border-bottom: none;
 }
 .area-joomla ul.nav-tabs li a {
-  color: #f2f7fb;
+  color: #8fb7df;
   text-decoration: none;
   text-transform: uppercase;
 }
 .area-joomla ul.nav-tabs li:hover > a,
 .area-joomla ul.nav-tabs li.active > a {
   color: #679ed4;
-  background: #fff;
-  border: 1px solid #679ed4;
-  border-bottom-color: #fff;
+  background: transparent;
+  border: none;
 }
 .area-joomla ul.social-media,
 .area-joomla ul.social-media > li.active > a,
@@ -8958,19 +8958,19 @@ img {
   color: #e84032;
 }
 .area-forum ul.nav-tabs {
-  border-bottom: 1px solid #e84032;
+  background: #f9f9f9;
+  border-bottom: none;
 }
 .area-forum ul.nav-tabs li a {
-  color: #fad6d2;
+  color: #ed6b60;
   text-decoration: none;
   text-transform: uppercase;
 }
 .area-forum ul.nav-tabs li:hover > a,
 .area-forum ul.nav-tabs li.active > a {
   color: #e84032;
-  background: #fff;
-  border: 1px solid #e84032;
-  border-bottom-color: #fff;
+  background: transparent;
+  border: none;
 }
 .area-forum ul.social-media,
 .area-forum ul.social-media > li.active > a,
@@ -9053,19 +9053,19 @@ img {
   color: #f9b431;
 }
 .area-community ul.nav-tabs {
-  border-bottom: 1px solid #f9b431;
+  background: #f9f9f9;
+  border-bottom: none;
 }
 .area-community ul.nav-tabs li a {
-  color: #fef3de;
+  color: #fac663;
   text-decoration: none;
   text-transform: uppercase;
 }
 .area-community ul.nav-tabs li:hover > a,
 .area-community ul.nav-tabs li.active > a {
   color: #f9b431;
-  background: #fff;
-  border: 1px solid #f9b431;
-  border-bottom-color: #fff;
+  background: transparent;
+  border: none;
 }
 .area-community ul.social-media,
 .area-community ul.social-media > li.active > a,
@@ -9148,19 +9148,19 @@ img {
   color: #85c03c;
 }
 .area-events ul.nav-tabs {
-  border-bottom: 1px solid #85c03c;
+  background: #f9f9f9;
+  border-bottom: none;
 }
 .area-events ul.nav-tabs li a {
-  color: #d9ecc2;
+  color: #9dce61;
   text-decoration: none;
   text-transform: uppercase;
 }
 .area-events ul.nav-tabs li:hover > a,
 .area-events ul.nav-tabs li.active > a {
   color: #85c03c;
-  background: #fff;
-  border: 1px solid #85c03c;
-  border-bottom-color: #fff;
+  background: transparent;
+  border: none;
 }
 .area-events ul.social-media,
 .area-events ul.social-media > li.active > a,
@@ -9243,19 +9243,19 @@ img {
   color: #919191;
 }
 .area-neutral ul.nav-tabs {
-  border-bottom: 1px solid #919191;
+  background: #f9f9f9;
+  border-bottom: none;
 }
 .area-neutral ul.nav-tabs li a {
-  color: #eaeaea;
+  color: #ababab;
   text-decoration: none;
   text-transform: uppercase;
 }
 .area-neutral ul.nav-tabs li:hover > a,
 .area-neutral ul.nav-tabs li.active > a {
   color: #919191;
-  background: #fff;
-  border: 1px solid #919191;
-  border-bottom-color: #fff;
+  background: transparent;
+  border: none;
 }
 .area-neutral ul.social-media,
 .area-neutral ul.social-media > li.active > a,
@@ -10819,6 +10819,10 @@ ul.tags.inline span {
 [class*='news_joomla-magazin'] .news_infobereich .news_category {
   background: #f9b431;
 }
+.news_community .news_infobereich h2,
+[class*='news_joomla-magazin'] .news_infobereich h2 {
+  color: #fff;
+}
 .news_community .news_icon:before,
 [class*='news_joomla-magazin'] .news_icon:before {
   padding: 0 5px;
@@ -10922,6 +10926,11 @@ div.pagination .page-section ul.pagination {
 }
 #maincontent .item-page .item-image {
   margin: 1em 0;
+}
+#maincontent .item-image.pull-left {
+  padding: 5px;
+  margin: 0 1em 1em 0;
+  border: 1px solid #ccc;
 }
 /* Übernommen von Joomla.de */
 ul.inline,
