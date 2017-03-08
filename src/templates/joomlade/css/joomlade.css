@@ -10927,6 +10927,10 @@ div.pagination .page-section ul.pagination {
 #maincontent .item-page .item-image {
   margin: 1em 0;
 }
+#maincontent .interviews .img-thumbnail {
+  width: 50%;
+  margin: 0 1em 1em 0;
+}
 /* Übernommen von Joomla.de */
 ul.inline,
 ol.inline {
