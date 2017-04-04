@@ -10975,4 +10975,17 @@ ol.inline > li {
   background-color: #f9b431;
   border-color: #f9b431;
 }
+.controls {
+  margin-bottom: 10px;
+}
+.controls input,
+.controls textarea {
+  width: 60%;
+}
+.form-horizontal .control-label {
+  text-align: left;
+}
+fieldset[class*='wt-'] {
+  margin-top: 20px;
+}
 /*# sourceMappingURL=joomlade.css.map */
