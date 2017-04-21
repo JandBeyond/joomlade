@@ -10948,4 +10948,19 @@ ol.inline > li {
   color: #f9b431;
   font-size: 16px;
 }
+.wickedteam-form i .icon-image,
+.wickedteam-form i .icon-trash {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wickedteam-form .icon-image::before {
+  content: "\f03e";
+}
+.wickedteam-form .icon-trash::before {
+  content: "\f1f8";
+}
 /*# sourceMappingURL=joomlade.css.map */
