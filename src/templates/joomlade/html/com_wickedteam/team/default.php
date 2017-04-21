@@ -12,18 +12,14 @@ defined('_JEXEC') or die;
 
 use Joomla\String\StringHelper;
 
-$params = $this->state->get('params');
-$pageclass = '-' . htmlspecialchars($params->get('pageclass_sfx', ''));
-
-$active = JFactory::getApplication()->getMenu()->getActive();
-
-$pageclass = '-' . htmlspecialchars($params->get('pageclass_sfx', ''));
-
-$listOrder	= $this->escape($this->state->get('list.ordering'));
-$listDirn	= $this->escape($this->state->get('list.direction'));
-
-$profileLink	= 'index.php?option=com_wickedteam&view=profile&id=';
-$editLink		= 'index.php?option=com_wickedteam&task=member.edit&return=' . $this->return_url . '&m_id=';
+$params      = $this->state->get('params');
+$pageclass   = '-' . htmlspecialchars($params->get('pageclass_sfx', ''));
+$active      = JFactory::getApplication()->getMenu()->getActive();
+$pageclass   = '-' . htmlspecialchars($params->get('pageclass_sfx', ''));
+$listOrder   = $this->escape($this->state->get('list.ordering'));
+$listDirn    = $this->escape($this->state->get('list.direction'));
+$profileLink = 'index.php?option=com_wickedteam&view=profile&id=';
+$editLink    = 'index.php?option=com_wickedteam&task=member.edit&return=' . $this->return_url . '&m_id=';
 
 $user = JFactory::getUser();
 
@@ -31,11 +27,9 @@ $user = JFactory::getUser();
 $filter_fields = $this->state->get('filter_fields');
 
 // Remove ID in the counter because that's no table title
-$sortable = is_array($filter_fields) && count(array_diff($filter_fields, array('m.id')));
-
+$sortable   = is_array($filter_fields) && count(array_diff($filter_fields, array('m.id')));
 $showsearch = $params->get('showsearch', 'basic');
-
-$canEdit = $this->canDo->get('core.edit');
+$canEdit    = $this->canDo->get('core.edit');
 ?>
 <div id="wickedteam-team" class="wickedteam item-page<?php echo $pageclass; ?>">
 	<div class="row">
@@ -58,25 +52,19 @@ $canEdit = $this->canDo->get('core.edit');
 					</button>
 				</div>
 		<?php elseif ($showsearch == 'extended') : ?>
-			<?php
-				$link = 'index.php?option=com_wickedteam&amp;view=search&amp;id=' . (int) $this->list_id;
-
-				echo JHtml::_('link', JRoute::_($link), JText::_('COM_WICKEDTEAM_TEAM_BACK_TO_SEARCH'), array('class' => 'btn'));
-			?>
+				<?php $link = 'index.php?option=com_wickedteam&amp;view=search&amp;id=' . (int) $this->list_id; ?>
+				<?php echo JHtml::_('link', JRoute::_($link), JText::_('COM_WICKEDTEAM_TEAM_BACK_TO_SEARCH'), array('class' => 'btn')); ?>
 		<?php endif; ?>
-
 		<input type="hidden" name="filter_order" value="" />
 		<input type="hidden" name="filter_order_Dir" value="" />
 		<input type="hidden" name="limitstart" value="" />
 		<input type="hidden" name="task" value="" />
-
 		<?php if ($params->get('showlists', 1) || $params->get('showlistlimit', 1)): ?>
 		<div class="btn-wrapper pull-right">
-			<?php
-			if ($params->get('showlists', 1)):
-				$this->filterForm->setValue('newlist', 'redirect', JRoute::_('index.php?Itemid=' . (int) $active->id));
-				echo $this->filterForm->getInput('newlist', 'redirect');
-			endif; ?>
+			<?php if ($params->get('showlists', 1)) : ?>
+				<?php $this->filterForm->setValue('newlist', 'redirect', JRoute::_('index.php?Itemid=' . (int) $active->id)); ?>
+				<?php echo $this->filterForm->getInput('newlist', 'redirect'); ?>
+			<?php endif; ?>
 			<?php if ($this->params->get('showlistlimit', '1')) : ?>
 					<label for="limit" class="element-invisible"><?php echo JText::_('JGLOBAL_DISPLAY_NUM'); ?></label>
 					<?php echo $this->pagination->getLimitBox(); ?>
@@ -86,31 +74,29 @@ $canEdit = $this->canDo->get('core.edit');
 		<div class="clearfix"></div>
 	</form>
 	</div>
-	<?php
-		$introtext = $params->get('introtext');
-		if ($introtext) :
-			if (!empty($this->searchfields) && is_array($this->searchfields)):
-				$searchfields = array();
-				if ($showsearch == 'basic') :
-					foreach ($this->searchfields as $searchfield) :
-						$searchfields[] = '<strong>' . $this->escape($searchfield->title) . '</strong>: ' . $this->escape($searchfield->alias);
-					endforeach;
-				elseif ($showsearch == 'extended') :
-					$searchinput = $this->state->get('filter.extendedsearch');
-					foreach ($this->searchfields as $searchfield) :
-						if (isset($searchinput['field-' . (int) $searchfield->id]) && !empty($searchinput['field-' . (int) $searchfield->id])):
-							$searchfields[] = '<strong>' . $this->escape($searchfield->title) . '</strong>: ' . $this->escape($searchinput['field-' . (int) $searchfield->id]);
-						endif;
-					endforeach;
-				endif;
-				$introtext = sprintf($introtext, implode(', ', $searchfields));
-			endif;
-	?>
-	<div class="memberlist-desc row">
-		<div class="col-md-12">
-			<p><?php echo JHtml::_('content.prepare', $introtext, '', 'com_wickedteam.team'); ?></p>
+	<?php $introtext = $params->get('introtext'); ?>
+	<?php if ($introtext) : ?>
+		<?php if (!empty($this->searchfields) && is_array($this->searchfields)): ?>
+			<?php $searchfields = array(); ?>
+			<?php if ($showsearch == 'basic') : ?>
+				<?php foreach ($this->searchfields as $searchfield) : ?>
+					<?php $searchfields[] = '<strong>' . $this->escape($searchfield->title) . '</strong>: ' . $this->escape($searchfield->alias); ?>
+				<?php endforeach; ?>
+			<?php elseif ($showsearch == 'extended') : ?>
+				<?php $searchinput = $this->state->get('filter.extendedsearch'); ?>
+				<?php foreach ($this->searchfields as $searchfield) : ?>
+					<?php if (isset($searchinput['field-' . (int) $searchfield->id]) && !empty($searchinput['field-' . (int) $searchfield->id])) : ?>
+						<?php $searchfields[] = '<strong>' . $this->escape($searchfield->title) . '</strong>: ' . $this->escape($searchinput['field-' . (int) $searchfield->id]); ?>
+					<?php endif; ?>
+				<?php endforeach; ?>
+			<?php endif; ?>
+			<?php $introtext = sprintf($introtext, implode(', ', $searchfields)); ?>
+		<?php endif; ?>
+		<div class="memberlist-desc row">
+			<div class="col-md-12">
+				<p><?php echo JHtml::_('content.prepare', $introtext, '', 'com_wickedteam.team'); ?></p>
+			</div>
 		</div>
-	</div>
 	<?php endif; ?>
 	<?php if (empty($this->items)) : ?>
 		<div class="alert alert-no-items">
@@ -129,23 +115,28 @@ $canEdit = $this->canDo->get('core.edit');
 						<h3>
 							<?php foreach ($this->listfields as $field) : ?>
 								<?php if ($field->field_id < 0) : ?>
-									<?php // Dienstleistername mit der ohne link zum profil ?>
 									<?php if ($params->get('linkuser', 0)) : ?>
 										<?php $link = $profileLink . (int) $item->id . (!empty($item->alias) ? ':' . $this->escape($item->alias) : ''); ?>
 										<?php echo JHtml::_('link', JRoute::_($link), $this->escape($item->title)); ?>
 									<?php else : ?>
 										<?php echo $this->escape($item->title); ?>
 									<?php endif; ?>
-									<?php // unublished info irgendwo anzeigen. sind die 4 zweilen PHP code dannach das hier entferen ?>
 									<?php if ($item->published == 0) : ?>
 										<span class="list-published label label-warning">
 											<?php echo JText::_('JUNPUBLISHED'); ?>
 										</span>
 									<?php endif; ?>
-									<?php // bitte auch den edit link & icon anzeigen bei canEdit === true die nächsten 4 zeilen ?>
 									<?php if ($canEdit) : ?>
 										<?php $text = '<span class="fa fa-edit"></span> '; ?>
-										<?php echo JHtml::_('link', JRoute::_($editLink . (int) $item->id), $text, array('class' => 'pull-right hasTooltip', 'title' => JText::_('JGLOBAL_EDIT'))); ?>
+										<?php echo JHtml::_(
+											'link',
+											JRoute::_($editLink . (int) $item->id),
+											$text,
+											array(
+												'class' => 'pull-right hasTooltip',
+												'title' => JText::_('JGLOBAL_EDIT'),
+											)
+										); ?>
 									<?php endif; ?>
 								<?php endif; ?>
 							<?php endforeach; ?>
@@ -165,9 +156,16 @@ $canEdit = $this->canDo->get('core.edit');
 										<?php endforeach; ?>
 								<?php endif; ?>
 
-								<?php if (is_array($value)): ?>
-								<?php // Das hier rendert das Bild solte also so passen? Also mit dem div? ?>
-								<?php echo call_user_func(array($this->fields[$field->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$field->field_id], $item); ?>
+								<?php if (is_array($value)) : ?>
+									<?php echo call_user_func(
+										array(
+											$this->fields[$field->field_id]->className,
+											'prepareBeforeListOutput',
+										),
+										$value,
+										$this->fields[$field->field_id],
+										$item
+									); ?>
 								<?php endif; ?>
 							<?php endif; ?>
 						<?php endforeach; ?>
@@ -192,7 +190,15 @@ $canEdit = $this->canDo->get('core.edit');
 														<?php endif; ?>
 													<?php endforeach; ?>
 												<?php endif; ?>
-												<?php echo call_user_func(array($this->fields[$child->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$child->field_id], $item); ?>
+												<?php echo call_user_func(
+													array(
+														$this->fields[$child->field_id]->className,
+														'prepareBeforeListOutput',
+													),
+													$value,
+													$this->fields[$child->field_id],
+													$item
+												); ?>
 											<?php endif; ?>
 										</div>
 									<?php continue; ?>
@@ -225,7 +231,15 @@ $canEdit = $this->canDo->get('core.edit');
 																	<?php endif; ?>
 																<?php endforeach; ?>
 															<?php endif; ?>
-															<?php echo call_user_func(array($this->fields[$f->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$f->field_id], $item) . ' '; ?>
+															<?php echo call_user_func(
+																array(
+																	$this->fields[$f->field_id]->className,
+																	'prepareBeforeListOutput',
+																),
+																$value,
+																$this->fields[$f->field_id],
+																$item
+																) . ' '; ?>
 														<?php endif; ?>
 													<?php endforeach; ?>
 												<?php endif; ?>
@@ -245,7 +259,15 @@ $canEdit = $this->canDo->get('core.edit');
 															<?php endif; ?>
 														<?php endforeach; ?>
 													<?php endif; ?>
-													<?php echo call_user_func(array($this->fields[$child->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$child->field_id], $item); ?>
+													<?php echo call_user_func(
+														array(
+															$this->fields[$child->field_id]->className,
+															'prepareBeforeListOutput',
+														),
+														$value,
+														$this->fields[$child->field_id],
+														$item
+													); ?>
 												<?php elseif ($child->field_id == 0 && !empty($child->children) && is_array($child->children)) : ?>
 													<?php foreach ($child->children as $f) : ?>
 														<?php if ($f->field_id > 0 && isset($this->fields[$f->field_id])) : ?>
@@ -259,7 +281,15 @@ $canEdit = $this->canDo->get('core.edit');
 																	<?php endif; ?>
 																<?php endforeach; ?>
 															<?php endif; ?>
-															<?php echo call_user_func(array($this->fields[$f->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$f->field_id], $item) . ' '; ?>
+															<?php echo call_user_func(
+																array(
+																	$this->fields[$f->field_id]->className,
+																	'prepareBeforeListOutput',
+																),
+																$value,
+																$this->fields[$f->field_id],
+																$item
+															) . ' '; ?>
 														<?php endif; ?>
 													<?php endforeach; ?>
 												<?php endif; ?>
@@ -287,7 +317,15 @@ $canEdit = $this->canDo->get('core.edit');
 													<?php endif; ?>
 												<?php endforeach; ?>
 											<?php endif; ?>
-											<?php echo call_user_func(array($this->fields[$child->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$child->field_id], $item); ?>
+											<?php echo call_user_func(
+												array(
+													$this->fields[$child->field_id]->className,
+													'prepareBeforeListOutput',
+												),
+												$value,
+												$this->fields[$child->field_id],
+												$item
+											); ?>
 										<?php elseif ($child->field_id == 0 && !empty($child->children) && is_array($child->children)) : ?>
 											<?php foreach ($child->children as $f) : ?>
 												<?php if ($f->field_id > 0 && isset($this->fields[$f->field_id])) : ?>
@@ -301,7 +339,14 @@ $canEdit = $this->canDo->get('core.edit');
 															<?php endif; ?>
 														<?php endforeach; ?>
 													<?php endif; ?>
-													<?php echo call_user_func(array($this->fields[$f->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$f->field_id], $item) . ' '; ?>
+													<?php echo call_user_func(
+														array($this->fields[$f->field_id]->className,
+														'prepareBeforeListOutput',
+														),
+														$value,
+														$this->fields[$f->field_id],
+														$item
+													) . ' '; ?>
 												<?php endif; ?>
 											<?php endforeach; ?>
 										<?php endif; ?>
