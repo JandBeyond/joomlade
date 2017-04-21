@@ -117,187 +117,202 @@ $canEdit = $this->canDo->get('core.edit');
 			<?php echo JText::_('COM_WICKEDTEAM_TEAM_NO_MATCHING_RESULTS'); ?>
 		</div>
 	<?php else : ?>
-	<div class="row">
-		<div class="col-md-12">
-			<table class="table table-striped" id="memberList">
-				<thead>
-					<tr>
-					<?php foreach ($this->listfields as $field) : ?>
-						<?php if ($field->field_id < 0) : ?>
-						<th>
-						<?php
-							$title = StringHelper::strlen(trim($field->title)) ? $this->escape($field->title) : JText::_('JGLOBAL_TITLE');
+	<div>
+		<?php foreach ($this->items as $i => $item) : ?>
+			<div class="dienstleister_container">
+				<div class="col-sm-4 nopadding diensleister_infobereich">
+					<div class="dienstleister_category">
+						<span class="dienstleister_icon"></span>
+						<span>Dienstleister</span>
+					</div>
+					<div class="dienstleister_name">
+						<h3>
+							<?php foreach ($this->listfields as $field) : ?>
+								<?php if ($field->field_id < 0) : ?>
+									<?php // Dienstleistername mit der ohne link zum profil ?>
+									<?php if ($params->get('linkuser', 0)) : ?>
+										<?php $link = $profileLink . (int) $item->id . (!empty($item->alias) ? ':' . $this->escape($item->alias) : ''); ?>
+										<?php echo JHtml::_('link', JRoute::_($link), $this->escape($item->title)); ?>
+									<?php else : ?>
+										<?php echo $this->escape($item->title); ?>
+									<?php endif; ?>
+									<?php // unublished info irgendwo anzeigen. sind die 4 zweilen PHP code dannach das hier entferen ?>
+									<?php if ($item->published == 0) : ?>
+										<span class="list-published label label-warning">
+											<?php echo JText::_('JUNPUBLISHED'); ?>
+										</span>
+									<?php endif; ?>
+									<?php // bitte auch den edit link & icon anzeigen bei canEdit === true die nächsten 4 zeilen ?>
+									<?php if ($canEdit) : ?>
+										<?php $text = '<span class="fa fa-edit"></span> '; ?>
+										<?php echo JHtml::_('link', JRoute::_($editLink . (int) $item->id), $text, array('class' => 'pull-right hasTooltip', 'title' => JText::_('JGLOBAL_EDIT'))); ?>
+									<?php endif; ?>
+								<?php endif; ?>
+							<?php endforeach; ?>
+						</h3>
+					</div>
+					<div class="dienstleister_logo">
+						<?php foreach ($this->listfields as $field) : ?>
+							<?php if ($field->field_id == '3' && isset($this->fields[$field->field_id])) : ?>
+								<?php $value = ''; ?>
+								<?php if (isset($this->values[$item->id][$field->field_id])) : ?>
+										<?php $value = array(); ?>
+										<?php foreach ($this->values[$item->id][$field->field_id] as $val) : ?>
+											<?php $visibility = in_array($val->visibility, array(0, 1, 2, 3)) ? (int) $val->visibility : 0; ?>
+											<?php if ($visibility === 0 || ($visibility === 1 && !$user->guest) || (!$this->params->get('visibility_section', 1) || ($visibility === 2 && $item->samesection))) : ?>
+												<?php $value[] = $val->value; ?>
+											<?php endif; ?>
+										<?php endforeach; ?>
+								<?php endif; ?>
 
-							if ($lang->hasKey($title)) :
-								$title = JText::_($title);
-							endif;
-
-							if ($sortable && in_array('m.title', $filter_fields)) :
-								echo JHtml::_('grid.sort', $this->escape($title), 'm.title', $listDirn, $listOrder);
-							else :
-								echo $this->escape($title);
-							endif;
-						?>
-						</th>
-						<?php elseif ($field->field_id > 0 && isset($this->fields[$field->field_id])) : ?>
-						<th>
-						<?php
-							$title = !empty($field->title) ? $field->title : $this->fields[$field->field_id]->title;
-
-							if ($lang->hasKey($title)) :
-								$title = JText::_($title);
-							endif;
-
-							if ($sortable && in_array('field-' . $field->field_id . '.value', $filter_fields)) :
-								echo JHtml::_('grid.sort', $this->escape($title), 'field-' . $field->field_id . '.value', $listDirn, $listOrder);
-							else :
-								echo $this->escape($title);
-							endif;
-						?>
-						</th>
-						<?php else : ?>
-						<th>
-						<?php
-							$title = $field->title;
-
-							if ($lang->hasKey($title)) :
-								$title = JText::_($title);
-							endif;
-
-							echo $this->escape($title);
-						?>
-						</th>
-						<?php endif; ?>
-					<?php endforeach; ?>
-					</tr>
-				</thead>
-				<tfoot>
-					<tr>
-						<td colspan="<?php echo count($this->listfields); ?>">
-
-						<div class="pagination text-center">
-							<p class="counter pull-right"> <?php echo $this->pagination->getPagesCounter(); ?> </p>
-							<?php echo $this->pagination->getPagesLinks(); ?>
-						</div>
-
-						</td>
-					</tr>
-				</tfoot>
-				<tbody>
-				<?php foreach ($this->items as $i => $item) : ?>
-					<tr class="row<?php echo ($i % 2) . ($item->published == 0 ? ' system-unpublished' : ''); ?>">
-					<?php foreach ($this->listfields as $field) : ?>
-						<td>
-						<?php if ($field->field_id < 0) : ?>
-							<?php
-								if ($params->get('linkuser', 0)) :
-									$link = $profileLink . (int) $item->id . (!empty($item->alias) ? ':' . $this->escape($item->alias) : '');
-									echo JHtml::_('link', JRoute::_($link), $this->escape($item->title));
-								else :
-									echo $this->escape($item->title);
-								endif;
-							?>
-							<?php if ($item->published == 0) : ?>
-								<span class="list-published label label-warning">
-									<?php echo JText::_('JUNPUBLISHED'); ?>
-								</span>
+								<?php if (is_array($value)): ?>
+								<?php // Das hier rendert das Bild solte also so passen? Also mit dem div? ?>
+								<?php echo call_user_func(array($this->fields[$field->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$field->field_id], $item); ?>
+								<?php endif; ?>
 							<?php endif; ?>
-							<?php if ($canEdit) :
-								$text = '<span class="fa fa-edit"></span> ' /*. JText::_('JGLOBAL_EDIT') */;
-
-								echo JHtml::_('link', JRoute::_($editLink . (int) $item->id), $text, array('class' => 'pull-right hasTooltip', 'title' => JText::_('JGLOBAL_EDIT')));
-							endif; ?>
-						<?php elseif ($field->field_id > 0 && isset($this->fields[$field->field_id])) : ?>
-						<?php
-							$value = '';
-							if (isset($this->values[$item->id][$field->field_id])) :
-									$value = array();
-									foreach ($this->values[$item->id][$field->field_id] as $val) :
-										$visibility = in_array($val->visibility, array(0, 1, 2, 3)) ? (int) $val->visibility : 0;
-										if ($visibility === 0 || ($visibility === 1 && !$user->guest) || (!$this->params->get('visibility_section', 1) || ($visibility === 2 && $item->samesection))) :
-											$value[] = $val->value;
-										endif;
-									endforeach;
-							endif;
-
-							echo call_user_func(array($this->fields[$field->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$field->field_id], $item);
-						?>
-						<?php else : ?>
-						<?php
-							if (!empty($field->children) && is_array($field->children)) :
-								foreach ($field->children as $child) :
-						?>
-								<div class="row">
-									<div class="col-md-12">
-									<?php
-										if (!empty($child->title)) :
-
-											$title = $child->title;
-
-											if ($lang->hasKey($title)) :
-												$title = JText::_($title);
-											endif;
-
-											echo '<span class="wickedteam-member-subheadline">' . $this->escape($title) . '</span>';
-										endif;
-
-										if ($child->field_id > 0 && isset($this->fields[$child->field_id])) :
-											$value = '';
-
-											if (isset($this->values[$item->id][$child->field_id])) :
-												$value = array();
-												foreach ($this->values[$item->id][$child->field_id] as $val) :
-													$visibility = in_array($val->visibility, array(0, 1, 2, 3)) ? (int) $val->visibility : 0;
-													if ($visibility === 0 || ($visibility === 1 && !$user->guest) || (!$this->params->get('visibility_section', 1) || ($visibility === 2 && $item->samesection))) :
-														$value[] = $val->value;
-													endif;
-												endforeach;
-											endif;
-
-											echo call_user_func(array($this->fields[$child->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$child->field_id], $item);
-										elseif ($child->field_id == 0 && !empty($child->children) && is_array($child->children)) :
-											foreach ($child->children as $f) :
-												if ($f->field_id > 0 && isset($this->fields[$f->field_id])) :
-													$value = '';
-													if (isset($this->values[$item->id][$f->field_id])) :
-														$value = array();
-														foreach ($this->values[$item->id][$f->field_id] as $val) :
-															$visibility = in_array($val->visibility, array(0, 1, 2, 3)) ? (int) $val->visibility : 0;
-															if ($visibility === 0 || ($visibility === 1 && !$user->guest) || (!$this->params->get('visibility_section', 1) || ($visibility === 2 && $item->samesection))) :
-																$value[] = $val->value;
-															endif;
-														endforeach;
-													endif;
-
-													if (strlen($f->title)) :
-
-														$title = $f->title;
-
-														if ($lang->hasKey($title)) :
-															$title = JText::_($title);
-														endif;
-														echo '<span class="wickedteam-member-secondsubheadline">' . $this->escape($title) . '</span>';
-													endif;
-
-													echo call_user_func(array($this->fields[$f->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$f->field_id], $item) . ' ';
-												endif;
-											endforeach;
-										endif;
-									?>
-									</div>
-								</div>
-						<?php
-								endforeach;
-							endif;
-						?>
+						<?php endforeach; ?>
+					</div>
+				</div>
+				<div class="col-sm-8 nopadding diensleister_contentbereich">
+					<?php foreach ($this->listfields as $field) : ?>
+						<?php if ($field->id == '96') : ?>
+							<?php if (!empty($field->children) && is_array($field->children)) : ?>
+								<?php foreach ($field->children as $child) : ?>
+									<?php if ($child->id == '97') : ?>
+										<div class="dienstleiser_desc">
+											<?php if ($child->field_id > 0 && isset($this->fields[$child->field_id])) : ?>
+											<h4>Beschreibung</h4>
+												<?php $value = ''; ?>
+												<?php if (isset($this->values[$item->id][$child->field_id])) : ?>
+													<?php $value = array(); ?>
+													<?php foreach ($this->values[$item->id][$child->field_id] as $val) : ?>
+														<?php $visibility = in_array($val->visibility, array(0, 1, 2, 3)) ? (int) $val->visibility : 0; ?>
+														<?php if ($visibility === 0 || ($visibility === 1 && !$user->guest) || (!$this->params->get('visibility_section', 1) || ($visibility === 2 && $item->samesection))) : ?>
+															<?php $value[] = $val->value; ?>
+														<?php endif; ?>
+													<?php endforeach; ?>
+												<?php endif; ?>
+												<?php echo call_user_func(array($this->fields[$child->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$child->field_id], $item); ?>
+											<?php endif; ?>
+										</div>
+									<?php continue; ?>
+									<?php endif; ?>
+										<?php if ($child->id == '98') : ?>
+											<div class="diensleister_main_offer">
+												<?php if ($child->field_id > 0 && isset($this->fields[$child->field_id])) : ?>
+													<?php $value = ''; ?>
+													<?php if (isset($this->values[$item->id][$child->field_id])) : ?>
+														<?php $value = array(); ?>
+														<?php foreach ($this->values[$item->id][$child->field_id] as $val) : ?>
+															<?php $visibility = in_array($val->visibility, array(0, 1, 2, 3)) ? (int) $val->visibility : 0; ?>
+															<?php if ($visibility === 0 || ($visibility === 1 && !$user->guest) || (!$this->params->get('visibility_section', 1) || ($visibility === 2 && $item->samesection))) : ?>
+																<?php $value[] = $val->value; ?>
+															<?php endif; ?>
+														<?php endforeach; ?>
+													<?php endif; ?>
+													<?php echo call_user_func(array($this->fields[$child->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$child->field_id], $item); ?>
+												<?php elseif ($child->field_id == 0 && !empty($child->children) && is_array($child->children)) : ?>
+													<h4>Angebot</h4>
+													<?php foreach ($child->children as $f) : ?>
+														<?php if ($f->field_id > 0 && isset($this->fields[$f->field_id])) : ?>
+															<?php $value = ''; ?>
+															<?php if (isset($this->values[$item->id][$f->field_id])) : ?>
+																<?php $value = array(); ?>
+																<?php foreach ($this->values[$item->id][$f->field_id] as $val) : ?>
+																	<?php $visibility = in_array($val->visibility, array(0, 1, 2, 3)) ? (int) $val->visibility : 0; ?>
+																	<?php if ($visibility === 0 || ($visibility === 1 && !$user->guest) || (!$this->params->get('visibility_section', 1) || ($visibility === 2 && $item->samesection))) : ?>
+																		<?php $value[] = $val->value; ?>
+																	<?php endif; ?>
+																<?php endforeach; ?>
+															<?php endif; ?>
+															<?php echo call_user_func(array($this->fields[$f->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$f->field_id], $item) . ' '; ?>
+														<?php endif; ?>
+													<?php endforeach; ?>
+												<?php endif; ?>
+											</div>
+										<?php continue; ?>
+										<?php endif; ?>
+										<?php if ($child->id == '100') : ?>
+											<div class="diensleister_seccond_offer">
+												<?php if ($child->field_id > 0 && isset($this->fields[$child->field_id])) : ?>
+													<?php $value = ''; ?>
+													<?php if (isset($this->values[$item->id][$child->field_id])) : ?>
+														<?php $value = array(); ?>
+														<?php foreach ($this->values[$item->id][$child->field_id] as $val) : ?>
+															<?php $visibility = in_array($val->visibility, array(0, 1, 2, 3)) ? (int) $val->visibility : 0; ?>
+															<?php if ($visibility === 0 || ($visibility === 1 && !$user->guest) || (!$this->params->get('visibility_section', 1) || ($visibility === 2 && $item->samesection))) : ?>
+																<?php $value[] = $val->value; ?>
+															<?php endif; ?>
+														<?php endforeach; ?>
+													<?php endif; ?>
+													<?php echo call_user_func(array($this->fields[$child->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$child->field_id], $item); ?>
+												<?php elseif ($child->field_id == 0 && !empty($child->children) && is_array($child->children)) : ?>
+													<?php foreach ($child->children as $f) : ?>
+														<?php if ($f->field_id > 0 && isset($this->fields[$f->field_id])) : ?>
+															<?php $value = ''; ?>
+															<?php if (isset($this->values[$item->id][$f->field_id])) : ?>
+																<?php $value = array(); ?>
+																<?php foreach ($this->values[$item->id][$f->field_id] as $val) : ?>
+																	<?php $visibility = in_array($val->visibility, array(0, 1, 2, 3)) ? (int) $val->visibility : 0; ?>
+																	<?php if ($visibility === 0 || ($visibility === 1 && !$user->guest) || (!$this->params->get('visibility_section', 1) || ($visibility === 2 && $item->samesection))) : ?>
+																		<?php $value[] = $val->value; ?>
+																	<?php endif; ?>
+																<?php endforeach; ?>
+															<?php endif; ?>
+															<?php echo call_user_func(array($this->fields[$f->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$f->field_id], $item) . ' '; ?>
+														<?php endif; ?>
+													<?php endforeach; ?>
+												<?php endif; ?>
+											</div>
+										<?php continue; ?>
+										<?php endif; ?>
+								<?php endforeach; ?>
+							<?php endif; ?>
+						<?php elseif ($field->id == '102') : ?>
+							<div class="diensleister_adress">
+								<?php if (!empty($field->children) && is_array($field->children)) : ?>
+									<h4>Adresse</h4>
+									<?php foreach ($field->children as $child) : ?>
+										<?php if (!empty($child->title)) : ?>
+											<?php echo $this->escape($child->title); ?>
+										<?php endif; ?>
+										<?php if ($child->field_id > 0 && isset($this->fields[$child->field_id])) : ?>
+											<?php $value = ''; ?>
+											<?php if (isset($this->values[$item->id][$child->field_id])) : ?>
+												<?php $value = array(); ?>
+												<?php foreach ($this->values[$item->id][$child->field_id] as $val) : ?>
+													<?php $visibility = in_array($val->visibility, array(0, 1, 2, 3)) ? (int) $val->visibility : 0; ?>
+													<?php if ($visibility === 0 || ($visibility === 1 && !$user->guest) || (!$this->params->get('visibility_section', 1) || ($visibility === 2 && $item->samesection))) : ?>
+														<?php $value[] = $val->value; ?>
+													<?php endif; ?>
+												<?php endforeach; ?>
+											<?php endif; ?>
+											<?php echo call_user_func(array($this->fields[$child->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$child->field_id], $item); ?>
+										<?php elseif ($child->field_id == 0 && !empty($child->children) && is_array($child->children)) : ?>
+											<?php foreach ($child->children as $f) : ?>
+												<?php if ($f->field_id > 0 && isset($this->fields[$f->field_id])) : ?>
+													<?php $value = ''; ?>
+													<?php if (isset($this->values[$item->id][$f->field_id])) : ?>
+														<?php $value = array(); ?>
+														<?php foreach ($this->values[$item->id][$f->field_id] as $val) : ?>
+															<?php $visibility = in_array($val->visibility, array(0, 1, 2, 3)) ? (int) $val->visibility : 0; ?>
+															<?php if ($visibility === 0 || ($visibility === 1 && !$user->guest) || (!$this->params->get('visibility_section', 1) || ($visibility === 2 && $item->samesection))) : ?>
+																<?php $value[] = $val->value; ?>
+															<?php endif; ?>
+														<?php endforeach; ?>
+													<?php endif; ?>
+													<?php echo call_user_func(array($this->fields[$f->field_id]->className, 'prepareBeforeListOutput'), $value, $this->fields[$f->field_id], $item) . ' '; ?>
+												<?php endif; ?>
+											<?php endforeach; ?>
+										<?php endif; ?>
+									<?php endforeach; ?>
+								<?php endif; ?>
+							</div>
 						<?php endif; ?>
-						</td>
 					<?php endforeach; ?>
-					</tr>
-				<?php endforeach; ?>
-				</tbody>
-			</table>
-		</div>
+				</div>
+			</div>
+		<?php endforeach; ?>
 	</div>
 	<?php endif; ?>
 </div>
