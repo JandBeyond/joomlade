@@ -1,0 +1,117 @@
+/* Dienstleisterverzeichnis - Übersicht */
+
+#wickedteam-team > .row {
+  margin-bottom: 50px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.dienstleister_container {
+  overflow: hidden;
+  clear: left;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #f9b431;
+}
+
+.diensleister_infobereich {
+  background: #fac663;
+  color: #fff;
+  display: flex;
+  display: -ms-flexbox;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 34px !important;
+}
+
+.dienstleister_category {
+  width: 100%;
+  background: #f9b431;
+  text-align: center;
+  padding: 5px 0px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+
+}
+
+.dienstleister_name,
+.dienstleister_logo {
+  text-align: center;
+}
+
+.dienstleister_logo img {
+  background: #fff;
+  margin: 20px 0px 30px 0px;
+  border-radius: 50%;
+}
+
+.dienstleister_name h3,
+.dienstleister_name h3 a {
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.dienstleister_name h3 a:hover,
+.dienstleister_name h3 a:focus {
+  text-decoration: underline;
+}
+
+.dienstleister_name a.hasTooltip {
+  position: absolute;
+  color: #fff;
+  top: 5px;
+  left: 10px;
+}
+
+.dienstleister_name a.hasTooltip span:before{
+  color: #fff;
+}
+
+.diensleister_contentbereich {
+  padding: 15px 30px 30px 30px !important;
+  border-top: 34px solid #fde1ad;
+}
+
+@media screen and (min-width: 768px) {
+  .dienstleister_container {
+    display: flex;
+    display: -ms-flexbox;
+  }
+}
+
+/* Dienstleisterverzeichnis - Einzelansicht */
+
+#wickedteam-profile .page-header {
+  padding-left: 15px;
+}
+
+.wf_geolocation-map {
+  height: 350px !important;
+}
+
+/* Dienstleisterverzeichnis - Profil bearbeiten */
+
+.nav-tabs {
+  margin: 20px 0px 0px 0px ;
+  display: none;
+}
+
+.tab-content {
+  padding: 0px !important;
+}
+
+.tab-content #profil-page > * {
+  padding: 20px 0px;
+}
+
+.tab-content #profil-page > *:first-child {
+  padding-top: 0px;
+}
+
+
+.tab-content legend {
+  text-transform: uppercase;
+  color: #f9b431;
+  font-size: 16px;
+}
