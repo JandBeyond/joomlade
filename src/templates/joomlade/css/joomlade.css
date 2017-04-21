@@ -10948,8 +10948,8 @@ ol.inline > li {
   color: #f9b431;
   font-size: 16px;
 }
-#wickedteam-form i .icon-image,
-#wickedteam-form i .icon-trash {
+#wickedteam-form i.icon-image,
+#wickedteam-form i.icon-trash {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
