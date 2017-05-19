@@ -5,7 +5,7 @@
 <?php if ($params->get('show_download', true) && !empty($release->downloadUrl)) : ?>
     <p>
         <a href="<?php echo $release->downloadUrl; ?>" class="btn btn-primary download blue">
-            <span class="fa fa-cloud-download"><?php echo JText::_('MOD_JVERSION_DOWNLOAD'); ?></span>
+            <span class="fa fa-cloud-download"></span><?php echo JText::_('MOD_JVERSION_DOWNLOAD'); ?>
         </a>
     </p>
 <?php endif; ?>
