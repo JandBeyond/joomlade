@@ -2,7 +2,7 @@
 <div class="jpattern area-joomla">
     <h4>Joomla! downloaden</h4>
     <?php if ($params->get('show_version', true)) : ?>
-        <p class="name"><?php echo JText::_('MOD_JVERSION_VERSION_PREFIX'); ?><?php echo $release->tag_name; ?></p>
+        <p class="name"><?php echo JText::_('MOD_JVERSION_VERSION_PREFIX'); ?><?php echo $release->version; ?></p>
     <?php endif; ?>
     <?php if ($params->get('show_download', true)) : ?>
         <p>
