@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.7" type="plugin" group="content" method="upgrade">
+	<name>plg_content_mydocslanguage</name>
+	<creationDate>2017-05-05</creationDate>
+	<author>JandBeyond e.V.</author>
+	<copyright>(C) 2017 JandBeyond e.V. All rights reserved.</copyright>
+	<authorUrl>https://www.joomla.de</authorUrl>
+	<version>1.0.0</version>
+	<license>GNU/GPL Version 2 or later</license>
+	<description>PLG_CONTENT_MYDOCSLANGUAGE_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
+	<files>
+		<folder>language</folder>
+		<filename plugin="mydocslanguage">mydocslanguage.php</filename>
+	</files>
+</extension>
