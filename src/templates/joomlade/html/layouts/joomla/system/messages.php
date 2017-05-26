@@ -13,7 +13,7 @@ $msgList = $displayData['msgList'];
 
 $map = array(
 	'message' => 'success',
-	'error' => 'danger',
+	'error'   => 'danger',
 );
 
 ?>
