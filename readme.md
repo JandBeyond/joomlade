@@ -22,7 +22,7 @@ Solltest du Fragen bei der Einrichtung oder Probleme mit der Entwicklungsumgebun
 
 ## Template Änderungen
 
-In unserem Template benutzen wir den Task Runner [Grunt](http://gruntjs.com/). Mit Hilfe von grunt werden bspw. die less Dateien kompiliert und die fertigen css Dateien minifiziert.
+In unserem Template benutzen wir den Task Runner [Grunt](https://gruntjs.com/). Mit Hilfe von grunt werden bspw. die less Dateien kompiliert und die fertigen css Dateien minifiziert.
 Um Änderungen am Template, den Stylesheets oder Javascript Dateien vorzunehmen, musst du daher Grunt einrichten:
 
 1) Öffne das Terminal und wechsel in das joomlade Template Verzeichnis:
