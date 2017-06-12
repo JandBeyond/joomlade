@@ -9202,6 +9202,11 @@ img {
   color: #fff;
   margin-right: 10px;
 }
+@media (min-width: 768px) {
+  #mainnav > ul > li > a {
+    padding: 3px 10px;
+  }
+}
 /** hide main nav on mobile **/
 #mainnav {
   position: absolute;
