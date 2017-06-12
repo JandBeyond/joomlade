@@ -9202,11 +9202,6 @@ img {
   color: #fff;
   margin-right: 10px;
 }
-@media (min-width: 768px) {
-  #mainnav > ul > li > a {
-    padding: 3px 10px;
-  }
-}
 /** hide main nav on mobile **/
 #mainnav {
   position: absolute;
@@ -9487,7 +9482,7 @@ body.shownav #mainnav ul.menu li.module {
     display: none;
   }
   #mainnav > ul > li > a {
-    padding: 3px 15px;
+    padding: 3px 10px;
   }
   #mainnav > ul > li.active > a,
   #mainnav > ul > li:hover > a,
