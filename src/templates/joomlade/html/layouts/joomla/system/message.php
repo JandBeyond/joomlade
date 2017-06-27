@@ -21,7 +21,7 @@ $map = array(
 	<?php if (is_array($msgList) && !empty($msgList)) : ?>
 		<div id="system-message">
 			<?php foreach ($msgList as $type => $msgs) : ?>
-				<div class="alert alert-<?php echo $map[$type]; ?>">
+				<div class="alert alert-<?php echo isset($map[$type]) ? $map[$type] : $type; ?>">
 					<?php // This requires JS so we should add it through JS. Progressive enhancement and stuff. ?>
 					<a class="close" data-dismiss="alert">×</a>
 
@@ -29,7 +29,7 @@ $map = array(
 						<h4 class="alert-heading"><?php echo JText::_($type); ?></h4>
 						<div>
 							<?php foreach ($msgs as $msg) : ?>
-								<div class="alert-message"><?php echo $msg; ?></div>
+								<div class="alert-<?php echo isset($map[$type]) ? $map[$type] : $type; ?>"><?php echo $msg; ?></div>
 							<?php endforeach; ?>
 						</div>
 					<?php endif; ?>
