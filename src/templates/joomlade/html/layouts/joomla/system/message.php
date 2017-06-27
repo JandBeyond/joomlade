@@ -23,7 +23,7 @@ $map = array(
 			<?php foreach ($msgList as $type => $msgs) : ?>
 				<div class="alert alert-<?php echo isset($map[$type]) ? $map[$type] : $type; ?>">
 					<?php // This requires JS so we should add it through JS. Progressive enhancement and stuff. ?>
-					<a class="close" data-dismiss="alert">Ã—</a>
+					<a class="close" data-dismiss="alert">×</a>
 
 					<?php if (!empty($msgs)) : ?>
 						<h4 class="alert-heading"><?php echo JText::_($type); ?></h4>
