@@ -12,8 +12,8 @@ defined('JPATH_BASE') or die;
 $msgList = $displayData['msgList'];
 
 $map = array(
-  'message' => 'success',
-  'error' => 'danger',
+	'message' => 'success',
+	'error'   => 'danger',
 );
 
 ?>
