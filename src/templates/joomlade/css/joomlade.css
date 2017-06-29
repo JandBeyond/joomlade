@@ -10965,6 +10965,7 @@ ol.inline > li {
 }
 .alert a.close {
   text-decoration: none;
+  color: #000;
 }
 .alert-error {
   background-color: #f2dede;
