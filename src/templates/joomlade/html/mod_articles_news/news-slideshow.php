@@ -25,9 +25,11 @@ defined('_JEXEC') or die;
                             </a>
                         <?php endif; ?>
 
-                        <h4><?php echo $item->title; ?></h4>
+                        <h4> <a href="<?php echo $item->link; ?>"><?php echo $item->title; ?></a></h4>
 
-                        <?php echo substr(strip_tags($item->introtext, '<sub><sup>'), 0, 180); ?>...
+                        <a href="<?php echo $item->link; ?>">
+                             <?php echo substr(strip_tags($item->introtext, '<sub><sup>'), 0, 180); ?>...
+                        </a>
 
                         <?php $tagLayout = new JLayoutFile('joomla.content.tags'); ?>
                         <?php echo $tagLayout->render($item->tags->itemTags); ?>
