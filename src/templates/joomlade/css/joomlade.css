@@ -9533,9 +9533,6 @@ body.shownav #mainnav ul.menu li.module {
     border-top-left-radius: 5px;
     border-top-right-radius: 0;
   }
-  #mainnav > ul > li.wissen > a {
-    display: block;
-  }
   #mainnav > ul > li.wissen > ul {
     right: 0px;
     width: 230px;
@@ -10282,6 +10279,10 @@ a.skiplink:focus {
 }
 .carousel.slide.news .item h4 {
   text-transform: uppercase;
+}
+.carousel.slide.news .item h4 a {
+  text-decoration: none;
+  color: inherit;
 }
 .carousel.slide.news .item img.intro {
   width: 150px;

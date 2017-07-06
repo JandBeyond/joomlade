@@ -25,7 +25,7 @@ defined('_JEXEC') or die;
                             </a>
                         <?php endif; ?>
 
-                        <h4><?php echo $item->title; ?></h4>
+                        <h4><a href="<?php echo $item->link; ?>"><?php echo $item->title; ?></a></h4>
 
                         <?php echo substr(strip_tags($item->introtext, '<sub><sup>'), 0, 180); ?>...
 
