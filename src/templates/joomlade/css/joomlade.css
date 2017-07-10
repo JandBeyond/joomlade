@@ -9533,6 +9533,9 @@ body.shownav #mainnav ul.menu li.module {
     border-top-left-radius: 5px;
     border-top-right-radius: 0;
   }
+  #mainnav > ul > li.dienstleister > ul {
+    width: 230px;
+  }
   #mainnav > ul > li.wissen > ul {
     right: 0px;
     width: 230px;
