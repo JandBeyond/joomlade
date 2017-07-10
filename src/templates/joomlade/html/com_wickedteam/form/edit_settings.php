@@ -104,43 +104,6 @@ endif;
 				<?php echo $this->form->renderField('published'); ?>
 				<?php echo $this->form->renderField('title_format'); ?>
 			</fieldset>
-			<?php /** 
-			<fieldset>
-				<legend><?php echo JText::_('COM_WICKEDTEAM_FORM_ASSIGN_USER'); ?></legend>
-				<?php if ($canCreateUser) : ?>
-				<div class="accordion" id="wickedteamusercreation">
-					<div class="accordion-group">
-						<div class="accordion-heading">
-						<a class="accordion-toggle" data-toggle="collapse" data-parent="#wickedteamusercreation" href="#collapseOne">
-						<?php echo JText::_('COM_WICKEDTEAM_FORM_ASSIGN_USER'); ?>
-						</a>
-					</div>
-					<div id="collapseOne" class="accordion-body collapse in">
-						<div class="accordion-inner">
-				<?php endif; ?>
-						<?php echo $this->form->renderField('user_id'); ?>
-				<?php if ($canCreateUser) : ?>
-						</div>
-					</div>
-				</div>
-					<div class="accordion-group">
-						<div class="accordion-heading">
-							<a class="accordion-toggle" data-toggle="collapse" data-parent="#wickedteamusercreation" href="#collapseTwo">
-							<?php echo JText::_('COM_WICKEDTEAM_FORM_CREATE_USER'); ?>
-							</a>
-						</div>
-						<div id="collapseTwo" class="accordion-body collapse">
-							<div class="accordion-inner">
-								<?php echo $this->form->renderField('username'); ?>
-								<?php echo $this->form->renderField('useremail'); ?>
-								<?php echo $this->form->renderField('userpassword'); ?>
-								<h4><?php echo JText::_('JLIB_RULES_GROUPS'); ?></h4>
-								<?php echo JHtml::_('access.usergroups', 'jform[usergroups]', array($this->userConfig->get('new_usertype', 0)), true); ?>
-							</div>
-						</div>
-					</div>
-				<?php endif; ?>
-			</fieldset>**/ ?>
 		</div>
 		<?php endif; ?>
 	</div>
