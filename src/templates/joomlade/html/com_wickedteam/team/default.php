@@ -103,6 +103,7 @@ $canEdit    = $this->canDo->get('core.edit');
 			<?php echo JText::_('COM_WICKEDTEAM_TEAM_NO_MATCHING_RESULTS'); ?>
 		</div>
 	<?php else : ?>
+	<?php shuffle($this->items); ?>
 	<div>
 		<?php foreach ($this->items as $i => $item) : ?>
 			<div class="dienstleister_container">
