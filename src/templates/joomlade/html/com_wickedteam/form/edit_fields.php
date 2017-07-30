@@ -31,33 +31,31 @@ foreach ($this->profiletabs as $tab) :
 			<div class="span6">
 				<?php for ($i = 0; $i <= $fieldset->maxinstance; ++$i) : ?>
 				<div class="wickedteamFieldset-<?php echo (int) $fieldset->id; ?> <?php echo $fieldset->params->get('formstyle', 'form-vertical'); ?>">
-					<?php $style = ''; ?>
-					<?php if ($fieldset->alias == 'karte') : ?>
-						<?php $style = "style='display:none'"; ?>
-					<?php endif; ?>
-					<fieldset class="wt-<?php echo $this->escape($fieldset->alias); ?>" <?php echo $style; ?>>
-						<legend>
-						<?php
-							echo $this->escape($fieldset->title);
+					<?php if (!$fieldset->alias == 'karte') : ?>
+						<fieldset class="wt-<?php echo $this->escape($fieldset->alias); ?>">
+							<legend>
+							<?php
+								echo $this->escape($fieldset->title);
 
-							$attribs = array();
+								$attribs = array();
 
-							$attribs['class'] = 'btn pull-right ';
-							$icon = 'icon-';
+								$attribs['class'] = 'btn pull-right ';
+								$icon = 'icon-';
 
-							if ($fieldset->params->get('duplicable', 0)) :
-								if ($i > 0) :
-									$attribs['class'] .= 'btn-warning removeFieldset';
-									$icon .= 'minus';
-								else :
-									$attribs['class'] .= 'btn-info duplicateFieldset';
-									$icon .= 'plus';
+								if ($fieldset->params->get('duplicable', 0)) :
+									if ($i > 0) :
+										$attribs['class'] .= 'btn-warning removeFieldset';
+										$icon .= 'minus';
+									else :
+										$attribs['class'] .= 'btn-info duplicateFieldset';
+										$icon .= 'plus';
+									endif;
+
+									echo JHtml::_('link', '#', '<i class="' . $icon . '"></i>', $attribs);
 								endif;
-
-								echo JHtml::_('link', '#', '<i class="' . $icon . '"></i>', $attribs);
-							endif;
-						?>
-						</legend>
+							?>
+							</legend>
+						<?php endif; ?>
 						<?php foreach ($this->fields[$fieldset->id] as $field) : ?>
 						<?php
 						if (!class_exists($field->className)
@@ -97,7 +95,9 @@ foreach ($this->profiletabs as $tab) :
 							?>
 						<?php endif; ?>
 					<?php endforeach; ?>
-					</fieldset>
+					<?php if (!$fieldset->alias == 'karte') : ?>
+						</fieldset>
+					<?php endif; ?>
 				</div>
 				<?php endfor; ?>
 			</div>
