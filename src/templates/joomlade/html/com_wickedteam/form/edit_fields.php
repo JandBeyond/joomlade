@@ -31,33 +31,6 @@ foreach ($this->profiletabs as $tab) :
 			<div class="span6">
 				<?php for ($i = 0; $i <= $fieldset->maxinstance; ++$i) : ?>
 				<div class="wickedteamFieldset-<?php echo (int) $fieldset->id; ?> <?php echo $fieldset->params->get('formstyle', 'form-vertical'); ?>">
-					<fieldset class="wt-<?php echo $this->escape($fieldset->alias); ?>">
-                          <?php if ($fieldset->alias == 'karte') : ?>
-                            <?php continue; ?>
-                          <?php endif; ?>
-                      <legend>
-
-						<?php
-							echo $this->escape($fieldset->title);
-
-							$attribs = array();
-
-							$attribs['class'] = 'btn pull-right ';
-							$icon = 'icon-';
-
-							if ($fieldset->params->get('duplicable', 0)) :
-								if ($i > 0) :
-									$attribs['class'] .= 'btn-warning removeFieldset';
-									$icon .= 'minus';
-								else :
-									$attribs['class'] .= 'btn-info duplicateFieldset';
-									$icon .= 'plus';
-								endif;
-
-								echo JHtml::_('link', '#', '<i class="' . $icon . '"></i>', $attribs);
-							endif;
-						?>
-						</legend>
 						<?php foreach ($this->fields[$fieldset->id] as $field) : ?>
 						<?php
 						if (!class_exists($field->className)
@@ -97,7 +70,6 @@ foreach ($this->profiletabs as $tab) :
 							?>
 						<?php endif; ?>
 					<?php endforeach; ?>
-					</fieldset>
 				</div>
 				<?php endfor; ?>
 			</div>
