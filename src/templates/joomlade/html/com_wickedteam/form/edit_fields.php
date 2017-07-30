@@ -31,12 +31,12 @@ foreach ($this->profiletabs as $tab) :
 			<div class="span6">
 				<?php for ($i = 0; $i <= $fieldset->maxinstance; ++$i) : ?>
 				<div class="wickedteamFieldset-<?php echo (int) $fieldset->id; ?> <?php echo $fieldset->params->get('formstyle', 'form-vertical'); ?>">
-					<fieldset class="wt-<?php echo $this->escape($fieldset->alias); ?>">
-                          <?php if ($fieldset->alias == 'karte') : ?>
-                            <?php continue; ?>
-                          <?php endif; ?>
-                      <legend>
-
+					<?php $style = ''; ?>
+					<?php if ($fieldset->alias == 'karte') : ?>
+						<?php $style = "style='display:none'"; ?>
+					<?php endif; ?>
+					<fieldset class="wt-<?php echo $this->escape($fieldset->alias); ?>" <?php echo $style; ?>>
+						<legend>
 						<?php
 							echo $this->escape($fieldset->title);
 
