@@ -180,8 +180,7 @@ $canEdit    = $this->canDo->get('core.edit');
 									<?php if ($child->id == '97') : ?>
 										<div class="dienstleiser_desc">
 											<?php if ($child->field_id > 0 && isset($this->fields[$child->field_id])) : ?>
-											<h4>Beschreibung</h4>
-												<?php $value = ''; ?>
+												<?php $value = array(); ?>
 												<?php if (isset($this->values[$item->id][$child->field_id])) : ?>
 													<?php $value = array(); ?>
 													<?php foreach ($this->values[$item->id][$child->field_id] as $val) : ?>
@@ -191,15 +190,18 @@ $canEdit    = $this->canDo->get('core.edit');
 														<?php endif; ?>
 													<?php endforeach; ?>
 												<?php endif; ?>
-												<?php echo call_user_func(
-													array(
-														$this->fields[$child->field_id]->className,
-														'prepareBeforeListOutput',
-													),
-													$value,
-													$this->fields[$child->field_id],
-													$item
-												); ?>
+												<?php if ($value[0] != '') : ?>
+													<h4>Beschreibung</h4>
+													<?php echo call_user_func(
+														array(
+															$this->fields[$child->field_id]->className,
+															'prepareBeforeListOutput',
+														),
+														$value,
+														$this->fields[$child->field_id],
+														$item
+													); ?>
+												<?php endif; ?>
 											<?php endif; ?>
 										</div>
 									<?php continue; ?>
