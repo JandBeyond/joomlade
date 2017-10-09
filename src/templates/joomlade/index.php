@@ -60,7 +60,7 @@ $doc->addHeadLink($tpath.'/images/favicon.ico', 'shortcut icon', 'rel', array('t
 <head>
   <meta name="x-ua-compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="<?php echo $tpath; ?>/js/joomlade.min.js?v=2"></script>
+  <script src="<?php echo $tpath; ?>/js/joomlade.min.js"></script>
 
   <jdoc:include type="head" />
 
