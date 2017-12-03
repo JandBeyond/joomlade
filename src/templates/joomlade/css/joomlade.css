@@ -10044,12 +10044,12 @@ ul.next-events li:before {
   border-radius: 75px;
   max-width: 150px;
 }
-.moduletable .advent {
+.moduletable.advent {
   padding: 10px;
   background: #f9b431;
   color: white;
 }
-.moduletable .advent:after {
+.moduletable.advent:after {
   font-family: FontAwesome;
   content: "\f1bb";
 }
