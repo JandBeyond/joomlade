@@ -365,15 +365,19 @@ ul.next-events {
   }
 }
 
-.moduletable {
-  &.advent {
-    padding: 10px;
-    background: @color-yellow;
-    color: white;
+#aside {
+  .moduletable {
+    &.advent {
+      padding: 10px;
+      background: @color-yellow;
+      color: white;
 
-    &:after {
-      font-family: FontAwesome;
-      content: @fa-var-tree;
+      h3 {
+        &:after {
+          font-family: FontAwesome;
+          content: @fa-var-tree;
+        }
+      }
     }
   }
 }
