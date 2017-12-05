@@ -8563,6 +8563,9 @@ button.close {
 .fa-medium:before {
   content: "\f23a";
 }
+pre {
+  color: #000;
+}
 a {
   text-decoration: underline;
 }
