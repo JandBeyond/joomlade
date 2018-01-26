@@ -284,7 +284,7 @@ $canEdit    = $this->canDo->get('core.edit');
 																	<?php endif; ?>
 																<?php endforeach; ?>
 															<?php endif; ?>
-															<?php echo call_user_func(
+															<?php $offers = call_user_func(
 																array(
 																	$this->fields[$f->field_id]->className,
 																	'prepareBeforeListOutput',
@@ -293,6 +293,8 @@ $canEdit    = $this->canDo->get('core.edit');
 																$this->fields[$f->field_id],
 																$item
 															) . ' '; ?>
+															<?php $offers = str_replace("<br />", "", $offers); ?>
+															<?php echo str_replace("\n", ", ", $offers); ?>
 														<?php endif; ?>
 													<?php endforeach; ?>
 												<?php endif; ?>
