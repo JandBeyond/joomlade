@@ -18,8 +18,12 @@ defined('_JEXEC') or die;
 			<div class="event-duration">
 				<?php echo ModGCalendarHelper::duration($event); ?>
 			</div>
-			<?php if($params->get('show_location', false) && !empty($event->location)) : ?>
-				<div class="event-location" itemprop="location" itemscope="" itemtype="http://schema.org/Text"><?php echo $event->location; ?></div>
+			<?php if(!empty($event->location)): ?>
+				<?php if($params->get('show_location', false)) : ?>
+					<div class="event-location" itemprop="location" itemscope="" itemtype="http://schema.org/Text"><?php echo $event->location; ?></div>
+				<?php else: ?>
+					<meta itemprop="location" itemscope="" itemtype="http://schema.org/Text" content="<?php echo $event->location; ?>">
+				<?php endif; ?>
 			<?php endif; ?>
 		</li>
 	<?php endforeach; ?>
