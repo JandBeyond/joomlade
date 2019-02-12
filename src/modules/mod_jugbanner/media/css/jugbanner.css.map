@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACC,oCAAsB;EACrB,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,MAAM;EAClB,wCAAI;IACH,SAAS,EAAE,IAAI;IACf,MAAM,EAAE,IAAI",
+"sources": ["../scss/jugbanner.scss"],
+"names": [],
+"file": "jugbanner.css"
+}
