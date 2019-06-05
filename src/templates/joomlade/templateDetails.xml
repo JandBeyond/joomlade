@@ -67,17 +67,6 @@
 					<option value="1">JYES</option>
 				</field>
 			</fieldset>
-
-			<fieldset name="webfonts">
-				<!-- GOOGLE FONT-->
-				<field  name="googlefont"
-						class=""
-						type="text"
-						default=""
-						label="TPL_JOOMLADE_PARAMETER_GOOGLEFONT_LABEL"
-						description="TPL_JOOMLADE_PARAMETER_GOOGLEFONT_DESC"
-						/>
-			</fieldset>
 		</fields>
 	</config>
 </extension>
