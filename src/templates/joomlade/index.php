@@ -166,22 +166,6 @@ $doc->addHeadLink($tpath.'/images/favicon.ico', 'shortcut icon', 'rel', array('t
         </footer>
       </div>
   </div>
-  <!-- Piwik -->
-  <script type="text/javascript">
-    var _paq = _paq || [];
-    _paq.push(["setDomains", ["*.www.joomla.de"]]);
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-      var u="//stats.joomla.de/";
-      _paq.push(['setTrackerUrl', u+'piwik.php']);
-      _paq.push(['setSiteId', 3]);
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-    })();
-  </script>
-  <noscript><p><img src="//stats.joomla.de/piwik.php?idsite=3" style="border:0;" alt="" /></p></noscript>
-  <!-- End Piwik Code -->
 </body>
 <jdoc:include type="modules" name="debug" />
 </html>
