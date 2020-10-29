@@ -91,29 +91,29 @@ $doc->addHeadLink($tpath.'/images/favicon.ico', 'shortcut icon', 'rel', array('t
       </header>
     </div>
 
-    <?php if($this->countModules('top-stack')):  ?>
+    <?php if($this->countModules('top-stack')) : ?>
       <div id="top-stack" class="row">
         <jdoc:include type="modules" name="top-stack" style="html5" />
       </div>
     <?php endif; ?>
 
-    <?php if($this->countModules('top-a')):  ?>
+    <?php if ($this->countModules('top-a')) : ?>
       <div id="top-a" class="row">
         <jdoc:include type="modules" name="top-a" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('top-a')); ?>"  />
       </div>
     <?php endif; ?>
-    <?php if($this->countModules('top-b')):  ?>
+    <?php if ($this->countModules('top-b')) : ?>
       <div id="top-b" class="row">
         <jdoc:include type="modules" name="top-b" style="joomlade" width="col-md-<?php echo round(12 / $this->countModules('top-b')); ?>"  />
       </div>
     <?php endif; ?>
-    <?php if($this->countModules('top-c')):  ?>
+    <?php if ($this->countModules('top-c')) : ?>
       <div id="top-c" class="row">
         <jdoc:include type="modules" name="top-c" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('top-c')); ?>"  />
       </div>
     <?php endif; ?>
 
-    <?php if(!$isFrontpage): ?>
+    <?php if (!$isFrontpage): ?>
         <div id="mainwrapper" class="row">
             <main id="maincontent" class="<?php if($this->countModules('aside')) {echo 'col-lg-9';} else {echo 'col-lg-12';} ?>">
                 <jdoc:include type="message" />
@@ -121,7 +121,7 @@ $doc->addHeadLink($tpath.'/images/favicon.ico', 'shortcut icon', 'rel', array('t
                 <jdoc:include type="modules" name="mainbody-bottom" style="html5" />
             </main>
 
-            <?php if($this->countModules('aside')): ?>
+            <?php if ($this->countModules('aside')): ?>
                 <section id="aside" class="col-lg-3">
                     <jdoc:include type="modules" name="aside" style="html5" />
                 </section>
@@ -129,7 +129,7 @@ $doc->addHeadLink($tpath.'/images/favicon.ico', 'shortcut icon', 'rel', array('t
         </div>
     <?php endif ;?>
 
-    <?php if($this->countModules('events')):  ?>
+    <?php if ($this->countModules('events')) : ?>
       <div id="events" class="row area-events">
         <div class="col-lg-12">
           <h3 class="moduleheading fullwidth"><?php echo JText::_('TPL_JOOMLADE_HEADING_EVENTS'); ?></h3>
@@ -138,23 +138,23 @@ $doc->addHeadLink($tpath.'/images/favicon.ico', 'shortcut icon', 'rel', array('t
       </div>
     <?php endif; ?>
 
-    <?php if($this->countModules('bottom-a')):  ?>
+    <?php if ($this->countModules('bottom-a')) : ?>
       <div id="bottom-a" class="row">
         <jdoc:include type="modules" name="bottom-a" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('bottom-a')); ?>"  />
       </div>
     <?php endif; ?>
-    <?php if($this->countModules('bottom-b')):  ?>
+    <?php if ($this->countModules('bottom-b')) : ?>
       <div id="bottom-b" class="row">
         <jdoc:include type="modules" name="bottom-b" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('bottom-b')); ?>"  />
       </div>
     <?php endif; ?>
-    <?php if($this->countModules('bottom-c')):  ?>
+    <?php if ($this->countModules('bottom-c')) : ?>
       <div id="bottom-c" class="row">
         <jdoc:include type="modules" name="bottom-c" style="joomlade" width="col-lg-<?php echo round(12 / $this->countModules('bottom-c')); ?>"  />
       </div>
     <?php endif; ?>
 
-    <?php if($this->countModules('bottom-stack')):  ?>
+    <?php if ($this->countModules('bottom-stack')) : ?>
       <div id="bottom-stack" class="row">
         <jdoc:include type="modules" name="bottom-stack" style="html5" />
       </div>
