@@ -38,7 +38,9 @@ $this->direction = $doc->direction;
 <div class="error">
 	<div id="outline">
 		<div id="errorboxoutline">
-			<div id="errorboxheader"><?php echo $this->error->getCode(); ?> - <?php echo htmlspecialchars($this->error->getMessage()); ?></div>
+			<div id="errorboxheader">
+				<?php echo $this->error->getCode(); ?> - <?php echo htmlspecialchars($this->error->getMessage()); ?>
+			</div>
 			<div id="errorboxbody">
 				<p><strong><?php echo JText::_('JERROR_LAYOUT_NOT_ABLE_TO_VISIT'); ?></strong></p>
 				<ol>
@@ -59,9 +61,9 @@ $this->direction = $doc->direction;
 				<div id="techinfo">
 					<p><?php echo htmlspecialchars($this->error->getMessage()); ?></p>
 					<p>
-						<?php if ($this->debug) :
-							echo $this->renderBacktrace();
-						endif; ?>
+						<?php if ($this->debug) : ?>
+							<?php echo $this->renderBacktrace(); ?>
+						<?php endif; ?>
 					</p>
 				</div>
 			</div>
