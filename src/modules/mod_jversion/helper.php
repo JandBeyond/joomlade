@@ -27,6 +27,11 @@ class ModJVersionHelper
 		// Add each release to a versions array
 		foreach ($releases->releases as $release)
 		{
+			if ($release->version[0] === "4")
+			{
+				continue;
+			}
+
 			$versions[$release->version] = $release;
 		}
 
