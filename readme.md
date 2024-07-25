@@ -6,7 +6,7 @@
 
 Die Joomla.de Website wird von einer Gruppe von freiwilligen Joomlaholics betrieben. Jeder, der sich an der Weiterentwicklung der Website - sei es technisch, inhaltlich oder gestalterisch - beteiligen möchte, ist dazu herzlich eingeladen!
 
-Als Kommunikationsplatform benutzen wie den Chat-Client [Glip](https://glip.com/). Schick einfach eine Anfrage an <david.jardin@community.joomla.org> und du wirst in die Joomla.de Gruppe eingeladen.
+Als Kommunikationsplatform benutzen wie den Chat-Client [Mattermost](https://www.joomla.de/community/mattermost). Schick einfach eine Anfrage an <david.jardin@community.joomla.org> und du wirst in die Joomla.de Gruppe eingeladen.
 
 ## Fehler & Änderungswünsche
 
